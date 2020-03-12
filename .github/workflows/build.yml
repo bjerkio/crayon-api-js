@@ -1,5 +1,7 @@
 on:
   push:
+    branches:
+      - master
     # paths:
     #   - "swagger.json"
 
@@ -15,5 +17,11 @@ jobs:
         name: Generate Swagger-code
         with:
           args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/
-  # release:
-  #   name: Release new package
+  release:
+    name: Release new package
+    steps:
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
