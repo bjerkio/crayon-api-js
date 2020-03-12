@@ -16,7 +16,7 @@ jobs:
       - uses: bjerkio/swagger-codegen-action@master
         name: Generate with Swagger
         with:
-          args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/
+          args: generate -i swagger.json -l typescript-node --config config.json
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
