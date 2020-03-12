@@ -12,6 +12,6 @@ jobs:
         name: Generate Swagger-code
         with:
           args: |
-            generate -i /github/workspace/swagger.json -l typescript-node --config /github/workspace/config.json --template-dir /github/workspace/templates/ -o /github/workspace/dist
+            generate -i /github/workspace/swagger.json -l typescript-node --config /github/workspace/config.json --template-dir /github/workspace/templates/ -o /github/workspace/dist && ls /github/workspace
   # release:
   #   name: Release new package
