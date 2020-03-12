@@ -8,9 +8,12 @@ jobs:
     name: Generate Swagger-code
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
       - uses: bjerkio/swagger-codegen-action@master
         name: Generate Swagger-code
         with:
-          args: generate -i /github/workspace/swagger.json -l typescript-node --config /github/workspace/config.json --template-dir /github/workspace/templates/ -o /github/workspace/dist
+          args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/ -o dist/
   # release:
   #   name: Release new package
