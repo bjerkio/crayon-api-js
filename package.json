@@ -4,6 +4,7 @@
   "description": "Typescript / Javascript class for Crayon API",
   "main": "dist/api.js",
   "typings": "dist/api.d.ts",
+  "private": false,
   "scripts": {
     "compile": "tsc --outDir dist/",
     "build": "npm run compile",
