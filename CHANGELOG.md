@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/bjerkio/crayon-api-js/compare/v1.0.1...v1.0.2) (2020-03-12)
+
+
+### Bug Fixes
+
+* add npm ([9e1343f](https://github.com/bjerkio/crayon-api-js/commit/9e1343fa3cf1f9ed67230732e1e1aeade29ded57))
+
 ## [1.0.1](https://github.com/bjerkio/crayon-api-js/compare/v1.0.0...v1.0.1) (2020-03-12)
 
 
