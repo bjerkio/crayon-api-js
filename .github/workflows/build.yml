@@ -14,6 +14,6 @@ jobs:
       - uses: bjerkio/swagger-codegen-action@master
         name: Generate Swagger-code
         with:
-          args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/ -o dist/
+          args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/ -o src/
   # release:
   #   name: Release new package
