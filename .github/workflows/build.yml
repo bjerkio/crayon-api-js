@@ -10,9 +10,10 @@ jobs:
     steps:
       - uses: swaggerapi/swagger-codegen-cli
         name: Generate Swagger-code
-        run: |
-          generate -i swagger.json \
-          -l typescript-node --config config.json \
-          --template-dir templates/ -o /dist
+        with:
+          args: |
+            generate -i swagger.json \
+            -l typescript-node --config config.json \
+            --template-dir templates/ -o /dist
   # release:
   #   name: Release new package
