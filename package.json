@@ -1,0 +1,42 @@
+{
+  "name": "@bjerkio/crayon-api",
+  "version": "0.0.0",
+  "description": "Typescript / Javascript class for Crayon API",
+  "main": "dist/api.js",
+  "typings": "dist/api.d.ts",
+  "scripts": {
+    "compile": "tsc --outDir dist/",
+    "build": "npm run compile",
+    "deploy": "node scripts/deploy"
+  },
+  "files": [
+    "dist/**",
+    "custom.d.ts"
+  ],
+  "keywords": [
+    "crayon",
+    "crayonapi",
+    "crayon customer api",
+    "rest-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjerkio/crayon-api-js.git"
+  },
+  "author": "Simen A. W. Olsen <so@ayr.no> (httpi://bjerk.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjerkio/crayon-api-js/issues"
+  },
+  "homepage": "https://github.com/bjerkio/crayon-api-js#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "request": "^2.81.0",
+    "@types/bluebird": "*",
+    "@types/request": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.1",
+    "typescript": "^3.5.3"
+  }
+}

@@ -17,7 +17,7 @@ jobs:
         name: Generate Swagger-code
         with:
           args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/
-      - name: Semantic Release
+      - name: Release package
         uses: cycjimmy/semantic-release-action@v2
         with:
           extra_plugins: |
