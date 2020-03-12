@@ -11,10 +11,7 @@ jobs:
       - uses: docker://swaggerapi/swagger-codegen-cli
         name: Generate Swagger-code
         with:
-          entrypoint: ls
-          args: .
-        # with:
-        #   args: |
-        #     generate -i swagger.json -l typescript-node --config config.json --template-dir templates/ -o /dist
+          args: |
+            generate -i swagger.json -l typescript-node --template-dir templates/ -o /dist
   # release:
   #   name: Release new package
