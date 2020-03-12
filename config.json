@@ -1,10 +1,10 @@
 {
-  "projectName": "tripletex",
+  "projectName": "crayon-api",
   "projectVersion": "2.0.0",
-  "projectDescription": "JavaScript client library for the Tripletex API",
+  "projectDescription": "JavaScript client library for the Crayon API",
   "projectLicenseName": "MIT",
-  "moduleName": "tripletex",
+  "moduleName": "crayon",
   "usePromises": true,
   "licenseName": "MIT",
-  "npmName": "tripletex"
+  "npmName": "crayon-api"
 }
