@@ -19,6 +19,7 @@ jobs:
           args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/
   release:
     name: Release new package
+    runs-on: ubuntu-latest
     steps:
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
