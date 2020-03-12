@@ -8,7 +8,7 @@ jobs:
     name: Generate Swagger-code
     runs-on: ubuntu-latest
     steps:
-      - uses: swaggerapi/swagger-codegen-cli
+      - uses: docker://swaggerapi/swagger-codegen-cli
         name: Generate Swagger-code
         with:
           args: |
