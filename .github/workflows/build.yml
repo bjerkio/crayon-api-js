@@ -7,7 +7,7 @@ on:
 
 jobs:
   generate_files:
-    name: Generate Swagger-code
+    name: Generate and Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -19,6 +19,11 @@ jobs:
           args: generate -i swagger.json -l typescript-node --config config.json --template-dir templates/
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            @semantic-release/github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
