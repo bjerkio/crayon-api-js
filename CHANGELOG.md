@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/bjerkio/crayon-api-js/compare/v1.0.2...v1.0.3) (2020-03-12)
+
+
+### Bug Fixes
+
+* release ([3b0de25](https://github.com/bjerkio/crayon-api-js/commit/3b0de2530edd78a680b170d32e27fc894610a017))
+
 ## [1.0.2](https://github.com/bjerkio/crayon-api-js/compare/v1.0.1...v1.0.2) (2020-03-12)
 
 
