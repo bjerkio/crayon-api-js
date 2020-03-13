@@ -2,14 +2,7 @@
   "name": "@bjerkio/crayon-api",
   "version": "0.0.0",
   "description": "Typescript / Javascript class for Crayon API",
-  "main": "dist/api.js",
-  "typings": "dist/api.d.ts",
   "private": false,
-  "scripts": {
-    "compile": "tsc --outDir dist/",
-    "build": "npm run compile",
-    "deploy": "node scripts/deploy"
-  },
   "files": [
     "dist/**",
     "custom.d.ts"
@@ -30,14 +23,22 @@
     "url": "https://github.com/bjerkio/crayon-api-js/issues"
   },
   "homepage": "https://github.com/bjerkio/crayon-api-js#readme",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts" : {
+    "build": "tsc --outDir dist/",
+    "postbuild": "npm run generate-docs",
+    "postinstall": "npm run build",
+    "generate-docs": "typedoc --mode file --readme none --plugin typedoc-plugin-markdown --hideSources --out docs ./*.ts"
+  },
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "request": "^2.81.0",
-    "@types/bluebird": "*",
-    "@types/request": "*"
+    "portable-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.0",
-    "typescript": "^3.5.3"
+    "@types/isomorphic-fetch": "0.0.34",
+    "@types/node": "^8.0.9",
+    "typedoc": "^0.15.6",
+    "typedoc-plugin-markdown": "^2.2.16",
+    "typescript": "^2.0"
   }
 }
