@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/bjerkio/crayon-api-js/compare/v2.0.0...v2.0.1) (2020-03-13)
+
+
+### Bug Fixes
+
+* Add .npmignore to make less pks ([1ffc634](https://github.com/bjerkio/crayon-api-js/commit/1ffc63444c9944dc744e79bf8244f97ac527d591))
+
 # [2.0.0](https://github.com/bjerkio/crayon-api-js/compare/v1.0.3...v2.0.0) (2020-03-13)
 
 
