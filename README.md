@@ -21,8 +21,8 @@ billingCycle.post();
 # Documentation
 Apart from this README, you can find details and examples of using the SDK in the following places:  
 
-- [API Documentation](docs/)
-- [API Documentation from Crayon](https://apidocs.crayon.com/) 
+- [SDK Documentation](docs/)
+- [API Documentation](https://apidocs.crayon.com/) 
 - [API Endpoints](https://apiv1.crayon.com/docs/) 
 
 ## Contribute & Disclaimer
