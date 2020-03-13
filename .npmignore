@@ -1,0 +1,11 @@
+docs/
+assets/
+.swagger-codegen/
+.github/
+CHANGELOG.md
+config.json
+node_modules
+LICENSE.md
+swagger.json
+tsconfig.json
+yarn*
