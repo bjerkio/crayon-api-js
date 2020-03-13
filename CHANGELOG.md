@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/bjerkio/crayon-api-js/compare/v1.0.3...v2.0.0) (2020-03-13)
+
+
+### Features
+
+* Change to typescript-fetch for node 10> support. ([a857ad6](https://github.com/bjerkio/crayon-api-js/commit/a857ad602cc1229ce86d4635a66eddf0e4cbe567))
+
+
+### BREAKING CHANGES
+
+* No longer using typescript-node for swagger
+
 ## [1.0.3](https://github.com/bjerkio/crayon-api-js/compare/v1.0.2...v1.0.3) (2020-03-12)
 
 

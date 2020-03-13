@@ -112,7 +112,7 @@ export interface ActivityLog {
     entity?: string;
     /**
      * 
-     * @type {Array&lt;ActivityLogItem&gt;}
+     * @type {Array<ActivityLogItem>}
      * @memberof ActivityLog
      */
     items?: Array<ActivityLogItem>;
@@ -544,7 +544,7 @@ export interface AgreementCollection {
     filter?: AgreementFilter;
     /**
      * 
-     * @type {Array&lt;Agreement&gt;}
+     * @type {Array<Agreement>}
      * @memberof AgreementCollection
      */
     items?: Array<Agreement>;
@@ -570,13 +570,13 @@ export interface AgreementFilter {
     organizationId?: number;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof AgreementFilter
      */
     organizationIds?: Array<number>;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof AgreementFilter
      */
     pricelistIds?: Array<number>;
@@ -588,19 +588,19 @@ export interface AgreementFilter {
     status?: AgreementFilter.StatusEnum;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementFilter
      */
     agreementTypes?: Array<AgreementFilter.AgreementTypesEnum>;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof AgreementFilter
      */
     publisherIds?: Array<number>;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof AgreementFilter
      */
     programIds?: Array<number>;
@@ -612,7 +612,7 @@ export interface AgreementFilter {
     searchDate?: Date;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof AgreementFilter
      */
     agreementIds?: Array<number>;
@@ -925,7 +925,7 @@ export namespace AgreementProduct {
 export interface AgreementProductCollection {
     /**
      * 
-     * @type {Array&lt;PublisherAggregationItem&gt;}
+     * @type {Array<PublisherAggregationItem>}
      * @memberof AgreementProductCollection
      */
     publishers?: Array<PublisherAggregationItem>;
@@ -937,103 +937,103 @@ export interface AgreementProductCollection {
     filter?: AgreementProductFilter;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     pools?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     operatingSystems?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     offerings?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     levels?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     languages?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     licenseAgreementTypes?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     licenseTypes?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     productFamilies?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     programs?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     productTypes?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     purchasePeriods?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     purchaseUnits?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     versions?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     regions?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof AgreementProductCollection
      */
     productCategories?: Array<AggregationItem>;
     /**
      * 
-     * @type {Array&lt;ObjectReference&gt;}
+     * @type {Array<ObjectReference>}
      * @memberof AgreementProductCollection
      */
     agreements?: Array<ObjectReference>;
     /**
      * 
-     * @type {Array&lt;AgreementProduct&gt;}
+     * @type {Array<AgreementProduct>}
      * @memberof AgreementProductCollection
      */
     items?: Array<AgreementProduct>;
@@ -1053,7 +1053,7 @@ export interface AgreementProductCollection {
 export interface AgreementProductFilter {
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductFilter
      */
     agreementTypeIds?: Array<AgreementProductFilter.AgreementTypeIdsEnum>;
@@ -1107,7 +1107,7 @@ export interface AgreementProductFilter {
     isTrial?: boolean;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof AgreementProductFilter
      */
     agreementIds?: Array<number>;
@@ -1191,109 +1191,109 @@ export namespace AgreementProductFilter {
 export interface AgreementProductsSubFilter {
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     partNumbers?: Array<string>;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof AgreementProductsSubFilter
      */
     publisherIds?: Array<number>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     publisherNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     poolNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     operatingSystemNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     levelNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     languageNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     licenseAgreementTypeNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     licenseTypeNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     productFamilyNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     productTypeNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     programNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     offeringNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     purchasePeriodNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     purchaseUnitNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     versionNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     regionNames?: Array<string>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof AgreementProductsSubFilter
      */
     productCategoryNames?: Array<string>;
@@ -1357,7 +1357,7 @@ export namespace AgreementReport {
 export interface ApiCollectionOfAddress {
     /**
      * 
-     * @type {Array&lt;Address&gt;}
+     * @type {Array<Address>}
      * @memberof ApiCollectionOfAddress
      */
     items?: Array<Address>;
@@ -1377,7 +1377,7 @@ export interface ApiCollectionOfAddress {
 export interface ApiCollectionOfAgreementReport {
     /**
      * 
-     * @type {Array&lt;AgreementReport&gt;}
+     * @type {Array<AgreementReport>}
      * @memberof ApiCollectionOfAgreementReport
      */
     items?: Array<AgreementReport>;
@@ -1397,7 +1397,7 @@ export interface ApiCollectionOfAgreementReport {
 export interface ApiCollectionOfAsset {
     /**
      * 
-     * @type {Array&lt;Asset&gt;}
+     * @type {Array<Asset>}
      * @memberof ApiCollectionOfAsset
      */
     items?: Array<Asset>;
@@ -1417,7 +1417,7 @@ export interface ApiCollectionOfAsset {
 export interface ApiCollectionOfAssetOrder {
     /**
      * 
-     * @type {Array&lt;AssetOrder&gt;}
+     * @type {Array<AssetOrder>}
      * @memberof ApiCollectionOfAssetOrder
      */
     items?: Array<AssetOrder>;
@@ -1437,7 +1437,7 @@ export interface ApiCollectionOfAssetOrder {
 export interface ApiCollectionOfAwsAccount {
     /**
      * 
-     * @type {Array&lt;AwsAccount&gt;}
+     * @type {Array<AwsAccount>}
      * @memberof ApiCollectionOfAwsAccount
      */
     items?: Array<AwsAccount>;
@@ -1457,7 +1457,7 @@ export interface ApiCollectionOfAwsAccount {
 export interface ApiCollectionOfAzureSubscription {
     /**
      * 
-     * @type {Array&lt;AzureSubscription&gt;}
+     * @type {Array<AzureSubscription>}
      * @memberof ApiCollectionOfAzureSubscription
      */
     items?: Array<AzureSubscription>;
@@ -1477,7 +1477,7 @@ export interface ApiCollectionOfAzureSubscription {
 export interface ApiCollectionOfBillingCycle {
     /**
      * 
-     * @type {Array&lt;BillingCycle&gt;}
+     * @type {Array<BillingCycle>}
      * @memberof ApiCollectionOfBillingCycle
      */
     items?: Array<BillingCycle>;
@@ -1497,7 +1497,7 @@ export interface ApiCollectionOfBillingCycle {
 export interface ApiCollectionOfBillingStatement {
     /**
      * 
-     * @type {Array&lt;BillingStatement&gt;}
+     * @type {Array<BillingStatement>}
      * @memberof ApiCollectionOfBillingStatement
      */
     items?: Array<BillingStatement>;
@@ -1517,7 +1517,7 @@ export interface ApiCollectionOfBillingStatement {
 export interface ApiCollectionOfBlogItem {
     /**
      * 
-     * @type {Array&lt;BlogItem&gt;}
+     * @type {Array<BlogItem>}
      * @memberof ApiCollectionOfBlogItem
      */
     items?: Array<BlogItem>;
@@ -1537,7 +1537,7 @@ export interface ApiCollectionOfBlogItem {
 export interface ApiCollectionOfBoolean {
     /**
      * 
-     * @type {Array&lt;boolean&gt;}
+     * @type {Array<boolean>}
      * @memberof ApiCollectionOfBoolean
      */
     items?: Array<boolean>;
@@ -1557,7 +1557,7 @@ export interface ApiCollectionOfBoolean {
 export interface ApiCollectionOfCategoryUsageCost {
     /**
      * 
-     * @type {Array&lt;CategoryUsageCost&gt;}
+     * @type {Array<CategoryUsageCost>}
      * @memberof ApiCollectionOfCategoryUsageCost
      */
     items?: Array<CategoryUsageCost>;
@@ -1577,7 +1577,7 @@ export interface ApiCollectionOfCategoryUsageCost {
 export interface ApiCollectionOfClient {
     /**
      * 
-     * @type {Array&lt;Client&gt;}
+     * @type {Array<Client>}
      * @memberof ApiCollectionOfClient
      */
     items?: Array<Client>;
@@ -1597,7 +1597,7 @@ export interface ApiCollectionOfClient {
 export interface ApiCollectionOfConsumer {
     /**
      * 
-     * @type {Array&lt;Consumer&gt;}
+     * @type {Array<Consumer>}
      * @memberof ApiCollectionOfConsumer
      */
     items?: Array<Consumer>;
@@ -1617,7 +1617,7 @@ export interface ApiCollectionOfConsumer {
 export interface ApiCollectionOfCrayonAccount {
     /**
      * 
-     * @type {Array&lt;CrayonAccount&gt;}
+     * @type {Array<CrayonAccount>}
      * @memberof ApiCollectionOfCrayonAccount
      */
     items?: Array<CrayonAccount>;
@@ -1637,7 +1637,7 @@ export interface ApiCollectionOfCrayonAccount {
 export interface ApiCollectionOfCustomerTenant {
     /**
      * 
-     * @type {Array&lt;CustomerTenant&gt;}
+     * @type {Array<CustomerTenant>}
      * @memberof ApiCollectionOfCustomerTenant
      */
     items?: Array<CustomerTenant>;
@@ -1657,7 +1657,7 @@ export interface ApiCollectionOfCustomerTenant {
 export interface ApiCollectionOfGroupedBillingStatement {
     /**
      * 
-     * @type {Array&lt;GroupedBillingStatement&gt;}
+     * @type {Array<GroupedBillingStatement>}
      * @memberof ApiCollectionOfGroupedBillingStatement
      */
     items?: Array<GroupedBillingStatement>;
@@ -1677,7 +1677,7 @@ export interface ApiCollectionOfGroupedBillingStatement {
 export interface ApiCollectionOfGrouping {
     /**
      * 
-     * @type {Array&lt;Grouping&gt;}
+     * @type {Array<Grouping>}
      * @memberof ApiCollectionOfGrouping
      */
     items?: Array<Grouping>;
@@ -1697,7 +1697,7 @@ export interface ApiCollectionOfGrouping {
 export interface ApiCollectionOfInvoiceProfile {
     /**
      * 
-     * @type {Array&lt;InvoiceProfile&gt;}
+     * @type {Array<InvoiceProfile>}
      * @memberof ApiCollectionOfInvoiceProfile
      */
     items?: Array<InvoiceProfile>;
@@ -1717,7 +1717,7 @@ export interface ApiCollectionOfInvoiceProfile {
 export interface ApiCollectionOfManagementLink {
     /**
      * 
-     * @type {Array&lt;ManagementLink&gt;}
+     * @type {Array<ManagementLink>}
      * @memberof ApiCollectionOfManagementLink
      */
     items?: Array<ManagementLink>;
@@ -1737,7 +1737,7 @@ export interface ApiCollectionOfManagementLink {
 export interface ApiCollectionOfManagementLinkGrouped {
     /**
      * 
-     * @type {Array&lt;ManagementLinkGrouped&gt;}
+     * @type {Array<ManagementLinkGrouped>}
      * @memberof ApiCollectionOfManagementLinkGrouped
      */
     items?: Array<ManagementLinkGrouped>;
@@ -1757,7 +1757,7 @@ export interface ApiCollectionOfManagementLinkGrouped {
 export interface ApiCollectionOfObjectReference {
     /**
      * 
-     * @type {Array&lt;ObjectReference&gt;}
+     * @type {Array<ObjectReference>}
      * @memberof ApiCollectionOfObjectReference
      */
     items?: Array<ObjectReference>;
@@ -1777,7 +1777,7 @@ export interface ApiCollectionOfObjectReference {
 export interface ApiCollectionOfOrganization {
     /**
      * 
-     * @type {Array&lt;Organization&gt;}
+     * @type {Array<Organization>}
      * @memberof ApiCollectionOfOrganization
      */
     items?: Array<Organization>;
@@ -1797,7 +1797,7 @@ export interface ApiCollectionOfOrganization {
 export interface ApiCollectionOfOrganizationAccess {
     /**
      * 
-     * @type {Array&lt;OrganizationAccess&gt;}
+     * @type {Array<OrganizationAccess>}
      * @memberof ApiCollectionOfOrganizationAccess
      */
     items?: Array<OrganizationAccess>;
@@ -1817,7 +1817,7 @@ export interface ApiCollectionOfOrganizationAccess {
 export interface ApiCollectionOfOrganizationUsageCost {
     /**
      * 
-     * @type {Array&lt;OrganizationUsageCost&gt;}
+     * @type {Array<OrganizationUsageCost>}
      * @memberof ApiCollectionOfOrganizationUsageCost
      */
     items?: Array<OrganizationUsageCost>;
@@ -1837,7 +1837,7 @@ export interface ApiCollectionOfOrganizationUsageCost {
 export interface ApiCollectionOfProductContainer {
     /**
      * 
-     * @type {Array&lt;ProductContainer&gt;}
+     * @type {Array<ProductContainer>}
      * @memberof ApiCollectionOfProductContainer
      */
     items?: Array<ProductContainer>;
@@ -1857,7 +1857,7 @@ export interface ApiCollectionOfProductContainer {
 export interface ApiCollectionOfProgram {
     /**
      * 
-     * @type {Array&lt;Program&gt;}
+     * @type {Array<Program>}
      * @memberof ApiCollectionOfProgram
      */
     items?: Array<Program>;
@@ -1877,7 +1877,7 @@ export interface ApiCollectionOfProgram {
 export interface ApiCollectionOfPublisher {
     /**
      * 
-     * @type {Array&lt;Publisher&gt;}
+     * @type {Array<Publisher>}
      * @memberof ApiCollectionOfPublisher
      */
     items?: Array<Publisher>;
@@ -1897,7 +1897,7 @@ export interface ApiCollectionOfPublisher {
 export interface ApiCollectionOfRegion {
     /**
      * 
-     * @type {Array&lt;Region&gt;}
+     * @type {Array<Region>}
      * @memberof ApiCollectionOfRegion
      */
     items?: Array<Region>;
@@ -1917,7 +1917,7 @@ export interface ApiCollectionOfRegion {
 export interface ApiCollectionOfResourceGroupUsageCost {
     /**
      * 
-     * @type {Array&lt;ResourceGroupUsageCost&gt;}
+     * @type {Array<ResourceGroupUsageCost>}
      * @memberof ApiCollectionOfResourceGroupUsageCost
      */
     items?: Array<ResourceGroupUsageCost>;
@@ -1937,7 +1937,7 @@ export interface ApiCollectionOfResourceGroupUsageCost {
 export interface ApiCollectionOfServiceAccountAgreement {
     /**
      * 
-     * @type {Array&lt;ServiceAccountAgreement&gt;}
+     * @type {Array<ServiceAccountAgreement>}
      * @memberof ApiCollectionOfServiceAccountAgreement
      */
     items?: Array<ServiceAccountAgreement>;
@@ -1957,7 +1957,7 @@ export interface ApiCollectionOfServiceAccountAgreement {
 export interface ApiCollectionOfSubcategoryUsageCost {
     /**
      * 
-     * @type {Array&lt;SubcategoryUsageCost&gt;}
+     * @type {Array<SubcategoryUsageCost>}
      * @memberof ApiCollectionOfSubcategoryUsageCost
      */
     items?: Array<SubcategoryUsageCost>;
@@ -1977,7 +1977,7 @@ export interface ApiCollectionOfSubcategoryUsageCost {
 export interface ApiCollectionOfSubscription {
     /**
      * 
-     * @type {Array&lt;Subscription&gt;}
+     * @type {Array<Subscription>}
      * @memberof ApiCollectionOfSubscription
      */
     items?: Array<Subscription>;
@@ -1997,7 +1997,7 @@ export interface ApiCollectionOfSubscription {
 export interface ApiCollectionOfSubscriptionConversion {
     /**
      * 
-     * @type {Array&lt;SubscriptionConversion&gt;}
+     * @type {Array<SubscriptionConversion>}
      * @memberof ApiCollectionOfSubscriptionConversion
      */
     items?: Array<SubscriptionConversion>;
@@ -2017,7 +2017,7 @@ export interface ApiCollectionOfSubscriptionConversion {
 export interface ApiCollectionOfSubscriptionResourceGroupUsageCost {
     /**
      * 
-     * @type {Array&lt;SubscriptionResourceGroupUsageCost&gt;}
+     * @type {Array<SubscriptionResourceGroupUsageCost>}
      * @memberof ApiCollectionOfSubscriptionResourceGroupUsageCost
      */
     items?: Array<SubscriptionResourceGroupUsageCost>;
@@ -2037,7 +2037,7 @@ export interface ApiCollectionOfSubscriptionResourceGroupUsageCost {
 export interface ApiCollectionOfSubscriptionUsageCost {
     /**
      * 
-     * @type {Array&lt;SubscriptionUsageCost&gt;}
+     * @type {Array<SubscriptionUsageCost>}
      * @memberof ApiCollectionOfSubscriptionUsageCost
      */
     items?: Array<SubscriptionUsageCost>;
@@ -2057,7 +2057,7 @@ export interface ApiCollectionOfSubscriptionUsageCost {
 export interface ApiCollectionOfUser {
     /**
      * 
-     * @type {Array&lt;User&gt;}
+     * @type {Array<User>}
      * @memberof ApiCollectionOfUser
      */
     items?: Array<User>;
@@ -2334,13 +2334,13 @@ export interface AssetOrder {
     resellerCustomerId?: number;
     /**
      * 
-     * @type {Array&lt;AssetOrderError&gt;}
+     * @type {Array<AssetOrderError>}
      * @memberof AssetOrder
      */
     errors?: Array<AssetOrderError>;
     /**
      * 
-     * @type {Array&lt;AssetOrderLine&gt;}
+     * @type {Array<AssetOrderLine>}
      * @memberof AssetOrder
      */
     orderLines?: Array<AssetOrderLine>;
@@ -2470,7 +2470,7 @@ export interface AssetOrderLine {
     resellerPriceTypeValue?: number;
     /**
      * 
-     * @type {Array&lt;AssetOrderLineError&gt;}
+     * @type {Array<AssetOrderLineError>}
      * @memberof AssetOrderLine
      */
     errors?: Array<AssetOrderLineError>;
@@ -3052,13 +3052,13 @@ export interface Client {
     enabled?: boolean;
     /**
      * 
-     * @type {Array&lt;Secret&gt;}
+     * @type {Array<Secret>}
      * @memberof Client
      */
     clientSecrets?: Array<Secret>;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof Client
      */
     redirectUris?: Array<string>;
@@ -3669,7 +3669,7 @@ export interface CustomerTenantUser {
 export interface FacebookOrder {
     /**
      * 
-     * @type {Array&lt;FacebookOrderLine&gt;}
+     * @type {Array<FacebookOrderLine>}
      * @memberof FacebookOrder
      */
     lines?: Array<FacebookOrderLine>;
@@ -3775,7 +3775,7 @@ export interface FacebookOrderLine {
 export interface GoogleOrder {
     /**
      * 
-     * @type {Array&lt;GoogleOrderLine&gt;}
+     * @type {Array<GoogleOrderLine>}
      * @memberof GoogleOrder
      */
     lines?: Array<GoogleOrderLine>;
@@ -4216,7 +4216,7 @@ export interface Me {
     token?: string;
     /**
      * 
-     * @type {Array&lt;string&gt;}
+     * @type {Array<string>}
      * @memberof Me
      */
     claims?: Array<string>;
@@ -4346,7 +4346,7 @@ export interface OrganizationAccess {
     allAgreements?: boolean;
     /**
      * 
-     * @type {Array&lt;AgreementAccess&gt;}
+     * @type {Array<AgreementAccess>}
      * @memberof OrganizationAccess
      */
     agreements?: Array<AgreementAccess>;
@@ -4595,13 +4595,13 @@ export interface ProductContainer {
     program?: Program;
     /**
      * 
-     * @type {Array&lt;ProductRow&gt;}
+     * @type {Array<ProductRow>}
      * @memberof ProductContainer
      */
     productRows?: Array<ProductRow>;
     /**
      * 
-     * @type {Array&lt;ProductContainerComment&gt;}
+     * @type {Array<ProductContainerComment>}
      * @memberof ProductContainer
      */
     comments?: Array<ProductContainerComment>;
@@ -4643,19 +4643,19 @@ export interface ProductContainer {
     quoteValidToDate?: Date;
     /**
      * 
-     * @type {Array&lt;Price&gt;}
+     * @type {Array<Price>}
      * @memberof ProductContainer
      */
     totalSalesPrice?: Array<Price>;
     /**
      * 
-     * @type {Array&lt;Price&gt;}
+     * @type {Array<Price>}
      * @memberof ProductContainer
      */
     totalAlternativeSalesPrice?: Array<Price>;
     /**
      * 
-     * @type {Array&lt;ProductContainerIssue&gt;}
+     * @type {Array<ProductContainerIssue>}
      * @memberof ProductContainer
      */
     issues?: Array<ProductContainerIssue>;
@@ -5029,7 +5029,7 @@ export interface ProductRow {
     grouping?: Grouping;
     /**
      * 
-     * @type {Array&lt;ProductContainerIssue&gt;}
+     * @type {Array<ProductContainerIssue>}
      * @memberof ProductRow
      */
     issues?: Array<ProductContainerIssue>;
@@ -5341,7 +5341,7 @@ export interface ProductVariant {
     defaultBillingCycleId?: number;
     /**
      * 
-     * @type {Array&lt;number&gt;}
+     * @type {Array<number>}
      * @memberof ProductVariant
      */
     availableBillingCycleIds?: Array<number>;
@@ -5425,7 +5425,7 @@ export interface PublisherAggregationItem {
     docCount?: number;
     /**
      * 
-     * @type {Array&lt;AggregationItem&gt;}
+     * @type {Array<AggregationItem>}
      * @memberof PublisherAggregationItem
      */
     programs?: Array<AggregationItem>;
@@ -5940,7 +5940,7 @@ export interface Subscription {
     availableAddonsCount?: number;
     /**
      * 
-     * @type {Array&lt;SubscriptionAddOn&gt;}
+     * @type {Array<SubscriptionAddOn>}
      * @memberof Subscription
      */
     subscriptions?: Array<SubscriptionAddOn>;
@@ -6358,7 +6358,7 @@ export interface SubscriptionDetailed {
     availableAddonsCount?: number;
     /**
      * 
-     * @type {Array&lt;SubscriptionAddOn&gt;}
+     * @type {Array<SubscriptionAddOn>}
      * @memberof SubscriptionDetailed
      */
     subscriptions?: Array<SubscriptionAddOn>;
@@ -6896,7 +6896,7 @@ export const ActivityLogsApiFetchParamCreator = function (configuration?: Config
          * 
          * @param {string} [entity] 
          * @param {number} [id] 
-         * @param {Array&lt;number&gt;} [ids] 
+         * @param {Array<number>} [ids] 
          * @param {Date} [searchDate] 
          * @param {Date} [from] 
          * @param {Date} [to] 
@@ -6975,7 +6975,7 @@ export const ActivityLogsApiFp = function(configuration?: Configuration) {
          * 
          * @param {string} [entity] 
          * @param {number} [id] 
-         * @param {Array&lt;number&gt;} [ids] 
+         * @param {Array<number>} [ids] 
          * @param {Date} [searchDate] 
          * @param {Date} [from] 
          * @param {Date} [to] 
@@ -7009,7 +7009,7 @@ export const ActivityLogsApiFactory = function (configuration?: Configuration, f
          * 
          * @param {string} [entity] 
          * @param {number} [id] 
-         * @param {Array&lt;number&gt;} [ids] 
+         * @param {Array<number>} [ids] 
          * @param {Date} [searchDate] 
          * @param {Date} [from] 
          * @param {Date} [to] 
@@ -7033,14 +7033,14 @@ export const ActivityLogsApiFactory = function (configuration?: Configuration, f
 export class ActivityLogsApi extends BaseAPI {
     /**
      * 
-     * @param {} [entity] 
-     * @param {} [id] 
-     * @param {} [ids] 
-     * @param {} [searchDate] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {string} [entity] 
+     * @param {number} [id] 
+     * @param {Array<number>} [ids] 
+     * @param {Date} [searchDate] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivityLogsApi
@@ -7060,11 +7060,11 @@ export const AddressesApiFetchParamCreator = function (configuration?: Configura
         /**
          * 
          * @param {number} organizationId 
-         * @param {string} [type] 
+         * @param {'None' | 'Invoice' | 'Delivery'} [type] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId: number, type?: string, options: any = {}): FetchArgs {
+        get(organizationId: number, type?: 'None' | 'Invoice' | 'Delivery', options: any = {}): FetchArgs {
             // verify required parameter 'organizationId' is not null or undefined
             if (organizationId === null || organizationId === undefined) {
                 throw new RequiredError('organizationId','Required parameter organizationId was null or undefined when calling get.');
@@ -7152,11 +7152,11 @@ export const AddressesApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {number} organizationId 
-         * @param {string} [type] 
+         * @param {'None' | 'Invoice' | 'Delivery'} [type] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId: number, type?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAddress> {
+        get(organizationId: number, type?: 'None' | 'Invoice' | 'Delivery', options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAddress> {
             const localVarFetchArgs = AddressesApiFetchParamCreator(configuration).get(organizationId, type, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -7199,11 +7199,11 @@ export const AddressesApiFactory = function (configuration?: Configuration, fetc
         /**
          * 
          * @param {number} organizationId 
-         * @param {string} [type] 
+         * @param {'None' | 'Invoice' | 'Delivery'} [type] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId: number, type?: string, options?: any) {
+        get(organizationId: number, type?: 'None' | 'Invoice' | 'Delivery', options?: any) {
             return AddressesApiFp(configuration).get(organizationId, type, options)(fetch, basePath);
         },
         /**
@@ -7228,20 +7228,20 @@ export const AddressesApiFactory = function (configuration?: Configuration, fetc
 export class AddressesApi extends BaseAPI {
     /**
      * 
-     * @param {} organizationId 
-     * @param {} [type] 
+     * @param {number} organizationId 
+     * @param {'None' | 'Invoice' | 'Delivery'} [type] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AddressesApi
      */
-    public get(organizationId: number, type?: string, options?: any) {
+    public get(organizationId: number, type?: 'None' | 'Invoice' | 'Delivery', options?: any) {
         return AddressesApiFp(this.configuration).get(organizationId, type, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} organizationId 
-     * @param {} id 
+     * @param {number} organizationId 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AddressesApi
@@ -7260,7 +7260,7 @@ export const AgreementProductsApiFetchParamCreator = function (configuration?: C
     return {
         /**
          * 
-         * @param {Array&lt;string&gt;} [agreementTypeIds] 
+         * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypeIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
@@ -7269,51 +7269,51 @@ export const AgreementProductsApiFetchParamCreator = function (configuration?: C
          * @param {number} [customerTenantId] 
          * @param {number} [agreementId] 
          * @param {boolean} [isTrial] 
-         * @param {Array&lt;number&gt;} [agreementIds] 
+         * @param {Array<number>} [agreementIds] 
          * @param {Date} [searchDate] 
-         * @param {Array&lt;string&gt;} [includePartNumbers] 
-         * @param {Array&lt;number&gt;} [includePublisherIds] 
-         * @param {Array&lt;string&gt;} [includePublisherNames] 
-         * @param {Array&lt;string&gt;} [includePoolNames] 
-         * @param {Array&lt;string&gt;} [includeOperatingSystemNames] 
-         * @param {Array&lt;string&gt;} [includeLevelNames] 
-         * @param {Array&lt;string&gt;} [includeLanguageNames] 
-         * @param {Array&lt;string&gt;} [includeLicenseAgreementTypeNames] 
-         * @param {Array&lt;string&gt;} [includeLicenseTypeNames] 
-         * @param {Array&lt;string&gt;} [includeProductFamilyNames] 
-         * @param {Array&lt;string&gt;} [includeProductTypeNames] 
-         * @param {Array&lt;string&gt;} [includeProgramNames] 
-         * @param {Array&lt;string&gt;} [includeOfferingNames] 
-         * @param {Array&lt;string&gt;} [includePurchasePeriodNames] 
-         * @param {Array&lt;string&gt;} [includePurchaseUnitNames] 
-         * @param {Array&lt;string&gt;} [includeVersionNames] 
-         * @param {Array&lt;string&gt;} [includeRegionNames] 
-         * @param {Array&lt;string&gt;} [includeProductCategoryNames] 
-         * @param {Array&lt;string&gt;} [excludePartNumbers] 
-         * @param {Array&lt;number&gt;} [excludePublisherIds] 
-         * @param {Array&lt;string&gt;} [excludePublisherNames] 
-         * @param {Array&lt;string&gt;} [excludePoolNames] 
-         * @param {Array&lt;string&gt;} [excludeOperatingSystemNames] 
-         * @param {Array&lt;string&gt;} [excludeLevelNames] 
-         * @param {Array&lt;string&gt;} [excludeLanguageNames] 
-         * @param {Array&lt;string&gt;} [excludeLicenseAgreementTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeLicenseTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeProductFamilyNames] 
-         * @param {Array&lt;string&gt;} [excludeProductTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeProgramNames] 
-         * @param {Array&lt;string&gt;} [excludeOfferingNames] 
-         * @param {Array&lt;string&gt;} [excludePurchasePeriodNames] 
-         * @param {Array&lt;string&gt;} [excludePurchaseUnitNames] 
-         * @param {Array&lt;string&gt;} [excludeVersionNames] 
-         * @param {Array&lt;string&gt;} [excludeRegionNames] 
-         * @param {Array&lt;string&gt;} [excludeProductCategoryNames] 
+         * @param {Array<string>} [includePartNumbers] 
+         * @param {Array<number>} [includePublisherIds] 
+         * @param {Array<string>} [includePublisherNames] 
+         * @param {Array<string>} [includePoolNames] 
+         * @param {Array<string>} [includeOperatingSystemNames] 
+         * @param {Array<string>} [includeLevelNames] 
+         * @param {Array<string>} [includeLanguageNames] 
+         * @param {Array<string>} [includeLicenseAgreementTypeNames] 
+         * @param {Array<string>} [includeLicenseTypeNames] 
+         * @param {Array<string>} [includeProductFamilyNames] 
+         * @param {Array<string>} [includeProductTypeNames] 
+         * @param {Array<string>} [includeProgramNames] 
+         * @param {Array<string>} [includeOfferingNames] 
+         * @param {Array<string>} [includePurchasePeriodNames] 
+         * @param {Array<string>} [includePurchaseUnitNames] 
+         * @param {Array<string>} [includeVersionNames] 
+         * @param {Array<string>} [includeRegionNames] 
+         * @param {Array<string>} [includeProductCategoryNames] 
+         * @param {Array<string>} [excludePartNumbers] 
+         * @param {Array<number>} [excludePublisherIds] 
+         * @param {Array<string>} [excludePublisherNames] 
+         * @param {Array<string>} [excludePoolNames] 
+         * @param {Array<string>} [excludeOperatingSystemNames] 
+         * @param {Array<string>} [excludeLevelNames] 
+         * @param {Array<string>} [excludeLanguageNames] 
+         * @param {Array<string>} [excludeLicenseAgreementTypeNames] 
+         * @param {Array<string>} [excludeLicenseTypeNames] 
+         * @param {Array<string>} [excludeProductFamilyNames] 
+         * @param {Array<string>} [excludeProductTypeNames] 
+         * @param {Array<string>} [excludeProgramNames] 
+         * @param {Array<string>} [excludeOfferingNames] 
+         * @param {Array<string>} [excludePurchasePeriodNames] 
+         * @param {Array<string>} [excludePurchaseUnitNames] 
+         * @param {Array<string>} [excludeVersionNames] 
+         * @param {Array<string>} [excludeRegionNames] 
+         * @param {Array<string>} [excludeProductCategoryNames] 
          * @param {string} [sortKey] 
          * @param {boolean} [includeProductInformation] 
-         * @param {string} [sortOrder] 
+         * @param {'Ascending' | 'Descending'} [sortOrder] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(agreementTypeIds?: Array<string>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: string, options: any = {}): FetchArgs {
+        get(agreementTypeIds?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: 'Ascending' | 'Descending', options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/AgreementProducts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -7660,7 +7660,7 @@ export const AgreementProductsApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {Array&lt;string&gt;} [agreementTypeIds] 
+         * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypeIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
@@ -7669,51 +7669,51 @@ export const AgreementProductsApiFp = function(configuration?: Configuration) {
          * @param {number} [customerTenantId] 
          * @param {number} [agreementId] 
          * @param {boolean} [isTrial] 
-         * @param {Array&lt;number&gt;} [agreementIds] 
+         * @param {Array<number>} [agreementIds] 
          * @param {Date} [searchDate] 
-         * @param {Array&lt;string&gt;} [includePartNumbers] 
-         * @param {Array&lt;number&gt;} [includePublisherIds] 
-         * @param {Array&lt;string&gt;} [includePublisherNames] 
-         * @param {Array&lt;string&gt;} [includePoolNames] 
-         * @param {Array&lt;string&gt;} [includeOperatingSystemNames] 
-         * @param {Array&lt;string&gt;} [includeLevelNames] 
-         * @param {Array&lt;string&gt;} [includeLanguageNames] 
-         * @param {Array&lt;string&gt;} [includeLicenseAgreementTypeNames] 
-         * @param {Array&lt;string&gt;} [includeLicenseTypeNames] 
-         * @param {Array&lt;string&gt;} [includeProductFamilyNames] 
-         * @param {Array&lt;string&gt;} [includeProductTypeNames] 
-         * @param {Array&lt;string&gt;} [includeProgramNames] 
-         * @param {Array&lt;string&gt;} [includeOfferingNames] 
-         * @param {Array&lt;string&gt;} [includePurchasePeriodNames] 
-         * @param {Array&lt;string&gt;} [includePurchaseUnitNames] 
-         * @param {Array&lt;string&gt;} [includeVersionNames] 
-         * @param {Array&lt;string&gt;} [includeRegionNames] 
-         * @param {Array&lt;string&gt;} [includeProductCategoryNames] 
-         * @param {Array&lt;string&gt;} [excludePartNumbers] 
-         * @param {Array&lt;number&gt;} [excludePublisherIds] 
-         * @param {Array&lt;string&gt;} [excludePublisherNames] 
-         * @param {Array&lt;string&gt;} [excludePoolNames] 
-         * @param {Array&lt;string&gt;} [excludeOperatingSystemNames] 
-         * @param {Array&lt;string&gt;} [excludeLevelNames] 
-         * @param {Array&lt;string&gt;} [excludeLanguageNames] 
-         * @param {Array&lt;string&gt;} [excludeLicenseAgreementTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeLicenseTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeProductFamilyNames] 
-         * @param {Array&lt;string&gt;} [excludeProductTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeProgramNames] 
-         * @param {Array&lt;string&gt;} [excludeOfferingNames] 
-         * @param {Array&lt;string&gt;} [excludePurchasePeriodNames] 
-         * @param {Array&lt;string&gt;} [excludePurchaseUnitNames] 
-         * @param {Array&lt;string&gt;} [excludeVersionNames] 
-         * @param {Array&lt;string&gt;} [excludeRegionNames] 
-         * @param {Array&lt;string&gt;} [excludeProductCategoryNames] 
+         * @param {Array<string>} [includePartNumbers] 
+         * @param {Array<number>} [includePublisherIds] 
+         * @param {Array<string>} [includePublisherNames] 
+         * @param {Array<string>} [includePoolNames] 
+         * @param {Array<string>} [includeOperatingSystemNames] 
+         * @param {Array<string>} [includeLevelNames] 
+         * @param {Array<string>} [includeLanguageNames] 
+         * @param {Array<string>} [includeLicenseAgreementTypeNames] 
+         * @param {Array<string>} [includeLicenseTypeNames] 
+         * @param {Array<string>} [includeProductFamilyNames] 
+         * @param {Array<string>} [includeProductTypeNames] 
+         * @param {Array<string>} [includeProgramNames] 
+         * @param {Array<string>} [includeOfferingNames] 
+         * @param {Array<string>} [includePurchasePeriodNames] 
+         * @param {Array<string>} [includePurchaseUnitNames] 
+         * @param {Array<string>} [includeVersionNames] 
+         * @param {Array<string>} [includeRegionNames] 
+         * @param {Array<string>} [includeProductCategoryNames] 
+         * @param {Array<string>} [excludePartNumbers] 
+         * @param {Array<number>} [excludePublisherIds] 
+         * @param {Array<string>} [excludePublisherNames] 
+         * @param {Array<string>} [excludePoolNames] 
+         * @param {Array<string>} [excludeOperatingSystemNames] 
+         * @param {Array<string>} [excludeLevelNames] 
+         * @param {Array<string>} [excludeLanguageNames] 
+         * @param {Array<string>} [excludeLicenseAgreementTypeNames] 
+         * @param {Array<string>} [excludeLicenseTypeNames] 
+         * @param {Array<string>} [excludeProductFamilyNames] 
+         * @param {Array<string>} [excludeProductTypeNames] 
+         * @param {Array<string>} [excludeProgramNames] 
+         * @param {Array<string>} [excludeOfferingNames] 
+         * @param {Array<string>} [excludePurchasePeriodNames] 
+         * @param {Array<string>} [excludePurchaseUnitNames] 
+         * @param {Array<string>} [excludeVersionNames] 
+         * @param {Array<string>} [excludeRegionNames] 
+         * @param {Array<string>} [excludeProductCategoryNames] 
          * @param {string} [sortKey] 
          * @param {boolean} [includeProductInformation] 
-         * @param {string} [sortOrder] 
+         * @param {'Ascending' | 'Descending'} [sortOrder] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(agreementTypeIds?: Array<string>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AgreementProductCollection> {
+        get(agreementTypeIds?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: 'Ascending' | 'Descending', options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AgreementProductCollection> {
             const localVarFetchArgs = AgreementProductsApiFetchParamCreator(configuration).get(agreementTypeIds, page, pageSize, search, priceListId, organizationId, customerTenantId, agreementId, isTrial, agreementIds, searchDate, includePartNumbers, includePublisherIds, includePublisherNames, includePoolNames, includeOperatingSystemNames, includeLevelNames, includeLanguageNames, includeLicenseAgreementTypeNames, includeLicenseTypeNames, includeProductFamilyNames, includeProductTypeNames, includeProgramNames, includeOfferingNames, includePurchasePeriodNames, includePurchaseUnitNames, includeVersionNames, includeRegionNames, includeProductCategoryNames, excludePartNumbers, excludePublisherIds, excludePublisherNames, excludePoolNames, excludeOperatingSystemNames, excludeLevelNames, excludeLanguageNames, excludeLicenseAgreementTypeNames, excludeLicenseTypeNames, excludeProductFamilyNames, excludeProductTypeNames, excludeProgramNames, excludeOfferingNames, excludePurchasePeriodNames, excludePurchaseUnitNames, excludeVersionNames, excludeRegionNames, excludeProductCategoryNames, sortKey, includeProductInformation, sortOrder, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -7791,7 +7791,7 @@ export const AgreementProductsApiFactory = function (configuration?: Configurati
     return {
         /**
          * 
-         * @param {Array&lt;string&gt;} [agreementTypeIds] 
+         * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypeIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
@@ -7800,51 +7800,51 @@ export const AgreementProductsApiFactory = function (configuration?: Configurati
          * @param {number} [customerTenantId] 
          * @param {number} [agreementId] 
          * @param {boolean} [isTrial] 
-         * @param {Array&lt;number&gt;} [agreementIds] 
+         * @param {Array<number>} [agreementIds] 
          * @param {Date} [searchDate] 
-         * @param {Array&lt;string&gt;} [includePartNumbers] 
-         * @param {Array&lt;number&gt;} [includePublisherIds] 
-         * @param {Array&lt;string&gt;} [includePublisherNames] 
-         * @param {Array&lt;string&gt;} [includePoolNames] 
-         * @param {Array&lt;string&gt;} [includeOperatingSystemNames] 
-         * @param {Array&lt;string&gt;} [includeLevelNames] 
-         * @param {Array&lt;string&gt;} [includeLanguageNames] 
-         * @param {Array&lt;string&gt;} [includeLicenseAgreementTypeNames] 
-         * @param {Array&lt;string&gt;} [includeLicenseTypeNames] 
-         * @param {Array&lt;string&gt;} [includeProductFamilyNames] 
-         * @param {Array&lt;string&gt;} [includeProductTypeNames] 
-         * @param {Array&lt;string&gt;} [includeProgramNames] 
-         * @param {Array&lt;string&gt;} [includeOfferingNames] 
-         * @param {Array&lt;string&gt;} [includePurchasePeriodNames] 
-         * @param {Array&lt;string&gt;} [includePurchaseUnitNames] 
-         * @param {Array&lt;string&gt;} [includeVersionNames] 
-         * @param {Array&lt;string&gt;} [includeRegionNames] 
-         * @param {Array&lt;string&gt;} [includeProductCategoryNames] 
-         * @param {Array&lt;string&gt;} [excludePartNumbers] 
-         * @param {Array&lt;number&gt;} [excludePublisherIds] 
-         * @param {Array&lt;string&gt;} [excludePublisherNames] 
-         * @param {Array&lt;string&gt;} [excludePoolNames] 
-         * @param {Array&lt;string&gt;} [excludeOperatingSystemNames] 
-         * @param {Array&lt;string&gt;} [excludeLevelNames] 
-         * @param {Array&lt;string&gt;} [excludeLanguageNames] 
-         * @param {Array&lt;string&gt;} [excludeLicenseAgreementTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeLicenseTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeProductFamilyNames] 
-         * @param {Array&lt;string&gt;} [excludeProductTypeNames] 
-         * @param {Array&lt;string&gt;} [excludeProgramNames] 
-         * @param {Array&lt;string&gt;} [excludeOfferingNames] 
-         * @param {Array&lt;string&gt;} [excludePurchasePeriodNames] 
-         * @param {Array&lt;string&gt;} [excludePurchaseUnitNames] 
-         * @param {Array&lt;string&gt;} [excludeVersionNames] 
-         * @param {Array&lt;string&gt;} [excludeRegionNames] 
-         * @param {Array&lt;string&gt;} [excludeProductCategoryNames] 
+         * @param {Array<string>} [includePartNumbers] 
+         * @param {Array<number>} [includePublisherIds] 
+         * @param {Array<string>} [includePublisherNames] 
+         * @param {Array<string>} [includePoolNames] 
+         * @param {Array<string>} [includeOperatingSystemNames] 
+         * @param {Array<string>} [includeLevelNames] 
+         * @param {Array<string>} [includeLanguageNames] 
+         * @param {Array<string>} [includeLicenseAgreementTypeNames] 
+         * @param {Array<string>} [includeLicenseTypeNames] 
+         * @param {Array<string>} [includeProductFamilyNames] 
+         * @param {Array<string>} [includeProductTypeNames] 
+         * @param {Array<string>} [includeProgramNames] 
+         * @param {Array<string>} [includeOfferingNames] 
+         * @param {Array<string>} [includePurchasePeriodNames] 
+         * @param {Array<string>} [includePurchaseUnitNames] 
+         * @param {Array<string>} [includeVersionNames] 
+         * @param {Array<string>} [includeRegionNames] 
+         * @param {Array<string>} [includeProductCategoryNames] 
+         * @param {Array<string>} [excludePartNumbers] 
+         * @param {Array<number>} [excludePublisherIds] 
+         * @param {Array<string>} [excludePublisherNames] 
+         * @param {Array<string>} [excludePoolNames] 
+         * @param {Array<string>} [excludeOperatingSystemNames] 
+         * @param {Array<string>} [excludeLevelNames] 
+         * @param {Array<string>} [excludeLanguageNames] 
+         * @param {Array<string>} [excludeLicenseAgreementTypeNames] 
+         * @param {Array<string>} [excludeLicenseTypeNames] 
+         * @param {Array<string>} [excludeProductFamilyNames] 
+         * @param {Array<string>} [excludeProductTypeNames] 
+         * @param {Array<string>} [excludeProgramNames] 
+         * @param {Array<string>} [excludeOfferingNames] 
+         * @param {Array<string>} [excludePurchasePeriodNames] 
+         * @param {Array<string>} [excludePurchaseUnitNames] 
+         * @param {Array<string>} [excludeVersionNames] 
+         * @param {Array<string>} [excludeRegionNames] 
+         * @param {Array<string>} [excludeProductCategoryNames] 
          * @param {string} [sortKey] 
          * @param {boolean} [includeProductInformation] 
-         * @param {string} [sortOrder] 
+         * @param {'Ascending' | 'Descending'} [sortOrder] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(agreementTypeIds?: Array<string>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: string, options?: any) {
+        get(agreementTypeIds?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: 'Ascending' | 'Descending', options?: any) {
             return AgreementProductsApiFp(configuration).get(agreementTypeIds, page, pageSize, search, priceListId, organizationId, customerTenantId, agreementId, isTrial, agreementIds, searchDate, includePartNumbers, includePublisherIds, includePublisherNames, includePoolNames, includeOperatingSystemNames, includeLevelNames, includeLanguageNames, includeLicenseAgreementTypeNames, includeLicenseTypeNames, includeProductFamilyNames, includeProductTypeNames, includeProgramNames, includeOfferingNames, includePurchasePeriodNames, includePurchaseUnitNames, includeVersionNames, includeRegionNames, includeProductCategoryNames, excludePartNumbers, excludePublisherIds, excludePublisherNames, excludePoolNames, excludeOperatingSystemNames, excludeLevelNames, excludeLanguageNames, excludeLicenseAgreementTypeNames, excludeLicenseTypeNames, excludeProductFamilyNames, excludeProductTypeNames, excludeProgramNames, excludeOfferingNames, excludePurchasePeriodNames, excludePurchaseUnitNames, excludeVersionNames, excludeRegionNames, excludeProductCategoryNames, sortKey, includeProductInformation, sortOrder, options)(fetch, basePath);
         },
         /**
@@ -7887,67 +7887,67 @@ export const AgreementProductsApiFactory = function (configuration?: Configurati
 export class AgreementProductsApi extends BaseAPI {
     /**
      * 
-     * @param {} [agreementTypeIds] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
-     * @param {} [priceListId] 
-     * @param {} [organizationId] 
-     * @param {} [customerTenantId] 
-     * @param {} [agreementId] 
-     * @param {} [isTrial] 
-     * @param {} [agreementIds] 
-     * @param {} [searchDate] 
-     * @param {} [includePartNumbers] 
-     * @param {} [includePublisherIds] 
-     * @param {} [includePublisherNames] 
-     * @param {} [includePoolNames] 
-     * @param {} [includeOperatingSystemNames] 
-     * @param {} [includeLevelNames] 
-     * @param {} [includeLanguageNames] 
-     * @param {} [includeLicenseAgreementTypeNames] 
-     * @param {} [includeLicenseTypeNames] 
-     * @param {} [includeProductFamilyNames] 
-     * @param {} [includeProductTypeNames] 
-     * @param {} [includeProgramNames] 
-     * @param {} [includeOfferingNames] 
-     * @param {} [includePurchasePeriodNames] 
-     * @param {} [includePurchaseUnitNames] 
-     * @param {} [includeVersionNames] 
-     * @param {} [includeRegionNames] 
-     * @param {} [includeProductCategoryNames] 
-     * @param {} [excludePartNumbers] 
-     * @param {} [excludePublisherIds] 
-     * @param {} [excludePublisherNames] 
-     * @param {} [excludePoolNames] 
-     * @param {} [excludeOperatingSystemNames] 
-     * @param {} [excludeLevelNames] 
-     * @param {} [excludeLanguageNames] 
-     * @param {} [excludeLicenseAgreementTypeNames] 
-     * @param {} [excludeLicenseTypeNames] 
-     * @param {} [excludeProductFamilyNames] 
-     * @param {} [excludeProductTypeNames] 
-     * @param {} [excludeProgramNames] 
-     * @param {} [excludeOfferingNames] 
-     * @param {} [excludePurchasePeriodNames] 
-     * @param {} [excludePurchaseUnitNames] 
-     * @param {} [excludeVersionNames] 
-     * @param {} [excludeRegionNames] 
-     * @param {} [excludeProductCategoryNames] 
-     * @param {} [sortKey] 
-     * @param {} [includeProductInformation] 
-     * @param {} [sortOrder] 
+     * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypeIds] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
+     * @param {number} [priceListId] 
+     * @param {number} [organizationId] 
+     * @param {number} [customerTenantId] 
+     * @param {number} [agreementId] 
+     * @param {boolean} [isTrial] 
+     * @param {Array<number>} [agreementIds] 
+     * @param {Date} [searchDate] 
+     * @param {Array<string>} [includePartNumbers] 
+     * @param {Array<number>} [includePublisherIds] 
+     * @param {Array<string>} [includePublisherNames] 
+     * @param {Array<string>} [includePoolNames] 
+     * @param {Array<string>} [includeOperatingSystemNames] 
+     * @param {Array<string>} [includeLevelNames] 
+     * @param {Array<string>} [includeLanguageNames] 
+     * @param {Array<string>} [includeLicenseAgreementTypeNames] 
+     * @param {Array<string>} [includeLicenseTypeNames] 
+     * @param {Array<string>} [includeProductFamilyNames] 
+     * @param {Array<string>} [includeProductTypeNames] 
+     * @param {Array<string>} [includeProgramNames] 
+     * @param {Array<string>} [includeOfferingNames] 
+     * @param {Array<string>} [includePurchasePeriodNames] 
+     * @param {Array<string>} [includePurchaseUnitNames] 
+     * @param {Array<string>} [includeVersionNames] 
+     * @param {Array<string>} [includeRegionNames] 
+     * @param {Array<string>} [includeProductCategoryNames] 
+     * @param {Array<string>} [excludePartNumbers] 
+     * @param {Array<number>} [excludePublisherIds] 
+     * @param {Array<string>} [excludePublisherNames] 
+     * @param {Array<string>} [excludePoolNames] 
+     * @param {Array<string>} [excludeOperatingSystemNames] 
+     * @param {Array<string>} [excludeLevelNames] 
+     * @param {Array<string>} [excludeLanguageNames] 
+     * @param {Array<string>} [excludeLicenseAgreementTypeNames] 
+     * @param {Array<string>} [excludeLicenseTypeNames] 
+     * @param {Array<string>} [excludeProductFamilyNames] 
+     * @param {Array<string>} [excludeProductTypeNames] 
+     * @param {Array<string>} [excludeProgramNames] 
+     * @param {Array<string>} [excludeOfferingNames] 
+     * @param {Array<string>} [excludePurchasePeriodNames] 
+     * @param {Array<string>} [excludePurchaseUnitNames] 
+     * @param {Array<string>} [excludeVersionNames] 
+     * @param {Array<string>} [excludeRegionNames] 
+     * @param {Array<string>} [excludeProductCategoryNames] 
+     * @param {string} [sortKey] 
+     * @param {boolean} [includeProductInformation] 
+     * @param {'Ascending' | 'Descending'} [sortOrder] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AgreementProductsApi
      */
-    public get(agreementTypeIds?: Array<string>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: string, options?: any) {
+    public get(agreementTypeIds?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, page?: number, pageSize?: number, search?: string, priceListId?: number, organizationId?: number, customerTenantId?: number, agreementId?: number, isTrial?: boolean, agreementIds?: Array<number>, searchDate?: Date, includePartNumbers?: Array<string>, includePublisherIds?: Array<number>, includePublisherNames?: Array<string>, includePoolNames?: Array<string>, includeOperatingSystemNames?: Array<string>, includeLevelNames?: Array<string>, includeLanguageNames?: Array<string>, includeLicenseAgreementTypeNames?: Array<string>, includeLicenseTypeNames?: Array<string>, includeProductFamilyNames?: Array<string>, includeProductTypeNames?: Array<string>, includeProgramNames?: Array<string>, includeOfferingNames?: Array<string>, includePurchasePeriodNames?: Array<string>, includePurchaseUnitNames?: Array<string>, includeVersionNames?: Array<string>, includeRegionNames?: Array<string>, includeProductCategoryNames?: Array<string>, excludePartNumbers?: Array<string>, excludePublisherIds?: Array<number>, excludePublisherNames?: Array<string>, excludePoolNames?: Array<string>, excludeOperatingSystemNames?: Array<string>, excludeLevelNames?: Array<string>, excludeLanguageNames?: Array<string>, excludeLicenseAgreementTypeNames?: Array<string>, excludeLicenseTypeNames?: Array<string>, excludeProductFamilyNames?: Array<string>, excludeProductTypeNames?: Array<string>, excludeProgramNames?: Array<string>, excludeOfferingNames?: Array<string>, excludePurchasePeriodNames?: Array<string>, excludePurchaseUnitNames?: Array<string>, excludeVersionNames?: Array<string>, excludeRegionNames?: Array<string>, excludeProductCategoryNames?: Array<string>, sortKey?: string, includeProductInformation?: boolean, sortOrder?: 'Ascending' | 'Descending', options?: any) {
         return AgreementProductsApiFp(this.configuration).get(agreementTypeIds, page, pageSize, search, priceListId, organizationId, customerTenantId, agreementId, isTrial, agreementIds, searchDate, includePartNumbers, includePublisherIds, includePublisherNames, includePoolNames, includeOperatingSystemNames, includeLevelNames, includeLanguageNames, includeLicenseAgreementTypeNames, includeLicenseTypeNames, includeProductFamilyNames, includeProductTypeNames, includeProgramNames, includeOfferingNames, includePurchasePeriodNames, includePurchaseUnitNames, includeVersionNames, includeRegionNames, includeProductCategoryNames, excludePartNumbers, excludePublisherIds, excludePublisherNames, excludePoolNames, excludeOperatingSystemNames, excludeLevelNames, excludeLanguageNames, excludeLicenseAgreementTypeNames, excludeLicenseTypeNames, excludeProductFamilyNames, excludeProductTypeNames, excludeProgramNames, excludeOfferingNames, excludePurchasePeriodNames, excludePurchaseUnitNames, excludeVersionNames, excludeRegionNames, excludeProductCategoryNames, sortKey, includeProductInformation, sortOrder, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [filter] 
+     * @param {AgreementProductFilter} [filter] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AgreementProductsApi
@@ -7958,7 +7958,7 @@ export class AgreementProductsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [filter] 
+     * @param {AgreementProductFilter} [filter] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AgreementProductsApi
@@ -7969,8 +7969,8 @@ export class AgreementProductsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} partNumber 
-     * @param {} [resellerCustomerId] 
+     * @param {string} partNumber 
+     * @param {number} [resellerCustomerId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AgreementProductsApi
@@ -8150,7 +8150,7 @@ export const AgreementReportsApiFactory = function (configuration?: Configuratio
 export class AgreementReportsApi extends BaseAPI {
     /**
      * 
-     * @param {} productContainerId 
+     * @param {number} productContainerId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AgreementReportsApi
@@ -8161,8 +8161,8 @@ export class AgreementReportsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} agreementId 
-     * @param {} [agreementReport] 
+     * @param {number} agreementId 
+     * @param {AgreementReport} [agreementReport] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AgreementReportsApi
@@ -8182,14 +8182,14 @@ export const AgreementsApiFetchParamCreator = function (configuration?: Configur
         /**
          * 
          * @param {number} [organizationId] 
-         * @param {Array&lt;number&gt;} [organizationIds] 
-         * @param {Array&lt;number&gt;} [pricelistIds] 
-         * @param {string} [status] 
-         * @param {Array&lt;string&gt;} [agreementTypes] 
-         * @param {Array&lt;number&gt;} [publisherIds] 
-         * @param {Array&lt;number&gt;} [programIds] 
+         * @param {Array<number>} [organizationIds] 
+         * @param {Array<number>} [pricelistIds] 
+         * @param {'None' | 'Active' | 'Inactive' | 'ActiveInactive'} [status] 
+         * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypes] 
+         * @param {Array<number>} [publisherIds] 
+         * @param {Array<number>} [programIds] 
          * @param {Date} [searchDate] 
-         * @param {Array&lt;number&gt;} [agreementIds] 
+         * @param {Array<number>} [agreementIds] 
          * @param {string} [salesPriceCurrency] 
          * @param {boolean} [termRequired] 
          * @param {number} [publisherId] 
@@ -8201,7 +8201,7 @@ export const AgreementsApiFetchParamCreator = function (configuration?: Configur
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: string, agreementTypes?: Array<string>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
+        get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: 'None' | 'Active' | 'Inactive' | 'ActiveInactive', agreementTypes?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Agreements`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -8306,14 +8306,14 @@ export const AgreementsApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {number} [organizationId] 
-         * @param {Array&lt;number&gt;} [organizationIds] 
-         * @param {Array&lt;number&gt;} [pricelistIds] 
-         * @param {string} [status] 
-         * @param {Array&lt;string&gt;} [agreementTypes] 
-         * @param {Array&lt;number&gt;} [publisherIds] 
-         * @param {Array&lt;number&gt;} [programIds] 
+         * @param {Array<number>} [organizationIds] 
+         * @param {Array<number>} [pricelistIds] 
+         * @param {'None' | 'Active' | 'Inactive' | 'ActiveInactive'} [status] 
+         * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypes] 
+         * @param {Array<number>} [publisherIds] 
+         * @param {Array<number>} [programIds] 
          * @param {Date} [searchDate] 
-         * @param {Array&lt;number&gt;} [agreementIds] 
+         * @param {Array<number>} [agreementIds] 
          * @param {string} [salesPriceCurrency] 
          * @param {boolean} [termRequired] 
          * @param {number} [publisherId] 
@@ -8325,7 +8325,7 @@ export const AgreementsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: string, agreementTypes?: Array<string>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AgreementCollection> {
+        get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: 'None' | 'Active' | 'Inactive' | 'ActiveInactive', agreementTypes?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<AgreementCollection> {
             const localVarFetchArgs = AgreementsApiFetchParamCreator(configuration).get(organizationId, organizationIds, pricelistIds, status, agreementTypes, publisherIds, programIds, searchDate, agreementIds, salesPriceCurrency, termRequired, publisherId, endDateFrom, endDateTo, page, pageSize, search, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -8349,14 +8349,14 @@ export const AgreementsApiFactory = function (configuration?: Configuration, fet
         /**
          * 
          * @param {number} [organizationId] 
-         * @param {Array&lt;number&gt;} [organizationIds] 
-         * @param {Array&lt;number&gt;} [pricelistIds] 
-         * @param {string} [status] 
-         * @param {Array&lt;string&gt;} [agreementTypes] 
-         * @param {Array&lt;number&gt;} [publisherIds] 
-         * @param {Array&lt;number&gt;} [programIds] 
+         * @param {Array<number>} [organizationIds] 
+         * @param {Array<number>} [pricelistIds] 
+         * @param {'None' | 'Active' | 'Inactive' | 'ActiveInactive'} [status] 
+         * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypes] 
+         * @param {Array<number>} [publisherIds] 
+         * @param {Array<number>} [programIds] 
          * @param {Date} [searchDate] 
-         * @param {Array&lt;number&gt;} [agreementIds] 
+         * @param {Array<number>} [agreementIds] 
          * @param {string} [salesPriceCurrency] 
          * @param {boolean} [termRequired] 
          * @param {number} [publisherId] 
@@ -8368,7 +8368,7 @@ export const AgreementsApiFactory = function (configuration?: Configuration, fet
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: string, agreementTypes?: Array<string>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options?: any) {
+        get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: 'None' | 'Active' | 'Inactive' | 'ActiveInactive', agreementTypes?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options?: any) {
             return AgreementsApiFp(configuration).get(organizationId, organizationIds, pricelistIds, status, agreementTypes, publisherIds, programIds, searchDate, agreementIds, salesPriceCurrency, termRequired, publisherId, endDateFrom, endDateTo, page, pageSize, search, options)(fetch, basePath);
         },
     };
@@ -8383,28 +8383,28 @@ export const AgreementsApiFactory = function (configuration?: Configuration, fet
 export class AgreementsApi extends BaseAPI {
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [organizationIds] 
-     * @param {} [pricelistIds] 
-     * @param {} [status] 
-     * @param {} [agreementTypes] 
-     * @param {} [publisherIds] 
-     * @param {} [programIds] 
-     * @param {} [searchDate] 
-     * @param {} [agreementIds] 
-     * @param {} [salesPriceCurrency] 
-     * @param {} [termRequired] 
-     * @param {} [publisherId] 
-     * @param {} [endDateFrom] 
-     * @param {} [endDateTo] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [organizationId] 
+     * @param {Array<number>} [organizationIds] 
+     * @param {Array<number>} [pricelistIds] 
+     * @param {'None' | 'Active' | 'Inactive' | 'ActiveInactive'} [status] 
+     * @param {Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>} [agreementTypes] 
+     * @param {Array<number>} [publisherIds] 
+     * @param {Array<number>} [programIds] 
+     * @param {Date} [searchDate] 
+     * @param {Array<number>} [agreementIds] 
+     * @param {string} [salesPriceCurrency] 
+     * @param {boolean} [termRequired] 
+     * @param {number} [publisherId] 
+     * @param {Date} [endDateFrom] 
+     * @param {Date} [endDateTo] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AgreementsApi
      */
-    public get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: string, agreementTypes?: Array<string>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options?: any) {
+    public get(organizationId?: number, organizationIds?: Array<number>, pricelistIds?: Array<number>, status?: 'None' | 'Active' | 'Inactive' | 'ActiveInactive', agreementTypes?: Array<'None' | 'LicenseAgreement' | 'OpenAgreement' | 'FrameAgreement' | 'SamAgreement' | 'ConsultingAgreement' | 'CloudSeatAgreement' | 'CloudUsageAgreement' | 'ReportingAgreement' | 'OtherAgreement' | 'Reserved1' | 'Reserved2' | 'Reserved3'>, publisherIds?: Array<number>, programIds?: Array<number>, searchDate?: Date, agreementIds?: Array<number>, salesPriceCurrency?: string, termRequired?: boolean, publisherId?: number, endDateFrom?: Date, endDateTo?: Date, page?: number, pageSize?: number, search?: string, options?: any) {
         return AgreementsApiFp(this.configuration).get(organizationId, organizationIds, pricelistIds, status, agreementTypes, publisherIds, programIds, searchDate, agreementIds, salesPriceCurrency, termRequired, publisherId, endDateFrom, endDateTo, page, pageSize, search, options)(this.fetch, this.basePath);
     }
 
@@ -8456,17 +8456,17 @@ export const AssetsApiFetchParamCreator = function (configuration?: Configuratio
          * @param {number} [resellerCustomerId] 
          * @param {number} [publisherId] 
          * @param {string} [externalOrderId] 
-         * @param {Array&lt;string&gt;} [externalOrderIds] 
+         * @param {Array<string>} [externalOrderIds] 
          * @param {string} [reservationId] 
-         * @param {string} [assetType] 
-         * @param {string} [status] 
+         * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+         * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
+        get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Assets`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -8536,17 +8536,17 @@ export const AssetsApiFetchParamCreator = function (configuration?: Configuratio
          * @param {number} [resellerCustomerId] 
          * @param {number} [publisherId] 
          * @param {string} [externalOrderId] 
-         * @param {Array&lt;string&gt;} [externalOrderIds] 
+         * @param {Array<string>} [externalOrderIds] 
          * @param {string} [reservationId] 
-         * @param {string} [assetType] 
-         * @param {string} [status] 
+         * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+         * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
+        getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Assets/orders`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -8678,17 +8678,17 @@ export const AssetsApiFp = function(configuration?: Configuration) {
          * @param {number} [resellerCustomerId] 
          * @param {number} [publisherId] 
          * @param {string} [externalOrderId] 
-         * @param {Array&lt;string&gt;} [externalOrderIds] 
+         * @param {Array<string>} [externalOrderIds] 
          * @param {string} [reservationId] 
-         * @param {string} [assetType] 
-         * @param {string} [status] 
+         * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+         * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAsset> {
+        get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAsset> {
             const localVarFetchArgs = AssetsApiFetchParamCreator(configuration).get(resellerCustomerId, publisherId, externalOrderId, externalOrderIds, reservationId, assetType, status, page, pageSize, search, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -8705,17 +8705,17 @@ export const AssetsApiFp = function(configuration?: Configuration) {
          * @param {number} [resellerCustomerId] 
          * @param {number} [publisherId] 
          * @param {string} [externalOrderId] 
-         * @param {Array&lt;string&gt;} [externalOrderIds] 
+         * @param {Array<string>} [externalOrderIds] 
          * @param {string} [reservationId] 
-         * @param {string} [assetType] 
-         * @param {string} [status] 
+         * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+         * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAssetOrder> {
+        getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAssetOrder> {
             const localVarFetchArgs = AssetsApiFetchParamCreator(configuration).getAssetOrdersAsync(resellerCustomerId, publisherId, externalOrderId, externalOrderIds, reservationId, assetType, status, page, pageSize, search, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -8768,17 +8768,17 @@ export const AssetsApiFactory = function (configuration?: Configuration, fetch?:
          * @param {number} [resellerCustomerId] 
          * @param {number} [publisherId] 
          * @param {string} [externalOrderId] 
-         * @param {Array&lt;string&gt;} [externalOrderIds] 
+         * @param {Array<string>} [externalOrderIds] 
          * @param {string} [reservationId] 
-         * @param {string} [assetType] 
-         * @param {string} [status] 
+         * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+         * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+        get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options?: any) {
             return AssetsApiFp(configuration).get(resellerCustomerId, publisherId, externalOrderId, externalOrderIds, reservationId, assetType, status, page, pageSize, search, options)(fetch, basePath);
         },
         /**
@@ -8786,17 +8786,17 @@ export const AssetsApiFactory = function (configuration?: Configuration, fetch?:
          * @param {number} [resellerCustomerId] 
          * @param {number} [publisherId] 
          * @param {string} [externalOrderId] 
-         * @param {Array&lt;string&gt;} [externalOrderIds] 
+         * @param {Array<string>} [externalOrderIds] 
          * @param {string} [reservationId] 
-         * @param {string} [assetType] 
-         * @param {string} [status] 
+         * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+         * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+        getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options?: any) {
             return AssetsApiFp(configuration).getAssetOrdersAsync(resellerCustomerId, publisherId, externalOrderId, externalOrderIds, reservationId, assetType, status, page, pageSize, search, options)(fetch, basePath);
         },
         /**
@@ -8820,7 +8820,7 @@ export const AssetsApiFactory = function (configuration?: Configuration, fetch?:
 export class AssetsApi extends BaseAPI {
     /**
      * 
-     * @param {} [order] 
+     * @param {AssetOrder} [order] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AssetsApi
@@ -8831,47 +8831,47 @@ export class AssetsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [resellerCustomerId] 
-     * @param {} [publisherId] 
-     * @param {} [externalOrderId] 
-     * @param {} [externalOrderIds] 
-     * @param {} [reservationId] 
-     * @param {} [assetType] 
-     * @param {} [status] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [resellerCustomerId] 
+     * @param {number} [publisherId] 
+     * @param {string} [externalOrderId] 
+     * @param {Array<string>} [externalOrderIds] 
+     * @param {string} [reservationId] 
+     * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+     * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AssetsApi
      */
-    public get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+    public get(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options?: any) {
         return AssetsApiFp(this.configuration).get(resellerCustomerId, publisherId, externalOrderId, externalOrderIds, reservationId, assetType, status, page, pageSize, search, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [resellerCustomerId] 
-     * @param {} [publisherId] 
-     * @param {} [externalOrderId] 
-     * @param {} [externalOrderIds] 
-     * @param {} [reservationId] 
-     * @param {} [assetType] 
-     * @param {} [status] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [resellerCustomerId] 
+     * @param {number} [publisherId] 
+     * @param {string} [externalOrderId] 
+     * @param {Array<string>} [externalOrderIds] 
+     * @param {string} [reservationId] 
+     * @param {'Reservation' | 'Software' | 'Subscription'} [assetType] 
+     * @param {'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All'} [status] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AssetsApi
      */
-    public getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: string, status?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+    public getAssetOrdersAsync(resellerCustomerId?: number, publisherId?: number, externalOrderId?: string, externalOrderIds?: Array<string>, reservationId?: string, assetType?: 'Reservation' | 'Software' | 'Subscription', status?: 'None' | 'Fulfilling' | 'Succeeded' | 'Cancelled' | 'All', page?: number, pageSize?: number, search?: string, options?: any) {
         return AssetsApiFp(this.configuration).getAssetOrdersAsync(resellerCustomerId, publisherId, externalOrderId, externalOrderIds, reservationId, assetType, status, page, pageSize, search, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [order] 
+     * @param {AssetOrder} [order] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AssetsApi
@@ -8929,14 +8929,14 @@ export const AwsAccountsApiFetchParamCreator = function (configuration?: Configu
          * @param {number} [organizationId] 
          * @param {number} [publisherId] 
          * @param {number} [consumerId] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
+        getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/AwsAccounts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -9062,14 +9062,14 @@ export const AwsAccountsApiFp = function(configuration?: Configuration) {
          * @param {number} [organizationId] 
          * @param {number} [publisherId] 
          * @param {number} [consumerId] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAwsAccount> {
+        getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfAwsAccount> {
             const localVarFetchArgs = AwsAccountsApiFetchParamCreator(configuration).getAwsAccounts(organizationId, publisherId, consumerId, customerTenantType, page, pageSize, search, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -9123,14 +9123,14 @@ export const AwsAccountsApiFactory = function (configuration?: Configuration, fe
          * @param {number} [organizationId] 
          * @param {number} [publisherId] 
          * @param {number} [consumerId] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+        getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options?: any) {
             return AwsAccountsApiFp(configuration).getAwsAccounts(organizationId, publisherId, consumerId, customerTenantType, page, pageSize, search, options)(fetch, basePath);
         },
         /**
@@ -9155,7 +9155,7 @@ export const AwsAccountsApiFactory = function (configuration?: Configuration, fe
 export class AwsAccountsApi extends BaseAPI {
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AwsAccountsApi
@@ -9166,25 +9166,25 @@ export class AwsAccountsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [publisherId] 
-     * @param {} [consumerId] 
-     * @param {} [customerTenantType] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [organizationId] 
+     * @param {number} [publisherId] 
+     * @param {number} [consumerId] 
+     * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AwsAccountsApi
      */
-    public getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+    public getAwsAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options?: any) {
         return AwsAccountsApiFp(this.configuration).getAwsAccounts(organizationId, publisherId, consumerId, customerTenantType, page, pageSize, search, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} id 
-     * @param {} [awsAccount] 
+     * @param {number} id 
+     * @param {AwsAccount} [awsAccount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AwsAccountsApi
@@ -9534,8 +9534,8 @@ export const AzurePlansApiFactory = function (configuration?: Configuration, fet
 export class AzurePlansApi extends BaseAPI {
     /**
      * 
-     * @param {} azurePlanId 
-     * @param {} [requestBody] 
+     * @param {number} azurePlanId 
+     * @param {CreateAzureSubscriptionRequest} [requestBody] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AzurePlansApi
@@ -9546,8 +9546,8 @@ export class AzurePlansApi extends BaseAPI {
 
     /**
      * 
-     * @param {} azurePlanId 
-     * @param {} id 
+     * @param {number} azurePlanId 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AzurePlansApi
@@ -9558,10 +9558,10 @@ export class AzurePlansApi extends BaseAPI {
 
     /**
      * 
-     * @param {} azurePlanId 
-     * @param {} [search] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {number} azurePlanId 
+     * @param {string} [search] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AzurePlansApi
@@ -9572,9 +9572,9 @@ export class AzurePlansApi extends BaseAPI {
 
     /**
      * 
-     * @param {} azurePlanId 
-     * @param {} id 
-     * @param {} [azureSubscription] 
+     * @param {number} azurePlanId 
+     * @param {number} id 
+     * @param {PutAzureSubscription} [azureSubscription] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AzurePlansApi
@@ -9801,7 +9801,7 @@ export const BillingCyclesApiFactory = function (configuration?: Configuration, 
 export class BillingCyclesApi extends BaseAPI {
     /**
      * 
-     * @param {} [includeUnknown] 
+     * @param {boolean} [includeUnknown] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BillingCyclesApi
@@ -9812,7 +9812,7 @@ export class BillingCyclesApi extends BaseAPI {
 
     /**
      * 
-     * @param {} productVariantId 
+     * @param {number} productVariantId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BillingCyclesApi
@@ -9915,7 +9915,7 @@ export const BillingStatementsApiFetchParamCreator = function (configuration?: C
          * 
          * @param {number} [invoiceProfileId] 
          * @param {number} [organizationId] 
-         * @param {string} [provisionType] 
+         * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {number} [page] 
@@ -9923,7 +9923,7 @@ export const BillingStatementsApiFetchParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options: any = {}): FetchArgs {
+        getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/BillingStatements`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -9980,7 +9980,7 @@ export const BillingStatementsApiFetchParamCreator = function (configuration?: C
          * 
          * @param {number} [invoiceProfileId] 
          * @param {number} [organizationId] 
-         * @param {string} [provisionType] 
+         * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {number} [page] 
@@ -9988,7 +9988,7 @@ export const BillingStatementsApiFetchParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options: any = {}): FetchArgs {
+        getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/BillingStatements/grouped`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -10126,7 +10126,7 @@ export const BillingStatementsApiFp = function(configuration?: Configuration) {
          * 
          * @param {number} [invoiceProfileId] 
          * @param {number} [organizationId] 
-         * @param {string} [provisionType] 
+         * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {number} [page] 
@@ -10134,7 +10134,7 @@ export const BillingStatementsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfBillingStatement> {
+        getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfBillingStatement> {
             const localVarFetchArgs = BillingStatementsApiFetchParamCreator(configuration).getBillingStatements(invoiceProfileId, organizationId, provisionType, from, to, page, pageSize, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -10150,7 +10150,7 @@ export const BillingStatementsApiFp = function(configuration?: Configuration) {
          * 
          * @param {number} [invoiceProfileId] 
          * @param {number} [organizationId] 
-         * @param {string} [provisionType] 
+         * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {number} [page] 
@@ -10158,7 +10158,7 @@ export const BillingStatementsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfGroupedBillingStatement> {
+        getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfGroupedBillingStatement> {
             const localVarFetchArgs = BillingStatementsApiFetchParamCreator(configuration).getGroupedBillingStatements(invoiceProfileId, organizationId, provisionType, from, to, page, pageSize, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -10219,7 +10219,7 @@ export const BillingStatementsApiFactory = function (configuration?: Configurati
          * 
          * @param {number} [invoiceProfileId] 
          * @param {number} [organizationId] 
-         * @param {string} [provisionType] 
+         * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {number} [page] 
@@ -10227,14 +10227,14 @@ export const BillingStatementsApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
+        getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
             return BillingStatementsApiFp(configuration).getBillingStatements(invoiceProfileId, organizationId, provisionType, from, to, page, pageSize, options)(fetch, basePath);
         },
         /**
          * 
          * @param {number} [invoiceProfileId] 
          * @param {number} [organizationId] 
-         * @param {string} [provisionType] 
+         * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {number} [page] 
@@ -10242,7 +10242,7 @@ export const BillingStatementsApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
+        getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
             return BillingStatementsApiFp(configuration).getGroupedBillingStatements(invoiceProfileId, organizationId, provisionType, from, to, page, pageSize, options)(fetch, basePath);
         },
         /**
@@ -10266,7 +10266,7 @@ export const BillingStatementsApiFactory = function (configuration?: Configurati
 export class BillingStatementsApi extends BaseAPI {
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BillingStatementsApi
@@ -10277,7 +10277,7 @@ export class BillingStatementsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BillingStatementsApi
@@ -10288,41 +10288,41 @@ export class BillingStatementsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [invoiceProfileId] 
-     * @param {} [organizationId] 
-     * @param {} [provisionType] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {number} [invoiceProfileId] 
+     * @param {number} [organizationId] 
+     * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BillingStatementsApi
      */
-    public getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
+    public getBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
         return BillingStatementsApiFp(this.configuration).getBillingStatements(invoiceProfileId, organizationId, provisionType, from, to, page, pageSize, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [invoiceProfileId] 
-     * @param {} [organizationId] 
-     * @param {} [provisionType] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {number} [invoiceProfileId] 
+     * @param {number} [organizationId] 
+     * @param {'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace'} [provisionType] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BillingStatementsApi
      */
-    public getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: string, from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
+    public getGroupedBillingStatements(invoiceProfileId?: number, organizationId?: number, provisionType?: 'None' | 'Seat' | 'Usage' | 'OneTime' | 'Crayon' | 'AzureMarketplace', from?: Date, to?: Date, page?: number, pageSize?: number, options?: any) {
         return BillingStatementsApiFp(this.configuration).getGroupedBillingStatements(invoiceProfileId, organizationId, provisionType, from, to, page, pageSize, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BillingStatementsApi
@@ -10438,8 +10438,8 @@ export const BlogItemsApiFactory = function (configuration?: Configuration, fetc
 export class BlogItemsApi extends BaseAPI {
     /**
      * 
-     * @param {} [count] 
-     * @param {} [organizationId] 
+     * @param {number} [count] 
+     * @param {number} [organizationId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof BlogItemsApi
@@ -10820,7 +10820,7 @@ export const ClientsApiFactory = function (configuration?: Configuration, fetch?
 export class ClientsApi extends BaseAPI {
     /**
      * 
-     * @param {} clientId 
+     * @param {string} clientId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClientsApi
@@ -10831,9 +10831,9 @@ export class ClientsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClientsApi
@@ -10844,7 +10844,7 @@ export class ClientsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} clientId 
+     * @param {string} clientId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClientsApi
@@ -10855,7 +10855,7 @@ export class ClientsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [client] 
+     * @param {Client} [client] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClientsApi
@@ -10866,8 +10866,8 @@ export class ClientsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} clientId 
-     * @param {} [client] 
+     * @param {string} clientId 
+     * @param {Client} [client] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClientsApi
@@ -11255,7 +11255,7 @@ export const ConsumersApiFactory = function (configuration?: Configuration, fetc
 export class ConsumersApi extends BaseAPI {
     /**
      * 
-     * @param {} [consumer] 
+     * @param {Consumer} [consumer] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumersApi
@@ -11266,7 +11266,7 @@ export class ConsumersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumersApi
@@ -11277,10 +11277,10 @@ export class ConsumersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [search] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {number} [organizationId] 
+     * @param {string} [search] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumersApi
@@ -11291,7 +11291,7 @@ export class ConsumersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumersApi
@@ -11302,8 +11302,8 @@ export class ConsumersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [consumer] 
+     * @param {number} id 
+     * @param {Consumer} [consumer] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConsumersApi
@@ -11361,14 +11361,14 @@ export const CrayonAccountsApiFetchParamCreator = function (configuration?: Conf
          * @param {number} [organizationId] 
          * @param {number} [publisherId] 
          * @param {number} [consumerId] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
+        getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/CrayonAccounts`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -11529,14 +11529,14 @@ export const CrayonAccountsApiFp = function(configuration?: Configuration) {
          * @param {number} [organizationId] 
          * @param {number} [publisherId] 
          * @param {number} [consumerId] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfCrayonAccount> {
+        getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfCrayonAccount> {
             const localVarFetchArgs = CrayonAccountsApiFetchParamCreator(configuration).getCrayonAccounts(organizationId, publisherId, consumerId, customerTenantType, page, pageSize, search, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -11608,14 +11608,14 @@ export const CrayonAccountsApiFactory = function (configuration?: Configuration,
          * @param {number} [organizationId] 
          * @param {number} [publisherId] 
          * @param {number} [consumerId] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+        getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options?: any) {
             return CrayonAccountsApiFp(configuration).getCrayonAccounts(organizationId, publisherId, consumerId, customerTenantType, page, pageSize, search, options)(fetch, basePath);
         },
         /**
@@ -11649,7 +11649,7 @@ export const CrayonAccountsApiFactory = function (configuration?: Configuration,
 export class CrayonAccountsApi extends BaseAPI {
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CrayonAccountsApi
@@ -11660,24 +11660,24 @@ export class CrayonAccountsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [publisherId] 
-     * @param {} [consumerId] 
-     * @param {} [customerTenantType] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [organizationId] 
+     * @param {number} [publisherId] 
+     * @param {number} [consumerId] 
+     * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CrayonAccountsApi
      */
-    public getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: string, page?: number, pageSize?: number, search?: string, options?: any) {
+    public getCrayonAccounts(organizationId?: number, publisherId?: number, consumerId?: number, customerTenantType?: 'None' | 'T1' | 'T2', page?: number, pageSize?: number, search?: string, options?: any) {
         return CrayonAccountsApiFp(this.configuration).getCrayonAccounts(organizationId, publisherId, consumerId, customerTenantType, page, pageSize, search, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [crayonAccount] 
+     * @param {CrayonAccount} [crayonAccount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CrayonAccountsApi
@@ -11688,8 +11688,8 @@ export class CrayonAccountsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [crayonAccount] 
+     * @param {number} id 
+     * @param {CrayonAccount} [crayonAccount] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CrayonAccountsApi
@@ -11750,11 +11750,11 @@ export const CustomerTenantAgreementsApiFetchParamCreator = function (configurat
         /**
          * 
          * @param {number} customerTenantId 
-         * @param {string} [agreementTypeConsent] 
+         * @param {'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement'} [agreementTypeConsent] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(customerTenantId: number, agreementTypeConsent?: string, options: any = {}): FetchArgs {
+        get(customerTenantId: number, agreementTypeConsent?: 'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement', options: any = {}): FetchArgs {
             // verify required parameter 'customerTenantId' is not null or undefined
             if (customerTenantId === null || customerTenantId === undefined) {
                 throw new RequiredError('customerTenantId','Required parameter customerTenantId was null or undefined when calling get.');
@@ -11819,11 +11819,11 @@ export const CustomerTenantAgreementsApiFp = function(configuration?: Configurat
         /**
          * 
          * @param {number} customerTenantId 
-         * @param {string} [agreementTypeConsent] 
+         * @param {'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement'} [agreementTypeConsent] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(customerTenantId: number, agreementTypeConsent?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfServiceAccountAgreement> {
+        get(customerTenantId: number, agreementTypeConsent?: 'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement', options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfServiceAccountAgreement> {
             const localVarFetchArgs = CustomerTenantAgreementsApiFetchParamCreator(configuration).get(customerTenantId, agreementTypeConsent, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -11857,11 +11857,11 @@ export const CustomerTenantAgreementsApiFactory = function (configuration?: Conf
         /**
          * 
          * @param {number} customerTenantId 
-         * @param {string} [agreementTypeConsent] 
+         * @param {'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement'} [agreementTypeConsent] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(customerTenantId: number, agreementTypeConsent?: string, options?: any) {
+        get(customerTenantId: number, agreementTypeConsent?: 'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement', options?: any) {
             return CustomerTenantAgreementsApiFp(configuration).get(customerTenantId, agreementTypeConsent, options)(fetch, basePath);
         },
     };
@@ -11876,8 +11876,8 @@ export const CustomerTenantAgreementsApiFactory = function (configuration?: Conf
 export class CustomerTenantAgreementsApi extends BaseAPI {
     /**
      * 
-     * @param {} customerTenantId 
-     * @param {} [agreement] 
+     * @param {number} customerTenantId 
+     * @param {ServiceAccountAgreement} [agreement] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantAgreementsApi
@@ -11888,13 +11888,13 @@ export class CustomerTenantAgreementsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} customerTenantId 
-     * @param {} [agreementTypeConsent] 
+     * @param {number} customerTenantId 
+     * @param {'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement'} [agreementTypeConsent] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantAgreementsApi
      */
-    public get(customerTenantId: number, agreementTypeConsent?: string, options?: any) {
+    public get(customerTenantId: number, agreementTypeConsent?: 'MicrosoftCloudAgreement' | 'MicrosoftCustomerAgreement', options?: any) {
         return CustomerTenantAgreementsApiFp(this.configuration).get(customerTenantId, agreementTypeConsent, options)(this.fetch, this.basePath);
     }
 
@@ -11990,7 +11990,7 @@ export const CustomerTenantsApiFetchParamCreator = function (configuration?: Con
          * @param {number} [consumerId] 
          * @param {string} [domain] 
          * @param {string} [domainPrefix] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [invoiceProfileId] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -11998,7 +11998,7 @@ export const CustomerTenantsApiFetchParamCreator = function (configuration?: Con
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: string, invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
+        get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: 'None' | 'T1' | 'T2', invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/CustomerTenants`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -12305,7 +12305,7 @@ export const CustomerTenantsApiFp = function(configuration?: Configuration) {
          * @param {number} [consumerId] 
          * @param {string} [domain] 
          * @param {string} [domainPrefix] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [invoiceProfileId] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -12313,7 +12313,7 @@ export const CustomerTenantsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: string, invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfCustomerTenant> {
+        get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: 'None' | 'T1' | 'T2', invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfCustomerTenant> {
             const localVarFetchArgs = CustomerTenantsApiFetchParamCreator(configuration).get(organizationId, publisherId, programId, consumerId, domain, domainPrefix, customerTenantType, invoiceProfileId, page, pageSize, search, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -12452,7 +12452,7 @@ export const CustomerTenantsApiFactory = function (configuration?: Configuration
          * @param {number} [consumerId] 
          * @param {string} [domain] 
          * @param {string} [domainPrefix] 
-         * @param {string} [customerTenantType] 
+         * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
          * @param {number} [invoiceProfileId] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -12460,7 +12460,7 @@ export const CustomerTenantsApiFactory = function (configuration?: Configuration
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: string, invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
+        get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: 'None' | 'T1' | 'T2', invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
             return CustomerTenantsApiFp(configuration).get(organizationId, publisherId, programId, consumerId, domain, domainPrefix, customerTenantType, invoiceProfileId, page, pageSize, search, options)(fetch, basePath);
         },
         /**
@@ -12521,8 +12521,8 @@ export const CustomerTenantsApiFactory = function (configuration?: Configuration
 export class CustomerTenantsApi extends BaseAPI {
     /**
      * 
-     * @param {} [existingTenant] 
-     * @param {} [syncFromPublisher] 
+     * @param {CustomerTenantDetailed} [existingTenant] 
+     * @param {boolean} [syncFromPublisher] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
@@ -12533,7 +12533,7 @@ export class CustomerTenantsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
@@ -12544,28 +12544,28 @@ export class CustomerTenantsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [publisherId] 
-     * @param {} [programId] 
-     * @param {} [consumerId] 
-     * @param {} [domain] 
-     * @param {} [domainPrefix] 
-     * @param {} [customerTenantType] 
-     * @param {} [invoiceProfileId] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [organizationId] 
+     * @param {number} [publisherId] 
+     * @param {number} [programId] 
+     * @param {number} [consumerId] 
+     * @param {string} [domain] 
+     * @param {string} [domainPrefix] 
+     * @param {'None' | 'T1' | 'T2'} [customerTenantType] 
+     * @param {number} [invoiceProfileId] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
      */
-    public get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: string, invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
+    public get(organizationId?: number, publisherId?: number, programId?: number, consumerId?: number, domain?: string, domainPrefix?: string, customerTenantType?: 'None' | 'T1' | 'T2', invoiceProfileId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
         return CustomerTenantsApiFp(this.configuration).get(organizationId, publisherId, programId, consumerId, domain, domainPrefix, customerTenantType, invoiceProfileId, page, pageSize, search, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} customerTenantId 
+     * @param {number} customerTenantId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
@@ -12576,7 +12576,7 @@ export class CustomerTenantsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
@@ -12587,7 +12587,7 @@ export class CustomerTenantsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
@@ -12598,7 +12598,7 @@ export class CustomerTenantsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [customerTenant] 
+     * @param {CustomerTenantDetailed} [customerTenant] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
@@ -12609,8 +12609,8 @@ export class CustomerTenantsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [customerTenant] 
+     * @param {number} id 
+     * @param {CustomerTenantDetailed} [customerTenant] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof CustomerTenantsApi
@@ -12820,7 +12820,7 @@ export const FacebookOrdersApiFactory = function (configuration?: Configuration,
 export class FacebookOrdersApi extends BaseAPI {
     /**
      * 
-     * @param {} [order] 
+     * @param {FacebookOrder} [order] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FacebookOrdersApi
@@ -12929,7 +12929,7 @@ export const GoogleOrdersApiFactory = function (configuration?: Configuration, f
 export class GoogleOrdersApi extends BaseAPI {
     /**
      * 
-     * @param {} [order] 
+     * @param {GoogleOrder} [order] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GoogleOrdersApi
@@ -13324,7 +13324,7 @@ export const GroupingsApiFactory = function (configuration?: Configuration, fetc
 export class GroupingsApi extends BaseAPI {
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupingsApi
@@ -13335,11 +13335,11 @@ export class GroupingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [includeRemoved] 
-     * @param {} [search] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {number} [organizationId] 
+     * @param {boolean} [includeRemoved] 
+     * @param {string} [search] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupingsApi
@@ -13350,7 +13350,7 @@ export class GroupingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupingsApi
@@ -13361,7 +13361,7 @@ export class GroupingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [grouping] 
+     * @param {Grouping} [grouping] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupingsApi
@@ -13372,8 +13372,8 @@ export class GroupingsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [grouping] 
+     * @param {number} id 
+     * @param {Grouping} [grouping] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GroupingsApi
@@ -13761,7 +13761,7 @@ export const InvoiceProfilesApiFactory = function (configuration?: Configuration
 export class InvoiceProfilesApi extends BaseAPI {
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvoiceProfilesApi
@@ -13772,10 +13772,10 @@ export class InvoiceProfilesApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [organizationId] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvoiceProfilesApi
@@ -13786,7 +13786,7 @@ export class InvoiceProfilesApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvoiceProfilesApi
@@ -13797,7 +13797,7 @@ export class InvoiceProfilesApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [invoiceProfile] 
+     * @param {InvoiceProfile} [invoiceProfile] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvoiceProfilesApi
@@ -13808,8 +13808,8 @@ export class InvoiceProfilesApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [invoiceProfile] 
+     * @param {number} id 
+     * @param {InvoiceProfile} [invoiceProfile] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InvoiceProfilesApi
@@ -13828,8 +13828,8 @@ export const ManagementLinksApiFetchParamCreator = function (configuration?: Con
     return {
         /**
          * 
-         * @param {Array&lt;number&gt;} [subscriptionIds] 
-         * @param {Array&lt;number&gt;} [resellerCustomerIds] 
+         * @param {Array<number>} [subscriptionIds] 
+         * @param {Array<number>} [resellerCustomerIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
@@ -13878,8 +13878,8 @@ export const ManagementLinksApiFetchParamCreator = function (configuration?: Con
         },
         /**
          * 
-         * @param {Array&lt;number&gt;} [subscriptionIds] 
-         * @param {Array&lt;number&gt;} [resellerCustomerIds] 
+         * @param {Array<number>} [subscriptionIds] 
+         * @param {Array<number>} [resellerCustomerIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
@@ -13937,8 +13937,8 @@ export const ManagementLinksApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {Array&lt;number&gt;} [subscriptionIds] 
-         * @param {Array&lt;number&gt;} [resellerCustomerIds] 
+         * @param {Array<number>} [subscriptionIds] 
+         * @param {Array<number>} [resellerCustomerIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
@@ -13958,8 +13958,8 @@ export const ManagementLinksApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {Array&lt;number&gt;} [subscriptionIds] 
-         * @param {Array&lt;number&gt;} [resellerCustomerIds] 
+         * @param {Array<number>} [subscriptionIds] 
+         * @param {Array<number>} [resellerCustomerIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
@@ -13988,8 +13988,8 @@ export const ManagementLinksApiFactory = function (configuration?: Configuration
     return {
         /**
          * 
-         * @param {Array&lt;number&gt;} [subscriptionIds] 
-         * @param {Array&lt;number&gt;} [resellerCustomerIds] 
+         * @param {Array<number>} [subscriptionIds] 
+         * @param {Array<number>} [resellerCustomerIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
@@ -14000,8 +14000,8 @@ export const ManagementLinksApiFactory = function (configuration?: Configuration
         },
         /**
          * 
-         * @param {Array&lt;number&gt;} [subscriptionIds] 
-         * @param {Array&lt;number&gt;} [resellerCustomerIds] 
+         * @param {Array<number>} [subscriptionIds] 
+         * @param {Array<number>} [resellerCustomerIds] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
@@ -14022,10 +14022,10 @@ export const ManagementLinksApiFactory = function (configuration?: Configuration
 export class ManagementLinksApi extends BaseAPI {
     /**
      * 
-     * @param {} [subscriptionIds] 
-     * @param {} [resellerCustomerIds] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {Array<number>} [subscriptionIds] 
+     * @param {Array<number>} [resellerCustomerIds] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagementLinksApi
@@ -14036,10 +14036,10 @@ export class ManagementLinksApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [subscriptionIds] 
-     * @param {} [resellerCustomerIds] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {Array<number>} [subscriptionIds] 
+     * @param {Array<number>} [resellerCustomerIds] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ManagementLinksApi
@@ -14259,7 +14259,7 @@ export const OrganizationAccessApiFetchParamCreator = function (configuration?: 
         },
         /**
          * 
-         * @param {Array&lt;OrganizationAccess&gt;} [list] 
+         * @param {Array<OrganizationAccess>} [list] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14345,7 +14345,7 @@ export const OrganizationAccessApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {Array&lt;OrganizationAccess&gt;} [list] 
+         * @param {Array<OrganizationAccess>} [list] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14396,7 +14396,7 @@ export const OrganizationAccessApiFactory = function (configuration?: Configurat
         },
         /**
          * 
-         * @param {Array&lt;OrganizationAccess&gt;} [list] 
+         * @param {Array<OrganizationAccess>} [list] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -14415,10 +14415,10 @@ export const OrganizationAccessApiFactory = function (configuration?: Configurat
 export class OrganizationAccessApi extends BaseAPI {
     /**
      * 
-     * @param {} [userId] 
-     * @param {} [organizationId] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {string} [userId] 
+     * @param {number} [organizationId] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationAccessApi
@@ -14429,10 +14429,10 @@ export class OrganizationAccessApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [userId] 
-     * @param {} [organizationId] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {string} [userId] 
+     * @param {number} [organizationId] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationAccessApi
@@ -14443,7 +14443,7 @@ export class OrganizationAccessApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [list] 
+     * @param {Array<OrganizationAccess>} [list] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationAccessApi
@@ -14755,9 +14755,9 @@ export const OrganizationsApiFactory = function (configuration?: Configuration, 
 export class OrganizationsApi extends BaseAPI {
     /**
      * 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationsApi
@@ -14768,7 +14768,7 @@ export class OrganizationsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationsApi
@@ -14779,7 +14779,7 @@ export class OrganizationsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} organizationId 
+     * @param {number} organizationId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationsApi
@@ -14790,7 +14790,7 @@ export class OrganizationsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationsApi
@@ -15011,8 +15011,8 @@ export const ProductContainersApiFetchParamCreator = function (configuration?: C
          * @param {number} [month] 
          * @param {string} [userId] 
          * @param {string} [sentByUserId] 
-         * @param {string} [type] 
-         * @param {string} [category] 
+         * @param {'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template'} [type] 
+         * @param {'None' | 'Seat' | 'Report'} [category] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {boolean} [includeRemoved] 
@@ -15020,7 +15020,7 @@ export const ProductContainersApiFetchParamCreator = function (configuration?: C
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: string, category?: string, from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options: any = {}): FetchArgs {
+        get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: 'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template', category?: 'None' | 'Seat' | 'Report', from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/ProductContainers`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -15370,8 +15370,8 @@ export const ProductContainersApiFp = function(configuration?: Configuration) {
          * @param {number} [month] 
          * @param {string} [userId] 
          * @param {string} [sentByUserId] 
-         * @param {string} [type] 
-         * @param {string} [category] 
+         * @param {'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template'} [type] 
+         * @param {'None' | 'Seat' | 'Report'} [category] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {boolean} [includeRemoved] 
@@ -15379,7 +15379,7 @@ export const ProductContainersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: string, category?: string, from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfProductContainer> {
+        get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: 'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template', category?: 'None' | 'Seat' | 'Report', from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfProductContainer> {
             const localVarFetchArgs = ProductContainersApiFetchParamCreator(configuration).get(organizationId, search, page, pageSize, activeDraft, programId, year, month, userId, sentByUserId, type, category, from, to, includeRemoved, includeSubsidiaries, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -15528,8 +15528,8 @@ export const ProductContainersApiFactory = function (configuration?: Configurati
          * @param {number} [month] 
          * @param {string} [userId] 
          * @param {string} [sentByUserId] 
-         * @param {string} [type] 
-         * @param {string} [category] 
+         * @param {'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template'} [type] 
+         * @param {'None' | 'Seat' | 'Report'} [category] 
          * @param {Date} [from] 
          * @param {Date} [to] 
          * @param {boolean} [includeRemoved] 
@@ -15537,7 +15537,7 @@ export const ProductContainersApiFactory = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: string, category?: string, from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options?: any) {
+        get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: 'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template', category?: 'None' | 'Seat' | 'Report', from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options?: any) {
             return ProductContainersApiFp(configuration).get(organizationId, search, page, pageSize, activeDraft, programId, year, month, userId, sentByUserId, type, category, from, to, includeRemoved, includeSubsidiaries, options)(fetch, basePath);
         },
         /**
@@ -15601,11 +15601,11 @@ export const ProductContainersApiFactory = function (configuration?: Configurati
 export class ProductContainersApi extends BaseAPI {
     /**
      * 
-     * @param {} [year] 
-     * @param {} [month] 
-     * @param {} [programId] 
-     * @param {} [organizationId] 
-     * @param {} [copyLast] 
+     * @param {number} [year] 
+     * @param {number} [month] 
+     * @param {number} [programId] 
+     * @param {number} [organizationId] 
+     * @param {boolean} [copyLast] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
@@ -15616,7 +15616,7 @@ export class ProductContainersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
@@ -15627,33 +15627,33 @@ export class ProductContainersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [search] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [activeDraft] 
-     * @param {} [programId] 
-     * @param {} [year] 
-     * @param {} [month] 
-     * @param {} [userId] 
-     * @param {} [sentByUserId] 
-     * @param {} [type] 
-     * @param {} [category] 
-     * @param {} [from] 
-     * @param {} [to] 
-     * @param {} [includeRemoved] 
-     * @param {} [includeSubsidiaries] 
+     * @param {number} [organizationId] 
+     * @param {string} [search] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {boolean} [activeDraft] 
+     * @param {number} [programId] 
+     * @param {number} [year] 
+     * @param {number} [month] 
+     * @param {string} [userId] 
+     * @param {string} [sentByUserId] 
+     * @param {'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template'} [type] 
+     * @param {'None' | 'Seat' | 'Report'} [category] 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
+     * @param {boolean} [includeRemoved] 
+     * @param {boolean} [includeSubsidiaries] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
      */
-    public get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: string, category?: string, from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options?: any) {
+    public get(organizationId?: number, search?: string, page?: number, pageSize?: number, activeDraft?: boolean, programId?: number, year?: number, month?: number, userId?: string, sentByUserId?: string, type?: 'None' | 'Draft' | 'Request' | 'Order' | 'Quote' | 'Template', category?: 'None' | 'Seat' | 'Report', from?: Date, to?: Date, includeRemoved?: boolean, includeSubsidiaries?: boolean, options?: any) {
         return ProductContainersApiFp(this.configuration).get(organizationId, search, page, pageSize, activeDraft, programId, year, month, userId, sentByUserId, type, category, from, to, includeRemoved, includeSubsidiaries, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
@@ -15664,7 +15664,7 @@ export class ProductContainersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
@@ -15675,7 +15675,7 @@ export class ProductContainersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
+     * @param {number} [organizationId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
@@ -15686,9 +15686,9 @@ export class ProductContainersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} productContainerId 
-     * @param {} productRowId 
-     * @param {} [productRowPatch] 
+     * @param {number} productContainerId 
+     * @param {number} productRowId 
+     * @param {ProductRowPatch} [productRowPatch] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
@@ -15699,9 +15699,9 @@ export class ProductContainersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [productContainer] 
-     * @param {} [requireEulaAnalysis] 
+     * @param {number} id 
+     * @param {ProductContainer} [productContainer] 
+     * @param {boolean} [requireEulaAnalysis] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProductContainersApi
@@ -15721,7 +15721,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
         /**
          * 
          * @param {number} [publisherId] 
-         * @param {string} [programType] 
+         * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
@@ -15729,7 +15729,7 @@ export const ProgramsApiFetchParamCreator = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(publisherId?: number, programType?: string, page?: number, pageSize?: number, search?: string, organizationId?: number, options: any = {}): FetchArgs {
+        get(publisherId?: number, programType?: 'None' | 'License' | 'Report' | 'Cloud', page?: number, pageSize?: number, search?: string, organizationId?: number, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Programs`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -15826,7 +15826,7 @@ export const ProgramsApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {number} [publisherId] 
-         * @param {string} [programType] 
+         * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
@@ -15834,7 +15834,7 @@ export const ProgramsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(publisherId?: number, programType?: string, page?: number, pageSize?: number, search?: string, organizationId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfProgram> {
+        get(publisherId?: number, programType?: 'None' | 'License' | 'Report' | 'Cloud', page?: number, pageSize?: number, search?: string, organizationId?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfProgram> {
             const localVarFetchArgs = ProgramsApiFetchParamCreator(configuration).get(publisherId, programType, page, pageSize, search, organizationId, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -15876,7 +15876,7 @@ export const ProgramsApiFactory = function (configuration?: Configuration, fetch
         /**
          * 
          * @param {number} [publisherId] 
-         * @param {string} [programType] 
+         * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
@@ -15884,7 +15884,7 @@ export const ProgramsApiFactory = function (configuration?: Configuration, fetch
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(publisherId?: number, programType?: string, page?: number, pageSize?: number, search?: string, organizationId?: number, options?: any) {
+        get(publisherId?: number, programType?: 'None' | 'License' | 'Report' | 'Cloud', page?: number, pageSize?: number, search?: string, organizationId?: number, options?: any) {
             return ProgramsApiFp(configuration).get(publisherId, programType, page, pageSize, search, organizationId, options)(fetch, basePath);
         },
         /**
@@ -15908,23 +15908,23 @@ export const ProgramsApiFactory = function (configuration?: Configuration, fetch
 export class ProgramsApi extends BaseAPI {
     /**
      * 
-     * @param {} [publisherId] 
-     * @param {} [programType] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
-     * @param {} [organizationId] 
+     * @param {number} [publisherId] 
+     * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
+     * @param {number} [organizationId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
      */
-    public get(publisherId?: number, programType?: string, page?: number, pageSize?: number, search?: string, organizationId?: number, options?: any) {
+    public get(publisherId?: number, programType?: 'None' | 'License' | 'Report' | 'Cloud', page?: number, pageSize?: number, search?: string, organizationId?: number, options?: any) {
         return ProgramsApiFp(this.configuration).get(publisherId, programType, page, pageSize, search, organizationId, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProgramsApi
@@ -15943,15 +15943,15 @@ export const PublishersApiFetchParamCreator = function (configuration?: Configur
     return {
         /**
          * 
-         * @param {Array&lt;string&gt;} [names] 
+         * @param {Array<string>} [names] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
-         * @param {string} [programType] 
+         * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: string, options: any = {}): FetchArgs {
+        get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: 'None' | 'License' | 'Report' | 'Cloud', options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Publishers`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -16043,15 +16043,15 @@ export const PublishersApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {Array&lt;string&gt;} [names] 
+         * @param {Array<string>} [names] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
-         * @param {string} [programType] 
+         * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfPublisher> {
+        get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: 'None' | 'License' | 'Report' | 'Cloud', options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfPublisher> {
             const localVarFetchArgs = PublishersApiFetchParamCreator(configuration).get(names, page, pageSize, search, programType, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -16092,15 +16092,15 @@ export const PublishersApiFactory = function (configuration?: Configuration, fet
     return {
         /**
          * 
-         * @param {Array&lt;string&gt;} [names] 
+         * @param {Array<string>} [names] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {string} [search] 
-         * @param {string} [programType] 
+         * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: string, options?: any) {
+        get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: 'None' | 'License' | 'Report' | 'Cloud', options?: any) {
             return PublishersApiFp(configuration).get(names, page, pageSize, search, programType, options)(fetch, basePath);
         },
         /**
@@ -16124,22 +16124,22 @@ export const PublishersApiFactory = function (configuration?: Configuration, fet
 export class PublishersApi extends BaseAPI {
     /**
      * 
-     * @param {} [names] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
-     * @param {} [programType] 
+     * @param {Array<string>} [names] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
+     * @param {'None' | 'License' | 'Report' | 'Cloud'} [programType] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PublishersApi
      */
-    public get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: string, options?: any) {
+    public get(names?: Array<string>, page?: number, pageSize?: number, search?: string, programType?: 'None' | 'License' | 'Report' | 'Cloud', options?: any) {
         return PublishersApiFp(this.configuration).get(names, page, pageSize, search, programType, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PublishersApi
@@ -16158,7 +16158,7 @@ export const RegionsApiFetchParamCreator = function (configuration?: Configurati
     return {
         /**
          * 
-         * @param {string} [regionList] 
+         * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
          * @param {number} [organizationId] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -16166,7 +16166,7 @@ export const RegionsApiFetchParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(regionList?: string, organizationId?: number, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
+        get(regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', organizationId?: number, page?: number, pageSize?: number, search?: string, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Regions`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -16214,11 +16214,11 @@ export const RegionsApiFetchParamCreator = function (configuration?: Configurati
         /**
          * 
          * @param {string} [regionCode] 
-         * @param {string} [regionList] 
+         * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getByRegionCode(regionCode?: string, regionList?: string, options: any = {}): FetchArgs {
+        getByRegionCode(regionCode?: string, regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Regions/bycode`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -16262,7 +16262,7 @@ export const RegionsApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {string} [regionList] 
+         * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
          * @param {number} [organizationId] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -16270,7 +16270,7 @@ export const RegionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(regionList?: string, organizationId?: number, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfRegion> {
+        get(regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', organizationId?: number, page?: number, pageSize?: number, search?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfRegion> {
             const localVarFetchArgs = RegionsApiFetchParamCreator(configuration).get(regionList, organizationId, page, pageSize, search, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -16285,11 +16285,11 @@ export const RegionsApiFp = function(configuration?: Configuration) {
         /**
          * 
          * @param {string} [regionCode] 
-         * @param {string} [regionList] 
+         * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getByRegionCode(regionCode?: string, regionList?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Region> {
+        getByRegionCode(regionCode?: string, regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Region> {
             const localVarFetchArgs = RegionsApiFetchParamCreator(configuration).getByRegionCode(regionCode, regionList, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -16312,7 +16312,7 @@ export const RegionsApiFactory = function (configuration?: Configuration, fetch?
     return {
         /**
          * 
-         * @param {string} [regionList] 
+         * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
          * @param {number} [organizationId] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -16320,17 +16320,17 @@ export const RegionsApiFactory = function (configuration?: Configuration, fetch?
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(regionList?: string, organizationId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
+        get(regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', organizationId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
             return RegionsApiFp(configuration).get(regionList, organizationId, page, pageSize, search, options)(fetch, basePath);
         },
         /**
          * 
          * @param {string} [regionCode] 
-         * @param {string} [regionList] 
+         * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getByRegionCode(regionCode?: string, regionList?: string, options?: any) {
+        getByRegionCode(regionCode?: string, regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', options?: any) {
             return RegionsApiFp(configuration).getByRegionCode(regionCode, regionList, options)(fetch, basePath);
         },
     };
@@ -16345,28 +16345,28 @@ export const RegionsApiFactory = function (configuration?: Configuration, fetch?
 export class RegionsApi extends BaseAPI {
     /**
      * 
-     * @param {} [regionList] 
-     * @param {} [organizationId] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
+     * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
+     * @param {number} [organizationId] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegionsApi
      */
-    public get(regionList?: string, organizationId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
+    public get(regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', organizationId?: number, page?: number, pageSize?: number, search?: string, options?: any) {
         return RegionsApiFp(this.configuration).get(regionList, organizationId, page, pageSize, search, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [regionCode] 
-     * @param {} [regionList] 
+     * @param {string} [regionCode] 
+     * @param {'None' | 'MicrosoftCsp' | 'OrganizationSpecific'} [regionList] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegionsApi
      */
-    public getByRegionCode(regionCode?: string, regionList?: string, options?: any) {
+    public getByRegionCode(regionCode?: string, regionList?: 'None' | 'MicrosoftCsp' | 'OrganizationSpecific', options?: any) {
         return RegionsApiFp(this.configuration).getByRegionCode(regionCode, regionList, options)(this.fetch, this.basePath);
     }
 
@@ -16380,14 +16380,14 @@ export const ResellerSalesPricesApiFetchParamCreator = function (configuration?:
     return {
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteByFilterAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options: any = {}): FetchArgs {
+        deleteByFilterAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/ResellerSalesPrices`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'DELETE' }, options);
@@ -16430,14 +16430,14 @@ export const ResellerSalesPricesApiFetchParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options: any = {}): FetchArgs {
+        getAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/ResellerSalesPrices`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -16480,14 +16480,14 @@ export const ResellerSalesPricesApiFetchParamCreator = function (configuration?:
         },
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCurrentAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options: any = {}): FetchArgs {
+        getCurrentAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/ResellerSalesPrices/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -16650,14 +16650,14 @@ export const ResellerSalesPricesApiFp = function(configuration?: Configuration) 
     return {
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteByFilterAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+        deleteByFilterAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
             const localVarFetchArgs = ResellerSalesPricesApiFetchParamCreator(configuration).deleteByFilterAsync(type, objectId, objectType, fromDate, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -16671,14 +16671,14 @@ export const ResellerSalesPricesApiFp = function(configuration?: Configuration) 
         },
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<ResellerSalesPrice>> {
+        getAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Array<ResellerSalesPrice>> {
             const localVarFetchArgs = ResellerSalesPricesApiFetchParamCreator(configuration).getAsync(type, objectId, objectType, fromDate, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -16692,14 +16692,14 @@ export const ResellerSalesPricesApiFp = function(configuration?: Configuration) 
         },
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCurrentAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ResellerSalesPrice> {
+        getCurrentAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ResellerSalesPrice> {
             const localVarFetchArgs = ResellerSalesPricesApiFetchParamCreator(configuration).getCurrentAsync(type, objectId, objectType, fromDate, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -16777,38 +16777,38 @@ export const ResellerSalesPricesApiFactory = function (configuration?: Configura
     return {
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteByFilterAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any) {
+        deleteByFilterAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any) {
             return ResellerSalesPricesApiFp(configuration).deleteByFilterAsync(type, objectId, objectType, fromDate, options)(fetch, basePath);
         },
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any) {
+        getAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any) {
             return ResellerSalesPricesApiFp(configuration).getAsync(type, objectId, objectType, fromDate, options)(fetch, basePath);
         },
         /**
          * 
-         * @param {string} [type] 
+         * @param {'License' | 'Usage' | 'OneTime'} [type] 
          * @param {number} [objectId] 
-         * @param {string} [objectType] 
+         * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
          * @param {Date} [fromDate] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCurrentAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any) {
+        getCurrentAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any) {
             return ResellerSalesPricesApiFp(configuration).getCurrentAsync(type, objectId, objectType, fromDate, options)(fetch, basePath);
         },
         /**
@@ -16851,49 +16851,49 @@ export const ResellerSalesPricesApiFactory = function (configuration?: Configura
 export class ResellerSalesPricesApi extends BaseAPI {
     /**
      * 
-     * @param {} [type] 
-     * @param {} [objectId] 
-     * @param {} [objectType] 
-     * @param {} [fromDate] 
+     * @param {'License' | 'Usage' | 'OneTime'} [type] 
+     * @param {number} [objectId] 
+     * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
+     * @param {Date} [fromDate] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResellerSalesPricesApi
      */
-    public deleteByFilterAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any) {
+    public deleteByFilterAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any) {
         return ResellerSalesPricesApiFp(this.configuration).deleteByFilterAsync(type, objectId, objectType, fromDate, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [type] 
-     * @param {} [objectId] 
-     * @param {} [objectType] 
-     * @param {} [fromDate] 
+     * @param {'License' | 'Usage' | 'OneTime'} [type] 
+     * @param {number} [objectId] 
+     * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
+     * @param {Date} [fromDate] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResellerSalesPricesApi
      */
-    public getAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any) {
+    public getAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any) {
         return ResellerSalesPricesApiFp(this.configuration).getAsync(type, objectId, objectType, fromDate, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [type] 
-     * @param {} [objectId] 
-     * @param {} [objectType] 
-     * @param {} [fromDate] 
+     * @param {'License' | 'Usage' | 'OneTime'} [type] 
+     * @param {number} [objectId] 
+     * @param {'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon'} [objectType] 
+     * @param {Date} [fromDate] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResellerSalesPricesApi
      */
-    public getCurrentAsync(type?: string, objectId?: number, objectType?: string, fromDate?: Date, options?: any) {
+    public getCurrentAsync(type?: 'License' | 'Usage' | 'OneTime', objectId?: number, objectType?: 'Organization' | 'CustomerTenant' | 'Subscription' | 'SubscriptionAddon', fromDate?: Date, options?: any) {
         return ResellerSalesPricesApiFp(this.configuration).getCurrentAsync(type, objectId, objectType, fromDate, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} [resellerSalesPrice] 
+     * @param {ResellerSalesPrice} [resellerSalesPrice] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResellerSalesPricesApi
@@ -16904,8 +16904,8 @@ export class ResellerSalesPricesApi extends BaseAPI {
 
     /**
      * 
-     * @param {} oldFromDate 
-     * @param {} [resellerSalesPrice] 
+     * @param {Date} oldFromDate 
+     * @param {ResellerSalesPrice} [resellerSalesPrice] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResellerSalesPricesApi
@@ -16916,7 +16916,7 @@ export class ResellerSalesPricesApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [resellerSalesPriceToggle] 
+     * @param {ResellerSalesPriceToggle} [resellerSalesPriceToggle] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ResellerSalesPricesApi
@@ -17094,8 +17094,8 @@ export const SecretsApiFactory = function (configuration?: Configuration, fetch?
 export class SecretsApi extends BaseAPI {
     /**
      * 
-     * @param {} [clientId] 
-     * @param {} [secretId] 
+     * @param {string} [clientId] 
+     * @param {number} [secretId] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SecretsApi
@@ -17106,7 +17106,7 @@ export class SecretsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [secret] 
+     * @param {Secret} [secret] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SecretsApi
@@ -17165,7 +17165,7 @@ export const SubscriptionsApiFetchParamCreator = function (configuration?: Confi
          * @param {number} [customerTenantId] 
          * @param {number} [publisherId] 
          * @param {boolean} [refresh] 
-         * @param {string} [statuses] 
+         * @param {'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All'} [statuses] 
          * @param {boolean} [isTrial] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -17174,7 +17174,7 @@ export const SubscriptionsApiFetchParamCreator = function (configuration?: Confi
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: string, isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options: any = {}): FetchArgs {
+        get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: 'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All', isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Subscriptions`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -17688,7 +17688,7 @@ export const SubscriptionsApiFp = function(configuration?: Configuration) {
          * @param {number} [customerTenantId] 
          * @param {number} [publisherId] 
          * @param {boolean} [refresh] 
-         * @param {string} [statuses] 
+         * @param {'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All'} [statuses] 
          * @param {boolean} [isTrial] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -17697,7 +17697,7 @@ export const SubscriptionsApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: string, isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfSubscription> {
+        get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: 'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All', isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfSubscription> {
             const localVarFetchArgs = SubscriptionsApiFetchParamCreator(configuration).get(organizationId, customerTenantId, publisherId, refresh, statuses, isTrial, page, pageSize, search, registeredForReservedInstance, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -17935,7 +17935,7 @@ export const SubscriptionsApiFactory = function (configuration?: Configuration, 
          * @param {number} [customerTenantId] 
          * @param {number} [publisherId] 
          * @param {boolean} [refresh] 
-         * @param {string} [statuses] 
+         * @param {'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All'} [statuses] 
          * @param {boolean} [isTrial] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
@@ -17944,7 +17944,7 @@ export const SubscriptionsApiFactory = function (configuration?: Configuration, 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: string, isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options?: any) {
+        get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: 'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All', isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options?: any) {
             return SubscriptionsApiFp(configuration).get(organizationId, customerTenantId, publisherId, refresh, statuses, isTrial, page, pageSize, search, registeredForReservedInstance, options)(fetch, basePath);
         },
         /**
@@ -18062,7 +18062,7 @@ export const SubscriptionsApiFactory = function (configuration?: Configuration, 
 export class SubscriptionsApi extends BaseAPI {
     /**
      * 
-     * @param {} subscriptionId 
+     * @param {number} subscriptionId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18073,27 +18073,27 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [organizationId] 
-     * @param {} [customerTenantId] 
-     * @param {} [publisherId] 
-     * @param {} [refresh] 
-     * @param {} [statuses] 
-     * @param {} [isTrial] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
-     * @param {} [search] 
-     * @param {} [registeredForReservedInstance] 
+     * @param {number} [organizationId] 
+     * @param {number} [customerTenantId] 
+     * @param {number} [publisherId] 
+     * @param {boolean} [refresh] 
+     * @param {'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All'} [statuses] 
+     * @param {boolean} [isTrial] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
+     * @param {string} [search] 
+     * @param {boolean} [registeredForReservedInstance] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
      */
-    public get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: string, isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options?: any) {
+    public get(organizationId?: number, customerTenantId?: number, publisherId?: number, refresh?: boolean, statuses?: 'None' | 'Active' | 'Suspended' | 'Deleted' | 'CustomerCancellation' | 'Converted' | 'Inactive' | 'All', isTrial?: boolean, page?: number, pageSize?: number, search?: string, registeredForReservedInstance?: boolean, options?: any) {
         return SubscriptionsApiFp(this.configuration).get(organizationId, customerTenantId, publisherId, refresh, statuses, isTrial, page, pageSize, search, registeredForReservedInstance, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18104,8 +18104,8 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} reservedInstance 
+     * @param {number} id 
+     * @param {boolean} reservedInstance 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18116,7 +18116,7 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} subscriptionId 
+     * @param {number} subscriptionId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18137,7 +18137,7 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} subscriptionId 
+     * @param {number} subscriptionId 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18148,7 +18148,7 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [subscription] 
+     * @param {SubscriptionDetailed} [subscription] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18159,8 +18159,8 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} subscriptionId 
-     * @param {} [conversion] 
+     * @param {number} subscriptionId 
+     * @param {SubscriptionConversion} [conversion] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18171,8 +18171,8 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [subscription] 
+     * @param {number} id 
+     * @param {SubscriptionDetailed} [subscription] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18183,8 +18183,8 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} reservedInstance 
+     * @param {number} id 
+     * @param {boolean} reservedInstance 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18195,8 +18195,8 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} subscriptionId 
-     * @param {} [tags] 
+     * @param {string} subscriptionId 
+     * @param {SubscriptionTags} [tags] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -18207,7 +18207,7 @@ export class SubscriptionsApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {number} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SubscriptionsApi
@@ -19138,12 +19138,12 @@ export const UsageCostApiFactory = function (configuration?: Configuration, fetc
 export class UsageCostApi extends BaseAPI {
     /**
      * 
-     * @param {} resellerCustomerId 
-     * @param {} subscriptionId 
-     * @param {} category 
-     * @param {} currencyCode 
-     * @param {} [from] 
-     * @param {} [to] 
+     * @param {number} resellerCustomerId 
+     * @param {string} subscriptionId 
+     * @param {string} category 
+     * @param {string} currencyCode 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19154,7 +19154,7 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [model] 
+     * @param {CategoryUsageCostRequest} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19165,9 +19165,9 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} organizationId 
-     * @param {} [from] 
-     * @param {} [to] 
+     * @param {number} organizationId 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19178,12 +19178,12 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} resellerCustomerId 
-     * @param {} subscriptionId 
-     * @param {} resourceGroup 
-     * @param {} currencyCode 
-     * @param {} [from] 
-     * @param {} [to] 
+     * @param {number} resellerCustomerId 
+     * @param {string} subscriptionId 
+     * @param {string} resourceGroup 
+     * @param {string} currencyCode 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19194,7 +19194,7 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [model] 
+     * @param {ResourceGroupUsageCostRequest} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19205,13 +19205,13 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} resellerCustomerId 
-     * @param {} subscriptionId 
-     * @param {} category 
-     * @param {} subcategory 
-     * @param {} currencyCode 
-     * @param {} [from] 
-     * @param {} [to] 
+     * @param {number} resellerCustomerId 
+     * @param {string} subscriptionId 
+     * @param {string} category 
+     * @param {string} subcategory 
+     * @param {string} currencyCode 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19222,7 +19222,7 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [model] 
+     * @param {SubcategoryUsageCostRequest} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19233,11 +19233,11 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} resellerCustomerId 
-     * @param {} subscriptionId 
-     * @param {} currencyCode 
-     * @param {} [from] 
-     * @param {} [to] 
+     * @param {number} resellerCustomerId 
+     * @param {string} subscriptionId 
+     * @param {string} currencyCode 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19248,11 +19248,11 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} resellerCustomerId 
-     * @param {} subscriptionId 
-     * @param {} currencyCode 
-     * @param {} [from] 
-     * @param {} [to] 
+     * @param {number} resellerCustomerId 
+     * @param {string} subscriptionId 
+     * @param {string} currencyCode 
+     * @param {Date} [from] 
+     * @param {Date} [to] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19263,7 +19263,7 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [model] 
+     * @param {SubscriptionUsageCostRequest} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19274,7 +19274,7 @@ export class UsageCostApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [model] 
+     * @param {SubscriptionUsageCostRequest} [model] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsageCostApi
@@ -19407,13 +19407,13 @@ export const UsersApiFetchParamCreator = function (configuration?: Configuration
          * 
          * @param {string} [search] 
          * @param {number} [organizationId] 
-         * @param {string} [role] 
+         * @param {'None' | 'User' | 'TenantAdmin'} [role] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(search?: string, organizationId?: number, role?: string, page?: number, pageSize?: number, options: any = {}): FetchArgs {
+        get(search?: string, organizationId?: number, role?: 'None' | 'User' | 'TenantAdmin', page?: number, pageSize?: number, options: any = {}): FetchArgs {
             const localVarPath = `/api/v1/Users`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
@@ -19638,13 +19638,13 @@ export const UsersApiFp = function(configuration?: Configuration) {
          * 
          * @param {string} [search] 
          * @param {number} [organizationId] 
-         * @param {string} [role] 
+         * @param {'None' | 'User' | 'TenantAdmin'} [role] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(search?: string, organizationId?: number, role?: string, page?: number, pageSize?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfUser> {
+        get(search?: string, organizationId?: number, role?: 'None' | 'User' | 'TenantAdmin', page?: number, pageSize?: number, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<ApiCollectionOfUser> {
             const localVarFetchArgs = UsersApiFetchParamCreator(configuration).get(search, organizationId, role, page, pageSize, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
@@ -19752,13 +19752,13 @@ export const UsersApiFactory = function (configuration?: Configuration, fetch?: 
          * 
          * @param {string} [search] 
          * @param {number} [organizationId] 
-         * @param {string} [role] 
+         * @param {'None' | 'User' | 'TenantAdmin'} [role] 
          * @param {number} [page] 
          * @param {number} [pageSize] 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        get(search?: string, organizationId?: number, role?: string, page?: number, pageSize?: number, options?: any) {
+        get(search?: string, organizationId?: number, role?: 'None' | 'User' | 'TenantAdmin', page?: number, pageSize?: number, options?: any) {
             return UsersApiFp(configuration).get(search, organizationId, role, page, pageSize, options)(fetch, basePath);
         },
         /**
@@ -19801,7 +19801,7 @@ export const UsersApiFactory = function (configuration?: Configuration, fetch?: 
 export class UsersApi extends BaseAPI {
     /**
      * 
-     * @param {} [user] 
+     * @param {User} [user] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
@@ -19812,8 +19812,8 @@ export class UsersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [changePassword] 
+     * @param {string} id 
+     * @param {UserChangePassword} [changePassword] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
@@ -19824,7 +19824,7 @@ export class UsersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
+     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
@@ -19835,22 +19835,22 @@ export class UsersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [search] 
-     * @param {} [organizationId] 
-     * @param {} [role] 
-     * @param {} [page] 
-     * @param {} [pageSize] 
+     * @param {string} [search] 
+     * @param {number} [organizationId] 
+     * @param {'None' | 'User' | 'TenantAdmin'} [role] 
+     * @param {number} [page] 
+     * @param {number} [pageSize] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
      */
-    public get(search?: string, organizationId?: number, role?: string, page?: number, pageSize?: number, options?: any) {
+    public get(search?: string, organizationId?: number, role?: 'None' | 'User' | 'TenantAdmin', page?: number, pageSize?: number, options?: any) {
         return UsersApiFp(this.configuration).get(search, organizationId, role, page, pageSize, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {} id 
+     * @param {string} id 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
@@ -19861,7 +19861,7 @@ export class UsersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} [userName] 
+     * @param {string} [userName] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
@@ -19872,8 +19872,8 @@ export class UsersApi extends BaseAPI {
 
     /**
      * 
-     * @param {} id 
-     * @param {} [user] 
+     * @param {string} id 
+     * @param {User} [user] 
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UsersApi
