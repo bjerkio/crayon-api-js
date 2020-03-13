@@ -1,26 +1,44 @@
 {
   "name": "@bjerkio/crayon-api",
-  "version": "1.0.0",
-  "description": "swagger client for @bjerkio/crayon-api",
-  "author": "Swagger Codegen Contributors",
-  "keywords": [
-    "fetch",
-    "typescript",
-    "swagger-client",
-    "@bjerkio/crayon-api"
+  "version": "0.0.0",
+  "description": "Typescript / Javascript class for Crayon API",
+  "private": false,
+  "files": [
+    "dist/**",
+    "custom.d.ts"
   ],
-  "license": "Unlicense",
+  "keywords": [
+    "crayon",
+    "crayonapi",
+    "crayon customer api",
+    "rest-api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjerkio/crayon-api-js.git"
+  },
+  "author": "Simen A. W. Olsen <so@ayr.no> (httpi://bjerk.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjerkio/crayon-api-js/issues"
+  },
+  "homepage": "https://github.com/bjerkio/crayon-api-js#readme",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts" : {
     "build": "tsc --outDir dist/",
-    "prepublishOnly": "npm run build"
+    "postbuild": "npm run generate-docs",
+    "postinstall": "npm run build",
+    "generate-docs": "typedoc --mode file --readme none --plugin typedoc-plugin-markdown --hideSources --out docs ./*.ts"
   },
   "dependencies": {
     "portable-fetch": "^3.0.0"
   },
   "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.34",
     "@types/node": "^8.0.9",
+    "typedoc": "^0.15.6",
+    "typedoc-plugin-markdown": "^2.2.16",
     "typescript": "^2.0"
   }
 }
