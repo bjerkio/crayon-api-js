@@ -8,6 +8,11 @@
       {
         "assets": [
           "api.ts",
+          "configuration.ts",
+          "custom.d.ts",
+          "index.ts",
+          "tsconfig.json",
+          "yarn.lock",
           "CHANGELOG.md",
           "package.json"
         ],
