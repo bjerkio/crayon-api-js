@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - master
+      - next
+    # paths:
+    #   - "swagger.json"
+
+jobs:
+  generate_files:
+    name: Generate and Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn
+      - name: Build package
+        run: yarn build

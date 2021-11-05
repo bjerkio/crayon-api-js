@@ -4,6 +4,7 @@
     "title": "Crayon Group Customer API",
     "version": "v1"
   },
+  "servers": [{ "url": "api.crayon.com" }],
   "paths": {
     "/api/v1/ActivityLogs": {
       "get": {
