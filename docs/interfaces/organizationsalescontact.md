@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [OrganizationSalesContact](organizationsalescontact.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / OrganizationSalesContact
 
 # Interface: OrganizationSalesContact
 
-**`export`** 
+**`export`**
 
 **`interface`** OrganizationSalesContact
 
-## Hierarchy
-
-* **OrganizationSalesContact**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [email](organizationsalescontact.md#optional-email)
-* [fullName](organizationsalescontact.md#optional-fullname)
-* [phone](organizationsalescontact.md#optional-phone)
+- [email](OrganizationSalesContact.md#email)
+- [fullName](OrganizationSalesContact.md#fullname)
+- [phone](OrganizationSalesContact.md#phone)
 
 ## Properties
 
-### `Optional` email
+### email
 
-• **email**? : *string*
-
-**`type`** {string}
+• `Optional` **email**: `string`
 
 **`memberof`** OrganizationSalesContact
+
+#### Defined in
+
+[src/models/OrganizationSalesContact.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationSalesContact.ts#L33)
 
 ___
 
-### `Optional` fullName
+### fullName
 
-• **fullName**? : *string*
-
-**`type`** {string}
+• `Optional` **fullName**: `string`
 
 **`memberof`** OrganizationSalesContact
+
+#### Defined in
+
+[src/models/OrganizationSalesContact.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationSalesContact.ts#L27)
 
 ___
 
-### `Optional` phone
+### phone
 
-• **phone**? : *string*
-
-**`type`** {string}
+• `Optional` **phone**: `string`
 
 **`memberof`** OrganizationSalesContact
+
+#### Defined in
+
+[src/models/OrganizationSalesContact.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationSalesContact.ts#L39)

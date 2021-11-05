@@ -1,214 +1,233 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [GoogleOrder](googleorder.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / GoogleOrder
 
 # Interface: GoogleOrder
 
-**`export`** 
+**`export`**
 
 **`interface`** GoogleOrder
 
-## Hierarchy
-
-* **GoogleOrder**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [consumerCity](googleorder.md#optional-consumercity)
-* [consumerContactEmail](googleorder.md#optional-consumercontactemail)
-* [consumerContactName](googleorder.md#optional-consumercontactname)
-* [consumerCountry](googleorder.md#optional-consumercountry)
-* [consumerFullLegalName](googleorder.md#optional-consumerfulllegalname)
-* [consumerPhoneNumber](googleorder.md#optional-consumerphonenumber)
-* [consumerState](googleorder.md#optional-consumerstate)
-* [consumerStreetAddress](googleorder.md#optional-consumerstreetaddress)
-* [consumerZipCode](googleorder.md#optional-consumerzipcode)
-* [contactEmail](googleorder.md#optional-contactemail)
-* [contactName](googleorder.md#optional-contactname)
-* [domainName](googleorder.md#optional-domainname)
-* [invoiceProfileId](googleorder.md#optional-invoiceprofileid)
-* [lines](googleorder.md#optional-lines)
-* [organizationId](googleorder.md#optional-organizationid)
-* [primaryAdminName](googleorder.md#optional-primaryadminname)
-* [primaryAdminUserName](googleorder.md#optional-primaryadminusername)
-* [subscriptionStartDate](googleorder.md#optional-subscriptionstartdate)
+- [consumerCity](GoogleOrder.md#consumercity)
+- [consumerContactEmail](GoogleOrder.md#consumercontactemail)
+- [consumerContactName](GoogleOrder.md#consumercontactname)
+- [consumerCountry](GoogleOrder.md#consumercountry)
+- [consumerFullLegalName](GoogleOrder.md#consumerfulllegalname)
+- [consumerPhoneNumber](GoogleOrder.md#consumerphonenumber)
+- [consumerState](GoogleOrder.md#consumerstate)
+- [consumerStreetAddress](GoogleOrder.md#consumerstreetaddress)
+- [consumerZipCode](GoogleOrder.md#consumerzipcode)
+- [contactEmail](GoogleOrder.md#contactemail)
+- [contactName](GoogleOrder.md#contactname)
+- [domainName](GoogleOrder.md#domainname)
+- [invoiceProfileId](GoogleOrder.md#invoiceprofileid)
+- [organizationId](GoogleOrder.md#organizationid)
+- [primaryAdminName](GoogleOrder.md#primaryadminname)
+- [primaryAdminUserName](GoogleOrder.md#primaryadminusername)
+- [subscriptionStartDate](GoogleOrder.md#subscriptionstartdate)
 
 ## Properties
 
-### `Optional` consumerCity
+### consumerCity
 
-• **consumerCity**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerCity**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:93](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L93)
 
 ___
 
-### `Optional` consumerContactEmail
+### consumerContactEmail
 
-• **consumerContactEmail**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerContactEmail**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L51)
 
 ___
 
-### `Optional` consumerContactName
+### consumerContactName
 
-• **consumerContactName**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerContactName**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L39)
 
 ___
 
-### `Optional` consumerCountry
+### consumerCountry
 
-• **consumerCountry**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerCountry**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:81](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L81)
 
 ___
 
-### `Optional` consumerFullLegalName
+### consumerFullLegalName
 
-• **consumerFullLegalName**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerFullLegalName**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L45)
 
 ___
 
-### `Optional` consumerPhoneNumber
+### consumerPhoneNumber
 
-• **consumerPhoneNumber**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerPhoneNumber**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:111](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L111)
 
 ___
 
-### `Optional` consumerState
+### consumerState
 
-• **consumerState**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerState**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:99](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L99)
 
 ___
 
-### `Optional` consumerStreetAddress
+### consumerStreetAddress
 
-• **consumerStreetAddress**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerStreetAddress**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:87](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L87)
 
 ___
 
-### `Optional` consumerZipCode
+### consumerZipCode
 
-• **consumerZipCode**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerZipCode**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:105](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L105)
 
 ___
 
-### `Optional` contactEmail
+### contactEmail
 
-• **contactEmail**? : *string*
-
-**`type`** {string}
+• `Optional` **contactEmail**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L33)
 
 ___
 
-### `Optional` contactName
+### contactName
 
-• **contactName**? : *string*
-
-**`type`** {string}
+• `Optional` **contactName**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L27)
 
 ___
 
-### `Optional` domainName
+### domainName
 
-• **domainName**? : *string*
-
-**`type`** {string}
+• `Optional` **domainName**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:75](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L75)
 
 ___
 
-### `Optional` invoiceProfileId
+### invoiceProfileId
 
-• **invoiceProfileId**? : *number*
-
-**`type`** {number}
+• `Optional` **invoiceProfileId**: `number`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:63](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L63)
 
 ___
 
-### `Optional` lines
+### organizationId
 
-• **lines**? : *Array‹[GoogleOrderLine](googleorderline.md)›*
-
-**`type`** {Array<GoogleOrderLine>}
+• `Optional` **organizationId**: `number`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L57)
 
 ___
 
-### `Optional` organizationId
+### primaryAdminName
 
-• **organizationId**? : *number*
-
-**`type`** {number}
+• `Optional` **primaryAdminName**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:117](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L117)
 
 ___
 
-### `Optional` primaryAdminName
+### primaryAdminUserName
 
-• **primaryAdminName**? : *string*
-
-**`type`** {string}
+• `Optional` **primaryAdminUserName**: `string`
 
 **`memberof`** GoogleOrder
+
+#### Defined in
+
+[src/models/GoogleOrder.ts:123](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L123)
 
 ___
 
-### `Optional` primaryAdminUserName
+### subscriptionStartDate
 
-• **primaryAdminUserName**? : *string*
-
-**`type`** {string}
+• `Optional` **subscriptionStartDate**: `Date`
 
 **`memberof`** GoogleOrder
 
-___
+#### Defined in
 
-### `Optional` subscriptionStartDate
-
-• **subscriptionStartDate**? : *Date*
-
-**`type`** {Date}
-
-**`memberof`** GoogleOrder
+[src/models/GoogleOrder.ts:69](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/GoogleOrder.ts#L69)

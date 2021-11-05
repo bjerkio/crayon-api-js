@@ -1,126 +1,129 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [FacebookOrder](facebookorder.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / FacebookOrder
 
 # Interface: FacebookOrder
 
-**`export`** 
+**`export`**
 
 **`interface`** FacebookOrder
 
-## Hierarchy
-
-* **FacebookOrder**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [consumerContactEmail](facebookorder.md#optional-consumercontactemail)
-* [consumerContactName](facebookorder.md#optional-consumercontactname)
-* [consumerFullLegalName](facebookorder.md#optional-consumerfulllegalname)
-* [consumerSignupEmail](facebookorder.md#optional-consumersignupemail)
-* [contactEmail](facebookorder.md#optional-contactemail)
-* [contactName](facebookorder.md#optional-contactname)
-* [invoiceProfileId](facebookorder.md#optional-invoiceprofileid)
-* [lines](facebookorder.md#optional-lines)
-* [organizationId](facebookorder.md#optional-organizationid)
-* [subscriptionStartDate](facebookorder.md#optional-subscriptionstartdate)
+- [consumerContactEmail](FacebookOrder.md#consumercontactemail)
+- [consumerContactName](FacebookOrder.md#consumercontactname)
+- [consumerFullLegalName](FacebookOrder.md#consumerfulllegalname)
+- [consumerSignupEmail](FacebookOrder.md#consumersignupemail)
+- [contactEmail](FacebookOrder.md#contactemail)
+- [contactName](FacebookOrder.md#contactname)
+- [invoiceProfileId](FacebookOrder.md#invoiceprofileid)
+- [organizationId](FacebookOrder.md#organizationid)
+- [subscriptionStartDate](FacebookOrder.md#subscriptionstartdate)
 
 ## Properties
 
-### `Optional` consumerContactEmail
+### consumerContactEmail
 
-• **consumerContactEmail**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerContactEmail**: `string`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L51)
 
 ___
 
-### `Optional` consumerContactName
+### consumerContactName
 
-• **consumerContactName**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerContactName**: `string`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L39)
 
 ___
 
-### `Optional` consumerFullLegalName
+### consumerFullLegalName
 
-• **consumerFullLegalName**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerFullLegalName**: `string`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L45)
 
 ___
 
-### `Optional` consumerSignupEmail
+### consumerSignupEmail
 
-• **consumerSignupEmail**? : *string*
-
-**`type`** {string}
+• `Optional` **consumerSignupEmail**: `string`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:75](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L75)
 
 ___
 
-### `Optional` contactEmail
+### contactEmail
 
-• **contactEmail**? : *string*
-
-**`type`** {string}
+• `Optional` **contactEmail**: `string`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L33)
 
 ___
 
-### `Optional` contactName
+### contactName
 
-• **contactName**? : *string*
-
-**`type`** {string}
+• `Optional` **contactName**: `string`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L27)
 
 ___
 
-### `Optional` invoiceProfileId
+### invoiceProfileId
 
-• **invoiceProfileId**? : *number*
-
-**`type`** {number}
+• `Optional` **invoiceProfileId**: `number`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:63](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L63)
 
 ___
 
-### `Optional` lines
+### organizationId
 
-• **lines**? : *Array‹[FacebookOrderLine](facebookorderline.md)›*
-
-**`type`** {Array<FacebookOrderLine>}
+• `Optional` **organizationId**: `number`
 
 **`memberof`** FacebookOrder
+
+#### Defined in
+
+[src/models/FacebookOrder.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L57)
 
 ___
 
-### `Optional` organizationId
+### subscriptionStartDate
 
-• **organizationId**? : *number*
-
-**`type`** {number}
+• `Optional` **subscriptionStartDate**: `Date`
 
 **`memberof`** FacebookOrder
 
-___
+#### Defined in
 
-### `Optional` subscriptionStartDate
-
-• **subscriptionStartDate**? : *Date*
-
-**`type`** {Date}
-
-**`memberof`** FacebookOrder
+[src/models/FacebookOrder.ts:69](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/FacebookOrder.ts#L69)

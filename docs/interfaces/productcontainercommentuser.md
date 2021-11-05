@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ProductContainerCommentUser](productcontainercommentuser.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ProductContainerCommentUser
 
 # Interface: ProductContainerCommentUser
 
-**`export`** 
+**`export`**
 
 **`interface`** ProductContainerCommentUser
 
-## Hierarchy
-
-* **ProductContainerCommentUser**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [crayonEmployee](productcontainercommentuser.md#optional-crayonemployee)
-* [firstName](productcontainercommentuser.md#optional-firstname)
-* [id](productcontainercommentuser.md#optional-id)
-* [lastName](productcontainercommentuser.md#optional-lastname)
-* [userName](productcontainercommentuser.md#optional-username)
+- [crayonEmployee](ProductContainerCommentUser.md#crayonemployee)
+- [firstName](ProductContainerCommentUser.md#firstname)
+- [id](ProductContainerCommentUser.md#id)
+- [lastName](ProductContainerCommentUser.md#lastname)
+- [userName](ProductContainerCommentUser.md#username)
 
 ## Properties
 
-### `Optional` crayonEmployee
+### crayonEmployee
 
-• **crayonEmployee**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **crayonEmployee**: `boolean`
 
 **`memberof`** ProductContainerCommentUser
+
+#### Defined in
+
+[src/models/ProductContainerCommentUser.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductContainerCommentUser.ts#L51)
 
 ___
 
-### `Optional` firstName
+### firstName
 
-• **firstName**? : *string*
-
-**`type`** {string}
+• `Optional` **firstName**: `string`
 
 **`memberof`** ProductContainerCommentUser
+
+#### Defined in
+
+[src/models/ProductContainerCommentUser.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductContainerCommentUser.ts#L39)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *string*
-
-**`type`** {string}
+• `Optional` **id**: `string`
 
 **`memberof`** ProductContainerCommentUser
+
+#### Defined in
+
+[src/models/ProductContainerCommentUser.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductContainerCommentUser.ts#L27)
 
 ___
 
-### `Optional` lastName
+### lastName
 
-• **lastName**? : *string*
-
-**`type`** {string}
+• `Optional` **lastName**: `string`
 
 **`memberof`** ProductContainerCommentUser
+
+#### Defined in
+
+[src/models/ProductContainerCommentUser.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductContainerCommentUser.ts#L45)
 
 ___
 
-### `Optional` userName
+### userName
 
-• **userName**? : *string*
-
-**`type`** {string}
+• `Optional` **userName**: `string`
 
 **`memberof`** ProductContainerCommentUser
+
+#### Defined in
+
+[src/models/ProductContainerCommentUser.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductContainerCommentUser.ts#L33)

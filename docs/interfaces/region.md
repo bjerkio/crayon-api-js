@@ -1,38 +1,38 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Region](region.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Region
 
 # Interface: Region
 
-**`export`** 
+**`export`**
 
 **`interface`** Region
 
-## Hierarchy
-
-* **Region**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [code](region.md#optional-code)
-* [name](region.md#optional-name)
+- [code](Region.md#code)
+- [name](Region.md#name)
 
 ## Properties
 
-### `Optional` code
+### code
 
-• **code**? : *string*
-
-**`type`** {string}
+• `Optional` **code**: `string`
 
 **`memberof`** Region
+
+#### Defined in
+
+[src/models/Region.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Region.ts#L27)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** Region
+
+#### Defined in
+
+[src/models/Region.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Region.ts#L33)

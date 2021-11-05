@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [UserProfile](userprofile.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / UserProfile
 
 # Interface: UserProfile
 
-**`export`** 
+**`export`**
 
 **`interface`** UserProfile
 
-## Hierarchy
-
-* **UserProfile**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [email](userprofile.md#optional-email)
-* [firstName](userprofile.md#optional-firstname)
-* [id](userprofile.md#optional-id)
-* [lastName](userprofile.md#optional-lastname)
-* [userName](userprofile.md#optional-username)
+- [email](UserProfile.md#email)
+- [firstName](UserProfile.md#firstname)
+- [id](UserProfile.md#id)
+- [lastName](UserProfile.md#lastname)
+- [userName](UserProfile.md#username)
 
 ## Properties
 
-### `Optional` email
+### email
 
-• **email**? : *string*
-
-**`type`** {string}
+• `Optional` **email**: `string`
 
 **`memberof`** UserProfile
+
+#### Defined in
+
+[src/models/UserProfile.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserProfile.ts#L39)
 
 ___
 
-### `Optional` firstName
+### firstName
 
-• **firstName**? : *string*
-
-**`type`** {string}
+• `Optional` **firstName**: `string`
 
 **`memberof`** UserProfile
+
+#### Defined in
+
+[src/models/UserProfile.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserProfile.ts#L45)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *string*
-
-**`type`** {string}
+• `Optional` **id**: `string`
 
 **`memberof`** UserProfile
+
+#### Defined in
+
+[src/models/UserProfile.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserProfile.ts#L27)
 
 ___
 
-### `Optional` lastName
+### lastName
 
-• **lastName**? : *string*
-
-**`type`** {string}
+• `Optional` **lastName**: `string`
 
 **`memberof`** UserProfile
+
+#### Defined in
+
+[src/models/UserProfile.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserProfile.ts#L51)
 
 ___
 
-### `Optional` userName
+### userName
 
-• **userName**? : *string*
-
-**`type`** {string}
+• `Optional` **userName**: `string`
 
 **`memberof`** UserProfile
+
+#### Defined in
+
+[src/models/UserProfile.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserProfile.ts#L33)

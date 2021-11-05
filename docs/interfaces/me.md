@@ -1,60 +1,64 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Me](me.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Me
 
 # Interface: Me
 
-**`export`** 
+**`export`**
 
 **`interface`** Me
 
-## Hierarchy
-
-* **Me**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [claims](me.md#optional-claims)
-* [token](me.md#optional-token)
-* [userId](me.md#optional-userid)
-* [userName](me.md#optional-username)
+- [claims](Me.md#claims)
+- [token](Me.md#token)
+- [userId](Me.md#userid)
+- [userName](Me.md#username)
 
 ## Properties
 
-### `Optional` claims
+### claims
 
-• **claims**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **claims**: `string`[]
 
 **`memberof`** Me
+
+#### Defined in
+
+[src/models/Me.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Me.ts#L45)
 
 ___
 
-### `Optional` token
+### token
 
-• **token**? : *string*
-
-**`type`** {string}
+• `Optional` **token**: `string`
 
 **`memberof`** Me
+
+#### Defined in
+
+[src/models/Me.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Me.ts#L39)
 
 ___
 
-### `Optional` userId
+### userId
 
-• **userId**? : *string*
-
-**`type`** {string}
+• `Optional` **userId**: `string`
 
 **`memberof`** Me
+
+#### Defined in
+
+[src/models/Me.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Me.ts#L27)
 
 ___
 
-### `Optional` userName
+### userName
 
-• **userName**? : *string*
-
-**`type`** {string}
+• `Optional` **userName**: `string`
 
 **`memberof`** Me
+
+#### Defined in
+
+[src/models/Me.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Me.ts#L33)

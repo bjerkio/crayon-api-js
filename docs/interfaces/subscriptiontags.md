@@ -1,104 +1,116 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [SubscriptionTags](subscriptiontags.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / SubscriptionTags
 
 # Interface: SubscriptionTags
 
-**`export`** 
+**`export`**
 
 **`interface`** SubscriptionTags
 
-## Hierarchy
-
-* **SubscriptionTags**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [costCenter](subscriptiontags.md#optional-costcenter)
-* [createdDate](subscriptiontags.md#optional-createddate)
-* [custom](subscriptiontags.md#optional-custom)
-* [department](subscriptiontags.md#optional-department)
-* [modifiedDate](subscriptiontags.md#optional-modifieddate)
-* [owner](subscriptiontags.md#optional-owner)
-* [project](subscriptiontags.md#optional-project)
-* [subscriptionId](subscriptiontags.md#optional-subscriptionid)
+- [costCenter](SubscriptionTags.md#costcenter)
+- [createdDate](SubscriptionTags.md#createddate)
+- [custom](SubscriptionTags.md#custom)
+- [department](SubscriptionTags.md#department)
+- [modifiedDate](SubscriptionTags.md#modifieddate)
+- [owner](SubscriptionTags.md#owner)
+- [project](SubscriptionTags.md#project)
+- [subscriptionId](SubscriptionTags.md#subscriptionid)
 
 ## Properties
 
-### `Optional` costCenter
+### costCenter
 
-• **costCenter**? : *string*
-
-**`type`** {string}
+• `Optional` **costCenter**: `string`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L33)
 
 ___
 
-### `Optional` createdDate
+### createdDate
 
-• **createdDate**? : *Date*
-
-**`type`** {Date}
+• `Optional` **createdDate**: `Date`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:63](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L63)
 
 ___
 
-### `Optional` custom
+### custom
 
-• **custom**? : *string*
-
-**`type`** {string}
+• `Optional` **custom**: `string`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L51)
 
 ___
 
-### `Optional` department
+### department
 
-• **department**? : *string*
-
-**`type`** {string}
+• `Optional` **department**: `string`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L39)
 
 ___
 
-### `Optional` modifiedDate
+### modifiedDate
 
-• **modifiedDate**? : *Date*
-
-**`type`** {Date}
+• `Optional` **modifiedDate**: `Date`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:69](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L69)
 
 ___
 
-### `Optional` owner
+### owner
 
-• **owner**? : *string*
-
-**`type`** {string}
+• `Optional` **owner**: `string`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L57)
 
 ___
 
-### `Optional` project
+### project
 
-• **project**? : *string*
-
-**`type`** {string}
+• `Optional` **project**: `string`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L45)
 
 ___
 
-### `Optional` subscriptionId
+### subscriptionId
 
-• **subscriptionId**? : *number*
-
-**`type`** {number}
+• `Optional` **subscriptionId**: `number`
 
 **`memberof`** SubscriptionTags
+
+#### Defined in
+
+[src/models/SubscriptionTags.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionTags.ts#L27)

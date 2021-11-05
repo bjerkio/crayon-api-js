@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ManagementLinkGrouped](managementlinkgrouped.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ManagementLinkGrouped
 
 # Interface: ManagementLinkGrouped
 
-**`export`** 
+**`export`**
 
 **`interface`** ManagementLinkGrouped
 
-## Hierarchy
-
-* **ManagementLinkGrouped**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [link](managementlinkgrouped.md#optional-link)
-* [resellerCustomer](managementlinkgrouped.md#optional-resellercustomer)
-* [text](managementlinkgrouped.md#optional-text)
+- [link](ManagementLinkGrouped.md#link)
+- [resellerCustomer](ManagementLinkGrouped.md#resellercustomer)
+- [text](ManagementLinkGrouped.md#text)
 
 ## Properties
 
-### `Optional` link
+### link
 
-• **link**? : *string*
-
-**`type`** {string}
+• `Optional` **link**: `string`
 
 **`memberof`** ManagementLinkGrouped
+
+#### Defined in
+
+[src/models/ManagementLinkGrouped.ts:34](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ManagementLinkGrouped.ts#L34)
 
 ___
 
-### `Optional` resellerCustomer
+### resellerCustomer
 
-• **resellerCustomer**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **resellerCustomer**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ManagementLinkGrouped
+
+#### Defined in
+
+[src/models/ManagementLinkGrouped.ts:40](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ManagementLinkGrouped.ts#L40)
 
 ___
 
-### `Optional` text
+### text
 
-• **text**? : *string*
-
-**`type`** {string}
+• `Optional` **text**: `string`
 
 **`memberof`** ManagementLinkGrouped
+
+#### Defined in
+
+[src/models/ManagementLinkGrouped.ts:46](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ManagementLinkGrouped.ts#L46)

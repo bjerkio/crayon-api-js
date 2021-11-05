@@ -1,82 +1,90 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ResourceGroupUsageCostRequest](resourcegroupusagecostrequest.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ResourceGroupUsageCostRequest
 
 # Interface: ResourceGroupUsageCostRequest
 
-**`export`** 
+**`export`**
 
 **`interface`** ResourceGroupUsageCostRequest
 
-## Hierarchy
-
-* **ResourceGroupUsageCostRequest**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [currencyCode](resourcegroupusagecostrequest.md#optional-currencycode)
-* [from](resourcegroupusagecostrequest.md#optional-from)
-* [resellerCustomerId](resourcegroupusagecostrequest.md#optional-resellercustomerid)
-* [resourceGroup](resourcegroupusagecostrequest.md#optional-resourcegroup)
-* [subscriptionId](resourcegroupusagecostrequest.md#optional-subscriptionid)
-* [to](resourcegroupusagecostrequest.md#optional-to)
+- [currencyCode](ResourceGroupUsageCostRequest.md#currencycode)
+- [from](ResourceGroupUsageCostRequest.md#from)
+- [resellerCustomerId](ResourceGroupUsageCostRequest.md#resellercustomerid)
+- [resourceGroup](ResourceGroupUsageCostRequest.md#resourcegroup)
+- [subscriptionId](ResourceGroupUsageCostRequest.md#subscriptionid)
+- [to](ResourceGroupUsageCostRequest.md#to)
 
 ## Properties
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** ResourceGroupUsageCostRequest
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCostRequest.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCostRequest.ts#L45)
 
 ___
 
-### `Optional` from
+### from
 
-• **from**? : *Date*
-
-**`type`** {Date}
+• `Optional` **from**: `Date`
 
 **`memberof`** ResourceGroupUsageCostRequest
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCostRequest.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCostRequest.ts#L51)
 
 ___
 
-### `Optional` resellerCustomerId
+### resellerCustomerId
 
-• **resellerCustomerId**? : *number*
-
-**`type`** {number}
+• `Optional` **resellerCustomerId**: `number`
 
 **`memberof`** ResourceGroupUsageCostRequest
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCostRequest.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCostRequest.ts#L27)
 
 ___
 
-### `Optional` resourceGroup
+### resourceGroup
 
-• **resourceGroup**? : *string*
-
-**`type`** {string}
+• `Optional` **resourceGroup**: `string`
 
 **`memberof`** ResourceGroupUsageCostRequest
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCostRequest.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCostRequest.ts#L39)
 
 ___
 
-### `Optional` subscriptionId
+### subscriptionId
 
-• **subscriptionId**? : *string*
-
-**`type`** {string}
+• `Optional` **subscriptionId**: `string`
 
 **`memberof`** ResourceGroupUsageCostRequest
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCostRequest.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCostRequest.ts#L33)
 
 ___
 
-### `Optional` to
+### to
 
-• **to**? : *Date*
-
-**`type`** {Date}
+• `Optional` **to**: `Date`
 
 **`memberof`** ResourceGroupUsageCostRequest
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCostRequest.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCostRequest.ts#L57)

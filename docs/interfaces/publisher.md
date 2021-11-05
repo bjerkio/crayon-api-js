@@ -1,38 +1,38 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Publisher](publisher.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Publisher
 
 # Interface: Publisher
 
-**`export`** 
+**`export`**
 
 **`interface`** Publisher
 
-## Hierarchy
-
-* **Publisher**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](publisher.md#optional-id)
-* [name](publisher.md#optional-name)
+- [id](Publisher.md#id)
+- [name](Publisher.md#name)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** Publisher
+
+#### Defined in
+
+[src/models/Publisher.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Publisher.ts#L27)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** Publisher
+
+#### Defined in
+
+[src/models/Publisher.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Publisher.ts#L33)

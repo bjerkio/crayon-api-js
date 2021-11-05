@@ -1,115 +1,129 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Grouping](grouping.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Grouping
 
 # Interface: Grouping
 
-**`export`** 
+**`export`**
 
 **`interface`** Grouping
 
-## Hierarchy
-
-* **Grouping**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [createdDate](grouping.md#optional-createddate)
-* [id](grouping.md#optional-id)
-* [invoiceProfile](grouping.md#optional-invoiceprofile)
-* [invoiceReference](grouping.md#optional-invoicereference)
-* [isDisabled](grouping.md#optional-isdisabled)
-* [isRemoved](grouping.md#optional-isremoved)
-* [modifiedDate](grouping.md#optional-modifieddate)
-* [name](grouping.md#optional-name)
-* [organization](grouping.md#optional-organization)
+- [createdDate](Grouping.md#createddate)
+- [id](Grouping.md#id)
+- [invoiceProfile](Grouping.md#invoiceprofile)
+- [invoiceReference](Grouping.md#invoicereference)
+- [isDisabled](Grouping.md#isdisabled)
+- [isRemoved](Grouping.md#isremoved)
+- [modifiedDate](Grouping.md#modifieddate)
+- [name](Grouping.md#name)
+- [organization](Grouping.md#organization)
 
 ## Properties
 
-### `Optional` createdDate
+### createdDate
 
-• **createdDate**? : *Date*
-
-**`type`** {Date}
+• `Optional` **createdDate**: `Date`
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:58](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L58)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:34](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L34)
 
 ___
 
-### `Optional` invoiceProfile
+### invoiceProfile
 
-• **invoiceProfile**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **invoiceProfile**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:46](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L46)
 
 ___
 
-### `Optional` invoiceReference
+### invoiceReference
 
-• **invoiceReference**? : *string*
-
-**`type`** {string}
+• `Optional` **invoiceReference**: `string`
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:82](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L82)
 
 ___
 
-### `Optional` isDisabled
+### isDisabled
 
-• **isDisabled**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **isDisabled**: `boolean`
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:70](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L70)
 
 ___
 
-### `Optional` isRemoved
+### isRemoved
 
-• **isRemoved**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **isRemoved**: `boolean`
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:76](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L76)
 
 ___
 
-### `Optional` modifiedDate
+### modifiedDate
 
-• **modifiedDate**? : *Date*
-
-**`type`** {Date}
+• `Optional` **modifiedDate**: `Date`
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:64](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L64)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:40](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L40)
 
 ___
 
-### `Optional` organization
+### organization
 
-• **organization**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **organization**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** Grouping
+
+#### Defined in
+
+[src/models/Grouping.ts:52](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Grouping.ts#L52)

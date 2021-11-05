@@ -1,27 +1,25 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CreateAzureSubscriptionRequest](createazuresubscriptionrequest.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CreateAzureSubscriptionRequest
 
 # Interface: CreateAzureSubscriptionRequest
 
-**`export`** 
+**`export`**
 
 **`interface`** CreateAzureSubscriptionRequest
 
-## Hierarchy
-
-* **CreateAzureSubscriptionRequest**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [name](createazuresubscriptionrequest.md#optional-name)
+- [name](CreateAzureSubscriptionRequest.md#name)
 
 ## Properties
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** CreateAzureSubscriptionRequest
+
+#### Defined in
+
+[src/models/CreateAzureSubscriptionRequest.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CreateAzureSubscriptionRequest.ts#L27)

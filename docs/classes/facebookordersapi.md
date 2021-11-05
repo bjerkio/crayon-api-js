@@ -1,94 +1,215 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [FacebookOrdersApi](facebookordersapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / FacebookOrdersApi
 
 # Class: FacebookOrdersApi
 
-FacebookOrdersApi - object-oriented interface
-
-**`export`** 
-
-**`class`** FacebookOrdersApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **FacebookOrdersApi**
+  ↳ **`FacebookOrdersApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](facebookordersapi.md#constructor)
+- [constructor](FacebookOrdersApi.md#constructor)
 
 ### Properties
 
-* [basePath](facebookordersapi.md#protected-basepath)
-* [configuration](facebookordersapi.md#protected-configuration)
-* [fetch](facebookordersapi.md#protected-fetch)
+- [configuration](FacebookOrdersApi.md#configuration)
 
 ### Methods
 
-* [checkoutAsync](facebookordersapi.md#checkoutasync)
+- [apiV1FacebookOrdersCheckoutPost](FacebookOrdersApi.md#apiv1facebookorderscheckoutpost)
+- [apiV1FacebookOrdersCheckoutPostRaw](FacebookOrdersApi.md#apiv1facebookorderscheckoutpostraw)
+- [request](FacebookOrdersApi.md#request)
+- [withMiddleware](FacebookOrdersApi.md#withmiddleware)
+- [withPostMiddleware](FacebookOrdersApi.md#withpostmiddleware)
+- [withPreMiddleware](FacebookOrdersApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new FacebookOrdersApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[FacebookOrdersApi](facebookordersapi.md)*
+• **new FacebookOrdersApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[FacebookOrdersApi](facebookordersapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  checkoutAsync
+### apiV1FacebookOrdersCheckoutPost
 
-▸ **checkoutAsync**(`order?`: [FacebookOrder](../interfaces/facebookorder.md), `options?`: any): *Promise‹Response›*
+▸ **apiV1FacebookOrdersCheckoutPost**(`requestParameters`, `initOverrides?`): `Promise`<`void`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** FacebookOrdersApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1FacebookOrdersCheckoutPostRequest`](../interfaces/ApiV1FacebookOrdersCheckoutPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`order?` | [FacebookOrder](../interfaces/facebookorder.md) |
-`options?` | any |
+`Promise`<`void`\>
 
-**Returns:** *Promise‹Response›*
+#### Defined in
+
+[src/apis/FacebookOrdersApi.ts:58](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/FacebookOrdersApi.ts#L58)
+
+___
+
+### apiV1FacebookOrdersCheckoutPostRaw
+
+▸ **apiV1FacebookOrdersCheckoutPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1FacebookOrdersCheckoutPostRequest`](../interfaces/ApiV1FacebookOrdersCheckoutPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
+
+#### Defined in
+
+[src/apis/FacebookOrdersApi.ts:34](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/FacebookOrdersApi.ts#L34)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

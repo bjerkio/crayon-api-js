@@ -1,115 +1,129 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AddressData](addressdata.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AddressData
 
 # Interface: AddressData
 
-**`export`** 
+**`export`**
 
 **`interface`** AddressData
 
-## Hierarchy
-
-* **AddressData**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [axAddressId](addressdata.md#optional-axaddressid)
-* [city](addressdata.md#optional-city)
-* [completeAddress](addressdata.md#optional-completeaddress)
-* [countryCode](addressdata.md#optional-countrycode)
-* [county](addressdata.md#optional-county)
-* [name](addressdata.md#optional-name)
-* [state](addressdata.md#optional-state)
-* [street](addressdata.md#optional-street)
-* [zipCode](addressdata.md#optional-zipcode)
+- [axAddressId](AddressData.md#axaddressid)
+- [city](AddressData.md#city)
+- [completeAddress](AddressData.md#completeaddress)
+- [countryCode](AddressData.md#countrycode)
+- [county](AddressData.md#county)
+- [name](AddressData.md#name)
+- [state](AddressData.md#state)
+- [street](AddressData.md#street)
+- [zipCode](AddressData.md#zipcode)
 
 ## Properties
 
-### `Optional` axAddressId
+### axAddressId
 
-• **axAddressId**? : *number*
-
-**`type`** {number}
+• `Optional` **axAddressId**: `number`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L27)
 
 ___
 
-### `Optional` city
+### city
 
-• **city**? : *string*
-
-**`type`** {string}
+• `Optional` **city**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L57)
 
 ___
 
-### `Optional` completeAddress
+### completeAddress
 
-• **completeAddress**? : *string*
-
-**`type`** {string}
+• `Optional` **completeAddress**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L39)
 
 ___
 
-### `Optional` countryCode
+### countryCode
 
-• **countryCode**? : *string*
-
-**`type`** {string}
+• `Optional` **countryCode**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:75](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L75)
 
 ___
 
-### `Optional` county
+### county
 
-• **county**? : *string*
-
-**`type`** {string}
+• `Optional` **county**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:63](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L63)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L33)
 
 ___
 
-### `Optional` state
+### state
 
-• **state**? : *string*
-
-**`type`** {string}
+• `Optional` **state**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:69](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L69)
 
 ___
 
-### `Optional` street
+### street
 
-• **street**? : *string*
-
-**`type`** {string}
+• `Optional` **street**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L45)
 
 ___
 
-### `Optional` zipCode
+### zipCode
 
-• **zipCode**? : *string*
-
-**`type`** {string}
+• `Optional` **zipCode**: `string`
 
 **`memberof`** AddressData
+
+#### Defined in
+
+[src/models/AddressData.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AddressData.ts#L51)

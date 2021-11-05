@@ -1,60 +1,64 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CustomerTenantContact](customertenantcontact.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CustomerTenantContact
 
 # Interface: CustomerTenantContact
 
-**`export`** 
+**`export`**
 
 **`interface`** CustomerTenantContact
 
-## Hierarchy
-
-* **CustomerTenantContact**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [email](customertenantcontact.md#optional-email)
-* [firstName](customertenantcontact.md#optional-firstname)
-* [lastName](customertenantcontact.md#optional-lastname)
-* [phoneNumber](customertenantcontact.md#optional-phonenumber)
+- [email](CustomerTenantContact.md#email)
+- [firstName](CustomerTenantContact.md#firstname)
+- [lastName](CustomerTenantContact.md#lastname)
+- [phoneNumber](CustomerTenantContact.md#phonenumber)
 
 ## Properties
 
-### `Optional` email
+### email
 
-• **email**? : *string*
-
-**`type`** {string}
+• `Optional` **email**: `string`
 
 **`memberof`** CustomerTenantContact
+
+#### Defined in
+
+[src/models/CustomerTenantContact.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantContact.ts#L39)
 
 ___
 
-### `Optional` firstName
+### firstName
 
-• **firstName**? : *string*
-
-**`type`** {string}
+• `Optional` **firstName**: `string`
 
 **`memberof`** CustomerTenantContact
+
+#### Defined in
+
+[src/models/CustomerTenantContact.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantContact.ts#L27)
 
 ___
 
-### `Optional` lastName
+### lastName
 
-• **lastName**? : *string*
-
-**`type`** {string}
+• `Optional` **lastName**: `string`
 
 **`memberof`** CustomerTenantContact
+
+#### Defined in
+
+[src/models/CustomerTenantContact.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantContact.ts#L33)
 
 ___
 
-### `Optional` phoneNumber
+### phoneNumber
 
-• **phoneNumber**? : *string*
-
-**`type`** {string}
+• `Optional` **phoneNumber**: `string`
 
 **`memberof`** CustomerTenantContact
+
+#### Defined in
+
+[src/models/CustomerTenantContact.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantContact.ts#L45)

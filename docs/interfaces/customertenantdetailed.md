@@ -1,49 +1,64 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CustomerTenantDetailed](customertenantdetailed.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CustomerTenantDetailed
 
 # Interface: CustomerTenantDetailed
 
-**`export`** 
+**`export`**
 
 **`interface`** CustomerTenantDetailed
 
-## Hierarchy
-
-* **CustomerTenantDetailed**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [profile](customertenantdetailed.md#optional-profile)
-* [tenant](customertenantdetailed.md#optional-tenant)
-* [user](customertenantdetailed.md#optional-user)
+- [company](CustomerTenantDetailed.md#company)
+- [profile](CustomerTenantDetailed.md#profile)
+- [tenant](CustomerTenantDetailed.md#tenant)
+- [user](CustomerTenantDetailed.md#user)
 
 ## Properties
 
-### `Optional` profile
+### company
 
-• **profile**? : *[CustomerTenantProfile](customertenantprofile.md)*
-
-**`type`** {CustomerTenantProfile}
+• `Optional` **company**: [`CustomerTenantCompany`](CustomerTenantCompany.md)
 
 **`memberof`** CustomerTenantDetailed
+
+#### Defined in
+
+[src/models/CustomerTenantDetailed.ts:64](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantDetailed.ts#L64)
 
 ___
 
-### `Optional` tenant
+### profile
 
-• **tenant**? : *[CustomerTenant](../modules/customertenant.md)*
-
-**`type`** {CustomerTenant}
+• `Optional` **profile**: [`CustomerTenantProfile`](CustomerTenantProfile.md)
 
 **`memberof`** CustomerTenantDetailed
+
+#### Defined in
+
+[src/models/CustomerTenantDetailed.ts:58](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantDetailed.ts#L58)
 
 ___
 
-### `Optional` user
+### tenant
 
-• **user**? : *[CustomerTenantUser](customertenantuser.md)*
-
-**`type`** {CustomerTenantUser}
+• `Optional` **tenant**: [`CustomerTenant`](CustomerTenant.md)
 
 **`memberof`** CustomerTenantDetailed
+
+#### Defined in
+
+[src/models/CustomerTenantDetailed.ts:46](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantDetailed.ts#L46)
+
+___
+
+### user
+
+• `Optional` **user**: [`CustomerTenantUser`](CustomerTenantUser.md)
+
+**`memberof`** CustomerTenantDetailed
+
+#### Defined in
+
+[src/models/CustomerTenantDetailed.ts:52](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantDetailed.ts#L52)

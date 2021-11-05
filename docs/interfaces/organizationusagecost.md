@@ -1,93 +1,103 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [OrganizationUsageCost](organizationusagecost.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / OrganizationUsageCost
 
 # Interface: OrganizationUsageCost
 
-**`export`** 
+**`export`**
 
 **`interface`** OrganizationUsageCost
 
-## Hierarchy
-
-* **OrganizationUsageCost**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [accountId](organizationusagecost.md#optional-accountid)
-* [accountName](organizationusagecost.md#optional-accountname)
-* [amount](organizationusagecost.md#optional-amount)
-* [currencyCode](organizationusagecost.md#optional-currencycode)
-* [subscriptionId](organizationusagecost.md#optional-subscriptionid)
-* [subscriptionName](organizationusagecost.md#optional-subscriptionname)
-* [supplier](organizationusagecost.md#optional-supplier)
+- [accountId](OrganizationUsageCost.md#accountid)
+- [accountName](OrganizationUsageCost.md#accountname)
+- [amount](OrganizationUsageCost.md#amount)
+- [currencyCode](OrganizationUsageCost.md#currencycode)
+- [subscriptionId](OrganizationUsageCost.md#subscriptionid)
+- [subscriptionName](OrganizationUsageCost.md#subscriptionname)
+- [supplier](OrganizationUsageCost.md#supplier)
 
 ## Properties
 
-### `Optional` accountId
+### accountId
 
-• **accountId**? : *number*
-
-**`type`** {number}
+• `Optional` **accountId**: `number`
 
 **`memberof`** OrganizationUsageCost
+
+#### Defined in
+
+[src/models/OrganizationUsageCost.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationUsageCost.ts#L33)
 
 ___
 
-### `Optional` accountName
+### accountName
 
-• **accountName**? : *string*
-
-**`type`** {string}
+• `Optional` **accountName**: `string`
 
 **`memberof`** OrganizationUsageCost
+
+#### Defined in
+
+[src/models/OrganizationUsageCost.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationUsageCost.ts#L39)
 
 ___
 
-### `Optional` amount
+### amount
 
-• **amount**? : *number*
-
-**`type`** {number}
+• `Optional` **amount**: `number`
 
 **`memberof`** OrganizationUsageCost
+
+#### Defined in
+
+[src/models/OrganizationUsageCost.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationUsageCost.ts#L57)
 
 ___
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** OrganizationUsageCost
+
+#### Defined in
+
+[src/models/OrganizationUsageCost.ts:63](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationUsageCost.ts#L63)
 
 ___
 
-### `Optional` subscriptionId
+### subscriptionId
 
-• **subscriptionId**? : *string*
-
-**`type`** {string}
+• `Optional` **subscriptionId**: `string`
 
 **`memberof`** OrganizationUsageCost
+
+#### Defined in
+
+[src/models/OrganizationUsageCost.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationUsageCost.ts#L51)
 
 ___
 
-### `Optional` subscriptionName
+### subscriptionName
 
-• **subscriptionName**? : *string*
-
-**`type`** {string}
+• `Optional` **subscriptionName**: `string`
 
 **`memberof`** OrganizationUsageCost
+
+#### Defined in
+
+[src/models/OrganizationUsageCost.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationUsageCost.ts#L45)
 
 ___
 
-### `Optional` supplier
+### supplier
 
-• **supplier**? : *string*
-
-**`type`** {string}
+• `Optional` **supplier**: `string`
 
 **`memberof`** OrganizationUsageCost
+
+#### Defined in
+
+[src/models/OrganizationUsageCost.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/OrganizationUsageCost.ts#L27)

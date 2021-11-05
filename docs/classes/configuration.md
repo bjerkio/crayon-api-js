@@ -1,97 +1,215 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Configuration](configuration.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Configuration
 
 # Class: Configuration
 
-## Hierarchy
-
-* **Configuration**
-
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](configuration.md#constructor)
+- [constructor](Configuration.md#constructor)
 
-### Properties
+### Accessors
 
-* [accessToken](configuration.md#optional-accesstoken)
-* [apiKey](configuration.md#optional-apikey)
-* [basePath](configuration.md#optional-basepath)
-* [password](configuration.md#optional-password)
-* [username](configuration.md#optional-username)
+- [accessToken](Configuration.md#accesstoken)
+- [apiKey](Configuration.md#apikey)
+- [basePath](Configuration.md#basepath)
+- [credentials](Configuration.md#credentials)
+- [fetchApi](Configuration.md#fetchapi)
+- [headers](Configuration.md#headers)
+- [middleware](Configuration.md#middleware)
+- [password](Configuration.md#password)
+- [queryParamsStringify](Configuration.md#queryparamsstringify)
+- [username](Configuration.md#username)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new Configuration**(`param`: [ConfigurationParameters](../interfaces/configurationparameters.md)): *[Configuration](configuration.md)*
+• **new Configuration**(`configuration?`)
 
-**Parameters:**
+#### Parameters
 
-Name | Type | Default |
------- | ------ | ------ |
-`param` | [ConfigurationParameters](../interfaces/configurationparameters.md) |  {} |
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`ConfigurationParameters`](../interfaces/ConfigurationParameters.md) |
 
-**Returns:** *[Configuration](configuration.md)*
+#### Defined in
 
-## Properties
+[src/runtime.ts:146](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L146)
 
-### `Optional` accessToken
+## Accessors
 
-• **accessToken**? : *string | function*
+### accessToken
 
-parameter for oauth2 security
+• `get` **accessToken**(): (`name?`: `string`, `scopes?`: `string`[]) => `string` \| `Promise`<`string`\>
 
-**`param`** security name
+#### Returns
 
-**`param`** oauth2 scope
+`fn`
 
-**`memberof`** Configuration
+▸ (`name?`, `scopes?`): `string` \| `Promise`<`string`\>
 
-___
+##### Parameters
 
-### `Optional` apiKey
+| Name | Type |
+| :------ | :------ |
+| `name?` | `string` |
+| `scopes?` | `string`[] |
 
-• **apiKey**? : *string | function*
+##### Returns
 
-parameter for apiKey security
+`string` \| `Promise`<`string`\>
 
-**`param`** security name
+#### Defined in
 
-**`memberof`** Configuration
-
-___
-
-### `Optional` basePath
-
-• **basePath**? : *string*
-
-override base path
-
-**`type`** {string}
-
-**`memberof`** Configuration
+[src/runtime.ts:180](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L180)
 
 ___
 
-### `Optional` password
+### apiKey
 
-• **password**? : *string*
+• `get` **apiKey**(): (`name`: `string`) => `string`
 
-parameter for basic security
+#### Returns
 
-**`type`** {string}
+`fn`
 
-**`memberof`** Configuration
+▸ (`name`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+
+##### Returns
+
+`string`
+
+#### Defined in
+
+[src/runtime.ts:172](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L172)
 
 ___
 
-### `Optional` username
+### basePath
 
-• **username**? : *string*
+• `get` **basePath**(): `string`
 
-parameter for basic security
+#### Returns
 
-**`type`** {string}
+`string`
 
-**`memberof`** Configuration
+#### Defined in
+
+[src/runtime.ts:148](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L148)
+
+___
+
+### credentials
+
+• `get` **credentials**(): `RequestCredentials`
+
+#### Returns
+
+`RequestCredentials`
+
+#### Defined in
+
+[src/runtime.ts:192](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L192)
+
+___
+
+### fetchApi
+
+• `get` **fetchApi**(): `any`
+
+#### Returns
+
+`any`
+
+#### Defined in
+
+[src/runtime.ts:152](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L152)
+
+___
+
+### headers
+
+• `get` **headers**(): [`HTTPHeaders`](../modules.md#httpheaders)
+
+#### Returns
+
+[`HTTPHeaders`](../modules.md#httpheaders)
+
+#### Defined in
+
+[src/runtime.ts:188](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L188)
+
+___
+
+### middleware
+
+• `get` **middleware**(): [`Middleware`](../interfaces/Middleware.md)[]
+
+#### Returns
+
+[`Middleware`](../interfaces/Middleware.md)[]
+
+#### Defined in
+
+[src/runtime.ts:156](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L156)
+
+___
+
+### password
+
+• `get` **password**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/runtime.ts:168](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L168)
+
+___
+
+### queryParamsStringify
+
+• `get` **queryParamsStringify**(): (`params`: [`HTTPQuery`](../modules.md#httpquery)) => `string`
+
+#### Returns
+
+`fn`
+
+▸ (`params`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | [`HTTPQuery`](../modules.md#httpquery) |
+
+##### Returns
+
+`string`
+
+#### Defined in
+
+[src/runtime.ts:160](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L160)
+
+___
+
+### username
+
+• `get` **username**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/runtime.ts:164](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L164)

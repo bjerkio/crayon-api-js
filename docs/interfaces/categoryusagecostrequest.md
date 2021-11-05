@@ -1,82 +1,90 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CategoryUsageCostRequest](categoryusagecostrequest.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CategoryUsageCostRequest
 
 # Interface: CategoryUsageCostRequest
 
-**`export`** 
+**`export`**
 
 **`interface`** CategoryUsageCostRequest
 
-## Hierarchy
-
-* **CategoryUsageCostRequest**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [category](categoryusagecostrequest.md#optional-category)
-* [currencyCode](categoryusagecostrequest.md#optional-currencycode)
-* [from](categoryusagecostrequest.md#optional-from)
-* [resellerCustomerId](categoryusagecostrequest.md#optional-resellercustomerid)
-* [subscriptionId](categoryusagecostrequest.md#optional-subscriptionid)
-* [to](categoryusagecostrequest.md#optional-to)
+- [category](CategoryUsageCostRequest.md#category)
+- [currencyCode](CategoryUsageCostRequest.md#currencycode)
+- [from](CategoryUsageCostRequest.md#from)
+- [resellerCustomerId](CategoryUsageCostRequest.md#resellercustomerid)
+- [subscriptionId](CategoryUsageCostRequest.md#subscriptionid)
+- [to](CategoryUsageCostRequest.md#to)
 
 ## Properties
 
-### `Optional` category
+### category
 
-• **category**? : *string*
-
-**`type`** {string}
+• `Optional` **category**: `string`
 
 **`memberof`** CategoryUsageCostRequest
+
+#### Defined in
+
+[src/models/CategoryUsageCostRequest.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CategoryUsageCostRequest.ts#L39)
 
 ___
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** CategoryUsageCostRequest
+
+#### Defined in
+
+[src/models/CategoryUsageCostRequest.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CategoryUsageCostRequest.ts#L45)
 
 ___
 
-### `Optional` from
+### from
 
-• **from**? : *Date*
-
-**`type`** {Date}
+• `Optional` **from**: `Date`
 
 **`memberof`** CategoryUsageCostRequest
+
+#### Defined in
+
+[src/models/CategoryUsageCostRequest.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CategoryUsageCostRequest.ts#L51)
 
 ___
 
-### `Optional` resellerCustomerId
+### resellerCustomerId
 
-• **resellerCustomerId**? : *number*
-
-**`type`** {number}
+• `Optional` **resellerCustomerId**: `number`
 
 **`memberof`** CategoryUsageCostRequest
+
+#### Defined in
+
+[src/models/CategoryUsageCostRequest.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CategoryUsageCostRequest.ts#L27)
 
 ___
 
-### `Optional` subscriptionId
+### subscriptionId
 
-• **subscriptionId**? : *string*
-
-**`type`** {string}
+• `Optional` **subscriptionId**: `string`
 
 **`memberof`** CategoryUsageCostRequest
+
+#### Defined in
+
+[src/models/CategoryUsageCostRequest.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CategoryUsageCostRequest.ts#L33)
 
 ___
 
-### `Optional` to
+### to
 
-• **to**? : *Date*
-
-**`type`** {Date}
+• `Optional` **to**: `Date`
 
 **`memberof`** CategoryUsageCostRequest
+
+#### Defined in
+
+[src/models/CategoryUsageCostRequest.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CategoryUsageCostRequest.ts#L57)

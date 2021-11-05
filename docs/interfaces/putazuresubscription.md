@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [PutAzureSubscription](putazuresubscription.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / PutAzureSubscription
 
 # Interface: PutAzureSubscription
 
-**`export`** 
+**`export`**
 
 **`interface`** PutAzureSubscription
 
-## Hierarchy
-
-* **PutAzureSubscription**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](putazuresubscription.md#optional-id)
-* [invoiceProfile](putazuresubscription.md#optional-invoiceprofile)
-* [tags](putazuresubscription.md#optional-tags)
+- [id](PutAzureSubscription.md#id)
+- [invoiceProfile](PutAzureSubscription.md#invoiceprofile)
+- [tags](PutAzureSubscription.md#tags)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** PutAzureSubscription
+
+#### Defined in
+
+[src/models/PutAzureSubscription.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/PutAzureSubscription.ts#L38)
 
 ___
 
-### `Optional` invoiceProfile
+### invoiceProfile
 
-• **invoiceProfile**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **invoiceProfile**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** PutAzureSubscription
+
+#### Defined in
+
+[src/models/PutAzureSubscription.ts:44](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/PutAzureSubscription.ts#L44)
 
 ___
 
-### `Optional` tags
+### tags
 
-• **tags**? : *[AzureSubscriptionTags](azuresubscriptiontags.md)*
-
-**`type`** {AzureSubscriptionTags}
+• `Optional` **tags**: [`AzureSubscriptionTags`](AzureSubscriptionTags.md)
 
 **`memberof`** PutAzureSubscription
+
+#### Defined in
+
+[src/models/PutAzureSubscription.ts:50](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/PutAzureSubscription.ts#L50)

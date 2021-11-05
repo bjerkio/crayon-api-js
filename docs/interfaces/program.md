@@ -1,60 +1,64 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Program](program.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Program
 
 # Interface: Program
 
-**`export`** 
+**`export`**
 
 **`interface`** Program
 
-## Hierarchy
-
-* **Program**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](program.md#optional-id)
-* [isCommitment](program.md#optional-iscommitment)
-* [name](program.md#optional-name)
-* [publisher](program.md#optional-publisher)
+- [id](Program.md#id)
+- [isCommitment](Program.md#iscommitment)
+- [name](Program.md#name)
+- [publisher](Program.md#publisher)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** Program
+
+#### Defined in
+
+[src/models/Program.ts:34](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Program.ts#L34)
 
 ___
 
-### `Optional` isCommitment
+### isCommitment
 
-• **isCommitment**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **isCommitment**: `boolean`
 
 **`memberof`** Program
+
+#### Defined in
+
+[src/models/Program.ts:46](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Program.ts#L46)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** Program
+
+#### Defined in
+
+[src/models/Program.ts:40](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Program.ts#L40)
 
 ___
 
-### `Optional` publisher
+### publisher
 
-• **publisher**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **publisher**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** Program
+
+#### Defined in
+
+[src/models/Program.ts:52](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Program.ts#L52)

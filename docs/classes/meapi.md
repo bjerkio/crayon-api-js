@@ -1,93 +1,213 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [MeApi](meapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / MeApi
 
 # Class: MeApi
 
-MeApi - object-oriented interface
-
-**`export`** 
-
-**`class`** MeApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **MeApi**
+  ↳ **`MeApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](meapi.md#constructor)
+- [constructor](MeApi.md#constructor)
 
 ### Properties
 
-* [basePath](meapi.md#protected-basepath)
-* [configuration](meapi.md#protected-configuration)
-* [fetch](meapi.md#protected-fetch)
+- [configuration](MeApi.md#configuration)
 
 ### Methods
 
-* [get](meapi.md#get)
+- [apiV1MeGet](MeApi.md#apiv1meget)
+- [apiV1MeGetRaw](MeApi.md#apiv1megetraw)
+- [request](MeApi.md#request)
+- [withMiddleware](MeApi.md#withmiddleware)
+- [withPostMiddleware](MeApi.md#withpostmiddleware)
+- [withPreMiddleware](MeApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new MeApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[MeApi](meapi.md)*
+• **new MeApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[MeApi](meapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  get
+### apiV1MeGet
 
-▸ **get**(`options?`: any): *Promise‹[Me](../interfaces/me.md)›*
+▸ **apiV1MeGet**(`initOverrides?`): `Promise`<[`Me`](../interfaces/Me.md)\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** MeApi
+| Name | Type |
+| :------ | :------ |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`options?` | any |
+`Promise`<[`Me`](../interfaces/Me.md)\>
 
-**Returns:** *Promise‹[Me](../interfaces/me.md)›*
+#### Defined in
+
+[src/apis/MeApi.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/MeApi.ts#L51)
+
+___
+
+### apiV1MeGetRaw
+
+▸ **apiV1MeGetRaw**(`initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Me`](../interfaces/Me.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Me`](../interfaces/Me.md)\>\>
+
+#### Defined in
+
+[src/apis/MeApi.ts:30](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/MeApi.ts#L30)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

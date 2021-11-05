@@ -1,118 +1,259 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [PublishersApi](publishersapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / PublishersApi
 
 # Class: PublishersApi
 
-PublishersApi - object-oriented interface
-
-**`export`** 
-
-**`class`** PublishersApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **PublishersApi**
+  ↳ **`PublishersApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](publishersapi.md#constructor)
+- [constructor](PublishersApi.md#constructor)
 
 ### Properties
 
-* [basePath](publishersapi.md#protected-basepath)
-* [configuration](publishersapi.md#protected-configuration)
-* [fetch](publishersapi.md#protected-fetch)
+- [configuration](PublishersApi.md#configuration)
 
 ### Methods
 
-* [get](publishersapi.md#get)
-* [getById](publishersapi.md#getbyid)
+- [apiV1PublishersGet](PublishersApi.md#apiv1publishersget)
+- [apiV1PublishersGetRaw](PublishersApi.md#apiv1publishersgetraw)
+- [apiV1PublishersIdGet](PublishersApi.md#apiv1publishersidget)
+- [apiV1PublishersIdGetRaw](PublishersApi.md#apiv1publishersidgetraw)
+- [request](PublishersApi.md#request)
+- [withMiddleware](PublishersApi.md#withmiddleware)
+- [withPostMiddleware](PublishersApi.md#withpostmiddleware)
+- [withPreMiddleware](PublishersApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new PublishersApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[PublishersApi](publishersapi.md)*
+• **new PublishersApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[PublishersApi](publishersapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  get
+### apiV1PublishersGet
 
-▸ **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: "None" | "License" | "Report" | "Cloud", `options?`: any): *Promise‹[ApiCollectionOfPublisher](../interfaces/apicollectionofpublisher.md)›*
+▸ **apiV1PublishersGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Publisher`](../interfaces/Publisher.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** PublishersApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1PublishersGetRequest`](../interfaces/ApiV1PublishersGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`names?` | Array‹string› |
-`page?` | number |
-`pageSize?` | number |
-`search?` | string |
-`programType?` | "None" &#124; "License" &#124; "Report" &#124; "Cloud" |
-`options?` | any |
+`Promise`<[`Publisher`](../interfaces/Publisher.md)[]\>
 
-**Returns:** *Promise‹[ApiCollectionOfPublisher](../interfaces/apicollectionofpublisher.md)›*
+#### Defined in
+
+[src/apis/PublishersApi.ts:86](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/PublishersApi.ts#L86)
 
 ___
 
-###  getById
+### apiV1PublishersGetRaw
 
-▸ **getById**(`id`: number, `options?`: any): *Promise‹[Publisher](../interfaces/publisher.md)›*
+▸ **apiV1PublishersGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Publisher`](../interfaces/Publisher.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** PublishersApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1PublishersGetRequest`](../interfaces/ApiV1PublishersGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Publisher`](../interfaces/Publisher.md)[]\>\>
 
-**Returns:** *Promise‹[Publisher](../interfaces/publisher.md)›*
+#### Defined in
+
+[src/apis/PublishersApi.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/PublishersApi.ts#L45)
+
+___
+
+### apiV1PublishersIdGet
+
+▸ **apiV1PublishersIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Publisher`](../interfaces/Publisher.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1PublishersIdGetRequest`](../interfaces/ApiV1PublishersIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Publisher`](../interfaces/Publisher.md)\>
+
+#### Defined in
+
+[src/apis/PublishersApi.ts:118](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/PublishersApi.ts#L118)
+
+___
+
+### apiV1PublishersIdGetRaw
+
+▸ **apiV1PublishersIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Publisher`](../interfaces/Publisher.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1PublishersIdGetRequest`](../interfaces/ApiV1PublishersIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Publisher`](../interfaces/Publisher.md)\>\>
+
+#### Defined in
+
+[src/apis/PublishersApi.ts:93](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/PublishersApi.ts#L93)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

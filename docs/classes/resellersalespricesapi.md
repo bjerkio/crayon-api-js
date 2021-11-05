@@ -1,204 +1,435 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ResellerSalesPricesApi](resellersalespricesapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ResellerSalesPricesApi
 
 # Class: ResellerSalesPricesApi
 
-ResellerSalesPricesApi - object-oriented interface
-
-**`export`** 
-
-**`class`** ResellerSalesPricesApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **ResellerSalesPricesApi**
+  ↳ **`ResellerSalesPricesApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](resellersalespricesapi.md#constructor)
+- [constructor](ResellerSalesPricesApi.md#constructor)
 
 ### Properties
 
-* [basePath](resellersalespricesapi.md#protected-basepath)
-* [configuration](resellersalespricesapi.md#protected-configuration)
-* [fetch](resellersalespricesapi.md#protected-fetch)
+- [configuration](ResellerSalesPricesApi.md#configuration)
 
 ### Methods
 
-* [deleteByFilterAsync](resellersalespricesapi.md#deletebyfilterasync)
-* [getAsync](resellersalespricesapi.md#getasync)
-* [getCurrentAsync](resellersalespricesapi.md#getcurrentasync)
-* [postAsync](resellersalespricesapi.md#postasync)
-* [putAsync](resellersalespricesapi.md#putasync)
-* [toggleAsync](resellersalespricesapi.md#toggleasync)
+- [apiV1ResellerSalesPricesCurrentGet](ResellerSalesPricesApi.md#apiv1resellersalespricescurrentget)
+- [apiV1ResellerSalesPricesCurrentGetRaw](ResellerSalesPricesApi.md#apiv1resellersalespricescurrentgetraw)
+- [apiV1ResellerSalesPricesDelete](ResellerSalesPricesApi.md#apiv1resellersalespricesdelete)
+- [apiV1ResellerSalesPricesDeleteRaw](ResellerSalesPricesApi.md#apiv1resellersalespricesdeleteraw)
+- [apiV1ResellerSalesPricesGet](ResellerSalesPricesApi.md#apiv1resellersalespricesget)
+- [apiV1ResellerSalesPricesGetRaw](ResellerSalesPricesApi.md#apiv1resellersalespricesgetraw)
+- [apiV1ResellerSalesPricesOldFromDatePut](ResellerSalesPricesApi.md#apiv1resellersalespricesoldfromdateput)
+- [apiV1ResellerSalesPricesOldFromDatePutRaw](ResellerSalesPricesApi.md#apiv1resellersalespricesoldfromdateputraw)
+- [apiV1ResellerSalesPricesPost](ResellerSalesPricesApi.md#apiv1resellersalespricespost)
+- [apiV1ResellerSalesPricesPostRaw](ResellerSalesPricesApi.md#apiv1resellersalespricespostraw)
+- [apiV1ResellerSalesPricesTogglePost](ResellerSalesPricesApi.md#apiv1resellersalespricestogglepost)
+- [apiV1ResellerSalesPricesTogglePostRaw](ResellerSalesPricesApi.md#apiv1resellersalespricestogglepostraw)
+- [request](ResellerSalesPricesApi.md#request)
+- [withMiddleware](ResellerSalesPricesApi.md#withmiddleware)
+- [withPostMiddleware](ResellerSalesPricesApi.md#withpostmiddleware)
+- [withPreMiddleware](ResellerSalesPricesApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new ResellerSalesPricesApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[ResellerSalesPricesApi](resellersalespricesapi.md)*
+• **new ResellerSalesPricesApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[ResellerSalesPricesApi](resellersalespricesapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  deleteByFilterAsync
+### apiV1ResellerSalesPricesCurrentGet
 
-▸ **deleteByFilterAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹Response›*
+▸ **apiV1ResellerSalesPricesCurrentGet**(`requestParameters`, `initOverrides?`): `Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ResellerSalesPricesApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesCurrentGetRequest`](../interfaces/ApiV1ResellerSalesPricesCurrentGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`type?` | "License" &#124; "Usage" &#124; "OneTime" |
-`objectId?` | number |
-`objectType?` | "Organization" &#124; "CustomerTenant" &#124; "Subscription" &#124; "SubscriptionAddon" |
-`fromDate?` | Date |
-`options?` | any |
+`Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>
 
-**Returns:** *Promise‹Response›*
+#### Defined in
 
-___
-
-###  getAsync
-
-▸ **getAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)[]›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** ResellerSalesPricesApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`type?` | "License" &#124; "Usage" &#124; "OneTime" |
-`objectId?` | number |
-`objectType?` | "Organization" &#124; "CustomerTenant" &#124; "Subscription" &#124; "SubscriptionAddon" |
-`fromDate?` | Date |
-`options?` | any |
-
-**Returns:** *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)[]›*
+[src/apis/ResellerSalesPricesApi.ts:110](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L110)
 
 ___
 
-###  getCurrentAsync
+### apiV1ResellerSalesPricesCurrentGetRaw
 
-▸ **getCurrentAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
+▸ **apiV1ResellerSalesPricesCurrentGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ResellerSalesPricesApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesCurrentGetRequest`](../interfaces/ApiV1ResellerSalesPricesCurrentGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`type?` | "License" &#124; "Usage" &#124; "OneTime" |
-`objectId?` | number |
-`objectType?` | "Organization" &#124; "CustomerTenant" &#124; "Subscription" &#124; "SubscriptionAddon" |
-`fromDate?` | Date |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>\>
 
-**Returns:** *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
+#### Defined in
 
-___
-
-###  postAsync
-
-▸ **postAsync**(`resellerSalesPrice?`: [ResellerSalesPrice](../modules/resellersalesprice.md), `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** ResellerSalesPricesApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`resellerSalesPrice?` | [ResellerSalesPrice](../modules/resellersalesprice.md) |
-`options?` | any |
-
-**Returns:** *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
+[src/apis/ResellerSalesPricesApi.ts:73](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L73)
 
 ___
 
-###  putAsync
+### apiV1ResellerSalesPricesDelete
 
-▸ **putAsync**(`oldFromDate`: Date, `resellerSalesPrice?`: [ResellerSalesPrice](../modules/resellersalesprice.md), `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
+▸ **apiV1ResellerSalesPricesDelete**(`requestParameters`, `initOverrides?`): `Promise`<`void`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ResellerSalesPricesApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesDeleteRequest`](../interfaces/ApiV1ResellerSalesPricesDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`oldFromDate` | Date |
-`resellerSalesPrice?` | [ResellerSalesPrice](../modules/resellersalesprice.md) |
-`options?` | any |
+`Promise`<`void`\>
 
-**Returns:** *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:154](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L154)
 
 ___
 
-###  toggleAsync
+### apiV1ResellerSalesPricesDeleteRaw
 
-▸ **toggleAsync**(`resellerSalesPriceToggle?`: [ResellerSalesPriceToggle](../modules/resellersalespricetoggle.md), `options?`: any): *Promise‹Response›*
+▸ **apiV1ResellerSalesPricesDeleteRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ResellerSalesPricesApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesDeleteRequest`](../interfaces/ApiV1ResellerSalesPricesDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`resellerSalesPriceToggle?` | [ResellerSalesPriceToggle](../modules/resellersalespricetoggle.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
 
-**Returns:** *Promise‹Response›*
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:117](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L117)
+
+___
+
+### apiV1ResellerSalesPricesGet
+
+▸ **apiV1ResellerSalesPricesGet**(`requestParameters`, `initOverrides?`): `Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesGetRequest`](../interfaces/ApiV1ResellerSalesPricesGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)[]\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:197](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L197)
+
+___
+
+### apiV1ResellerSalesPricesGetRaw
+
+▸ **apiV1ResellerSalesPricesGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesGetRequest`](../interfaces/ApiV1ResellerSalesPricesGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)[]\>\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:160](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L160)
+
+___
+
+### apiV1ResellerSalesPricesOldFromDatePut
+
+▸ **apiV1ResellerSalesPricesOldFromDatePut**(`requestParameters`, `initOverrides?`): `Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesOldFromDatePutRequest`](../interfaces/ApiV1ResellerSalesPricesOldFromDatePutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:232](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L232)
+
+___
+
+### apiV1ResellerSalesPricesOldFromDatePutRaw
+
+▸ **apiV1ResellerSalesPricesOldFromDatePutRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesOldFromDatePutRequest`](../interfaces/ApiV1ResellerSalesPricesOldFromDatePutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:204](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L204)
+
+___
+
+### apiV1ResellerSalesPricesPost
+
+▸ **apiV1ResellerSalesPricesPost**(`requestParameters`, `initOverrides?`): `Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesPostRequest`](../interfaces/ApiV1ResellerSalesPricesPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:263](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L263)
+
+___
+
+### apiV1ResellerSalesPricesPostRaw
+
+▸ **apiV1ResellerSalesPricesPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesPostRequest`](../interfaces/ApiV1ResellerSalesPricesPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResellerSalesPrice`](../interfaces/ResellerSalesPrice.md)\>\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:239](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L239)
+
+___
+
+### apiV1ResellerSalesPricesTogglePost
+
+▸ **apiV1ResellerSalesPricesTogglePost**(`requestParameters`, `initOverrides?`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesTogglePostRequest`](../interfaces/ApiV1ResellerSalesPricesTogglePostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:294](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L294)
+
+___
+
+### apiV1ResellerSalesPricesTogglePostRaw
+
+▸ **apiV1ResellerSalesPricesTogglePostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ResellerSalesPricesTogglePostRequest`](../interfaces/ApiV1ResellerSalesPricesTogglePostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
+
+#### Defined in
+
+[src/apis/ResellerSalesPricesApi.ts:270](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ResellerSalesPricesApi.ts#L270)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

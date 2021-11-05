@@ -1,110 +1,215 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AgreementsApi](agreementsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AgreementsApi
 
 # Class: AgreementsApi
 
-AgreementsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** AgreementsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **AgreementsApi**
+  ↳ **`AgreementsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](agreementsapi.md#constructor)
+- [constructor](AgreementsApi.md#constructor)
 
 ### Properties
 
-* [basePath](agreementsapi.md#protected-basepath)
-* [configuration](agreementsapi.md#protected-configuration)
-* [fetch](agreementsapi.md#protected-fetch)
+- [configuration](AgreementsApi.md#configuration)
 
 ### Methods
 
-* [get](agreementsapi.md#get)
+- [apiV1AgreementsGet](AgreementsApi.md#apiv1agreementsget)
+- [apiV1AgreementsGetRaw](AgreementsApi.md#apiv1agreementsgetraw)
+- [request](AgreementsApi.md#request)
+- [withMiddleware](AgreementsApi.md#withmiddleware)
+- [withPostMiddleware](AgreementsApi.md#withpostmiddleware)
+- [withPreMiddleware](AgreementsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new AgreementsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[AgreementsApi](agreementsapi.md)*
+• **new AgreementsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[AgreementsApi](agreementsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  get
+### apiV1AgreementsGet
 
-▸ **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: "None" | "Active" | "Inactive" | "ActiveInactive", `agreementTypes?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[AgreementCollection](../interfaces/agreementcollection.md)›*
+▸ **apiV1AgreementsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Agreement`](../interfaces/Agreement.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** AgreementsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementsGetRequest`](../interfaces/ApiV1AgreementsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`organizationId?` | number |
-`organizationIds?` | Array‹number› |
-`pricelistIds?` | Array‹number› |
-`status?` | "None" &#124; "Active" &#124; "Inactive" &#124; "ActiveInactive" |
-`agreementTypes?` | Array‹"None" &#124; "LicenseAgreement" &#124; "OpenAgreement" &#124; "FrameAgreement" &#124; "SamAgreement" &#124; "ConsultingAgreement" &#124; "CloudSeatAgreement" &#124; "CloudUsageAgreement" &#124; "ReportingAgreement" &#124; "OtherAgreement" &#124; "Reserved1" &#124; "Reserved2" &#124; "Reserved3"› |
-`publisherIds?` | Array‹number› |
-`programIds?` | Array‹number› |
-`searchDate?` | Date |
-`agreementIds?` | Array‹number› |
-`salesPriceCurrency?` | string |
-`termRequired?` | boolean |
-`publisherId?` | number |
-`endDateFrom?` | Date |
-`endDateTo?` | Date |
-`page?` | number |
-`pageSize?` | number |
-`search?` | string |
-`options?` | any |
+`Promise`<[`Agreement`](../interfaces/Agreement.md)[]\>
 
-**Returns:** *Promise‹[AgreementCollection](../interfaces/agreementcollection.md)›*
+#### Defined in
+
+[src/apis/AgreementsApi.ts:145](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementsApi.ts#L145)
+
+___
+
+### apiV1AgreementsGetRaw
+
+▸ **apiV1AgreementsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Agreement`](../interfaces/Agreement.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementsGetRequest`](../interfaces/ApiV1AgreementsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Agreement`](../interfaces/Agreement.md)[]\>\>
+
+#### Defined in
+
+[src/apis/AgreementsApi.ts:56](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementsApi.ts#L56)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

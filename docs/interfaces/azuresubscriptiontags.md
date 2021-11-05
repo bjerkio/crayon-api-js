@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AzureSubscriptionTags](azuresubscriptiontags.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AzureSubscriptionTags
 
 # Interface: AzureSubscriptionTags
 
-**`export`** 
+**`export`**
 
 **`interface`** AzureSubscriptionTags
 
-## Hierarchy
-
-* **AzureSubscriptionTags**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [costCenter](azuresubscriptiontags.md#optional-costcenter)
-* [custom](azuresubscriptiontags.md#optional-custom)
-* [department](azuresubscriptiontags.md#optional-department)
-* [owner](azuresubscriptiontags.md#optional-owner)
-* [project](azuresubscriptiontags.md#optional-project)
+- [costCenter](AzureSubscriptionTags.md#costcenter)
+- [custom](AzureSubscriptionTags.md#custom)
+- [department](AzureSubscriptionTags.md#department)
+- [owner](AzureSubscriptionTags.md#owner)
+- [project](AzureSubscriptionTags.md#project)
 
 ## Properties
 
-### `Optional` costCenter
+### costCenter
 
-• **costCenter**? : *string*
-
-**`type`** {string}
+• `Optional` **costCenter**: `string`
 
 **`memberof`** AzureSubscriptionTags
+
+#### Defined in
+
+[src/models/AzureSubscriptionTags.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscriptionTags.ts#L27)
 
 ___
 
-### `Optional` custom
+### custom
 
-• **custom**? : *string*
-
-**`type`** {string}
+• `Optional` **custom**: `string`
 
 **`memberof`** AzureSubscriptionTags
+
+#### Defined in
+
+[src/models/AzureSubscriptionTags.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscriptionTags.ts#L45)
 
 ___
 
-### `Optional` department
+### department
 
-• **department**? : *string*
-
-**`type`** {string}
+• `Optional` **department**: `string`
 
 **`memberof`** AzureSubscriptionTags
+
+#### Defined in
+
+[src/models/AzureSubscriptionTags.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscriptionTags.ts#L33)
 
 ___
 
-### `Optional` owner
+### owner
 
-• **owner**? : *string*
-
-**`type`** {string}
+• `Optional` **owner**: `string`
 
 **`memberof`** AzureSubscriptionTags
+
+#### Defined in
+
+[src/models/AzureSubscriptionTags.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscriptionTags.ts#L51)
 
 ___
 
-### `Optional` project
+### project
 
-• **project**? : *string*
-
-**`type`** {string}
+• `Optional` **project**: `string`
 
 **`memberof`** AzureSubscriptionTags
+
+#### Defined in
+
+[src/models/AzureSubscriptionTags.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscriptionTags.ts#L39)

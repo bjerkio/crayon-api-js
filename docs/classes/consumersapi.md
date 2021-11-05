@@ -1,178 +1,391 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ConsumersApi](consumersapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ConsumersApi
 
 # Class: ConsumersApi
 
-ConsumersApi - object-oriented interface
-
-**`export`** 
-
-**`class`** ConsumersApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **ConsumersApi**
+  ↳ **`ConsumersApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](consumersapi.md#constructor)
+- [constructor](ConsumersApi.md#constructor)
 
 ### Properties
 
-* [basePath](consumersapi.md#protected-basepath)
-* [configuration](consumersapi.md#protected-configuration)
-* [fetch](consumersapi.md#protected-fetch)
+- [configuration](ConsumersApi.md#configuration)
 
 ### Methods
 
-* [addConsumer](consumersapi.md#addconsumer)
-* [deleteConsumer](consumersapi.md#deleteconsumer)
-* [get](consumersapi.md#get)
-* [getConsumerById](consumersapi.md#getconsumerbyid)
-* [updateConsumer](consumersapi.md#updateconsumer)
+- [apiV1ConsumersGet](ConsumersApi.md#apiv1consumersget)
+- [apiV1ConsumersGetRaw](ConsumersApi.md#apiv1consumersgetraw)
+- [apiV1ConsumersIdDelete](ConsumersApi.md#apiv1consumersiddelete)
+- [apiV1ConsumersIdDeleteRaw](ConsumersApi.md#apiv1consumersiddeleteraw)
+- [apiV1ConsumersIdGet](ConsumersApi.md#apiv1consumersidget)
+- [apiV1ConsumersIdGetRaw](ConsumersApi.md#apiv1consumersidgetraw)
+- [apiV1ConsumersIdPut](ConsumersApi.md#apiv1consumersidput)
+- [apiV1ConsumersIdPutRaw](ConsumersApi.md#apiv1consumersidputraw)
+- [apiV1ConsumersPost](ConsumersApi.md#apiv1consumerspost)
+- [apiV1ConsumersPostRaw](ConsumersApi.md#apiv1consumerspostraw)
+- [request](ConsumersApi.md#request)
+- [withMiddleware](ConsumersApi.md#withmiddleware)
+- [withPostMiddleware](ConsumersApi.md#withpostmiddleware)
+- [withPreMiddleware](ConsumersApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new ConsumersApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[ConsumersApi](consumersapi.md)*
+• **new ConsumersApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[ConsumersApi](consumersapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  addConsumer
+### apiV1ConsumersGet
 
-▸ **addConsumer**(`consumer?`: [Consumer](../interfaces/consumer.md), `options?`: any): *Promise‹[Consumer](../interfaces/consumer.md)›*
+▸ **apiV1ConsumersGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Consumer`](../interfaces/Consumer.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ConsumersApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersGetRequest`](../interfaces/ApiV1ConsumersGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`consumer?` | [Consumer](../interfaces/consumer.md) |
-`options?` | any |
+`Promise`<[`Consumer`](../interfaces/Consumer.md)[]\>
 
-**Returns:** *Promise‹[Consumer](../interfaces/consumer.md)›*
+#### Defined in
 
-___
-
-###  deleteConsumer
-
-▸ **deleteConsumer**(`id`: number, `options?`: any): *Promise‹boolean›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** ConsumersApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
-
-**Returns:** *Promise‹boolean›*
+[src/apis/ConsumersApi.ts:91](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L91)
 
 ___
 
-###  get
+### apiV1ConsumersGetRaw
 
-▸ **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfConsumer](../interfaces/apicollectionofconsumer.md)›*
+▸ **apiV1ConsumersGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ConsumersApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersGetRequest`](../interfaces/ApiV1ConsumersGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`organizationId?` | number |
-`search?` | string |
-`page?` | number |
-`pageSize?` | number |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)[]\>\>
 
-**Returns:** *Promise‹[ApiCollectionOfConsumer](../interfaces/apicollectionofconsumer.md)›*
+#### Defined in
 
-___
-
-###  getConsumerById
-
-▸ **getConsumerById**(`id`: number, `options?`: any): *Promise‹[Consumer](../interfaces/consumer.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** ConsumersApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
-
-**Returns:** *Promise‹[Consumer](../interfaces/consumer.md)›*
+[src/apis/ConsumersApi.ts:54](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L54)
 
 ___
 
-###  updateConsumer
+### apiV1ConsumersIdDelete
 
-▸ **updateConsumer**(`id`: number, `consumer?`: [Consumer](../interfaces/consumer.md), `options?`: any): *Promise‹[Consumer](../interfaces/consumer.md)›*
+▸ **apiV1ConsumersIdDelete**(`requestParameters`, `initOverrides?`): `Promise`<`boolean`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ConsumersApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersIdDeleteRequest`](../interfaces/ApiV1ConsumersIdDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`consumer?` | [Consumer](../interfaces/consumer.md) |
-`options?` | any |
+`Promise`<`boolean`\>
 
-**Returns:** *Promise‹[Consumer](../interfaces/consumer.md)›*
+#### Defined in
+
+[src/apis/ConsumersApi.ts:123](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L123)
+
+___
+
+### apiV1ConsumersIdDeleteRaw
+
+▸ **apiV1ConsumersIdDeleteRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersIdDeleteRequest`](../interfaces/ApiV1ConsumersIdDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
+
+#### Defined in
+
+[src/apis/ConsumersApi.ts:98](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L98)
+
+___
+
+### apiV1ConsumersIdGet
+
+▸ **apiV1ConsumersIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Consumer`](../interfaces/Consumer.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersIdGetRequest`](../interfaces/ApiV1ConsumersIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Consumer`](../interfaces/Consumer.md)\>
+
+#### Defined in
+
+[src/apis/ConsumersApi.ts:155](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L155)
+
+___
+
+### apiV1ConsumersIdGetRaw
+
+▸ **apiV1ConsumersIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersIdGetRequest`](../interfaces/ApiV1ConsumersIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)\>\>
+
+#### Defined in
+
+[src/apis/ConsumersApi.ts:130](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L130)
+
+___
+
+### apiV1ConsumersIdPut
+
+▸ **apiV1ConsumersIdPut**(`requestParameters`, `initOverrides?`): `Promise`<[`Consumer`](../interfaces/Consumer.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersIdPutRequest`](../interfaces/ApiV1ConsumersIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Consumer`](../interfaces/Consumer.md)\>
+
+#### Defined in
+
+[src/apis/ConsumersApi.ts:190](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L190)
+
+___
+
+### apiV1ConsumersIdPutRaw
+
+▸ **apiV1ConsumersIdPutRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersIdPutRequest`](../interfaces/ApiV1ConsumersIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)\>\>
+
+#### Defined in
+
+[src/apis/ConsumersApi.ts:162](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L162)
+
+___
+
+### apiV1ConsumersPost
+
+▸ **apiV1ConsumersPost**(`requestParameters`, `initOverrides?`): `Promise`<[`Consumer`](../interfaces/Consumer.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersPostRequest`](../interfaces/ApiV1ConsumersPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Consumer`](../interfaces/Consumer.md)\>
+
+#### Defined in
+
+[src/apis/ConsumersApi.ts:221](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L221)
+
+___
+
+### apiV1ConsumersPostRaw
+
+▸ **apiV1ConsumersPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ConsumersPostRequest`](../interfaces/ApiV1ConsumersPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Consumer`](../interfaces/Consumer.md)\>\>
+
+#### Defined in
+
+[src/apis/ConsumersApi.ts:197](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ConsumersApi.ts#L197)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

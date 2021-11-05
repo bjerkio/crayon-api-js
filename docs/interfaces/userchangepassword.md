@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [UserChangePassword](userchangepassword.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / UserChangePassword
 
 # Interface: UserChangePassword
 
-**`export`** 
+**`export`**
 
 **`interface`** UserChangePassword
 
-## Hierarchy
-
-* **UserChangePassword**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [newPassword](userchangepassword.md#optional-newpassword)
-* [oldPassword](userchangepassword.md#optional-oldpassword)
-* [userId](userchangepassword.md#optional-userid)
+- [newPassword](UserChangePassword.md#newpassword)
+- [oldPassword](UserChangePassword.md#oldpassword)
+- [userId](UserChangePassword.md#userid)
 
 ## Properties
 
-### `Optional` newPassword
+### newPassword
 
-• **newPassword**? : *string*
-
-**`type`** {string}
+• `Optional` **newPassword**: `string`
 
 **`memberof`** UserChangePassword
+
+#### Defined in
+
+[src/models/UserChangePassword.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserChangePassword.ts#L39)
 
 ___
 
-### `Optional` oldPassword
+### oldPassword
 
-• **oldPassword**? : *string*
-
-**`type`** {string}
+• `Optional` **oldPassword**: `string`
 
 **`memberof`** UserChangePassword
+
+#### Defined in
+
+[src/models/UserChangePassword.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserChangePassword.ts#L33)
 
 ___
 
-### `Optional` userId
+### userId
 
-• **userId**? : *string*
-
-**`type`** {string}
+• `Optional` **userId**: `string`
 
 **`memberof`** UserChangePassword
+
+#### Defined in
+
+[src/models/UserChangePassword.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/UserChangePassword.ts#L27)

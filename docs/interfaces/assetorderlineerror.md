@@ -1,53 +1,55 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AssetOrderLineError](assetorderlineerror.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AssetOrderLineError
 
 # Interface: AssetOrderLineError
 
-**`export`** 
+**`export`**
 
 **`interface`** AssetOrderLineError
 
-## Hierarchy
-
-* **AssetOrderLineError**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [description](assetorderlineerror.md#optional-description)
-* [properties](assetorderlineerror.md#optional-properties)
-* [reasonCode](assetorderlineerror.md#optional-reasoncode)
+- [description](AssetOrderLineError.md#description)
+- [properties](AssetOrderLineError.md#properties)
+- [reasonCode](AssetOrderLineError.md#reasoncode)
 
 ## Properties
 
-### `Optional` description
+### description
 
-• **description**? : *string*
-
-**`type`** {string}
+• `Optional` **description**: `string`
 
 **`memberof`** AssetOrderLineError
+
+#### Defined in
+
+[src/models/AssetOrderLineError.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrderLineError.ts#L33)
 
 ___
 
-### `Optional` properties
+### properties
 
-• **properties**? : *object*
-
-**`type`** {{ [key: string]: string; }}
+• `Optional` **properties**: `Object`
 
 **`memberof`** AssetOrderLineError
 
-#### Type declaration:
+#### Index signature
 
-* \[ **key**: *string*\]: string
+▪ [key: `string`]: `string`
+
+#### Defined in
+
+[src/models/AssetOrderLineError.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrderLineError.ts#L39)
 
 ___
 
-### `Optional` reasonCode
+### reasonCode
 
-• **reasonCode**? : *string*
-
-**`type`** {string}
+• `Optional` **reasonCode**: `string`
 
 **`memberof`** AssetOrderLineError
+
+#### Defined in
+
+[src/models/AssetOrderLineError.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrderLineError.ts#L27)

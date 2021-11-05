@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ProductReference](productreference.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ProductReference
 
 # Interface: ProductReference
 
-**`export`** 
+**`export`**
 
 **`interface`** ProductReference
 
-## Hierarchy
-
-* **ProductReference**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](productreference.md#optional-id)
-* [itemLegalName](productreference.md#optional-itemlegalname)
-* [itemName](productreference.md#optional-itemname)
-* [partNumber](productreference.md#optional-partnumber)
-* [publisherProductId](productreference.md#optional-publisherproductid)
+- [id](ProductReference.md#id)
+- [itemLegalName](ProductReference.md#itemlegalname)
+- [itemName](ProductReference.md#itemname)
+- [partNumber](ProductReference.md#partnumber)
+- [publisherProductId](ProductReference.md#publisherproductid)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** ProductReference
+
+#### Defined in
+
+[src/models/ProductReference.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductReference.ts#L27)
 
 ___
 
-### `Optional` itemLegalName
+### itemLegalName
 
-• **itemLegalName**? : *string*
-
-**`type`** {string}
+• `Optional` **itemLegalName**: `string`
 
 **`memberof`** ProductReference
+
+#### Defined in
+
+[src/models/ProductReference.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductReference.ts#L45)
 
 ___
 
-### `Optional` itemName
+### itemName
 
-• **itemName**? : *string*
-
-**`type`** {string}
+• `Optional` **itemName**: `string`
 
 **`memberof`** ProductReference
+
+#### Defined in
+
+[src/models/ProductReference.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductReference.ts#L51)
 
 ___
 
-### `Optional` partNumber
+### partNumber
 
-• **partNumber**? : *string*
-
-**`type`** {string}
+• `Optional` **partNumber**: `string`
 
 **`memberof`** ProductReference
+
+#### Defined in
+
+[src/models/ProductReference.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductReference.ts#L33)
 
 ___
 
-### `Optional` publisherProductId
+### publisherProductId
 
-• **publisherProductId**? : *string*
-
-**`type`** {string}
+• `Optional` **publisherProductId**: `string`
 
 **`memberof`** ProductReference
+
+#### Defined in
+
+[src/models/ProductReference.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductReference.ts#L39)

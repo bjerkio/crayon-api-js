@@ -1,60 +1,64 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ManagementLink](managementlink.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ManagementLink
 
 # Interface: ManagementLink
 
-**`export`** 
+**`export`**
 
 **`interface`** ManagementLink
 
-## Hierarchy
-
-* **ManagementLink**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [link](managementlink.md#optional-link)
-* [resellerCustomer](managementlink.md#optional-resellercustomer)
-* [subscription](managementlink.md#optional-subscription)
-* [text](managementlink.md#optional-text)
+- [link](ManagementLink.md#link)
+- [resellerCustomer](ManagementLink.md#resellercustomer)
+- [subscription](ManagementLink.md#subscription)
+- [text](ManagementLink.md#text)
 
 ## Properties
 
-### `Optional` link
+### link
 
-• **link**? : *string*
-
-**`type`** {string}
+• `Optional` **link**: `string`
 
 **`memberof`** ManagementLink
+
+#### Defined in
+
+[src/models/ManagementLink.ts:34](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ManagementLink.ts#L34)
 
 ___
 
-### `Optional` resellerCustomer
+### resellerCustomer
 
-• **resellerCustomer**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **resellerCustomer**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ManagementLink
+
+#### Defined in
+
+[src/models/ManagementLink.ts:40](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ManagementLink.ts#L40)
 
 ___
 
-### `Optional` subscription
+### subscription
 
-• **subscription**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **subscription**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ManagementLink
+
+#### Defined in
+
+[src/models/ManagementLink.ts:46](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ManagementLink.ts#L46)
 
 ___
 
-### `Optional` text
+### text
 
-• **text**? : *string*
-
-**`type`** {string}
+• `Optional` **text**: `string`
 
 **`memberof`** ManagementLink
+
+#### Defined in
+
+[src/models/ManagementLink.ts:52](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ManagementLink.ts#L52)

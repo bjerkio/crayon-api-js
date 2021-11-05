@@ -1,116 +1,259 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CustomerTenantAgreementsApi](customertenantagreementsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CustomerTenantAgreementsApi
 
 # Class: CustomerTenantAgreementsApi
 
-CustomerTenantAgreementsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** CustomerTenantAgreementsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **CustomerTenantAgreementsApi**
+  ↳ **`CustomerTenantAgreementsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](customertenantagreementsapi.md#constructor)
+- [constructor](CustomerTenantAgreementsApi.md#constructor)
 
 ### Properties
 
-* [basePath](customertenantagreementsapi.md#protected-basepath)
-* [configuration](customertenantagreementsapi.md#protected-configuration)
-* [fetch](customertenantagreementsapi.md#protected-fetch)
+- [configuration](CustomerTenantAgreementsApi.md#configuration)
 
 ### Methods
 
-* [add](customertenantagreementsapi.md#add)
-* [get](customertenantagreementsapi.md#get)
+- [apiV1CustomertenantsCustomerTenantIdAgreementsGet](CustomerTenantAgreementsApi.md#apiv1customertenantscustomertenantidagreementsget)
+- [apiV1CustomertenantsCustomerTenantIdAgreementsGetRaw](CustomerTenantAgreementsApi.md#apiv1customertenantscustomertenantidagreementsgetraw)
+- [apiV1CustomertenantsCustomerTenantIdAgreementsPost](CustomerTenantAgreementsApi.md#apiv1customertenantscustomertenantidagreementspost)
+- [apiV1CustomertenantsCustomerTenantIdAgreementsPostRaw](CustomerTenantAgreementsApi.md#apiv1customertenantscustomertenantidagreementspostraw)
+- [request](CustomerTenantAgreementsApi.md#request)
+- [withMiddleware](CustomerTenantAgreementsApi.md#withmiddleware)
+- [withPostMiddleware](CustomerTenantAgreementsApi.md#withpostmiddleware)
+- [withPreMiddleware](CustomerTenantAgreementsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new CustomerTenantAgreementsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[CustomerTenantAgreementsApi](customertenantagreementsapi.md)*
+• **new CustomerTenantAgreementsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[CustomerTenantAgreementsApi](customertenantagreementsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  add
+### apiV1CustomertenantsCustomerTenantIdAgreementsGet
 
-▸ **add**(`customerTenantId`: number, `agreement?`: [ServiceAccountAgreement](../modules/serviceaccountagreement.md), `options?`: any): *Promise‹[ServiceAccountAgreement](../modules/serviceaccountagreement.md)›*
+▸ **apiV1CustomertenantsCustomerTenantIdAgreementsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** CustomerTenantAgreementsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CustomertenantsCustomerTenantIdAgreementsGetRequest`](../interfaces/ApiV1CustomertenantsCustomerTenantIdAgreementsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`customerTenantId` | number |
-`agreement?` | [ServiceAccountAgreement](../modules/serviceaccountagreement.md) |
-`options?` | any |
+`Promise`<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)[]\>
 
-**Returns:** *Promise‹[ServiceAccountAgreement](../modules/serviceaccountagreement.md)›*
+#### Defined in
+
+[src/apis/CustomerTenantAgreementsApi.ts:72](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CustomerTenantAgreementsApi.ts#L72)
 
 ___
 
-###  get
+### apiV1CustomertenantsCustomerTenantIdAgreementsGetRaw
 
-▸ **get**(`customerTenantId`: number, `agreementTypeConsent?`: "MicrosoftCloudAgreement" | "MicrosoftCustomerAgreement", `options?`: any): *Promise‹[ApiCollectionOfServiceAccountAgreement](../interfaces/apicollectionofserviceaccountagreement.md)›*
+▸ **apiV1CustomertenantsCustomerTenantIdAgreementsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** CustomerTenantAgreementsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CustomertenantsCustomerTenantIdAgreementsGetRequest`](../interfaces/ApiV1CustomertenantsCustomerTenantIdAgreementsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`customerTenantId` | number |
-`agreementTypeConsent?` | "MicrosoftCloudAgreement" &#124; "MicrosoftCustomerAgreement" |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)[]\>\>
 
-**Returns:** *Promise‹[ApiCollectionOfServiceAccountAgreement](../interfaces/apicollectionofserviceaccountagreement.md)›*
+#### Defined in
+
+[src/apis/CustomerTenantAgreementsApi.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CustomerTenantAgreementsApi.ts#L43)
+
+___
+
+### apiV1CustomertenantsCustomerTenantIdAgreementsPost
+
+▸ **apiV1CustomertenantsCustomerTenantIdAgreementsPost**(`requestParameters`, `initOverrides?`): `Promise`<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CustomertenantsCustomerTenantIdAgreementsPostRequest`](../interfaces/ApiV1CustomertenantsCustomerTenantIdAgreementsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)\>
+
+#### Defined in
+
+[src/apis/CustomerTenantAgreementsApi.ts:107](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CustomerTenantAgreementsApi.ts#L107)
+
+___
+
+### apiV1CustomertenantsCustomerTenantIdAgreementsPostRaw
+
+▸ **apiV1CustomertenantsCustomerTenantIdAgreementsPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CustomertenantsCustomerTenantIdAgreementsPostRequest`](../interfaces/ApiV1CustomertenantsCustomerTenantIdAgreementsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ServiceAccountAgreement`](../interfaces/ServiceAccountAgreement.md)\>\>
+
+#### Defined in
+
+[src/apis/CustomerTenantAgreementsApi.ts:79](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CustomerTenantAgreementsApi.ts#L79)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

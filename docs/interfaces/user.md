@@ -1,148 +1,168 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [User](user.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / User
 
 # Interface: User
 
-**`export`** 
+**`export`**
 
 **`interface`** User
 
-## Hierarchy
-
-* **User**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [email](user.md#optional-email)
-* [emailConfirmed](user.md#optional-emailconfirmed)
-* [firstName](user.md#optional-firstname)
-* [id](user.md#optional-id)
-* [lastName](user.md#optional-lastname)
-* [lockoutEnabled](user.md#optional-lockoutenabled)
-* [lockoutEnd](user.md#optional-lockoutend)
-* [phoneNumber](user.md#optional-phonenumber)
-* [phoneNumberConfirmed](user.md#optional-phonenumberconfirmed)
-* [tenantAdmin](user.md#optional-tenantadmin)
-* [twoFactorEnabled](user.md#optional-twofactorenabled)
-* [userName](user.md#optional-username)
+- [email](User.md#email)
+- [emailConfirmed](User.md#emailconfirmed)
+- [firstName](User.md#firstname)
+- [id](User.md#id)
+- [lastName](User.md#lastname)
+- [lockoutEnabled](User.md#lockoutenabled)
+- [lockoutEnd](User.md#lockoutend)
+- [phoneNumber](User.md#phonenumber)
+- [phoneNumberConfirmed](User.md#phonenumberconfirmed)
+- [tenantAdmin](User.md#tenantadmin)
+- [twoFactorEnabled](User.md#twofactorenabled)
+- [userName](User.md#username)
 
 ## Properties
 
-### `Optional` email
+### email
 
-• **email**? : *string*
-
-**`type`** {string}
+• `Optional` **email**: `string`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L51)
 
 ___
 
-### `Optional` emailConfirmed
+### emailConfirmed
 
-• **emailConfirmed**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **emailConfirmed**: `boolean`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L57)
 
 ___
 
-### `Optional` firstName
+### firstName
 
-• **firstName**? : *string*
-
-**`type`** {string}
+• `Optional` **firstName**: `string`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L39)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *string*
-
-**`type`** {string}
+• `Optional` **id**: `string`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L27)
 
 ___
 
-### `Optional` lastName
+### lastName
 
-• **lastName**? : *string*
-
-**`type`** {string}
+• `Optional` **lastName**: `string`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L45)
 
 ___
 
-### `Optional` lockoutEnabled
+### lockoutEnabled
 
-• **lockoutEnabled**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **lockoutEnabled**: `boolean`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:63](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L63)
 
 ___
 
-### `Optional` lockoutEnd
+### lockoutEnd
 
-• **lockoutEnd**? : *Date*
-
-**`type`** {Date}
+• `Optional` **lockoutEnd**: `Date`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:69](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L69)
 
 ___
 
-### `Optional` phoneNumber
+### phoneNumber
 
-• **phoneNumber**? : *string*
-
-**`type`** {string}
+• `Optional` **phoneNumber**: `string`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:75](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L75)
 
 ___
 
-### `Optional` phoneNumberConfirmed
+### phoneNumberConfirmed
 
-• **phoneNumberConfirmed**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **phoneNumberConfirmed**: `boolean`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:81](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L81)
 
 ___
 
-### `Optional` tenantAdmin
+### tenantAdmin
 
-• **tenantAdmin**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **tenantAdmin**: `boolean`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:93](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L93)
 
 ___
 
-### `Optional` twoFactorEnabled
+### twoFactorEnabled
 
-• **twoFactorEnabled**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **twoFactorEnabled**: `boolean`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:87](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L87)
 
 ___
 
-### `Optional` userName
+### userName
 
-• **userName**? : *string*
-
-**`type`** {string}
+• `Optional` **userName**: `string`
 
 **`memberof`** User
+
+#### Defined in
+
+[src/models/User.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/User.ts#L33)

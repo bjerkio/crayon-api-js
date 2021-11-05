@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [SubscriptionPricing](subscriptionpricing.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / SubscriptionPricing
 
 # Interface: SubscriptionPricing
 
-**`export`** 
+**`export`**
 
 **`interface`** SubscriptionPricing
 
-## Hierarchy
-
-* **SubscriptionPricing**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [currencyCode](subscriptionpricing.md#optional-currencycode)
-* [purchasePrice](subscriptionpricing.md#optional-purchaseprice)
-* [recommendedRetailPrice](subscriptionpricing.md#optional-recommendedretailprice)
+- [currencyCode](SubscriptionPricing.md#currencycode)
+- [purchasePrice](SubscriptionPricing.md#purchaseprice)
+- [recommendedRetailPrice](SubscriptionPricing.md#recommendedretailprice)
 
 ## Properties
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** SubscriptionPricing
+
+#### Defined in
+
+[src/models/SubscriptionPricing.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionPricing.ts#L27)
 
 ___
 
-### `Optional` purchasePrice
+### purchasePrice
 
-• **purchasePrice**? : *number*
-
-**`type`** {number}
+• `Optional` **purchasePrice**: `number`
 
 **`memberof`** SubscriptionPricing
+
+#### Defined in
+
+[src/models/SubscriptionPricing.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionPricing.ts#L33)
 
 ___
 
-### `Optional` recommendedRetailPrice
+### recommendedRetailPrice
 
-• **recommendedRetailPrice**? : *number*
-
-**`type`** {number}
+• `Optional` **recommendedRetailPrice**: `number`
 
 **`memberof`** SubscriptionPricing
+
+#### Defined in
+
+[src/models/SubscriptionPricing.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionPricing.ts#L39)

@@ -1,38 +1,38 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ObjectReference](objectreference.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ObjectReference
 
 # Interface: ObjectReference
 
-**`export`** 
+**`export`**
 
 **`interface`** ObjectReference
 
-## Hierarchy
-
-* **ObjectReference**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](objectreference.md#optional-id)
-* [name](objectreference.md#optional-name)
+- [id](ObjectReference.md#id)
+- [name](ObjectReference.md#name)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** ObjectReference
+
+#### Defined in
+
+[src/models/ObjectReference.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ObjectReference.ts#L27)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** ObjectReference
+
+#### Defined in
+
+[src/models/ObjectReference.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ObjectReference.ts#L33)

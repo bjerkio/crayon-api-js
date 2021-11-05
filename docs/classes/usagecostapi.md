@@ -1,320 +1,435 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [UsageCostApi](usagecostapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / UsageCostApi
 
 # Class: UsageCostApi
 
-UsageCostApi - object-oriented interface
-
-**`export`** 
-
-**`class`** UsageCostApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **UsageCostApi**
+  ↳ **`UsageCostApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](usagecostapi.md#constructor)
+- [constructor](UsageCostApi.md#constructor)
 
 ### Properties
 
-* [basePath](usagecostapi.md#protected-basepath)
-* [configuration](usagecostapi.md#protected-configuration)
-* [fetch](usagecostapi.md#protected-fetch)
+- [configuration](UsageCostApi.md#configuration)
 
 ### Methods
 
-* [getForCategory](usagecostapi.md#getforcategory)
-* [getForCategory_1](usagecostapi.md#getforcategory_1)
-* [getForOrganization](usagecostapi.md#getfororganization)
-* [getForResourceGroup](usagecostapi.md#getforresourcegroup)
-* [getForResourceGroup_2](usagecostapi.md#getforresourcegroup_2)
-* [getForSubcategory](usagecostapi.md#getforsubcategory)
-* [getForSubcategory_3](usagecostapi.md#getforsubcategory_3)
-* [getForSubscription](usagecostapi.md#getforsubscription)
-* [getForSubscriptionWithResourceGroups](usagecostapi.md#getforsubscriptionwithresourcegroups)
-* [getForSubscriptionWithResourceGroups_4](usagecostapi.md#getforsubscriptionwithresourcegroups_4)
-* [getForSubscription_5](usagecostapi.md#getforsubscription_5)
+- [apiV1UsageCostGetForCategoryPost](UsageCostApi.md#apiv1usagecostgetforcategorypost)
+- [apiV1UsageCostGetForCategoryPostRaw](UsageCostApi.md#apiv1usagecostgetforcategorypostraw)
+- [apiV1UsageCostGetForResourceGroupPost](UsageCostApi.md#apiv1usagecostgetforresourcegrouppost)
+- [apiV1UsageCostGetForResourceGroupPostRaw](UsageCostApi.md#apiv1usagecostgetforresourcegrouppostraw)
+- [apiV1UsageCostGetForSubcategoryPost](UsageCostApi.md#apiv1usagecostgetforsubcategorypost)
+- [apiV1UsageCostGetForSubcategoryPostRaw](UsageCostApi.md#apiv1usagecostgetforsubcategorypostraw)
+- [apiV1UsageCostGetForSubscriptionPost](UsageCostApi.md#apiv1usagecostgetforsubscriptionpost)
+- [apiV1UsageCostGetForSubscriptionPostRaw](UsageCostApi.md#apiv1usagecostgetforsubscriptionpostraw)
+- [apiV1UsageCostGetForSubscriptionResourceGroupsPost](UsageCostApi.md#apiv1usagecostgetforsubscriptionresourcegroupspost)
+- [apiV1UsageCostGetForSubscriptionResourceGroupsPostRaw](UsageCostApi.md#apiv1usagecostgetforsubscriptionresourcegroupspostraw)
+- [apiV1UsageCostOrganizationOrganizationIdGet](UsageCostApi.md#apiv1usagecostorganizationorganizationidget)
+- [apiV1UsageCostOrganizationOrganizationIdGetRaw](UsageCostApi.md#apiv1usagecostorganizationorganizationidgetraw)
+- [request](UsageCostApi.md#request)
+- [withMiddleware](UsageCostApi.md#withmiddleware)
+- [withPostMiddleware](UsageCostApi.md#withpostmiddleware)
+- [withPreMiddleware](UsageCostApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new UsageCostApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[UsageCostApi](usagecostapi.md)*
+• **new UsageCostApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[UsageCostApi](usagecostapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  getForCategory
+### apiV1UsageCostGetForCategoryPost
 
-▸ **getForCategory**(`resellerCustomerId`: number, `subscriptionId`: string, `category`: string, `currencyCode`: string, `from?`: Date, `to?`: Date, `options?`: any): *Promise‹[ApiCollectionOfCategoryUsageCost](../interfaces/apicollectionofcategoryusagecost.md)›*
+▸ **apiV1UsageCostGetForCategoryPost**(`requestParameters`, `initOverrides?`): `Promise`<[`CategoryUsageCost`](../interfaces/CategoryUsageCost.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForCategoryPostRequest`](../interfaces/ApiV1UsageCostGetForCategoryPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`resellerCustomerId` | number |
-`subscriptionId` | string |
-`category` | string |
-`currencyCode` | string |
-`from?` | Date |
-`to?` | Date |
-`options?` | any |
+`Promise`<[`CategoryUsageCost`](../interfaces/CategoryUsageCost.md)[]\>
 
-**Returns:** *Promise‹[ApiCollectionOfCategoryUsageCost](../interfaces/apicollectionofcategoryusagecost.md)›*
+#### Defined in
+
+[src/apis/UsageCostApi.ts:107](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L107)
 
 ___
 
-###  getForCategory_1
+### apiV1UsageCostGetForCategoryPostRaw
 
-▸ **getForCategory_1**(`model?`: [CategoryUsageCostRequest](../interfaces/categoryusagecostrequest.md), `options?`: any): *Promise‹[ApiCollectionOfCategoryUsageCost](../interfaces/apicollectionofcategoryusagecost.md)›*
+▸ **apiV1UsageCostGetForCategoryPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CategoryUsageCost`](../interfaces/CategoryUsageCost.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForCategoryPostRequest`](../interfaces/ApiV1UsageCostGetForCategoryPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`model?` | [CategoryUsageCostRequest](../interfaces/categoryusagecostrequest.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CategoryUsageCost`](../interfaces/CategoryUsageCost.md)[]\>\>
 
-**Returns:** *Promise‹[ApiCollectionOfCategoryUsageCost](../interfaces/apicollectionofcategoryusagecost.md)›*
+#### Defined in
 
-___
-
-###  getForOrganization
-
-▸ **getForOrganization**(`organizationId`: number, `from?`: Date, `to?`: Date, `options?`: any): *Promise‹[ApiCollectionOfOrganizationUsageCost](../interfaces/apicollectionoforganizationusagecost.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** UsageCostApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`organizationId` | number |
-`from?` | Date |
-`to?` | Date |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfOrganizationUsageCost](../interfaces/apicollectionoforganizationusagecost.md)›*
+[src/apis/UsageCostApi.ts:83](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L83)
 
 ___
 
-###  getForResourceGroup
+### apiV1UsageCostGetForResourceGroupPost
 
-▸ **getForResourceGroup**(`resellerCustomerId`: number, `subscriptionId`: string, `resourceGroup`: string, `currencyCode`: string, `from?`: Date, `to?`: Date, `options?`: any): *Promise‹[ApiCollectionOfResourceGroupUsageCost](../interfaces/apicollectionofresourcegroupusagecost.md)›*
+▸ **apiV1UsageCostGetForResourceGroupPost**(`requestParameters`, `initOverrides?`): `Promise`<[`ResourceGroupUsageCost`](../interfaces/ResourceGroupUsageCost.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForResourceGroupPostRequest`](../interfaces/ApiV1UsageCostGetForResourceGroupPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`resellerCustomerId` | number |
-`subscriptionId` | string |
-`resourceGroup` | string |
-`currencyCode` | string |
-`from?` | Date |
-`to?` | Date |
-`options?` | any |
+`Promise`<[`ResourceGroupUsageCost`](../interfaces/ResourceGroupUsageCost.md)[]\>
 
-**Returns:** *Promise‹[ApiCollectionOfResourceGroupUsageCost](../interfaces/apicollectionofresourcegroupusagecost.md)›*
+#### Defined in
+
+[src/apis/UsageCostApi.ts:138](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L138)
 
 ___
 
-###  getForResourceGroup_2
+### apiV1UsageCostGetForResourceGroupPostRaw
 
-▸ **getForResourceGroup_2**(`model?`: [ResourceGroupUsageCostRequest](../interfaces/resourcegroupusagecostrequest.md), `options?`: any): *Promise‹[ApiCollectionOfResourceGroupUsageCost](../interfaces/apicollectionofresourcegroupusagecost.md)›*
+▸ **apiV1UsageCostGetForResourceGroupPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResourceGroupUsageCost`](../interfaces/ResourceGroupUsageCost.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForResourceGroupPostRequest`](../interfaces/ApiV1UsageCostGetForResourceGroupPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`model?` | [ResourceGroupUsageCostRequest](../interfaces/resourcegroupusagecostrequest.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ResourceGroupUsageCost`](../interfaces/ResourceGroupUsageCost.md)[]\>\>
 
-**Returns:** *Promise‹[ApiCollectionOfResourceGroupUsageCost](../interfaces/apicollectionofresourcegroupusagecost.md)›*
+#### Defined in
 
-___
-
-###  getForSubcategory
-
-▸ **getForSubcategory**(`resellerCustomerId`: number, `subscriptionId`: string, `category`: string, `subcategory`: string, `currencyCode`: string, `from?`: Date, `to?`: Date, `options?`: any): *Promise‹[ApiCollectionOfSubcategoryUsageCost](../interfaces/apicollectionofsubcategoryusagecost.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** UsageCostApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`resellerCustomerId` | number |
-`subscriptionId` | string |
-`category` | string |
-`subcategory` | string |
-`currencyCode` | string |
-`from?` | Date |
-`to?` | Date |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfSubcategoryUsageCost](../interfaces/apicollectionofsubcategoryusagecost.md)›*
+[src/apis/UsageCostApi.ts:114](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L114)
 
 ___
 
-###  getForSubcategory_3
+### apiV1UsageCostGetForSubcategoryPost
 
-▸ **getForSubcategory_3**(`model?`: [SubcategoryUsageCostRequest](../interfaces/subcategoryusagecostrequest.md), `options?`: any): *Promise‹[ApiCollectionOfSubcategoryUsageCost](../interfaces/apicollectionofsubcategoryusagecost.md)›*
+▸ **apiV1UsageCostGetForSubcategoryPost**(`requestParameters`, `initOverrides?`): `Promise`<[`SubcategoryUsageCost`](../interfaces/SubcategoryUsageCost.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForSubcategoryPostRequest`](../interfaces/ApiV1UsageCostGetForSubcategoryPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`model?` | [SubcategoryUsageCostRequest](../interfaces/subcategoryusagecostrequest.md) |
-`options?` | any |
+`Promise`<[`SubcategoryUsageCost`](../interfaces/SubcategoryUsageCost.md)[]\>
 
-**Returns:** *Promise‹[ApiCollectionOfSubcategoryUsageCost](../interfaces/apicollectionofsubcategoryusagecost.md)›*
+#### Defined in
 
-___
-
-###  getForSubscription
-
-▸ **getForSubscription**(`resellerCustomerId`: number, `subscriptionId`: string, `currencyCode`: string, `from?`: Date, `to?`: Date, `options?`: any): *Promise‹[ApiCollectionOfSubscriptionUsageCost](../interfaces/apicollectionofsubscriptionusagecost.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** UsageCostApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`resellerCustomerId` | number |
-`subscriptionId` | string |
-`currencyCode` | string |
-`from?` | Date |
-`to?` | Date |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfSubscriptionUsageCost](../interfaces/apicollectionofsubscriptionusagecost.md)›*
+[src/apis/UsageCostApi.ts:169](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L169)
 
 ___
 
-###  getForSubscriptionWithResourceGroups
+### apiV1UsageCostGetForSubcategoryPostRaw
 
-▸ **getForSubscriptionWithResourceGroups**(`resellerCustomerId`: number, `subscriptionId`: string, `currencyCode`: string, `from?`: Date, `to?`: Date, `options?`: any): *Promise‹[ApiCollectionOfSubscriptionResourceGroupUsageCost](../interfaces/apicollectionofsubscriptionresourcegroupusagecost.md)›*
+▸ **apiV1UsageCostGetForSubcategoryPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`SubcategoryUsageCost`](../interfaces/SubcategoryUsageCost.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForSubcategoryPostRequest`](../interfaces/ApiV1UsageCostGetForSubcategoryPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`resellerCustomerId` | number |
-`subscriptionId` | string |
-`currencyCode` | string |
-`from?` | Date |
-`to?` | Date |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`SubcategoryUsageCost`](../interfaces/SubcategoryUsageCost.md)[]\>\>
 
-**Returns:** *Promise‹[ApiCollectionOfSubscriptionResourceGroupUsageCost](../interfaces/apicollectionofsubscriptionresourcegroupusagecost.md)›*
+#### Defined in
+
+[src/apis/UsageCostApi.ts:145](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L145)
 
 ___
 
-###  getForSubscriptionWithResourceGroups_4
+### apiV1UsageCostGetForSubscriptionPost
 
-▸ **getForSubscriptionWithResourceGroups_4**(`model?`: [SubscriptionUsageCostRequest](../interfaces/subscriptionusagecostrequest.md), `options?`: any): *Promise‹[ApiCollectionOfSubscriptionResourceGroupUsageCost](../interfaces/apicollectionofsubscriptionresourcegroupusagecost.md)›*
+▸ **apiV1UsageCostGetForSubscriptionPost**(`requestParameters`, `initOverrides?`): `Promise`<[`SubscriptionUsageCost`](../interfaces/SubscriptionUsageCost.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForSubscriptionPostRequest`](../interfaces/ApiV1UsageCostGetForSubscriptionPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`model?` | [SubscriptionUsageCostRequest](../interfaces/subscriptionusagecostrequest.md) |
-`options?` | any |
+`Promise`<[`SubscriptionUsageCost`](../interfaces/SubscriptionUsageCost.md)[]\>
 
-**Returns:** *Promise‹[ApiCollectionOfSubscriptionResourceGroupUsageCost](../interfaces/apicollectionofsubscriptionresourcegroupusagecost.md)›*
+#### Defined in
+
+[src/apis/UsageCostApi.ts:200](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L200)
 
 ___
 
-###  getForSubscription_5
+### apiV1UsageCostGetForSubscriptionPostRaw
 
-▸ **getForSubscription_5**(`model?`: [SubscriptionUsageCostRequest](../interfaces/subscriptionusagecostrequest.md), `options?`: any): *Promise‹[ApiCollectionOfSubscriptionUsageCost](../interfaces/apicollectionofsubscriptionusagecost.md)›*
+▸ **apiV1UsageCostGetForSubscriptionPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`SubscriptionUsageCost`](../interfaces/SubscriptionUsageCost.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** UsageCostApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForSubscriptionPostRequest`](../interfaces/ApiV1UsageCostGetForSubscriptionPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`model?` | [SubscriptionUsageCostRequest](../interfaces/subscriptionusagecostrequest.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`SubscriptionUsageCost`](../interfaces/SubscriptionUsageCost.md)[]\>\>
 
-**Returns:** *Promise‹[ApiCollectionOfSubscriptionUsageCost](../interfaces/apicollectionofsubscriptionusagecost.md)›*
+#### Defined in
+
+[src/apis/UsageCostApi.ts:176](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L176)
+
+___
+
+### apiV1UsageCostGetForSubscriptionResourceGroupsPost
+
+▸ **apiV1UsageCostGetForSubscriptionResourceGroupsPost**(`requestParameters`, `initOverrides?`): `Promise`<[`SubscriptionResourceGroupUsageCost`](../interfaces/SubscriptionResourceGroupUsageCost.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForSubscriptionResourceGroupsPostRequest`](../interfaces/ApiV1UsageCostGetForSubscriptionResourceGroupsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`SubscriptionResourceGroupUsageCost`](../interfaces/SubscriptionResourceGroupUsageCost.md)[]\>
+
+#### Defined in
+
+[src/apis/UsageCostApi.ts:231](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L231)
+
+___
+
+### apiV1UsageCostGetForSubscriptionResourceGroupsPostRaw
+
+▸ **apiV1UsageCostGetForSubscriptionResourceGroupsPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`SubscriptionResourceGroupUsageCost`](../interfaces/SubscriptionResourceGroupUsageCost.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostGetForSubscriptionResourceGroupsPostRequest`](../interfaces/ApiV1UsageCostGetForSubscriptionResourceGroupsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`SubscriptionResourceGroupUsageCost`](../interfaces/SubscriptionResourceGroupUsageCost.md)[]\>\>
+
+#### Defined in
+
+[src/apis/UsageCostApi.ts:207](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L207)
+
+___
+
+### apiV1UsageCostOrganizationOrganizationIdGet
+
+▸ **apiV1UsageCostOrganizationOrganizationIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`OrganizationUsageCost`](../interfaces/OrganizationUsageCost.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostOrganizationOrganizationIdGetRequest`](../interfaces/ApiV1UsageCostOrganizationOrganizationIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`OrganizationUsageCost`](../interfaces/OrganizationUsageCost.md)[]\>
+
+#### Defined in
+
+[src/apis/UsageCostApi.ts:271](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L271)
+
+___
+
+### apiV1UsageCostOrganizationOrganizationIdGetRaw
+
+▸ **apiV1UsageCostOrganizationOrganizationIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`OrganizationUsageCost`](../interfaces/OrganizationUsageCost.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1UsageCostOrganizationOrganizationIdGetRequest`](../interfaces/ApiV1UsageCostOrganizationOrganizationIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`OrganizationUsageCost`](../interfaces/OrganizationUsageCost.md)[]\>\>
+
+#### Defined in
+
+[src/apis/UsageCostApi.ts:238](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/UsageCostApi.ts#L238)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

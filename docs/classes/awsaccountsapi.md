@@ -1,141 +1,303 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AwsAccountsApi](awsaccountsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AwsAccountsApi
 
 # Class: AwsAccountsApi
 
-AwsAccountsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** AwsAccountsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **AwsAccountsApi**
+  ↳ **`AwsAccountsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](awsaccountsapi.md#constructor)
+- [constructor](AwsAccountsApi.md#constructor)
 
 ### Properties
 
-* [basePath](awsaccountsapi.md#protected-basepath)
-* [configuration](awsaccountsapi.md#protected-configuration)
-* [fetch](awsaccountsapi.md#protected-fetch)
+- [configuration](AwsAccountsApi.md#configuration)
 
 ### Methods
 
-* [getAwsAccountById](awsaccountsapi.md#getawsaccountbyid)
-* [getAwsAccounts](awsaccountsapi.md#getawsaccounts)
-* [put](awsaccountsapi.md#put)
+- [apiV1AwsAccountsGet](AwsAccountsApi.md#apiv1awsaccountsget)
+- [apiV1AwsAccountsGetRaw](AwsAccountsApi.md#apiv1awsaccountsgetraw)
+- [apiV1AwsAccountsIdGet](AwsAccountsApi.md#apiv1awsaccountsidget)
+- [apiV1AwsAccountsIdGetRaw](AwsAccountsApi.md#apiv1awsaccountsidgetraw)
+- [apiV1AwsAccountsIdPut](AwsAccountsApi.md#apiv1awsaccountsidput)
+- [apiV1AwsAccountsIdPutRaw](AwsAccountsApi.md#apiv1awsaccountsidputraw)
+- [request](AwsAccountsApi.md#request)
+- [withMiddleware](AwsAccountsApi.md#withmiddleware)
+- [withPostMiddleware](AwsAccountsApi.md#withpostmiddleware)
+- [withPreMiddleware](AwsAccountsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new AwsAccountsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[AwsAccountsApi](awsaccountsapi.md)*
+• **new AwsAccountsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[AwsAccountsApi](awsaccountsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  getAwsAccountById
+### apiV1AwsAccountsGet
 
-▸ **getAwsAccountById**(`id`: number, `options?`: any): *Promise‹[AwsAccount](../modules/awsaccount.md)›*
+▸ **apiV1AwsAccountsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`AwsAccount`](../interfaces/AwsAccount.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** AwsAccountsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AwsAccountsGetRequest`](../interfaces/ApiV1AwsAccountsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
+`Promise`<[`AwsAccount`](../interfaces/AwsAccount.md)[]\>
 
-**Returns:** *Promise‹[AwsAccount](../modules/awsaccount.md)›*
+#### Defined in
 
-___
-
-###  getAwsAccounts
-
-▸ **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAwsAccount](../interfaces/apicollectionofawsaccount.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** AwsAccountsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`organizationId?` | number |
-`publisherId?` | number |
-`consumerId?` | number |
-`customerTenantType?` | "None" &#124; "T1" &#124; "T2" |
-`page?` | number |
-`pageSize?` | number |
-`search?` | string |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfAwsAccount](../interfaces/apicollectionofawsaccount.md)›*
+[src/apis/AwsAccountsApi.ts:101](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AwsAccountsApi.ts#L101)
 
 ___
 
-###  put
+### apiV1AwsAccountsGetRaw
 
-▸ **put**(`id`: number, `awsAccount?`: [AwsAccount](../modules/awsaccount.md), `options?`: any): *Promise‹[AwsAccount](../modules/awsaccount.md)›*
+▸ **apiV1AwsAccountsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AwsAccount`](../interfaces/AwsAccount.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** AwsAccountsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AwsAccountsGetRequest`](../interfaces/ApiV1AwsAccountsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`awsAccount?` | [AwsAccount](../modules/awsaccount.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AwsAccount`](../interfaces/AwsAccount.md)[]\>\>
 
-**Returns:** *Promise‹[AwsAccount](../modules/awsaccount.md)›*
+#### Defined in
+
+[src/apis/AwsAccountsApi.ts:52](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AwsAccountsApi.ts#L52)
+
+___
+
+### apiV1AwsAccountsIdGet
+
+▸ **apiV1AwsAccountsIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`AwsAccount`](../interfaces/AwsAccount.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AwsAccountsIdGetRequest`](../interfaces/ApiV1AwsAccountsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`AwsAccount`](../interfaces/AwsAccount.md)\>
+
+#### Defined in
+
+[src/apis/AwsAccountsApi.ts:133](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AwsAccountsApi.ts#L133)
+
+___
+
+### apiV1AwsAccountsIdGetRaw
+
+▸ **apiV1AwsAccountsIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AwsAccount`](../interfaces/AwsAccount.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AwsAccountsIdGetRequest`](../interfaces/ApiV1AwsAccountsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AwsAccount`](../interfaces/AwsAccount.md)\>\>
+
+#### Defined in
+
+[src/apis/AwsAccountsApi.ts:108](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AwsAccountsApi.ts#L108)
+
+___
+
+### apiV1AwsAccountsIdPut
+
+▸ **apiV1AwsAccountsIdPut**(`requestParameters`, `initOverrides?`): `Promise`<[`AwsAccount`](../interfaces/AwsAccount.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AwsAccountsIdPutRequest`](../interfaces/ApiV1AwsAccountsIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`AwsAccount`](../interfaces/AwsAccount.md)\>
+
+#### Defined in
+
+[src/apis/AwsAccountsApi.ts:168](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AwsAccountsApi.ts#L168)
+
+___
+
+### apiV1AwsAccountsIdPutRaw
+
+▸ **apiV1AwsAccountsIdPutRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AwsAccount`](../interfaces/AwsAccount.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AwsAccountsIdPutRequest`](../interfaces/ApiV1AwsAccountsIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AwsAccount`](../interfaces/AwsAccount.md)\>\>
+
+#### Defined in
+
+[src/apis/AwsAccountsApi.ts:140](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AwsAccountsApi.ts#L140)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

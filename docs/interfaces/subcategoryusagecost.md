@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [SubcategoryUsageCost](subcategoryusagecost.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / SubcategoryUsageCost
 
 # Interface: SubcategoryUsageCost
 
-**`export`** 
+**`export`**
 
 **`interface`** SubcategoryUsageCost
 
-## Hierarchy
-
-* **SubcategoryUsageCost**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [amount](subcategoryusagecost.md#optional-amount)
-* [currencyCode](subcategoryusagecost.md#optional-currencycode)
-* [meter](subcategoryusagecost.md#optional-meter)
+- [amount](SubcategoryUsageCost.md#amount)
+- [currencyCode](SubcategoryUsageCost.md#currencycode)
+- [meter](SubcategoryUsageCost.md#meter)
 
 ## Properties
 
-### `Optional` amount
+### amount
 
-• **amount**? : *number*
-
-**`type`** {number}
+• `Optional` **amount**: `number`
 
 **`memberof`** SubcategoryUsageCost
+
+#### Defined in
+
+[src/models/SubcategoryUsageCost.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubcategoryUsageCost.ts#L33)
 
 ___
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** SubcategoryUsageCost
+
+#### Defined in
+
+[src/models/SubcategoryUsageCost.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubcategoryUsageCost.ts#L39)
 
 ___
 
-### `Optional` meter
+### meter
 
-• **meter**? : *string*
-
-**`type`** {string}
+• `Optional` **meter**: `string`
 
 **`memberof`** SubcategoryUsageCost
+
+#### Defined in
+
+[src/models/SubcategoryUsageCost.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubcategoryUsageCost.ts#L27)

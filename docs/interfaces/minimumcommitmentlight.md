@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [MinimumCommitmentLight](minimumcommitmentlight.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / MinimumCommitmentLight
 
 # Interface: MinimumCommitmentLight
 
-**`export`** 
+**`export`**
 
 **`interface`** MinimumCommitmentLight
 
-## Hierarchy
-
-* **MinimumCommitmentLight**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](minimumcommitmentlight.md#optional-id)
-* [months](minimumcommitmentlight.md#optional-months)
-* [name](minimumcommitmentlight.md#optional-name)
+- [id](MinimumCommitmentLight.md#id)
+- [months](MinimumCommitmentLight.md#months)
+- [name](MinimumCommitmentLight.md#name)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** MinimumCommitmentLight
+
+#### Defined in
+
+[src/models/MinimumCommitmentLight.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/MinimumCommitmentLight.ts#L27)
 
 ___
 
-### `Optional` months
+### months
 
-• **months**? : *number*
-
-**`type`** {number}
+• `Optional` **months**: `number`
 
 **`memberof`** MinimumCommitmentLight
+
+#### Defined in
+
+[src/models/MinimumCommitmentLight.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/MinimumCommitmentLight.ts#L33)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** MinimumCommitmentLight
+
+#### Defined in
+
+[src/models/MinimumCommitmentLight.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/MinimumCommitmentLight.ts#L39)

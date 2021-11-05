@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ProductRowUser](productrowuser.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ProductRowUser
 
 # Interface: ProductRowUser
 
-**`export`** 
+**`export`**
 
 **`interface`** ProductRowUser
 
-## Hierarchy
-
-* **ProductRowUser**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [crayonEmployee](productrowuser.md#optional-crayonemployee)
-* [firstName](productrowuser.md#optional-firstname)
-* [id](productrowuser.md#optional-id)
-* [lastName](productrowuser.md#optional-lastname)
-* [userName](productrowuser.md#optional-username)
+- [crayonEmployee](ProductRowUser.md#crayonemployee)
+- [firstName](ProductRowUser.md#firstname)
+- [id](ProductRowUser.md#id)
+- [lastName](ProductRowUser.md#lastname)
+- [userName](ProductRowUser.md#username)
 
 ## Properties
 
-### `Optional` crayonEmployee
+### crayonEmployee
 
-• **crayonEmployee**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **crayonEmployee**: `boolean`
 
 **`memberof`** ProductRowUser
+
+#### Defined in
+
+[src/models/ProductRowUser.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowUser.ts#L51)
 
 ___
 
-### `Optional` firstName
+### firstName
 
-• **firstName**? : *string*
-
-**`type`** {string}
+• `Optional` **firstName**: `string`
 
 **`memberof`** ProductRowUser
+
+#### Defined in
+
+[src/models/ProductRowUser.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowUser.ts#L39)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *string*
-
-**`type`** {string}
+• `Optional` **id**: `string`
 
 **`memberof`** ProductRowUser
+
+#### Defined in
+
+[src/models/ProductRowUser.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowUser.ts#L27)
 
 ___
 
-### `Optional` lastName
+### lastName
 
-• **lastName**? : *string*
-
-**`type`** {string}
+• `Optional` **lastName**: `string`
 
 **`memberof`** ProductRowUser
+
+#### Defined in
+
+[src/models/ProductRowUser.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowUser.ts#L45)
 
 ___
 
-### `Optional` userName
+### userName
 
-• **userName**? : *string*
-
-**`type`** {string}
+• `Optional` **userName**: `string`
 
 **`memberof`** ProductRowUser
+
+#### Defined in
+
+[src/models/ProductRowUser.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowUser.ts#L33)

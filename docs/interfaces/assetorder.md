@@ -1,71 +1,116 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AssetOrder](assetorder.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AssetOrder
 
 # Interface: AssetOrder
 
-**`export`** 
+**`export`**
 
 **`interface`** AssetOrder
 
-## Hierarchy
-
-* **AssetOrder**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [countryCode](assetorder.md#optional-countrycode)
-* [errors](assetorder.md#optional-errors)
-* [externalOrderId](assetorder.md#optional-externalorderid)
-* [orderLines](assetorder.md#optional-orderlines)
-* [resellerCustomerId](assetorder.md#optional-resellercustomerid)
+- [adminAccount](AssetOrder.md#adminaccount)
+- [countryCode](AssetOrder.md#countrycode)
+- [errors](AssetOrder.md#errors)
+- [externalOrderId](AssetOrder.md#externalorderid)
+- [invoiceProfileId](AssetOrder.md#invoiceprofileid)
+- [notificationEmail](AssetOrder.md#notificationemail)
+- [orderLines](AssetOrder.md#orderlines)
+- [resellerCustomerId](AssetOrder.md#resellercustomerid)
 
 ## Properties
 
-### `Optional` countryCode
+### adminAccount
 
-• **countryCode**? : *string*
-
-**`type`** {string}
+• `Optional` **adminAccount**: `string`
 
 **`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:56](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L56)
 
 ___
 
-### `Optional` errors
+### countryCode
 
-• **errors**? : *Array‹[AssetOrderError](assetordererror.md)›*
-
-**`type`** {Array<AssetOrderError>}
+• `Optional` **countryCode**: `string`
 
 **`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:44](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L44)
 
 ___
 
-### `Optional` externalOrderId
+### errors
 
-• **externalOrderId**? : *string*
-
-**`type`** {string}
+• `Optional` **errors**: [`AssetOrderError`](AssetOrderError.md)[]
 
 **`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:74](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L74)
 
 ___
 
-### `Optional` orderLines
+### externalOrderId
 
-• **orderLines**? : *Array‹[AssetOrderLine](../modules/assetorderline.md)›*
-
-**`type`** {Array<AssetOrderLine>}
+• `Optional` **externalOrderId**: `string`
 
 **`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L38)
 
 ___
 
-### `Optional` resellerCustomerId
+### invoiceProfileId
 
-• **resellerCustomerId**? : *number*
-
-**`type`** {number}
+• `Optional` **invoiceProfileId**: `number`
 
 **`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:68](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L68)
+
+___
+
+### notificationEmail
+
+• `Optional` **notificationEmail**: `string`
+
+**`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:62](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L62)
+
+___
+
+### orderLines
+
+• `Optional` **orderLines**: [`AssetOrderLine`](AssetOrderLine.md)[]
+
+**`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:80](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L80)
+
+___
+
+### resellerCustomerId
+
+• `Optional` **resellerCustomerId**: `number`
+
+**`memberof`** AssetOrder
+
+#### Defined in
+
+[src/models/AssetOrder.ts:50](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrder.ts#L50)

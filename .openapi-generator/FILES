@@ -174,5 +174,4 @@ src/models/UserChangePassword.ts
 src/models/UserProfile.ts
 src/models/UserRole.ts
 src/models/index.ts
-src/runtime.ts
 tsconfig.json

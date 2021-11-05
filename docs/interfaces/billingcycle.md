@@ -1,38 +1,38 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [BillingCycle](billingcycle.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / BillingCycle
 
 # Interface: BillingCycle
 
-**`export`** 
+**`export`**
 
 **`interface`** BillingCycle
 
-## Hierarchy
-
-* **BillingCycle**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](billingcycle.md#optional-id)
-* [name](billingcycle.md#optional-name)
+- [id](BillingCycle.md#id)
+- [name](BillingCycle.md#name)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** BillingCycle
+
+#### Defined in
+
+[src/models/BillingCycle.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BillingCycle.ts#L27)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** BillingCycle
+
+#### Defined in
+
+[src/models/BillingCycle.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BillingCycle.ts#L33)

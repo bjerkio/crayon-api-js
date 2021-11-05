@@ -1,38 +1,38 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ProductContainerIssue](productcontainerissue.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ProductContainerIssue
 
 # Interface: ProductContainerIssue
 
-**`export`** 
+**`export`**
 
 **`interface`** ProductContainerIssue
 
-## Hierarchy
-
-* **ProductContainerIssue**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [code](productcontainerissue.md#optional-code)
-* [message](productcontainerissue.md#optional-message)
+- [code](ProductContainerIssue.md#code)
+- [message](ProductContainerIssue.md#message)
 
 ## Properties
 
-### `Optional` code
+### code
 
-• **code**? : *string*
-
-**`type`** {string}
+• `Optional` **code**: `string`
 
 **`memberof`** ProductContainerIssue
+
+#### Defined in
+
+[src/models/ProductContainerIssue.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductContainerIssue.ts#L27)
 
 ___
 
-### `Optional` message
+### message
 
-• **message**? : *string*
-
-**`type`** {string}
+• `Optional` **message**: `string`
 
 **`memberof`** ProductContainerIssue
+
+#### Defined in
+
+[src/models/ProductContainerIssue.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductContainerIssue.ts#L33)

@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Organization](organization.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Organization
 
 # Interface: Organization
 
-**`export`** 
+**`export`**
 
 **`interface`** Organization
 
-## Hierarchy
-
-* **Organization**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [accountNumber](organization.md#optional-accountnumber)
-* [crayonCompanyName](organization.md#optional-crayoncompanyname)
-* [id](organization.md#optional-id)
-* [name](organization.md#optional-name)
-* [parentId](organization.md#optional-parentid)
+- [accountNumber](Organization.md#accountnumber)
+- [crayonCompanyName](Organization.md#crayoncompanyname)
+- [id](Organization.md#id)
+- [name](Organization.md#name)
+- [parentId](Organization.md#parentid)
 
 ## Properties
 
-### `Optional` accountNumber
+### accountNumber
 
-• **accountNumber**? : *string*
-
-**`type`** {string}
+• `Optional` **accountNumber**: `string`
 
 **`memberof`** Organization
+
+#### Defined in
+
+[src/models/Organization.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Organization.ts#L51)
 
 ___
 
-### `Optional` crayonCompanyName
+### crayonCompanyName
 
-• **crayonCompanyName**? : *string*
-
-**`type`** {string}
+• `Optional` **crayonCompanyName**: `string`
 
 **`memberof`** Organization
+
+#### Defined in
+
+[src/models/Organization.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Organization.ts#L45)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** Organization
+
+#### Defined in
+
+[src/models/Organization.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Organization.ts#L27)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** Organization
+
+#### Defined in
+
+[src/models/Organization.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Organization.ts#L33)
 
 ___
 
-### `Optional` parentId
+### parentId
 
-• **parentId**? : *number*
-
-**`type`** {number}
+• `Optional` **parentId**: `number`
 
 **`memberof`** Organization
+
+#### Defined in
+
+[src/models/Organization.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Organization.ts#L39)

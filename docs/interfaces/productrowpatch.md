@@ -1,104 +1,116 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ProductRowPatch](productrowpatch.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ProductRowPatch
 
 # Interface: ProductRowPatch
 
-**`export`** 
+**`export`**
 
 **`interface`** ProductRowPatch
 
-## Hierarchy
-
-* **ProductRowPatch**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [agreement](productrowpatch.md#optional-agreement)
-* [comment](productrowpatch.md#optional-comment)
-* [grouping](productrowpatch.md#optional-grouping)
-* [id](productrowpatch.md#optional-id)
-* [productVariant](productrowpatch.md#optional-productvariant)
-* [quantity](productrowpatch.md#optional-quantity)
-* [usageCountryCode](productrowpatch.md#optional-usagecountrycode)
-* [userId](productrowpatch.md#optional-userid)
+- [agreement](ProductRowPatch.md#agreement)
+- [comment](ProductRowPatch.md#comment)
+- [grouping](ProductRowPatch.md#grouping)
+- [id](ProductRowPatch.md#id)
+- [productVariant](ProductRowPatch.md#productvariant)
+- [quantity](ProductRowPatch.md#quantity)
+- [usageCountryCode](ProductRowPatch.md#usagecountrycode)
+- [userId](ProductRowPatch.md#userid)
 
 ## Properties
 
-### `Optional` agreement
+### agreement
 
-• **agreement**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **agreement**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:64](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L64)
 
 ___
 
-### `Optional` comment
+### comment
 
-• **comment**? : *string*
-
-**`type`** {string}
+• `Optional` **comment**: `string`
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:46](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L46)
 
 ___
 
-### `Optional` grouping
+### grouping
 
-• **grouping**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **grouping**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:76](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L76)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:34](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L34)
 
 ___
 
-### `Optional` productVariant
+### productVariant
 
-• **productVariant**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **productVariant**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:70](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L70)
 
 ___
 
-### `Optional` quantity
+### quantity
 
-• **quantity**? : *number*
-
-**`type`** {number}
+• `Optional` **quantity**: `number`
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:40](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L40)
 
 ___
 
-### `Optional` usageCountryCode
+### usageCountryCode
 
-• **usageCountryCode**? : *string*
-
-**`type`** {string}
+• `Optional` **usageCountryCode**: `string`
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:52](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L52)
 
 ___
 
-### `Optional` userId
+### userId
 
-• **userId**? : *string*
-
-**`type`** {string}
+• `Optional` **userId**: `string`
 
 **`memberof`** ProductRowPatch
+
+#### Defined in
+
+[src/models/ProductRowPatch.ts:58](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductRowPatch.ts#L58)

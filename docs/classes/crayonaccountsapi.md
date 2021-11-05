@@ -1,161 +1,347 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CrayonAccountsApi](crayonaccountsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CrayonAccountsApi
 
 # Class: CrayonAccountsApi
 
-CrayonAccountsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** CrayonAccountsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **CrayonAccountsApi**
+  ↳ **`CrayonAccountsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](crayonaccountsapi.md#constructor)
+- [constructor](CrayonAccountsApi.md#constructor)
 
 ### Properties
 
-* [basePath](crayonaccountsapi.md#protected-basepath)
-* [configuration](crayonaccountsapi.md#protected-configuration)
-* [fetch](crayonaccountsapi.md#protected-fetch)
+- [configuration](CrayonAccountsApi.md#configuration)
 
 ### Methods
 
-* [getCrayonAccountById](crayonaccountsapi.md#getcrayonaccountbyid)
-* [getCrayonAccounts](crayonaccountsapi.md#getcrayonaccounts)
-* [post](crayonaccountsapi.md#post)
-* [put](crayonaccountsapi.md#put)
+- [apiV1CrayonAccountsGet](CrayonAccountsApi.md#apiv1crayonaccountsget)
+- [apiV1CrayonAccountsGetRaw](CrayonAccountsApi.md#apiv1crayonaccountsgetraw)
+- [apiV1CrayonAccountsIdGet](CrayonAccountsApi.md#apiv1crayonaccountsidget)
+- [apiV1CrayonAccountsIdGetRaw](CrayonAccountsApi.md#apiv1crayonaccountsidgetraw)
+- [apiV1CrayonAccountsIdPut](CrayonAccountsApi.md#apiv1crayonaccountsidput)
+- [apiV1CrayonAccountsIdPutRaw](CrayonAccountsApi.md#apiv1crayonaccountsidputraw)
+- [apiV1CrayonAccountsPost](CrayonAccountsApi.md#apiv1crayonaccountspost)
+- [apiV1CrayonAccountsPostRaw](CrayonAccountsApi.md#apiv1crayonaccountspostraw)
+- [request](CrayonAccountsApi.md#request)
+- [withMiddleware](CrayonAccountsApi.md#withmiddleware)
+- [withPostMiddleware](CrayonAccountsApi.md#withpostmiddleware)
+- [withPreMiddleware](CrayonAccountsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new CrayonAccountsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[CrayonAccountsApi](crayonaccountsapi.md)*
+• **new CrayonAccountsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[CrayonAccountsApi](crayonaccountsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  getCrayonAccountById
+### apiV1CrayonAccountsGet
 
-▸ **getCrayonAccountById**(`id`: number, `options?`: any): *Promise‹[CrayonAccount](../modules/crayonaccount.md)›*
+▸ **apiV1CrayonAccountsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** CrayonAccountsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsGetRequest`](../interfaces/ApiV1CrayonAccountsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
+`Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)[]\>
 
-**Returns:** *Promise‹[CrayonAccount](../modules/crayonaccount.md)›*
+#### Defined in
 
-___
-
-###  getCrayonAccounts
-
-▸ **getCrayonAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfCrayonAccount](../interfaces/apicollectionofcrayonaccount.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** CrayonAccountsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`organizationId?` | number |
-`publisherId?` | number |
-`consumerId?` | number |
-`customerTenantType?` | "None" &#124; "T1" &#124; "T2" |
-`page?` | number |
-`pageSize?` | number |
-`search?` | string |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfCrayonAccount](../interfaces/apicollectionofcrayonaccount.md)›*
+[src/apis/CrayonAccountsApi.ts:105](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L105)
 
 ___
 
-###  post
+### apiV1CrayonAccountsGetRaw
 
-▸ **post**(`crayonAccount?`: [CrayonAccount](../modules/crayonaccount.md), `options?`: any): *Promise‹[CrayonAccount](../modules/crayonaccount.md)›*
+▸ **apiV1CrayonAccountsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** CrayonAccountsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsGetRequest`](../interfaces/ApiV1CrayonAccountsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`crayonAccount?` | [CrayonAccount](../modules/crayonaccount.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)[]\>\>
 
-**Returns:** *Promise‹[CrayonAccount](../modules/crayonaccount.md)›*
+#### Defined in
+
+[src/apis/CrayonAccountsApi.ts:56](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L56)
 
 ___
 
-###  put
+### apiV1CrayonAccountsIdGet
 
-▸ **put**(`id`: number, `crayonAccount?`: [CrayonAccount](../modules/crayonaccount.md), `options?`: any): *Promise‹[CrayonAccount](../modules/crayonaccount.md)›*
+▸ **apiV1CrayonAccountsIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** CrayonAccountsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsIdGetRequest`](../interfaces/ApiV1CrayonAccountsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`crayonAccount?` | [CrayonAccount](../modules/crayonaccount.md) |
-`options?` | any |
+`Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>
 
-**Returns:** *Promise‹[CrayonAccount](../modules/crayonaccount.md)›*
+#### Defined in
+
+[src/apis/CrayonAccountsApi.ts:137](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L137)
+
+___
+
+### apiV1CrayonAccountsIdGetRaw
+
+▸ **apiV1CrayonAccountsIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsIdGetRequest`](../interfaces/ApiV1CrayonAccountsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>\>
+
+#### Defined in
+
+[src/apis/CrayonAccountsApi.ts:112](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L112)
+
+___
+
+### apiV1CrayonAccountsIdPut
+
+▸ **apiV1CrayonAccountsIdPut**(`requestParameters`, `initOverrides?`): `Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsIdPutRequest`](../interfaces/ApiV1CrayonAccountsIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>
+
+#### Defined in
+
+[src/apis/CrayonAccountsApi.ts:172](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L172)
+
+___
+
+### apiV1CrayonAccountsIdPutRaw
+
+▸ **apiV1CrayonAccountsIdPutRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsIdPutRequest`](../interfaces/ApiV1CrayonAccountsIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>\>
+
+#### Defined in
+
+[src/apis/CrayonAccountsApi.ts:144](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L144)
+
+___
+
+### apiV1CrayonAccountsPost
+
+▸ **apiV1CrayonAccountsPost**(`requestParameters`, `initOverrides?`): `Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsPostRequest`](../interfaces/ApiV1CrayonAccountsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>
+
+#### Defined in
+
+[src/apis/CrayonAccountsApi.ts:203](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L203)
+
+___
+
+### apiV1CrayonAccountsPostRaw
+
+▸ **apiV1CrayonAccountsPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1CrayonAccountsPostRequest`](../interfaces/ApiV1CrayonAccountsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`CrayonAccount`](../interfaces/CrayonAccount.md)\>\>
+
+#### Defined in
+
+[src/apis/CrayonAccountsApi.ts:179](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/CrayonAccountsApi.ts#L179)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

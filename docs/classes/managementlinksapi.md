@@ -1,120 +1,259 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ManagementLinksApi](managementlinksapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ManagementLinksApi
 
 # Class: ManagementLinksApi
 
-ManagementLinksApi - object-oriented interface
-
-**`export`** 
-
-**`class`** ManagementLinksApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **ManagementLinksApi**
+  ↳ **`ManagementLinksApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](managementlinksapi.md#constructor)
+- [constructor](ManagementLinksApi.md#constructor)
 
 ### Properties
 
-* [basePath](managementlinksapi.md#protected-basepath)
-* [configuration](managementlinksapi.md#protected-configuration)
-* [fetch](managementlinksapi.md#protected-fetch)
+- [configuration](ManagementLinksApi.md#configuration)
 
 ### Methods
 
-* [get](managementlinksapi.md#get)
-* [getGrouped](managementlinksapi.md#getgrouped)
+- [apiV1ManagementLinksGet](ManagementLinksApi.md#apiv1managementlinksget)
+- [apiV1ManagementLinksGetRaw](ManagementLinksApi.md#apiv1managementlinksgetraw)
+- [apiV1ManagementLinksGroupedGet](ManagementLinksApi.md#apiv1managementlinksgroupedget)
+- [apiV1ManagementLinksGroupedGetRaw](ManagementLinksApi.md#apiv1managementlinksgroupedgetraw)
+- [request](ManagementLinksApi.md#request)
+- [withMiddleware](ManagementLinksApi.md#withmiddleware)
+- [withPostMiddleware](ManagementLinksApi.md#withpostmiddleware)
+- [withPreMiddleware](ManagementLinksApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new ManagementLinksApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[ManagementLinksApi](managementlinksapi.md)*
+• **new ManagementLinksApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[ManagementLinksApi](managementlinksapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  get
+### apiV1ManagementLinksGet
 
-▸ **get**(`subscriptionIds?`: Array‹number›, `resellerCustomerIds?`: Array‹number›, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfManagementLink](../interfaces/apicollectionofmanagementlink.md)›*
+▸ **apiV1ManagementLinksGet**(`requestParameters`, `initOverrides?`): `Promise`<[`ManagementLink`](../interfaces/ManagementLink.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ManagementLinksApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ManagementLinksGetRequest`](../interfaces/ApiV1ManagementLinksGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`subscriptionIds?` | Array‹number› |
-`resellerCustomerIds?` | Array‹number› |
-`page?` | number |
-`pageSize?` | number |
-`options?` | any |
+`Promise`<[`ManagementLink`](../interfaces/ManagementLink.md)[]\>
 
-**Returns:** *Promise‹[ApiCollectionOfManagementLink](../interfaces/apicollectionofmanagementlink.md)›*
+#### Defined in
+
+[src/apis/ManagementLinksApi.ts:84](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ManagementLinksApi.ts#L84)
 
 ___
 
-###  getGrouped
+### apiV1ManagementLinksGetRaw
 
-▸ **getGrouped**(`subscriptionIds?`: Array‹number›, `resellerCustomerIds?`: Array‹number›, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfManagementLinkGrouped](../interfaces/apicollectionofmanagementlinkgrouped.md)›*
+▸ **apiV1ManagementLinksGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ManagementLink`](../interfaces/ManagementLink.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ManagementLinksApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ManagementLinksGetRequest`](../interfaces/ApiV1ManagementLinksGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`subscriptionIds?` | Array‹number› |
-`resellerCustomerIds?` | Array‹number› |
-`page?` | number |
-`pageSize?` | number |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ManagementLink`](../interfaces/ManagementLink.md)[]\>\>
 
-**Returns:** *Promise‹[ApiCollectionOfManagementLinkGrouped](../interfaces/apicollectionofmanagementlinkgrouped.md)›*
+#### Defined in
+
+[src/apis/ManagementLinksApi.ts:47](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ManagementLinksApi.ts#L47)
+
+___
+
+### apiV1ManagementLinksGroupedGet
+
+▸ **apiV1ManagementLinksGroupedGet**(`requestParameters`, `initOverrides?`): `Promise`<[`ManagementLinkGrouped`](../interfaces/ManagementLinkGrouped.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ManagementLinksGroupedGetRequest`](../interfaces/ApiV1ManagementLinksGroupedGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ManagementLinkGrouped`](../interfaces/ManagementLinkGrouped.md)[]\>
+
+#### Defined in
+
+[src/apis/ManagementLinksApi.ts:128](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ManagementLinksApi.ts#L128)
+
+___
+
+### apiV1ManagementLinksGroupedGetRaw
+
+▸ **apiV1ManagementLinksGroupedGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ManagementLinkGrouped`](../interfaces/ManagementLinkGrouped.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ManagementLinksGroupedGetRequest`](../interfaces/ApiV1ManagementLinksGroupedGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ManagementLinkGrouped`](../interfaces/ManagementLinkGrouped.md)[]\>\>
+
+#### Defined in
+
+[src/apis/ManagementLinksApi.ts:91](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ManagementLinksApi.ts#L91)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

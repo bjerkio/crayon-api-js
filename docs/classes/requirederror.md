@@ -1,82 +1,171 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [RequiredError](requirederror.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / RequiredError
 
 # Class: RequiredError
 
-**`export`** 
-
-**`class`** RequiredError
-
-**`extends`** {Error}
-
 ## Hierarchy
 
-* Error
+- `Error`
 
-  ↳ **RequiredError**
+  ↳ **`RequiredError`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](requirederror.md#constructor)
+- [constructor](RequiredError.md#constructor)
 
 ### Properties
 
-* [field](requirederror.md#field)
-* [message](requirederror.md#message)
-* [name](requirederror.md#name)
-* [stack](requirederror.md#optional-stack)
-* [Error](requirederror.md#static-error)
+- [field](RequiredError.md#field)
+- [message](RequiredError.md#message)
+- [name](RequiredError.md#name)
+- [stack](RequiredError.md#stack)
+- [prepareStackTrace](RequiredError.md#preparestacktrace)
+- [stackTraceLimit](RequiredError.md#stacktracelimit)
+
+### Methods
+
+- [captureStackTrace](RequiredError.md#capturestacktrace)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new RequiredError**(`field`: string, `msg?`: string): *[RequiredError](requirederror.md)*
+• **new RequiredError**(`field`, `msg?`)
 
-**Parameters:**
+#### Parameters
 
-Name | Type |
------- | ------ |
-`field` | string |
-`msg?` | string |
+| Name | Type |
+| :------ | :------ |
+| `field` | `string` |
+| `msg?` | `string` |
 
-**Returns:** *[RequiredError](requirederror.md)*
+#### Overrides
+
+Error.constructor
+
+#### Defined in
+
+[src/runtime.ts:118](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L118)
 
 ## Properties
 
-###  field
+### field
 
-• **field**: *string*
-
-___
-
-###  message
-
-• **message**: *string*
-
-*Inherited from void*
+• **field**: `string`
 
 ___
 
-###  name
+### message
 
-• **name**: *"RequiredError"*
+• **message**: `string`
 
-*Overrides void*
+#### Inherited from
 
-___
+Error.message
 
-### `Optional` stack
+#### Defined in
 
-• **stack**? : *string*
-
-*Inherited from void*
-
-*Overrides void*
+node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
-### `Static` Error
+### name
 
-▪ **Error**: *ErrorConstructor*
+• **name**: ``"RequiredError"``
+
+#### Overrides
+
+Error.name
+
+#### Defined in
+
+[src/runtime.ts:117](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L117)
+
+___
+
+### stack
+
+• `Optional` **stack**: `string`
+
+#### Inherited from
+
+Error.stack
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:975
+
+___
+
+### prepareStackTrace
+
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+
+#### Type declaration
+
+▸ (`err`, `stackTraces`): `any`
+
+Optional override for formatting stack traces
+
+**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `err` | `Error` |
+| `stackTraces` | `CallSite`[] |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+Error.prepareStackTrace
+
+#### Defined in
+
+node_modules/@types/node/globals.d.ts:11
+
+___
+
+### stackTraceLimit
+
+▪ `Static` **stackTraceLimit**: `number`
+
+#### Inherited from
+
+Error.stackTraceLimit
+
+#### Defined in
+
+node_modules/@types/node/globals.d.ts:13
+
+## Methods
+
+### captureStackTrace
+
+▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Create .stack property on a target object
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | `object` |
+| `constructorOpt?` | `Function` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+Error.captureStackTrace
+
+#### Defined in
+
+node_modules/@types/node/globals.d.ts:4

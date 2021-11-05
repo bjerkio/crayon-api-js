@@ -1,93 +1,103 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AzureSubscription](azuresubscription.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AzureSubscription
 
 # Interface: AzureSubscription
 
-**`export`** 
+**`export`**
 
 **`interface`** AzureSubscription
 
-## Hierarchy
-
-* **AzureSubscription**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [azurePlanId](azuresubscription.md#optional-azureplanid)
-* [friendlyName](azuresubscription.md#optional-friendlyname)
-* [id](azuresubscription.md#optional-id)
-* [invoiceProfile](azuresubscription.md#optional-invoiceprofile)
-* [publisherSubscriptionId](azuresubscription.md#optional-publishersubscriptionid)
-* [status](azuresubscription.md#optional-status)
-* [tags](azuresubscription.md#optional-tags)
+- [azurePlanId](AzureSubscription.md#azureplanid)
+- [friendlyName](AzureSubscription.md#friendlyname)
+- [id](AzureSubscription.md#id)
+- [invoiceProfile](AzureSubscription.md#invoiceprofile)
+- [publisherSubscriptionId](AzureSubscription.md#publishersubscriptionid)
+- [status](AzureSubscription.md#status)
+- [tags](AzureSubscription.md#tags)
 
 ## Properties
 
-### `Optional` azurePlanId
+### azurePlanId
 
-• **azurePlanId**? : *number*
-
-**`type`** {number}
+• `Optional` **azurePlanId**: `number`
 
 **`memberof`** AzureSubscription
+
+#### Defined in
+
+[src/models/AzureSubscription.ts:44](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscription.ts#L44)
 
 ___
 
-### `Optional` friendlyName
+### friendlyName
 
-• **friendlyName**? : *string*
-
-**`type`** {string}
+• `Optional` **friendlyName**: `string`
 
 **`memberof`** AzureSubscription
+
+#### Defined in
+
+[src/models/AzureSubscription.ts:56](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscription.ts#L56)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** AzureSubscription
+
+#### Defined in
+
+[src/models/AzureSubscription.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscription.ts#L38)
 
 ___
 
-### `Optional` invoiceProfile
+### invoiceProfile
 
-• **invoiceProfile**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **invoiceProfile**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** AzureSubscription
+
+#### Defined in
+
+[src/models/AzureSubscription.ts:68](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscription.ts#L68)
 
 ___
 
-### `Optional` publisherSubscriptionId
+### publisherSubscriptionId
 
-• **publisherSubscriptionId**? : *string*
-
-**`type`** {string}
+• `Optional` **publisherSubscriptionId**: `string`
 
 **`memberof`** AzureSubscription
+
+#### Defined in
+
+[src/models/AzureSubscription.ts:50](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscription.ts#L50)
 
 ___
 
-### `Optional` status
+### status
 
-• **status**? : *string*
-
-**`type`** {string}
+• `Optional` **status**: `string`
 
 **`memberof`** AzureSubscription
+
+#### Defined in
+
+[src/models/AzureSubscription.ts:62](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscription.ts#L62)
 
 ___
 
-### `Optional` tags
+### tags
 
-• **tags**? : *[AzureSubscriptionTags](azuresubscriptiontags.md)*
-
-**`type`** {AzureSubscriptionTags}
+• `Optional` **tags**: [`AzureSubscriptionTags`](AzureSubscriptionTags.md)
 
 **`memberof`** AzureSubscription
+
+#### Defined in
+
+[src/models/AzureSubscription.ts:74](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AzureSubscription.ts#L74)

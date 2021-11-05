@@ -1,115 +1,259 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [SecretsApi](secretsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / SecretsApi
 
 # Class: SecretsApi
 
-SecretsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** SecretsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **SecretsApi**
+  ↳ **`SecretsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](secretsapi.md#constructor)
+- [constructor](SecretsApi.md#constructor)
 
 ### Properties
 
-* [basePath](secretsapi.md#protected-basepath)
-* [configuration](secretsapi.md#protected-configuration)
-* [fetch](secretsapi.md#protected-fetch)
+- [configuration](SecretsApi.md#configuration)
 
 ### Methods
 
-* [_delete](secretsapi.md#_delete)
-* [post](secretsapi.md#post)
+- [apiV1SecretsDelete](SecretsApi.md#apiv1secretsdelete)
+- [apiV1SecretsDeleteRaw](SecretsApi.md#apiv1secretsdeleteraw)
+- [apiV1SecretsPost](SecretsApi.md#apiv1secretspost)
+- [apiV1SecretsPostRaw](SecretsApi.md#apiv1secretspostraw)
+- [request](SecretsApi.md#request)
+- [withMiddleware](SecretsApi.md#withmiddleware)
+- [withPostMiddleware](SecretsApi.md#withpostmiddleware)
+- [withPreMiddleware](SecretsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new SecretsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[SecretsApi](secretsapi.md)*
+• **new SecretsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[SecretsApi](secretsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  _delete
+### apiV1SecretsDelete
 
-▸ **_delete**(`clientId?`: string, `secretId?`: number, `options?`: any): *Promise‹boolean›*
+▸ **apiV1SecretsDelete**(`requestParameters`, `initOverrides?`): `Promise`<`boolean`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** SecretsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1SecretsDeleteRequest`](../interfaces/ApiV1SecretsDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`clientId?` | string |
-`secretId?` | number |
-`options?` | any |
+`Promise`<`boolean`\>
 
-**Returns:** *Promise‹boolean›*
+#### Defined in
+
+[src/apis/SecretsApi.ts:68](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/SecretsApi.ts#L68)
 
 ___
 
-###  post
+### apiV1SecretsDeleteRaw
 
-▸ **post**(`secret?`: [Secret](../interfaces/secret.md), `options?`: any): *Promise‹[Secret](../interfaces/secret.md)›*
+▸ **apiV1SecretsDeleteRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** SecretsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1SecretsDeleteRequest`](../interfaces/ApiV1SecretsDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`secret?` | [Secret](../interfaces/secret.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
 
-**Returns:** *Promise‹[Secret](../interfaces/secret.md)›*
+#### Defined in
+
+[src/apis/SecretsApi.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/SecretsApi.ts#L39)
+
+___
+
+### apiV1SecretsPost
+
+▸ **apiV1SecretsPost**(`requestParameters`, `initOverrides?`): `Promise`<[`Secret`](../interfaces/Secret.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1SecretsPostRequest`](../interfaces/ApiV1SecretsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Secret`](../interfaces/Secret.md)\>
+
+#### Defined in
+
+[src/apis/SecretsApi.ts:99](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/SecretsApi.ts#L99)
+
+___
+
+### apiV1SecretsPostRaw
+
+▸ **apiV1SecretsPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Secret`](../interfaces/Secret.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1SecretsPostRequest`](../interfaces/ApiV1SecretsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Secret`](../interfaces/Secret.md)\>\>
+
+#### Defined in
+
+[src/apis/SecretsApi.ts:75](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/SecretsApi.ts#L75)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

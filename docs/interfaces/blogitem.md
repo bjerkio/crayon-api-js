@@ -1,82 +1,90 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [BlogItem](blogitem.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / BlogItem
 
 # Interface: BlogItem
 
-**`export`** 
+**`export`**
 
 **`interface`** BlogItem
 
-## Hierarchy
-
-* **BlogItem**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [author](blogitem.md#optional-author)
-* [description](blogitem.md#optional-description)
-* [image](blogitem.md#optional-image)
-* [link](blogitem.md#optional-link)
-* [publicationDate](blogitem.md#optional-publicationdate)
-* [title](blogitem.md#optional-title)
+- [author](BlogItem.md#author)
+- [description](BlogItem.md#description)
+- [image](BlogItem.md#image)
+- [link](BlogItem.md#link)
+- [publicationDate](BlogItem.md#publicationdate)
+- [title](BlogItem.md#title)
 
 ## Properties
 
-### `Optional` author
+### author
 
-• **author**? : *string*
-
-**`type`** {string}
+• `Optional` **author**: `string`
 
 **`memberof`** BlogItem
+
+#### Defined in
+
+[src/models/BlogItem.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BlogItem.ts#L33)
 
 ___
 
-### `Optional` description
+### description
 
-• **description**? : *string*
-
-**`type`** {string}
+• `Optional` **description**: `string`
 
 **`memberof`** BlogItem
+
+#### Defined in
+
+[src/models/BlogItem.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BlogItem.ts#L39)
 
 ___
 
-### `Optional` image
+### image
 
-• **image**? : *string*
-
-**`type`** {string}
+• `Optional` **image**: `string`
 
 **`memberof`** BlogItem
+
+#### Defined in
+
+[src/models/BlogItem.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BlogItem.ts#L45)
 
 ___
 
-### `Optional` link
+### link
 
-• **link**? : *string*
-
-**`type`** {string}
+• `Optional` **link**: `string`
 
 **`memberof`** BlogItem
+
+#### Defined in
+
+[src/models/BlogItem.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BlogItem.ts#L51)
 
 ___
 
-### `Optional` publicationDate
+### publicationDate
 
-• **publicationDate**? : *Date*
-
-**`type`** {Date}
+• `Optional` **publicationDate**: `Date`
 
 **`memberof`** BlogItem
+
+#### Defined in
+
+[src/models/BlogItem.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BlogItem.ts#L57)
 
 ___
 
-### `Optional` title
+### title
 
-• **title**? : *string*
-
-**`type`** {string}
+• `Optional` **title**: `string`
 
 **`memberof`** BlogItem
+
+#### Defined in
+
+[src/models/BlogItem.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/BlogItem.ts#L27)

@@ -1,38 +1,38 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ActivationLink](activationlink.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ActivationLink
 
 # Interface: ActivationLink
 
-**`export`** 
+**`export`**
 
 **`interface`** ActivationLink
 
-## Hierarchy
-
-* **ActivationLink**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [subscriptionId](activationlink.md#optional-subscriptionid)
-* [uri](activationlink.md#optional-uri)
+- [subscriptionId](ActivationLink.md#subscriptionid)
+- [uri](ActivationLink.md#uri)
 
 ## Properties
 
-### `Optional` subscriptionId
+### subscriptionId
 
-• **subscriptionId**? : *string*
-
-**`type`** {string}
+• `Optional` **subscriptionId**: `string`
 
 **`memberof`** ActivationLink
+
+#### Defined in
+
+[src/models/ActivationLink.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ActivationLink.ts#L27)
 
 ___
 
-### `Optional` uri
+### uri
 
-• **uri**? : *string*
-
-**`type`** {string}
+• `Optional` **uri**: `string`
 
 **`memberof`** ActivationLink
+
+#### Defined in
+
+[src/models/ActivationLink.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ActivationLink.ts#L33)

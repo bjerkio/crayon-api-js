@@ -1,38 +1,38 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CustomerTenantUser](customertenantuser.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CustomerTenantUser
 
 # Interface: CustomerTenantUser
 
-**`export`** 
+**`export`**
 
 **`interface`** CustomerTenantUser
 
-## Hierarchy
-
-* **CustomerTenantUser**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [password](customertenantuser.md#optional-password)
-* [userName](customertenantuser.md#optional-username)
+- [password](CustomerTenantUser.md#password)
+- [userName](CustomerTenantUser.md#username)
 
 ## Properties
 
-### `Optional` password
+### password
 
-• **password**? : *string*
-
-**`type`** {string}
+• `Optional` **password**: `string`
 
 **`memberof`** CustomerTenantUser
+
+#### Defined in
+
+[src/models/CustomerTenantUser.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantUser.ts#L33)
 
 ___
 
-### `Optional` userName
+### userName
 
-• **userName**? : *string*
-
-**`type`** {string}
+• `Optional` **userName**: `string`
 
 **`memberof`** CustomerTenantUser
+
+#### Defined in
+
+[src/models/CustomerTenantUser.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantUser.ts#L27)

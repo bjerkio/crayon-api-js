@@ -1,27 +1,25 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CustomerTenantReference](customertenantreference.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CustomerTenantReference
 
 # Interface: CustomerTenantReference
 
-**`export`** 
+**`export`**
 
 **`interface`** CustomerTenantReference
 
-## Hierarchy
-
-* **CustomerTenantReference**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](customertenantreference.md#optional-id)
+- [id](CustomerTenantReference.md#id)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** CustomerTenantReference
+
+#### Defined in
+
+[src/models/CustomerTenantReference.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantReference.ts#L27)

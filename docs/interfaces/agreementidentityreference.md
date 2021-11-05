@@ -1,60 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AgreementIdentityReference](agreementidentityreference.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AgreementIdentityReference
 
 # Interface: AgreementIdentityReference
 
-**`export`** 
+**`export`**
 
 **`interface`** AgreementIdentityReference
 
-## Hierarchy
-
-* **AgreementIdentityReference**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [agreementNumber](agreementidentityreference.md#optional-agreementnumber)
-* [commitmentLevel](agreementidentityreference.md#optional-commitmentlevel)
-* [id](agreementidentityreference.md#optional-id)
-* [name](agreementidentityreference.md#optional-name)
+- [agreementNumber](AgreementIdentityReference.md#agreementnumber)
+- [commitmentLevel](AgreementIdentityReference.md#commitmentlevel)
+- [id](AgreementIdentityReference.md#id)
+- [isCustomCommitment](AgreementIdentityReference.md#iscustomcommitment)
+- [name](AgreementIdentityReference.md#name)
 
 ## Properties
 
-### `Optional` agreementNumber
+### agreementNumber
 
-• **agreementNumber**? : *string*
-
-**`type`** {string}
+• `Optional` **agreementNumber**: `string`
 
 **`memberof`** AgreementIdentityReference
+
+#### Defined in
+
+[src/models/AgreementIdentityReference.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementIdentityReference.ts#L39)
 
 ___
 
-### `Optional` commitmentLevel
+### commitmentLevel
 
-• **commitmentLevel**? : *number*
-
-**`type`** {number}
+• `Optional` **commitmentLevel**: `number`
 
 **`memberof`** AgreementIdentityReference
+
+#### Defined in
+
+[src/models/AgreementIdentityReference.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementIdentityReference.ts#L45)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** AgreementIdentityReference
+
+#### Defined in
+
+[src/models/AgreementIdentityReference.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementIdentityReference.ts#L27)
 
 ___
 
-### `Optional` name
+### isCustomCommitment
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **isCustomCommitment**: `boolean`
 
 **`memberof`** AgreementIdentityReference
+
+#### Defined in
+
+[src/models/AgreementIdentityReference.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementIdentityReference.ts#L51)
+
+___
+
+### name
+
+• `Optional` **name**: `string`
+
+**`memberof`** AgreementIdentityReference
+
+#### Defined in
+
+[src/models/AgreementIdentityReference.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementIdentityReference.ts#L33)

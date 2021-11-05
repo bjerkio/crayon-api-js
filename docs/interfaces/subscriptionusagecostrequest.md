@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [SubscriptionUsageCostRequest](subscriptionusagecostrequest.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / SubscriptionUsageCostRequest
 
 # Interface: SubscriptionUsageCostRequest
 
-**`export`** 
+**`export`**
 
 **`interface`** SubscriptionUsageCostRequest
 
-## Hierarchy
-
-* **SubscriptionUsageCostRequest**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [currencyCode](subscriptionusagecostrequest.md#optional-currencycode)
-* [from](subscriptionusagecostrequest.md#optional-from)
-* [resellerCustomerId](subscriptionusagecostrequest.md#optional-resellercustomerid)
-* [subscriptionId](subscriptionusagecostrequest.md#optional-subscriptionid)
-* [to](subscriptionusagecostrequest.md#optional-to)
+- [currencyCode](SubscriptionUsageCostRequest.md#currencycode)
+- [from](SubscriptionUsageCostRequest.md#from)
+- [resellerCustomerId](SubscriptionUsageCostRequest.md#resellercustomerid)
+- [subscriptionId](SubscriptionUsageCostRequest.md#subscriptionid)
+- [to](SubscriptionUsageCostRequest.md#to)
 
 ## Properties
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** SubscriptionUsageCostRequest
+
+#### Defined in
+
+[src/models/SubscriptionUsageCostRequest.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionUsageCostRequest.ts#L39)
 
 ___
 
-### `Optional` from
+### from
 
-• **from**? : *Date*
-
-**`type`** {Date}
+• `Optional` **from**: `Date`
 
 **`memberof`** SubscriptionUsageCostRequest
+
+#### Defined in
+
+[src/models/SubscriptionUsageCostRequest.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionUsageCostRequest.ts#L45)
 
 ___
 
-### `Optional` resellerCustomerId
+### resellerCustomerId
 
-• **resellerCustomerId**? : *number*
-
-**`type`** {number}
+• `Optional` **resellerCustomerId**: `number`
 
 **`memberof`** SubscriptionUsageCostRequest
+
+#### Defined in
+
+[src/models/SubscriptionUsageCostRequest.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionUsageCostRequest.ts#L27)
 
 ___
 
-### `Optional` subscriptionId
+### subscriptionId
 
-• **subscriptionId**? : *string*
-
-**`type`** {string}
+• `Optional` **subscriptionId**: `string`
 
 **`memberof`** SubscriptionUsageCostRequest
+
+#### Defined in
+
+[src/models/SubscriptionUsageCostRequest.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionUsageCostRequest.ts#L33)
 
 ___
 
-### `Optional` to
+### to
 
-• **to**? : *Date*
-
-**`type`** {Date}
+• `Optional` **to**: `Date`
 
 **`memberof`** SubscriptionUsageCostRequest
+
+#### Defined in
+
+[src/models/SubscriptionUsageCostRequest.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionUsageCostRequest.ts#L51)

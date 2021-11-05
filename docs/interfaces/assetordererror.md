@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AssetOrderError](assetordererror.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AssetOrderError
 
 # Interface: AssetOrderError
 
-**`export`** 
+**`export`**
 
 **`interface`** AssetOrderError
 
-## Hierarchy
-
-* **AssetOrderError**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [code](assetordererror.md#optional-code)
-* [description](assetordererror.md#optional-description)
-* [orderGroupId](assetordererror.md#optional-ordergroupid)
+- [code](AssetOrderError.md#code)
+- [description](AssetOrderError.md#description)
+- [orderGroupId](AssetOrderError.md#ordergroupid)
 
 ## Properties
 
-### `Optional` code
+### code
 
-• **code**? : *number*
-
-**`type`** {number}
+• `Optional` **code**: `number`
 
 **`memberof`** AssetOrderError
+
+#### Defined in
+
+[src/models/AssetOrderError.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrderError.ts#L33)
 
 ___
 
-### `Optional` description
+### description
 
-• **description**? : *string*
-
-**`type`** {string}
+• `Optional` **description**: `string`
 
 **`memberof`** AssetOrderError
+
+#### Defined in
+
+[src/models/AssetOrderError.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrderError.ts#L39)
 
 ___
 
-### `Optional` orderGroupId
+### orderGroupId
 
-• **orderGroupId**? : *string*
-
-**`type`** {string}
+• `Optional` **orderGroupId**: `string`
 
 **`memberof`** AssetOrderError
+
+#### Defined in
+
+[src/models/AssetOrderError.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AssetOrderError.ts#L27)

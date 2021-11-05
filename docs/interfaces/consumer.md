@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Consumer](consumer.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Consumer
 
 # Interface: Consumer
 
-**`export`** 
+**`export`**
 
 **`interface`** Consumer
 
-## Hierarchy
-
-* **Consumer**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](consumer.md#optional-id)
-* [name](consumer.md#optional-name)
-* [organization](consumer.md#optional-organization)
+- [id](Consumer.md#id)
+- [name](Consumer.md#name)
+- [organization](Consumer.md#organization)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** Consumer
+
+#### Defined in
+
+[src/models/Consumer.ts:34](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Consumer.ts#L34)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** Consumer
+
+#### Defined in
+
+[src/models/Consumer.ts:40](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Consumer.ts#L40)
 
 ___
 
-### `Optional` organization
+### organization
 
-• **organization**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **organization**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** Consumer
+
+#### Defined in
+
+[src/models/Consumer.ts:46](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Consumer.ts#L46)

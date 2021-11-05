@@ -1,156 +1,347 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [OrganizationsApi](organizationsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / OrganizationsApi
 
 # Class: OrganizationsApi
 
-OrganizationsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** OrganizationsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **OrganizationsApi**
+  ↳ **`OrganizationsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](organizationsapi.md#constructor)
+- [constructor](OrganizationsApi.md#constructor)
 
 ### Properties
 
-* [basePath](organizationsapi.md#protected-basepath)
-* [configuration](organizationsapi.md#protected-configuration)
-* [fetch](organizationsapi.md#protected-fetch)
+- [configuration](OrganizationsApi.md#configuration)
 
 ### Methods
 
-* [get](organizationsapi.md#get)
-* [getById](organizationsapi.md#getbyid)
-* [getOrganizationSalesContact](organizationsapi.md#getorganizationsalescontact)
-* [hasAccessAsync](organizationsapi.md#hasaccessasync)
+- [apiV1OrganizationsGet](OrganizationsApi.md#apiv1organizationsget)
+- [apiV1OrganizationsGetRaw](OrganizationsApi.md#apiv1organizationsgetraw)
+- [apiV1OrganizationsHasAccessIdGet](OrganizationsApi.md#apiv1organizationshasaccessidget)
+- [apiV1OrganizationsHasAccessIdGetRaw](OrganizationsApi.md#apiv1organizationshasaccessidgetraw)
+- [apiV1OrganizationsIdGet](OrganizationsApi.md#apiv1organizationsidget)
+- [apiV1OrganizationsIdGetRaw](OrganizationsApi.md#apiv1organizationsidgetraw)
+- [apiV1OrganizationsOrganizationIdSalescontactGet](OrganizationsApi.md#apiv1organizationsorganizationidsalescontactget)
+- [apiV1OrganizationsOrganizationIdSalescontactGetRaw](OrganizationsApi.md#apiv1organizationsorganizationidsalescontactgetraw)
+- [request](OrganizationsApi.md#request)
+- [withMiddleware](OrganizationsApi.md#withmiddleware)
+- [withPostMiddleware](OrganizationsApi.md#withpostmiddleware)
+- [withPreMiddleware](OrganizationsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new OrganizationsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[OrganizationsApi](organizationsapi.md)*
+• **new OrganizationsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[OrganizationsApi](organizationsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  get
+### apiV1OrganizationsGet
 
-▸ **get**(`page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfOrganization](../interfaces/apicollectionoforganization.md)›*
+▸ **apiV1OrganizationsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Organization`](../interfaces/Organization.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** OrganizationsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsGetRequest`](../interfaces/ApiV1OrganizationsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`page?` | number |
-`pageSize?` | number |
-`search?` | string |
-`options?` | any |
+`Promise`<[`Organization`](../interfaces/Organization.md)[]\>
 
-**Returns:** *Promise‹[ApiCollectionOfOrganization](../interfaces/apicollectionoforganization.md)›*
+#### Defined in
 
-___
-
-###  getById
-
-▸ **getById**(`id`: number, `options?`: any): *Promise‹[Organization](../interfaces/organization.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** OrganizationsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
-
-**Returns:** *Promise‹[Organization](../interfaces/organization.md)›*
+[src/apis/OrganizationsApi.ts:84](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L84)
 
 ___
 
-###  getOrganizationSalesContact
+### apiV1OrganizationsGetRaw
 
-▸ **getOrganizationSalesContact**(`organizationId`: number, `options?`: any): *Promise‹[OrganizationSalesContact](../interfaces/organizationsalescontact.md)›*
+▸ **apiV1OrganizationsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Organization`](../interfaces/Organization.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** OrganizationsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsGetRequest`](../interfaces/ApiV1OrganizationsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`organizationId` | number |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Organization`](../interfaces/Organization.md)[]\>\>
 
-**Returns:** *Promise‹[OrganizationSalesContact](../interfaces/organizationsalescontact.md)›*
+#### Defined in
+
+[src/apis/OrganizationsApi.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L51)
 
 ___
 
-###  hasAccessAsync
+### apiV1OrganizationsHasAccessIdGet
 
-▸ **hasAccessAsync**(`id`: number, `options?`: any): *Promise‹boolean›*
+▸ **apiV1OrganizationsHasAccessIdGet**(`requestParameters`, `initOverrides?`): `Promise`<`boolean`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** OrganizationsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsHasAccessIdGetRequest`](../interfaces/ApiV1OrganizationsHasAccessIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
+`Promise`<`boolean`\>
 
-**Returns:** *Promise‹boolean›*
+#### Defined in
+
+[src/apis/OrganizationsApi.ts:116](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L116)
+
+___
+
+### apiV1OrganizationsHasAccessIdGetRaw
+
+▸ **apiV1OrganizationsHasAccessIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsHasAccessIdGetRequest`](../interfaces/ApiV1OrganizationsHasAccessIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
+
+#### Defined in
+
+[src/apis/OrganizationsApi.ts:91](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L91)
+
+___
+
+### apiV1OrganizationsIdGet
+
+▸ **apiV1OrganizationsIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Organization`](../interfaces/Organization.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsIdGetRequest`](../interfaces/ApiV1OrganizationsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Organization`](../interfaces/Organization.md)\>
+
+#### Defined in
+
+[src/apis/OrganizationsApi.ts:148](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L148)
+
+___
+
+### apiV1OrganizationsIdGetRaw
+
+▸ **apiV1OrganizationsIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Organization`](../interfaces/Organization.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsIdGetRequest`](../interfaces/ApiV1OrganizationsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Organization`](../interfaces/Organization.md)\>\>
+
+#### Defined in
+
+[src/apis/OrganizationsApi.ts:123](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L123)
+
+___
+
+### apiV1OrganizationsOrganizationIdSalescontactGet
+
+▸ **apiV1OrganizationsOrganizationIdSalescontactGet**(`requestParameters`, `initOverrides?`): `Promise`<[`OrganizationSalesContact`](../interfaces/OrganizationSalesContact.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsOrganizationIdSalescontactGetRequest`](../interfaces/ApiV1OrganizationsOrganizationIdSalescontactGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`OrganizationSalesContact`](../interfaces/OrganizationSalesContact.md)\>
+
+#### Defined in
+
+[src/apis/OrganizationsApi.ts:180](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L180)
+
+___
+
+### apiV1OrganizationsOrganizationIdSalescontactGetRaw
+
+▸ **apiV1OrganizationsOrganizationIdSalescontactGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`OrganizationSalesContact`](../interfaces/OrganizationSalesContact.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1OrganizationsOrganizationIdSalescontactGetRequest`](../interfaces/ApiV1OrganizationsOrganizationIdSalescontactGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`OrganizationSalesContact`](../interfaces/OrganizationSalesContact.md)\>\>
+
+#### Defined in
+
+[src/apis/OrganizationsApi.ts:155](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/OrganizationsApi.ts#L155)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

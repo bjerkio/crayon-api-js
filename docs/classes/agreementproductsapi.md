@@ -1,204 +1,347 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AgreementProductsApi](agreementproductsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AgreementProductsApi
 
 # Class: AgreementProductsApi
 
-AgreementProductsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** AgreementProductsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **AgreementProductsApi**
+  ↳ **`AgreementProductsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](agreementproductsapi.md#constructor)
+- [constructor](AgreementProductsApi.md#constructor)
 
 ### Properties
 
-* [basePath](agreementproductsapi.md#protected-basepath)
-* [configuration](agreementproductsapi.md#protected-configuration)
-* [fetch](agreementproductsapi.md#protected-fetch)
+- [configuration](AgreementProductsApi.md#configuration)
 
 ### Methods
 
-* [get](agreementproductsapi.md#get)
-* [getAsExcelFile](agreementproductsapi.md#getasexcelfile)
-* [getOperationSdk133](agreementproductsapi.md#getoperationsdk133)
-* [getSupportedBillingCycles](agreementproductsapi.md#getsupportedbillingcycles)
+- [apiV1AgreementProductsFileXlsxPost](AgreementProductsApi.md#apiv1agreementproductsfilexlsxpost)
+- [apiV1AgreementProductsFileXlsxPostRaw](AgreementProductsApi.md#apiv1agreementproductsfilexlsxpostraw)
+- [apiV1AgreementProductsGet](AgreementProductsApi.md#apiv1agreementproductsget)
+- [apiV1AgreementProductsGetRaw](AgreementProductsApi.md#apiv1agreementproductsgetraw)
+- [apiV1AgreementProductsPartNumberSupportedbillingcyclesGet](AgreementProductsApi.md#apiv1agreementproductspartnumbersupportedbillingcyclesget)
+- [apiV1AgreementProductsPartNumberSupportedbillingcyclesGetRaw](AgreementProductsApi.md#apiv1agreementproductspartnumbersupportedbillingcyclesgetraw)
+- [apiV1AgreementProductsPost](AgreementProductsApi.md#apiv1agreementproductspost)
+- [apiV1AgreementProductsPostRaw](AgreementProductsApi.md#apiv1agreementproductspostraw)
+- [request](AgreementProductsApi.md#request)
+- [withMiddleware](AgreementProductsApi.md#withmiddleware)
+- [withPostMiddleware](AgreementProductsApi.md#withpostmiddleware)
+- [withPreMiddleware](AgreementProductsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new AgreementProductsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[AgreementProductsApi](agreementproductsapi.md)*
+• **new AgreementProductsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[AgreementProductsApi](agreementproductsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  get
+### apiV1AgreementProductsFileXlsxPost
 
-▸ **get**(`agreementTypeIds?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: "Ascending" | "Descending", `options?`: any): *Promise‹[AgreementProductCollection](../interfaces/agreementproductcollection.md)›*
+▸ **apiV1AgreementProductsFileXlsxPost**(`requestParameters`, `initOverrides?`): `Promise`<`void`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** AgreementProductsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsFileXlsxPostRequest`](../interfaces/ApiV1AgreementProductsFileXlsxPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`agreementTypeIds?` | Array‹"None" &#124; "LicenseAgreement" &#124; "OpenAgreement" &#124; "FrameAgreement" &#124; "SamAgreement" &#124; "ConsultingAgreement" &#124; "CloudSeatAgreement" &#124; "CloudUsageAgreement" &#124; "ReportingAgreement" &#124; "OtherAgreement" &#124; "Reserved1" &#124; "Reserved2" &#124; "Reserved3"› |
-`page?` | number |
-`pageSize?` | number |
-`search?` | string |
-`priceListId?` | number |
-`organizationId?` | number |
-`customerTenantId?` | number |
-`agreementId?` | number |
-`isTrial?` | boolean |
-`agreementIds?` | Array‹number› |
-`searchDate?` | Date |
-`includePartNumbers?` | Array‹string› |
-`includePublisherIds?` | Array‹number› |
-`includePublisherNames?` | Array‹string› |
-`includePoolNames?` | Array‹string› |
-`includeOperatingSystemNames?` | Array‹string› |
-`includeLevelNames?` | Array‹string› |
-`includeLanguageNames?` | Array‹string› |
-`includeLicenseAgreementTypeNames?` | Array‹string› |
-`includeLicenseTypeNames?` | Array‹string› |
-`includeProductFamilyNames?` | Array‹string› |
-`includeProductTypeNames?` | Array‹string› |
-`includeProgramNames?` | Array‹string› |
-`includeOfferingNames?` | Array‹string› |
-`includePurchasePeriodNames?` | Array‹string› |
-`includePurchaseUnitNames?` | Array‹string› |
-`includeVersionNames?` | Array‹string› |
-`includeRegionNames?` | Array‹string› |
-`includeProductCategoryNames?` | Array‹string› |
-`excludePartNumbers?` | Array‹string› |
-`excludePublisherIds?` | Array‹number› |
-`excludePublisherNames?` | Array‹string› |
-`excludePoolNames?` | Array‹string› |
-`excludeOperatingSystemNames?` | Array‹string› |
-`excludeLevelNames?` | Array‹string› |
-`excludeLanguageNames?` | Array‹string› |
-`excludeLicenseAgreementTypeNames?` | Array‹string› |
-`excludeLicenseTypeNames?` | Array‹string› |
-`excludeProductFamilyNames?` | Array‹string› |
-`excludeProductTypeNames?` | Array‹string› |
-`excludeProgramNames?` | Array‹string› |
-`excludeOfferingNames?` | Array‹string› |
-`excludePurchasePeriodNames?` | Array‹string› |
-`excludePurchaseUnitNames?` | Array‹string› |
-`excludeVersionNames?` | Array‹string› |
-`excludeRegionNames?` | Array‹string› |
-`excludeProductCategoryNames?` | Array‹string› |
-`sortKey?` | string |
-`includeProductInformation?` | boolean |
-`sortOrder?` | "Ascending" &#124; "Descending" |
-`options?` | any |
+`Promise`<`void`\>
 
-**Returns:** *Promise‹[AgreementProductCollection](../interfaces/agreementproductcollection.md)›*
+#### Defined in
+
+[src/apis/AgreementProductsApi.ts:136](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L136)
 
 ___
 
-###  getAsExcelFile
+### apiV1AgreementProductsFileXlsxPostRaw
 
-▸ **getAsExcelFile**(`filter?`: [AgreementProductFilter](../modules/agreementproductfilter.md), `options?`: any): *Promise‹Response›*
+▸ **apiV1AgreementProductsFileXlsxPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** AgreementProductsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsFileXlsxPostRequest`](../interfaces/ApiV1AgreementProductsFileXlsxPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`filter?` | [AgreementProductFilter](../modules/agreementproductfilter.md) |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
 
-**Returns:** *Promise‹Response›*
+#### Defined in
 
-___
-
-###  getOperationSdk133
-
-▸ **getOperationSdk133**(`filter?`: [AgreementProductFilter](../modules/agreementproductfilter.md), `options?`: any): *Promise‹[AgreementProductCollection](../interfaces/agreementproductcollection.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** AgreementProductsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`filter?` | [AgreementProductFilter](../modules/agreementproductfilter.md) |
-`options?` | any |
-
-**Returns:** *Promise‹[AgreementProductCollection](../interfaces/agreementproductcollection.md)›*
+[src/apis/AgreementProductsApi.ts:112](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L112)
 
 ___
 
-###  getSupportedBillingCycles
+### apiV1AgreementProductsGet
 
-▸ **getSupportedBillingCycles**(`partNumber`: string, `resellerCustomerId?`: number, `options?`: any): *Promise‹string[]›*
+▸ **apiV1AgreementProductsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** AgreementProductsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsGetRequest`](../interfaces/ApiV1AgreementProductsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`partNumber` | string |
-`resellerCustomerId?` | number |
-`options?` | any |
+`Promise`<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>
 
-**Returns:** *Promise‹string[]›*
+#### Defined in
+
+[src/apis/AgreementProductsApi.ts:379](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L379)
+
+___
+
+### apiV1AgreementProductsGetRaw
+
+▸ **apiV1AgreementProductsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsGetRequest`](../interfaces/ApiV1AgreementProductsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>\>
+
+#### Defined in
+
+[src/apis/AgreementProductsApi.ts:142](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L142)
+
+___
+
+### apiV1AgreementProductsPartNumberSupportedbillingcyclesGet
+
+▸ **apiV1AgreementProductsPartNumberSupportedbillingcyclesGet**(`requestParameters`, `initOverrides?`): `Promise`<[`BillingCycleEnum`](../enums/BillingCycleEnum.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsPartNumberSupportedbillingcyclesGetRequest`](../interfaces/ApiV1AgreementProductsPartNumberSupportedbillingcyclesGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`BillingCycleEnum`](../enums/BillingCycleEnum.md)[]\>
+
+#### Defined in
+
+[src/apis/AgreementProductsApi.ts:415](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L415)
+
+___
+
+### apiV1AgreementProductsPartNumberSupportedbillingcyclesGetRaw
+
+▸ **apiV1AgreementProductsPartNumberSupportedbillingcyclesGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`BillingCycleEnum`](../enums/BillingCycleEnum.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsPartNumberSupportedbillingcyclesGetRequest`](../interfaces/ApiV1AgreementProductsPartNumberSupportedbillingcyclesGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`BillingCycleEnum`](../enums/BillingCycleEnum.md)[]\>\>
+
+#### Defined in
+
+[src/apis/AgreementProductsApi.ts:386](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L386)
+
+___
+
+### apiV1AgreementProductsPost
+
+▸ **apiV1AgreementProductsPost**(`requestParameters`, `initOverrides?`): `Promise`<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsPostRequest`](../interfaces/ApiV1AgreementProductsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>
+
+#### Defined in
+
+[src/apis/AgreementProductsApi.ts:446](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L446)
+
+___
+
+### apiV1AgreementProductsPostRaw
+
+▸ **apiV1AgreementProductsPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1AgreementProductsPostRequest`](../interfaces/ApiV1AgreementProductsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`AgreementProduct`](../interfaces/AgreementProduct.md)[]\>\>
+
+#### Defined in
+
+[src/apis/AgreementProductsApi.ts:422](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/AgreementProductsApi.ts#L422)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

@@ -1,82 +1,90 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Secret](secret.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Secret
 
 # Interface: Secret
 
-**`export`** 
+**`export`**
 
 **`interface`** Secret
 
-## Hierarchy
-
-* **Secret**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [clientId](secret.md#optional-clientid)
-* [description](secret.md#optional-description)
-* [expiration](secret.md#optional-expiration)
-* [id](secret.md#optional-id)
-* [timeStamp](secret.md#optional-timestamp)
-* [value](secret.md#optional-value)
+- [clientId](Secret.md#clientid)
+- [description](Secret.md#description)
+- [expiration](Secret.md#expiration)
+- [id](Secret.md#id)
+- [timeStamp](Secret.md#timestamp)
+- [value](Secret.md#value)
 
 ## Properties
 
-### `Optional` clientId
+### clientId
 
-• **clientId**? : *string*
-
-**`type`** {string}
+• `Optional` **clientId**: `string`
 
 **`memberof`** Secret
+
+#### Defined in
+
+[src/models/Secret.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Secret.ts#L33)
 
 ___
 
-### `Optional` description
+### description
 
-• **description**? : *string*
-
-**`type`** {string}
+• `Optional` **description**: `string`
 
 **`memberof`** Secret
+
+#### Defined in
+
+[src/models/Secret.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Secret.ts#L45)
 
 ___
 
-### `Optional` expiration
+### expiration
 
-• **expiration**? : *Date*
-
-**`type`** {Date}
+• `Optional` **expiration**: `Date`
 
 **`memberof`** Secret
+
+#### Defined in
+
+[src/models/Secret.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Secret.ts#L51)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** Secret
+
+#### Defined in
+
+[src/models/Secret.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Secret.ts#L27)
 
 ___
 
-### `Optional` timeStamp
+### timeStamp
 
-• **timeStamp**? : *Date*
-
-**`type`** {Date}
+• `Optional` **timeStamp**: `Date`
 
 **`memberof`** Secret
+
+#### Defined in
+
+[src/models/Secret.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Secret.ts#L57)
 
 ___
 
-### `Optional` value
+### value
 
-• **value**? : *string*
-
-**`type`** {string}
+• `Optional` **value**: `string`
 
 **`memberof`** Secret
+
+#### Defined in
+
+[src/models/Secret.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Secret.ts#L39)

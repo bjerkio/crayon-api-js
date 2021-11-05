@@ -1,101 +1,215 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ActivityLogsApi](activitylogsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ActivityLogsApi
 
 # Class: ActivityLogsApi
 
-ActivityLogsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** ActivityLogsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **ActivityLogsApi**
+  ↳ **`ActivityLogsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](activitylogsapi.md#constructor)
+- [constructor](ActivityLogsApi.md#constructor)
 
 ### Properties
 
-* [basePath](activitylogsapi.md#protected-basepath)
-* [configuration](activitylogsapi.md#protected-configuration)
-* [fetch](activitylogsapi.md#protected-fetch)
+- [configuration](ActivityLogsApi.md#configuration)
 
 ### Methods
 
-* [get](activitylogsapi.md#get)
+- [apiV1ActivityLogsGet](ActivityLogsApi.md#apiv1activitylogsget)
+- [apiV1ActivityLogsGetRaw](ActivityLogsApi.md#apiv1activitylogsgetraw)
+- [request](ActivityLogsApi.md#request)
+- [withMiddleware](ActivityLogsApi.md#withmiddleware)
+- [withPostMiddleware](ActivityLogsApi.md#withpostmiddleware)
+- [withPreMiddleware](ActivityLogsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new ActivityLogsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[ActivityLogsApi](activitylogsapi.md)*
+• **new ActivityLogsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[ActivityLogsApi](activitylogsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  get
+### apiV1ActivityLogsGet
 
-▸ **get**(`entity?`: string, `id?`: number, `ids?`: Array‹number›, `searchDate?`: Date, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ActivityLog](../interfaces/activitylog.md)›*
+▸ **apiV1ActivityLogsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`ActivityLogItem`](../interfaces/ActivityLogItem.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ActivityLogsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ActivityLogsGetRequest`](../interfaces/ApiV1ActivityLogsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`entity?` | string |
-`id?` | number |
-`ids?` | Array‹number› |
-`searchDate?` | Date |
-`from?` | Date |
-`to?` | Date |
-`page?` | number |
-`pageSize?` | number |
-`options?` | any |
+`Promise`<[`ActivityLogItem`](../interfaces/ActivityLogItem.md)[]\>
 
-**Returns:** *Promise‹[ActivityLog](../interfaces/activitylog.md)›*
+#### Defined in
+
+[src/apis/ActivityLogsApi.ts:94](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ActivityLogsApi.ts#L94)
+
+___
+
+### apiV1ActivityLogsGetRaw
+
+▸ **apiV1ActivityLogsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ActivityLogItem`](../interfaces/ActivityLogItem.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ActivityLogsGetRequest`](../interfaces/ApiV1ActivityLogsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`ActivityLogItem`](../interfaces/ActivityLogItem.md)[]\>\>
+
+#### Defined in
+
+[src/apis/ActivityLogsApi.ts:41](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ActivityLogsApi.ts#L41)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

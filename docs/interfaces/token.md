@@ -1,82 +1,90 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [Token](token.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / Token
 
 # Interface: Token
 
-**`export`** 
+**`export`**
 
 **`interface`** Token
 
-## Hierarchy
-
-* **Token**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [accessToken](token.md#optional-accesstoken)
-* [error](token.md#optional-error)
-* [expiresIn](token.md#optional-expiresin)
-* [identityToken](token.md#optional-identitytoken)
-* [refreshToken](token.md#optional-refreshtoken)
-* [tokenType](token.md#optional-tokentype)
+- [accessToken](Token.md#accesstoken)
+- [error](Token.md#error)
+- [expiresIn](Token.md#expiresin)
+- [identityToken](Token.md#identitytoken)
+- [refreshToken](Token.md#refreshtoken)
+- [tokenType](Token.md#tokentype)
 
 ## Properties
 
-### `Optional` accessToken
+### accessToken
 
-• **accessToken**? : *string*
-
-**`type`** {string}
+• `Optional` **accessToken**: `string`
 
 **`memberof`** Token
+
+#### Defined in
+
+[src/models/Token.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Token.ts#L27)
 
 ___
 
-### `Optional` error
+### error
 
-• **error**? : *string*
-
-**`type`** {string}
+• `Optional` **error**: `string`
 
 **`memberof`** Token
+
+#### Defined in
+
+[src/models/Token.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Token.ts#L39)
 
 ___
 
-### `Optional` expiresIn
+### expiresIn
 
-• **expiresIn**? : *number*
-
-**`type`** {number}
+• `Optional` **expiresIn**: `number`
 
 **`memberof`** Token
+
+#### Defined in
+
+[src/models/Token.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Token.ts#L45)
 
 ___
 
-### `Optional` identityToken
+### identityToken
 
-• **identityToken**? : *string*
-
-**`type`** {string}
+• `Optional` **identityToken**: `string`
 
 **`memberof`** Token
+
+#### Defined in
+
+[src/models/Token.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Token.ts#L33)
 
 ___
 
-### `Optional` refreshToken
+### refreshToken
 
-• **refreshToken**? : *string*
-
-**`type`** {string}
+• `Optional` **refreshToken**: `string`
 
 **`memberof`** Token
+
+#### Defined in
+
+[src/models/Token.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Token.ts#L57)
 
 ___
 
-### `Optional` tokenType
+### tokenType
 
-• **tokenType**? : *string*
-
-**`type`** {string}
+• `Optional` **tokenType**: `string`
 
 **`memberof`** Token
+
+#### Defined in
+
+[src/models/Token.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/Token.ts#L51)

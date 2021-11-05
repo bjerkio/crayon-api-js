@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ResourceGroupUsageCost](resourcegroupusagecost.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ResourceGroupUsageCost
 
 # Interface: ResourceGroupUsageCost
 
-**`export`** 
+**`export`**
 
 **`interface`** ResourceGroupUsageCost
 
-## Hierarchy
-
-* **ResourceGroupUsageCost**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [amount](resourcegroupusagecost.md#optional-amount)
-* [category](resourcegroupusagecost.md#optional-category)
-* [currencyCode](resourcegroupusagecost.md#optional-currencycode)
-* [meter](resourcegroupusagecost.md#optional-meter)
-* [subcategory](resourcegroupusagecost.md#optional-subcategory)
+- [amount](ResourceGroupUsageCost.md#amount)
+- [category](ResourceGroupUsageCost.md#category)
+- [currencyCode](ResourceGroupUsageCost.md#currencycode)
+- [meter](ResourceGroupUsageCost.md#meter)
+- [subcategory](ResourceGroupUsageCost.md#subcategory)
 
 ## Properties
 
-### `Optional` amount
+### amount
 
-• **amount**? : *number*
-
-**`type`** {number}
+• `Optional` **amount**: `number`
 
 **`memberof`** ResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCost.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCost.ts#L45)
 
 ___
 
-### `Optional` category
+### category
 
-• **category**? : *string*
-
-**`type`** {string}
+• `Optional` **category**: `string`
 
 **`memberof`** ResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCost.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCost.ts#L27)
 
 ___
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** ResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCost.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCost.ts#L51)
 
 ___
 
-### `Optional` meter
+### meter
 
-• **meter**? : *string*
-
-**`type`** {string}
+• `Optional` **meter**: `string`
 
 **`memberof`** ResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCost.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCost.ts#L39)
 
 ___
 
-### `Optional` subcategory
+### subcategory
 
-• **subcategory**? : *string*
-
-**`type`** {string}
+• `Optional` **subcategory**: `string`
 
 **`memberof`** ResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/ResourceGroupUsageCost.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ResourceGroupUsageCost.ts#L33)

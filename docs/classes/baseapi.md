@@ -1,127 +1,314 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [BaseAPI](baseapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / BaseAPI
 
 # Class: BaseAPI
 
-**`export`** 
-
-**`class`** BaseAPI
+This is the base class for all generated API classes.
 
 ## Hierarchy
 
-* **BaseAPI**
+- **`BaseAPI`**
 
-  ↳ [ActivityLogsApi](activitylogsapi.md)
+  ↳ [`ActivityLogsApi`](ActivityLogsApi.md)
 
-  ↳ [AddressesApi](addressesapi.md)
+  ↳ [`AddressesApi`](AddressesApi.md)
 
-  ↳ [AgreementProductsApi](agreementproductsapi.md)
+  ↳ [`AgreementProductsApi`](AgreementProductsApi.md)
 
-  ↳ [AgreementReportsApi](agreementreportsapi.md)
+  ↳ [`AgreementReportsApi`](AgreementReportsApi.md)
 
-  ↳ [AgreementsApi](agreementsapi.md)
+  ↳ [`AgreementsApi`](AgreementsApi.md)
 
-  ↳ [AssetsApi](assetsapi.md)
+  ↳ [`AssetsApi`](AssetsApi.md)
 
-  ↳ [AwsAccountsApi](awsaccountsapi.md)
+  ↳ [`AwsAccountsApi`](AwsAccountsApi.md)
 
-  ↳ [AzurePlansApi](azureplansapi.md)
+  ↳ [`AzurePlansApi`](AzurePlansApi.md)
 
-  ↳ [BillingCyclesApi](billingcyclesapi.md)
+  ↳ [`BillingCyclesApi`](BillingCyclesApi.md)
 
-  ↳ [BillingStatementsApi](billingstatementsapi.md)
+  ↳ [`BillingStatementsApi`](BillingStatementsApi.md)
 
-  ↳ [BlogItemsApi](blogitemsapi.md)
+  ↳ [`BlogItemsApi`](BlogItemsApi.md)
 
-  ↳ [ClientsApi](clientsapi.md)
+  ↳ [`ClientsApi`](ClientsApi.md)
 
-  ↳ [ConsumersApi](consumersapi.md)
+  ↳ [`ConsumersApi`](ConsumersApi.md)
 
-  ↳ [CrayonAccountsApi](crayonaccountsapi.md)
+  ↳ [`CrayonAccountsApi`](CrayonAccountsApi.md)
 
-  ↳ [CustomerTenantAgreementsApi](customertenantagreementsapi.md)
+  ↳ [`CustomerTenantAgreementsApi`](CustomerTenantAgreementsApi.md)
 
-  ↳ [CustomerTenantsApi](customertenantsapi.md)
+  ↳ [`CustomerTenantsApi`](CustomerTenantsApi.md)
 
-  ↳ [CustomerTokenApi](customertokenapi.md)
+  ↳ [`CustomerTokenApi`](CustomerTokenApi.md)
 
-  ↳ [FacebookOrdersApi](facebookordersapi.md)
+  ↳ [`FacebookOrdersApi`](FacebookOrdersApi.md)
 
-  ↳ [GoogleOrdersApi](googleordersapi.md)
+  ↳ [`GoogleOrdersApi`](GoogleOrdersApi.md)
 
-  ↳ [GroupingsApi](groupingsapi.md)
+  ↳ [`GroupingsApi`](GroupingsApi.md)
 
-  ↳ [InvoiceProfilesApi](invoiceprofilesapi.md)
+  ↳ [`InvoiceProfilesApi`](InvoiceProfilesApi.md)
 
-  ↳ [ManagementLinksApi](managementlinksapi.md)
+  ↳ [`ManagementLinksApi`](ManagementLinksApi.md)
 
-  ↳ [MeApi](meapi.md)
+  ↳ [`MeApi`](MeApi.md)
 
-  ↳ [OrganizationAccessApi](organizationaccessapi.md)
+  ↳ [`OrganizationAccessApi`](OrganizationAccessApi.md)
 
-  ↳ [OrganizationsApi](organizationsapi.md)
+  ↳ [`OrganizationsApi`](OrganizationsApi.md)
 
-  ↳ [PingApi](pingapi.md)
+  ↳ [`PingApi`](PingApi.md)
 
-  ↳ [ProductContainersApi](productcontainersapi.md)
+  ↳ [`ProductContainersApi`](ProductContainersApi.md)
 
-  ↳ [ProgramsApi](programsapi.md)
+  ↳ [`ProgramsApi`](ProgramsApi.md)
 
-  ↳ [PublishersApi](publishersapi.md)
+  ↳ [`PublishersApi`](PublishersApi.md)
 
-  ↳ [RegionsApi](regionsapi.md)
+  ↳ [`RegionsApi`](RegionsApi.md)
 
-  ↳ [ResellerSalesPricesApi](resellersalespricesapi.md)
+  ↳ [`ResellerSalesPricesApi`](ResellerSalesPricesApi.md)
 
-  ↳ [SecretsApi](secretsapi.md)
+  ↳ [`SecretsApi`](SecretsApi.md)
 
-  ↳ [SubscriptionsApi](subscriptionsapi.md)
+  ↳ [`SubscriptionsApi`](SubscriptionsApi.md)
 
-  ↳ [UsageCostApi](usagecostapi.md)
+  ↳ [`UsageCostApi`](UsageCostApi.md)
 
-  ↳ [UsersApi](usersapi.md)
+  ↳ [`UsersApi`](UsersApi.md)
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](baseapi.md#constructor)
+- [constructor](BaseAPI.md#constructor)
 
 ### Properties
 
-* [basePath](baseapi.md#protected-basepath)
-* [configuration](baseapi.md#protected-configuration)
-* [fetch](baseapi.md#protected-fetch)
+- [configuration](BaseAPI.md#configuration)
+- [middleware](BaseAPI.md#middleware)
+
+### Methods
+
+- [clone](BaseAPI.md#clone)
+- [createFetchParams](BaseAPI.md#createfetchparams)
+- [fetchApi](BaseAPI.md#fetchapi)
+- [request](BaseAPI.md#request)
+- [withMiddleware](BaseAPI.md#withmiddleware)
+- [withPostMiddleware](BaseAPI.md#withpostmiddleware)
+- [withPreMiddleware](BaseAPI.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new BaseAPI**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[BaseAPI](baseapi.md)*
+• **new BaseAPI**(`configuration?`)
 
-**Parameters:**
+#### Parameters
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-**Returns:** *[BaseAPI](baseapi.md)*
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
-
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
 ___
 
-### `Protected` fetch
+### middleware
 
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
+• `Private` **middleware**: [`Middleware`](../interfaces/Middleware.md)[]
+
+#### Defined in
+
+[src/runtime.ts:26](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L26)
+
+## Methods
+
+### clone
+
+▸ `Private` **clone**<`T`\>(): `T`
+
+Create a shallow clone of `this` by constructing a new instance
+and then shallow cloning data members.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[src/runtime.ts:108](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L108)
+
+___
+
+### createFetchParams
+
+▸ `Private` **createFetchParams**(`context`, `initOverrides?`): `Object`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `init` | `Object` |
+| `init.body` | `any` |
+| `init.cache?` | `RequestCache` |
+| `init.credentials` | `RequestCredentials` |
+| `init.headers` | [`HTTPHeaders`](../modules.md#httpheaders) \| `HeadersInit` |
+| `init.integrity?` | `string` |
+| `init.keepalive?` | `boolean` |
+| `init.method` | `string` |
+| `init.mode?` | `RequestMode` |
+| `init.redirect?` | `RequestRedirect` |
+| `init.referrer?` | `string` |
+| `init.referrerPolicy?` | `ReferrerPolicy` |
+| `init.signal?` | `AbortSignal` |
+| `init.window?` | `any` |
+| `url` | `string` |
+
+#### Defined in
+
+[src/runtime.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L57)
+
+___
+
+### fetchApi
+
+▸ `Private` **fetchApi**(`url`, `init`): `Promise`<`any`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `url` | `string` |
+| `init` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[src/runtime.ts:80](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L80)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

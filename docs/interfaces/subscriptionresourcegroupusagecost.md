@@ -1,49 +1,51 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [SubscriptionResourceGroupUsageCost](subscriptionresourcegroupusagecost.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / SubscriptionResourceGroupUsageCost
 
 # Interface: SubscriptionResourceGroupUsageCost
 
-**`export`** 
+**`export`**
 
 **`interface`** SubscriptionResourceGroupUsageCost
 
-## Hierarchy
-
-* **SubscriptionResourceGroupUsageCost**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [amount](subscriptionresourcegroupusagecost.md#optional-amount)
-* [currencyCode](subscriptionresourcegroupusagecost.md#optional-currencycode)
-* [resourceGroup](subscriptionresourcegroupusagecost.md#optional-resourcegroup)
+- [amount](SubscriptionResourceGroupUsageCost.md#amount)
+- [currencyCode](SubscriptionResourceGroupUsageCost.md#currencycode)
+- [resourceGroup](SubscriptionResourceGroupUsageCost.md#resourcegroup)
 
 ## Properties
 
-### `Optional` amount
+### amount
 
-• **amount**? : *number*
-
-**`type`** {number}
+• `Optional` **amount**: `number`
 
 **`memberof`** SubscriptionResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/SubscriptionResourceGroupUsageCost.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionResourceGroupUsageCost.ts#L33)
 
 ___
 
-### `Optional` currencyCode
+### currencyCode
 
-• **currencyCode**? : *string*
-
-**`type`** {string}
+• `Optional` **currencyCode**: `string`
 
 **`memberof`** SubscriptionResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/SubscriptionResourceGroupUsageCost.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionResourceGroupUsageCost.ts#L39)
 
 ___
 
-### `Optional` resourceGroup
+### resourceGroup
 
-• **resourceGroup**? : *string*
-
-**`type`** {string}
+• `Optional` **resourceGroup**: `string`
 
 **`memberof`** SubscriptionResourceGroupUsageCost
+
+#### Defined in
+
+[src/models/SubscriptionResourceGroupUsageCost.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionResourceGroupUsageCost.ts#L27)

@@ -1,60 +1,64 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ProductInformation](productinformation.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ProductInformation
 
 # Interface: ProductInformation
 
-**`export`** 
+**`export`**
 
 **`interface`** ProductInformation
 
-## Hierarchy
-
-* **ProductInformation**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [cultureCode](productinformation.md#optional-culturecode)
-* [description](productinformation.md#optional-description)
-* [externalProductId](productinformation.md#optional-externalproductid)
-* [learnMoreLink](productinformation.md#optional-learnmorelink)
+- [cultureCode](ProductInformation.md#culturecode)
+- [description](ProductInformation.md#description)
+- [externalProductId](ProductInformation.md#externalproductid)
+- [learnMoreLink](ProductInformation.md#learnmorelink)
 
 ## Properties
 
-### `Optional` cultureCode
+### cultureCode
 
-• **cultureCode**? : *string*
-
-**`type`** {string}
+• `Optional` **cultureCode**: `string`
 
 **`memberof`** ProductInformation
+
+#### Defined in
+
+[src/models/ProductInformation.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductInformation.ts#L33)
 
 ___
 
-### `Optional` description
+### description
 
-• **description**? : *string*
-
-**`type`** {string}
+• `Optional` **description**: `string`
 
 **`memberof`** ProductInformation
+
+#### Defined in
+
+[src/models/ProductInformation.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductInformation.ts#L39)
 
 ___
 
-### `Optional` externalProductId
+### externalProductId
 
-• **externalProductId**? : *number*
-
-**`type`** {number}
+• `Optional` **externalProductId**: `number`
 
 **`memberof`** ProductInformation
+
+#### Defined in
+
+[src/models/ProductInformation.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductInformation.ts#L27)
 
 ___
 
-### `Optional` learnMoreLink
+### learnMoreLink
 
-• **learnMoreLink**? : *string*
-
-**`type`** {string}
+• `Optional` **learnMoreLink**: `string`
 
 **`memberof`** ProductInformation
+
+#### Defined in
+
+[src/models/ProductInformation.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductInformation.ts#L45)

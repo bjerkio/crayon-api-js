@@ -1,133 +1,301 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [BillingCyclesApi](billingcyclesapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / BillingCyclesApi
 
 # Class: BillingCyclesApi
 
-BillingCyclesApi - object-oriented interface
-
-**`export`** 
-
-**`class`** BillingCyclesApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **BillingCyclesApi**
+  ↳ **`BillingCyclesApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](billingcyclesapi.md#constructor)
+- [constructor](BillingCyclesApi.md#constructor)
 
 ### Properties
 
-* [basePath](billingcyclesapi.md#protected-basepath)
-* [configuration](billingcyclesapi.md#protected-configuration)
-* [fetch](billingcyclesapi.md#protected-fetch)
+- [configuration](BillingCyclesApi.md#configuration)
 
 ### Methods
 
-* [getAllBillingCycles](billingcyclesapi.md#getallbillingcycles)
-* [getByProductVariantId](billingcyclesapi.md#getbyproductvariantid)
-* [getCspNameDictionary](billingcyclesapi.md#getcspnamedictionary)
+- [apiV1BillingCyclesCspNameDictionaryGet](BillingCyclesApi.md#apiv1billingcyclescspnamedictionaryget)
+- [apiV1BillingCyclesCspNameDictionaryGetRaw](BillingCyclesApi.md#apiv1billingcyclescspnamedictionarygetraw)
+- [apiV1BillingCyclesGet](BillingCyclesApi.md#apiv1billingcyclesget)
+- [apiV1BillingCyclesGetRaw](BillingCyclesApi.md#apiv1billingcyclesgetraw)
+- [apiV1BillingCyclesProductVariantProductVariantIdGet](BillingCyclesApi.md#apiv1billingcyclesproductvariantproductvariantidget)
+- [apiV1BillingCyclesProductVariantProductVariantIdGetRaw](BillingCyclesApi.md#apiv1billingcyclesproductvariantproductvariantidgetraw)
+- [request](BillingCyclesApi.md#request)
+- [withMiddleware](BillingCyclesApi.md#withmiddleware)
+- [withPostMiddleware](BillingCyclesApi.md#withpostmiddleware)
+- [withPreMiddleware](BillingCyclesApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new BillingCyclesApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[BillingCyclesApi](billingcyclesapi.md)*
+• **new BillingCyclesApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[BillingCyclesApi](billingcyclesapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  getAllBillingCycles
+### apiV1BillingCyclesCspNameDictionaryGet
 
-▸ **getAllBillingCycles**(`includeUnknown?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfBillingCycle](../interfaces/apicollectionofbillingcycle.md)›*
+▸ **apiV1BillingCyclesCspNameDictionaryGet**(`initOverrides?`): `Promise`<`Object`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** BillingCyclesApi
+| Name | Type |
+| :------ | :------ |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`includeUnknown?` | boolean |
-`options?` | any |
+`Promise`<`Object`\>
 
-**Returns:** *Promise‹[ApiCollectionOfBillingCycle](../interfaces/apicollectionofbillingcycle.md)›*
+#### Defined in
 
-___
-
-###  getByProductVariantId
-
-▸ **getByProductVariantId**(`productVariantId`: number, `options?`: any): *Promise‹[ApiCollectionOfBillingCycle](../interfaces/apicollectionofbillingcycle.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** BillingCyclesApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`productVariantId` | number |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfBillingCycle](../interfaces/apicollectionofbillingcycle.md)›*
+[src/apis/BillingCyclesApi.ts:59](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/BillingCyclesApi.ts#L59)
 
 ___
 
-###  getCspNameDictionary
+### apiV1BillingCyclesCspNameDictionaryGetRaw
 
-▸ **getCspNameDictionary**(`options?`: any): *Promise‹object›*
+▸ **apiV1BillingCyclesCspNameDictionaryGetRaw**(`initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`Object`\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** BillingCyclesApi
+| Name | Type |
+| :------ | :------ |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`Object`\>\>
 
-**Returns:** *Promise‹object›*
+#### Defined in
+
+[src/apis/BillingCyclesApi.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/BillingCyclesApi.ts#L38)
+
+___
+
+### apiV1BillingCyclesGet
+
+▸ **apiV1BillingCyclesGet**(`requestParameters`, `initOverrides?`): `Promise`<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1BillingCyclesGetRequest`](../interfaces/ApiV1BillingCyclesGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>
+
+#### Defined in
+
+[src/apis/BillingCyclesApi.ts:91](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/BillingCyclesApi.ts#L91)
+
+___
+
+### apiV1BillingCyclesGetRaw
+
+▸ **apiV1BillingCyclesGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1BillingCyclesGetRequest`](../interfaces/ApiV1BillingCyclesGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>\>
+
+#### Defined in
+
+[src/apis/BillingCyclesApi.ts:66](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/BillingCyclesApi.ts#L66)
+
+___
+
+### apiV1BillingCyclesProductVariantProductVariantIdGet
+
+▸ **apiV1BillingCyclesProductVariantProductVariantIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1BillingCyclesProductVariantProductVariantIdGetRequest`](../interfaces/ApiV1BillingCyclesProductVariantProductVariantIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>
+
+#### Defined in
+
+[src/apis/BillingCyclesApi.ts:123](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/BillingCyclesApi.ts#L123)
+
+___
+
+### apiV1BillingCyclesProductVariantProductVariantIdGetRaw
+
+▸ **apiV1BillingCyclesProductVariantProductVariantIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1BillingCyclesProductVariantProductVariantIdGetRequest`](../interfaces/ApiV1BillingCyclesProductVariantProductVariantIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`BillingCycle`](../interfaces/BillingCycle.md)[]\>\>
+
+#### Defined in
+
+[src/apis/BillingCyclesApi.ts:98](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/BillingCyclesApi.ts#L98)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

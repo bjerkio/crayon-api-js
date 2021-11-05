@@ -1,177 +1,391 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ClientsApi](clientsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ClientsApi
 
 # Class: ClientsApi
 
-ClientsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** ClientsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **ClientsApi**
+  ↳ **`ClientsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](clientsapi.md#constructor)
+- [constructor](ClientsApi.md#constructor)
 
 ### Properties
 
-* [basePath](clientsapi.md#protected-basepath)
-* [configuration](clientsapi.md#protected-configuration)
-* [fetch](clientsapi.md#protected-fetch)
+- [configuration](ClientsApi.md#configuration)
 
 ### Methods
 
-* [_delete](clientsapi.md#_delete)
-* [get](clientsapi.md#get)
-* [getById](clientsapi.md#getbyid)
-* [post](clientsapi.md#post)
-* [put](clientsapi.md#put)
+- [apiV1ClientsClientIdDelete](ClientsApi.md#apiv1clientsclientiddelete)
+- [apiV1ClientsClientIdDeleteRaw](ClientsApi.md#apiv1clientsclientiddeleteraw)
+- [apiV1ClientsClientIdGet](ClientsApi.md#apiv1clientsclientidget)
+- [apiV1ClientsClientIdGetRaw](ClientsApi.md#apiv1clientsclientidgetraw)
+- [apiV1ClientsClientIdPut](ClientsApi.md#apiv1clientsclientidput)
+- [apiV1ClientsClientIdPutRaw](ClientsApi.md#apiv1clientsclientidputraw)
+- [apiV1ClientsGet](ClientsApi.md#apiv1clientsget)
+- [apiV1ClientsGetRaw](ClientsApi.md#apiv1clientsgetraw)
+- [apiV1ClientsPost](ClientsApi.md#apiv1clientspost)
+- [apiV1ClientsPostRaw](ClientsApi.md#apiv1clientspostraw)
+- [request](ClientsApi.md#request)
+- [withMiddleware](ClientsApi.md#withmiddleware)
+- [withPostMiddleware](ClientsApi.md#withpostmiddleware)
+- [withPreMiddleware](ClientsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new ClientsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[ClientsApi](clientsapi.md)*
+• **new ClientsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[ClientsApi](clientsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  _delete
+### apiV1ClientsClientIdDelete
 
-▸ **_delete**(`clientId`: string, `options?`: any): *Promise‹boolean›*
+▸ **apiV1ClientsClientIdDelete**(`requestParameters`, `initOverrides?`): `Promise`<`boolean`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ClientsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsClientIdDeleteRequest`](../interfaces/ApiV1ClientsClientIdDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`clientId` | string |
-`options?` | any |
+`Promise`<`boolean`\>
 
-**Returns:** *Promise‹boolean›*
+#### Defined in
 
-___
-
-###  get
-
-▸ **get**(`page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfClient](../interfaces/apicollectionofclient.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** ClientsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`page?` | number |
-`pageSize?` | number |
-`search?` | string |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfClient](../interfaces/apicollectionofclient.md)›*
+[src/apis/ClientsApi.ts:78](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L78)
 
 ___
 
-###  getById
+### apiV1ClientsClientIdDeleteRaw
 
-▸ **getById**(`clientId`: string, `options?`: any): *Promise‹[Client](../modules/client.md)›*
+▸ **apiV1ClientsClientIdDeleteRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ClientsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsClientIdDeleteRequest`](../interfaces/ApiV1ClientsClientIdDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`clientId` | string |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`boolean`\>\>
 
-**Returns:** *Promise‹[Client](../modules/client.md)›*
+#### Defined in
 
-___
-
-###  post
-
-▸ **post**(`client?`: [Client](../modules/client.md), `options?`: any): *Promise‹[Client](../modules/client.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** ClientsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`client?` | [Client](../modules/client.md) |
-`options?` | any |
-
-**Returns:** *Promise‹[Client](../modules/client.md)›*
+[src/apis/ClientsApi.ts:53](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L53)
 
 ___
 
-###  put
+### apiV1ClientsClientIdGet
 
-▸ **put**(`clientId`: string, `client?`: [Client](../modules/client.md), `options?`: any): *Promise‹[Client](../modules/client.md)›*
+▸ **apiV1ClientsClientIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Client`](../interfaces/Client.md)\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** ClientsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsClientIdGetRequest`](../interfaces/ApiV1ClientsClientIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`clientId` | string |
-`client?` | [Client](../modules/client.md) |
-`options?` | any |
+`Promise`<[`Client`](../interfaces/Client.md)\>
 
-**Returns:** *Promise‹[Client](../modules/client.md)›*
+#### Defined in
+
+[src/apis/ClientsApi.ts:110](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L110)
+
+___
+
+### apiV1ClientsClientIdGetRaw
+
+▸ **apiV1ClientsClientIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsClientIdGetRequest`](../interfaces/ApiV1ClientsClientIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)\>\>
+
+#### Defined in
+
+[src/apis/ClientsApi.ts:85](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L85)
+
+___
+
+### apiV1ClientsClientIdPut
+
+▸ **apiV1ClientsClientIdPut**(`requestParameters`, `initOverrides?`): `Promise`<[`Client`](../interfaces/Client.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsClientIdPutRequest`](../interfaces/ApiV1ClientsClientIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Client`](../interfaces/Client.md)\>
+
+#### Defined in
+
+[src/apis/ClientsApi.ts:145](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L145)
+
+___
+
+### apiV1ClientsClientIdPutRaw
+
+▸ **apiV1ClientsClientIdPutRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsClientIdPutRequest`](../interfaces/ApiV1ClientsClientIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)\>\>
+
+#### Defined in
+
+[src/apis/ClientsApi.ts:117](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L117)
+
+___
+
+### apiV1ClientsGet
+
+▸ **apiV1ClientsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Client`](../interfaces/Client.md)[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsGetRequest`](../interfaces/ApiV1ClientsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Client`](../interfaces/Client.md)[]\>
+
+#### Defined in
+
+[src/apis/ClientsApi.ts:185](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L185)
+
+___
+
+### apiV1ClientsGetRaw
+
+▸ **apiV1ClientsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)[]\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsGetRequest`](../interfaces/ApiV1ClientsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)[]\>\>
+
+#### Defined in
+
+[src/apis/ClientsApi.ts:152](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L152)
+
+___
+
+### apiV1ClientsPost
+
+▸ **apiV1ClientsPost**(`requestParameters`, `initOverrides?`): `Promise`<[`Client`](../interfaces/Client.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsPostRequest`](../interfaces/ApiV1ClientsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Client`](../interfaces/Client.md)\>
+
+#### Defined in
+
+[src/apis/ClientsApi.ts:216](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L216)
+
+___
+
+### apiV1ClientsPostRaw
+
+▸ **apiV1ClientsPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1ClientsPostRequest`](../interfaces/ApiV1ClientsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Client`](../interfaces/Client.md)\>\>
+
+#### Defined in
+
+[src/apis/ClientsApi.ts:192](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/ClientsApi.ts#L192)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

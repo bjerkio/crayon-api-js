@@ -1,214 +1,272 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [AgreementProductsSubFilter](agreementproductssubfilter.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / AgreementProductsSubFilter
 
 # Interface: AgreementProductsSubFilter
 
-**`export`** 
+**`export`**
 
 **`interface`** AgreementProductsSubFilter
 
-## Hierarchy
-
-* **AgreementProductsSubFilter**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [languageNames](agreementproductssubfilter.md#optional-languagenames)
-* [levelNames](agreementproductssubfilter.md#optional-levelnames)
-* [licenseAgreementTypeNames](agreementproductssubfilter.md#optional-licenseagreementtypenames)
-* [licenseTypeNames](agreementproductssubfilter.md#optional-licensetypenames)
-* [offeringNames](agreementproductssubfilter.md#optional-offeringnames)
-* [operatingSystemNames](agreementproductssubfilter.md#optional-operatingsystemnames)
-* [partNumbers](agreementproductssubfilter.md#optional-partnumbers)
-* [poolNames](agreementproductssubfilter.md#optional-poolnames)
-* [productCategoryNames](agreementproductssubfilter.md#optional-productcategorynames)
-* [productFamilyNames](agreementproductssubfilter.md#optional-productfamilynames)
-* [productTypeNames](agreementproductssubfilter.md#optional-producttypenames)
-* [programNames](agreementproductssubfilter.md#optional-programnames)
-* [publisherIds](agreementproductssubfilter.md#optional-publisherids)
-* [publisherNames](agreementproductssubfilter.md#optional-publishernames)
-* [purchasePeriodNames](agreementproductssubfilter.md#optional-purchaseperiodnames)
-* [purchaseUnitNames](agreementproductssubfilter.md#optional-purchaseunitnames)
-* [regionNames](agreementproductssubfilter.md#optional-regionnames)
-* [versionNames](agreementproductssubfilter.md#optional-versionnames)
+- [billingCycles](AgreementProductsSubFilter.md#billingcycles)
+- [catalogNames](AgreementProductsSubFilter.md#catalognames)
+- [languageNames](AgreementProductsSubFilter.md#languagenames)
+- [levelNames](AgreementProductsSubFilter.md#levelnames)
+- [licenseAgreementTypeNames](AgreementProductsSubFilter.md#licenseagreementtypenames)
+- [licenseTypeNames](AgreementProductsSubFilter.md#licensetypenames)
+- [offeringNames](AgreementProductsSubFilter.md#offeringnames)
+- [operatingSystemNames](AgreementProductsSubFilter.md#operatingsystemnames)
+- [partNumbers](AgreementProductsSubFilter.md#partnumbers)
+- [poolNames](AgreementProductsSubFilter.md#poolnames)
+- [productCategoryNames](AgreementProductsSubFilter.md#productcategorynames)
+- [productFamilyNames](AgreementProductsSubFilter.md#productfamilynames)
+- [productTypeNames](AgreementProductsSubFilter.md#producttypenames)
+- [programNames](AgreementProductsSubFilter.md#programnames)
+- [publisherIds](AgreementProductsSubFilter.md#publisherids)
+- [publisherNames](AgreementProductsSubFilter.md#publishernames)
+- [purchasePeriodNames](AgreementProductsSubFilter.md#purchaseperiodnames)
+- [purchaseUnitNames](AgreementProductsSubFilter.md#purchaseunitnames)
+- [regionNames](AgreementProductsSubFilter.md#regionnames)
+- [versionNames](AgreementProductsSubFilter.md#versionnames)
 
 ## Properties
 
-### `Optional` languageNames
+### billingCycles
 
-• **languageNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **billingCycles**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:141](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L141)
 
 ___
 
-### `Optional` levelNames
+### catalogNames
 
-• **levelNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **catalogNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:135](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L135)
 
 ___
 
-### `Optional` licenseAgreementTypeNames
+### languageNames
 
-• **licenseAgreementTypeNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **languageNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:63](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L63)
 
 ___
 
-### `Optional` licenseTypeNames
+### levelNames
 
-• **licenseTypeNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **levelNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:57](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L57)
 
 ___
 
-### `Optional` offeringNames
+### licenseAgreementTypeNames
 
-• **offeringNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **licenseAgreementTypeNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:69](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L69)
 
 ___
 
-### `Optional` operatingSystemNames
+### licenseTypeNames
 
-• **operatingSystemNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **licenseTypeNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:75](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L75)
 
 ___
 
-### `Optional` partNumbers
+### offeringNames
 
-• **partNumbers**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **offeringNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:99](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L99)
 
 ___
 
-### `Optional` poolNames
+### operatingSystemNames
 
-• **poolNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **operatingSystemNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:51](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L51)
 
 ___
 
-### `Optional` productCategoryNames
+### partNumbers
 
-• **productCategoryNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **partNumbers**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L27)
 
 ___
 
-### `Optional` productFamilyNames
+### poolNames
 
-• **productFamilyNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **poolNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L45)
 
 ___
 
-### `Optional` productTypeNames
+### productCategoryNames
 
-• **productTypeNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **productCategoryNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:129](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L129)
 
 ___
 
-### `Optional` programNames
+### productFamilyNames
 
-• **programNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **productFamilyNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:81](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L81)
 
 ___
 
-### `Optional` publisherIds
+### productTypeNames
 
-• **publisherIds**? : *Array‹number›*
-
-**`type`** {Array<number>}
+• `Optional` **productTypeNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:87](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L87)
 
 ___
 
-### `Optional` publisherNames
+### programNames
 
-• **publisherNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **programNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:93](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L93)
 
 ___
 
-### `Optional` purchasePeriodNames
+### publisherIds
 
-• **purchasePeriodNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **publisherIds**: `number`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L33)
 
 ___
 
-### `Optional` purchaseUnitNames
+### publisherNames
 
-• **purchaseUnitNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **publisherNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L39)
 
 ___
 
-### `Optional` regionNames
+### purchasePeriodNames
 
-• **regionNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **purchasePeriodNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:105](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L105)
 
 ___
 
-### `Optional` versionNames
+### purchaseUnitNames
 
-• **versionNames**? : *Array‹string›*
-
-**`type`** {Array<string>}
+• `Optional` **purchaseUnitNames**: `string`[]
 
 **`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:111](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L111)
+
+___
+
+### regionNames
+
+• `Optional` **regionNames**: `string`[]
+
+**`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:123](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L123)
+
+___
+
+### versionNames
+
+• `Optional` **versionNames**: `string`[]
+
+**`memberof`** AgreementProductsSubFilter
+
+#### Defined in
+
+[src/models/AgreementProductsSubFilter.ts:117](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/AgreementProductsSubFilter.ts#L117)

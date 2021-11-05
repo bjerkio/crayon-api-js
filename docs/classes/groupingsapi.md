@@ -1,179 +1,391 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [GroupingsApi](groupingsapi.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / GroupingsApi
 
 # Class: GroupingsApi
 
-GroupingsApi - object-oriented interface
-
-**`export`** 
-
-**`class`** GroupingsApi
-
-**`extends`** {BaseAPI}
-
 ## Hierarchy
 
-* [BaseAPI](baseapi.md)
+- [`BaseAPI`](BaseAPI.md)
 
-  ↳ **GroupingsApi**
+  ↳ **`GroupingsApi`**
 
-## Index
+## Table of contents
 
 ### Constructors
 
-* [constructor](groupingsapi.md#constructor)
+- [constructor](GroupingsApi.md#constructor)
 
 ### Properties
 
-* [basePath](groupingsapi.md#protected-basepath)
-* [configuration](groupingsapi.md#protected-configuration)
-* [fetch](groupingsapi.md#protected-fetch)
+- [configuration](GroupingsApi.md#configuration)
 
 ### Methods
 
-* [_delete](groupingsapi.md#_delete)
-* [get](groupingsapi.md#get)
-* [getById](groupingsapi.md#getbyid)
-* [post](groupingsapi.md#post)
-* [put](groupingsapi.md#put)
+- [apiV1GroupingsGet](GroupingsApi.md#apiv1groupingsget)
+- [apiV1GroupingsGetRaw](GroupingsApi.md#apiv1groupingsgetraw)
+- [apiV1GroupingsIdDelete](GroupingsApi.md#apiv1groupingsiddelete)
+- [apiV1GroupingsIdDeleteRaw](GroupingsApi.md#apiv1groupingsiddeleteraw)
+- [apiV1GroupingsIdGet](GroupingsApi.md#apiv1groupingsidget)
+- [apiV1GroupingsIdGetRaw](GroupingsApi.md#apiv1groupingsidgetraw)
+- [apiV1GroupingsIdPut](GroupingsApi.md#apiv1groupingsidput)
+- [apiV1GroupingsIdPutRaw](GroupingsApi.md#apiv1groupingsidputraw)
+- [apiV1GroupingsPost](GroupingsApi.md#apiv1groupingspost)
+- [apiV1GroupingsPostRaw](GroupingsApi.md#apiv1groupingspostraw)
+- [request](GroupingsApi.md#request)
+- [withMiddleware](GroupingsApi.md#withmiddleware)
+- [withPostMiddleware](GroupingsApi.md#withpostmiddleware)
+- [withPreMiddleware](GroupingsApi.md#withpremiddleware)
 
 ## Constructors
 
-###  constructor
+### constructor
 
-\+ **new GroupingsApi**(`configuration?`: [Configuration](configuration.md), `basePath`: string, `fetch`: [FetchAPI](../interfaces/fetchapi.md)): *[GroupingsApi](groupingsapi.md)*
+• **new GroupingsApi**(`configuration?`)
 
-*Inherited from [BaseAPI](baseapi.md).[constructor](baseapi.md#constructor)*
+#### Parameters
 
-**Parameters:**
+| Name | Type |
+| :------ | :------ |
+| `configuration` | [`Configuration`](Configuration.md) |
 
-Name | Type | Default |
------- | ------ | ------ |
-`configuration?` | [Configuration](configuration.md) | - |
-`basePath` | string |  BASE_PATH |
-`fetch` | [FetchAPI](../interfaces/fetchapi.md) |  portableFetch |
+#### Inherited from
 
-**Returns:** *[GroupingsApi](groupingsapi.md)*
+[BaseAPI](BaseAPI.md).[constructor](BaseAPI.md#constructor)
+
+#### Defined in
+
+[src/runtime.ts:28](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L28)
 
 ## Properties
 
-### `Protected` basePath
+### configuration
 
-• **basePath**: *string*
+• `Protected` **configuration**: [`Configuration`](Configuration.md)
 
-*Inherited from [BaseAPI](baseapi.md).[basePath](baseapi.md#protected-basepath)*
+#### Inherited from
 
-___
-
-### `Protected` configuration
-
-• **configuration**: *[Configuration](configuration.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[configuration](baseapi.md#protected-configuration)*
-
-___
-
-### `Protected` fetch
-
-• **fetch**: *[FetchAPI](../interfaces/fetchapi.md)*
-
-*Inherited from [BaseAPI](baseapi.md).[fetch](baseapi.md#protected-fetch)*
+[BaseAPI](BaseAPI.md).[configuration](BaseAPI.md#configuration)
 
 ## Methods
 
-###  _delete
+### apiV1GroupingsGet
 
-▸ **_delete**(`id`: number, `options?`: any): *Promise‹Response›*
+▸ **apiV1GroupingsGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Grouping`](../interfaces/Grouping.md)[]\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** GroupingsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsGetRequest`](../interfaces/ApiV1GroupingsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
+`Promise`<[`Grouping`](../interfaces/Grouping.md)[]\>
 
-**Returns:** *Promise‹Response›*
+#### Defined in
 
-___
-
-###  get
-
-▸ **get**(`organizationId?`: number, `includeRemoved?`: boolean, `search?`: string, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfGrouping](../interfaces/apicollectionofgrouping.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** GroupingsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`organizationId?` | number |
-`includeRemoved?` | boolean |
-`search?` | string |
-`page?` | number |
-`pageSize?` | number |
-`options?` | any |
-
-**Returns:** *Promise‹[ApiCollectionOfGrouping](../interfaces/apicollectionofgrouping.md)›*
+[src/apis/GroupingsApi.ts:96](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L96)
 
 ___
 
-###  getById
+### apiV1GroupingsGetRaw
 
-▸ **getById**(`id`: number, `options?`: any): *Promise‹[Grouping](../interfaces/grouping.md)›*
+▸ **apiV1GroupingsGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)[]\>\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** GroupingsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsGetRequest`](../interfaces/ApiV1GroupingsGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`options?` | any |
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)[]\>\>
 
-**Returns:** *Promise‹[Grouping](../interfaces/grouping.md)›*
+#### Defined in
 
-___
-
-###  post
-
-▸ **post**(`grouping?`: [Grouping](../interfaces/grouping.md), `options?`: any): *Promise‹[Grouping](../interfaces/grouping.md)›*
-
-**`throws`** {RequiredError}
-
-**`memberof`** GroupingsApi
-
-**Parameters:**
-
-Name | Type |
------- | ------ |
-`grouping?` | [Grouping](../interfaces/grouping.md) |
-`options?` | any |
-
-**Returns:** *Promise‹[Grouping](../interfaces/grouping.md)›*
+[src/apis/GroupingsApi.ts:55](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L55)
 
 ___
 
-###  put
+### apiV1GroupingsIdDelete
 
-▸ **put**(`id`: number, `grouping?`: [Grouping](../interfaces/grouping.md), `options?`: any): *Promise‹[Grouping](../interfaces/grouping.md)›*
+▸ **apiV1GroupingsIdDelete**(`requestParameters`, `initOverrides?`): `Promise`<`void`\>
 
-**`throws`** {RequiredError}
+#### Parameters
 
-**`memberof`** GroupingsApi
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsIdDeleteRequest`](../interfaces/ApiV1GroupingsIdDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
 
-**Parameters:**
+#### Returns
 
-Name | Type |
------- | ------ |
-`id` | number |
-`grouping?` | [Grouping](../interfaces/grouping.md) |
-`options?` | any |
+`Promise`<`void`\>
 
-**Returns:** *Promise‹[Grouping](../interfaces/grouping.md)›*
+#### Defined in
+
+[src/apis/GroupingsApi.ts:128](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L128)
+
+___
+
+### apiV1GroupingsIdDeleteRaw
+
+▸ **apiV1GroupingsIdDeleteRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsIdDeleteRequest`](../interfaces/ApiV1GroupingsIdDeleteRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<`void`\>\>
+
+#### Defined in
+
+[src/apis/GroupingsApi.ts:103](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L103)
+
+___
+
+### apiV1GroupingsIdGet
+
+▸ **apiV1GroupingsIdGet**(`requestParameters`, `initOverrides?`): `Promise`<[`Grouping`](../interfaces/Grouping.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsIdGetRequest`](../interfaces/ApiV1GroupingsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Grouping`](../interfaces/Grouping.md)\>
+
+#### Defined in
+
+[src/apis/GroupingsApi.ts:159](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L159)
+
+___
+
+### apiV1GroupingsIdGetRaw
+
+▸ **apiV1GroupingsIdGetRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsIdGetRequest`](../interfaces/ApiV1GroupingsIdGetRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)\>\>
+
+#### Defined in
+
+[src/apis/GroupingsApi.ts:134](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L134)
+
+___
+
+### apiV1GroupingsIdPut
+
+▸ **apiV1GroupingsIdPut**(`requestParameters`, `initOverrides?`): `Promise`<[`Grouping`](../interfaces/Grouping.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsIdPutRequest`](../interfaces/ApiV1GroupingsIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Grouping`](../interfaces/Grouping.md)\>
+
+#### Defined in
+
+[src/apis/GroupingsApi.ts:194](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L194)
+
+___
+
+### apiV1GroupingsIdPutRaw
+
+▸ **apiV1GroupingsIdPutRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsIdPutRequest`](../interfaces/ApiV1GroupingsIdPutRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)\>\>
+
+#### Defined in
+
+[src/apis/GroupingsApi.ts:166](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L166)
+
+___
+
+### apiV1GroupingsPost
+
+▸ **apiV1GroupingsPost**(`requestParameters`, `initOverrides?`): `Promise`<[`Grouping`](../interfaces/Grouping.md)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsPostRequest`](../interfaces/ApiV1GroupingsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`Grouping`](../interfaces/Grouping.md)\>
+
+#### Defined in
+
+[src/apis/GroupingsApi.ts:225](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L225)
+
+___
+
+### apiV1GroupingsPostRaw
+
+▸ **apiV1GroupingsPostRaw**(`requestParameters`, `initOverrides?`): `Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)\>\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `requestParameters` | [`ApiV1GroupingsPostRequest`](../interfaces/ApiV1GroupingsPostRequest.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<[`ApiResponse`](../interfaces/ApiResponse.md)<[`Grouping`](../interfaces/Grouping.md)\>\>
+
+#### Defined in
+
+[src/apis/GroupingsApi.ts:201](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/apis/GroupingsApi.ts#L201)
+
+___
+
+### request
+
+▸ `Protected` **request**(`context`, `initOverrides?`): `Promise`<`Response`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `context` | [`RequestOpts`](../interfaces/RequestOpts.md) |
+| `initOverrides?` | `RequestInit` |
+
+#### Returns
+
+`Promise`<`Response`\>
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[request](BaseAPI.md#request)
+
+#### Defined in
+
+[src/runtime.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L48)
+
+___
+
+### withMiddleware
+
+▸ **withMiddleware**<`T`\>(...`middlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...middlewares` | [`Middleware`](../interfaces/Middleware.md)[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withMiddleware](BaseAPI.md#withmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:32](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L32)
+
+___
+
+### withPostMiddleware
+
+▸ **withPostMiddleware**<`T`\>(...`postMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...postMiddlewares` | (`context`: [`ResponseContext`](../interfaces/ResponseContext.md)) => `Promise`<`void` \| `Response`\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPostMiddleware](BaseAPI.md#withpostmiddleware)
+
+#### Defined in
+
+[src/runtime.ts:43](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L43)
+
+___
+
+### withPreMiddleware
+
+▸ **withPreMiddleware**<`T`\>(...`preMiddlewares`): `T`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`BaseAPI`](BaseAPI.md)<`T`\> |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...preMiddlewares` | (`context`: [`RequestContext`](../interfaces/RequestContext.md)) => `Promise`<`void` \| [`FetchParams`](../interfaces/FetchParams.md)\>[] |
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+[BaseAPI](BaseAPI.md).[withPreMiddleware](BaseAPI.md#withpremiddleware)
+
+#### Defined in
+
+[src/runtime.ts:38](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/runtime.ts#L38)

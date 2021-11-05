@@ -1,71 +1,77 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [CustomerTenantProfile](customertenantprofile.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / CustomerTenantProfile
 
 # Interface: CustomerTenantProfile
 
-**`export`** 
+**`export`**
 
 **`interface`** CustomerTenantProfile
 
-## Hierarchy
-
-* **CustomerTenantProfile**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [address](customertenantprofile.md#optional-address)
-* [agreement](customertenantprofile.md#optional-agreement)
-* [contact](customertenantprofile.md#optional-contact)
-* [cultureCode](customertenantprofile.md#optional-culturecode)
-* [languageCode](customertenantprofile.md#optional-languagecode)
+- [address](CustomerTenantProfile.md#address)
+- [agreement](CustomerTenantProfile.md#agreement)
+- [contact](CustomerTenantProfile.md#contact)
+- [cultureCode](CustomerTenantProfile.md#culturecode)
+- [languageCode](CustomerTenantProfile.md#languagecode)
 
 ## Properties
 
-### `Optional` address
+### address
 
-• **address**? : *[CustomerTenantAddress](customertenantaddress.md)*
-
-**`type`** {CustomerTenantAddress}
+• `Optional` **address**: [`CustomerTenantAddress`](CustomerTenantAddress.md)
 
 **`memberof`** CustomerTenantProfile
+
+#### Defined in
+
+[src/models/CustomerTenantProfile.ts:60](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantProfile.ts#L60)
 
 ___
 
-### `Optional` agreement
+### agreement
 
-• **agreement**? : *[CustomerTenantAgreement](../modules/customertenantagreement.md)*
-
-**`type`** {CustomerTenantAgreement}
+• `Optional` **agreement**: [`CustomerTenantAgreement`](CustomerTenantAgreement.md)
 
 **`memberof`** CustomerTenantProfile
+
+#### Defined in
+
+[src/models/CustomerTenantProfile.ts:66](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantProfile.ts#L66)
 
 ___
 
-### `Optional` contact
+### contact
 
-• **contact**? : *[CustomerTenantContact](customertenantcontact.md)*
-
-**`type`** {CustomerTenantContact}
+• `Optional` **contact**: [`CustomerTenantContact`](CustomerTenantContact.md)
 
 **`memberof`** CustomerTenantProfile
+
+#### Defined in
+
+[src/models/CustomerTenantProfile.ts:54](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantProfile.ts#L54)
 
 ___
 
-### `Optional` cultureCode
+### cultureCode
 
-• **cultureCode**? : *string*
-
-**`type`** {string}
+• `Optional` **cultureCode**: `string`
 
 **`memberof`** CustomerTenantProfile
+
+#### Defined in
+
+[src/models/CustomerTenantProfile.ts:42](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantProfile.ts#L42)
 
 ___
 
-### `Optional` languageCode
+### languageCode
 
-• **languageCode**? : *string*
-
-**`type`** {string}
+• `Optional` **languageCode**: `string`
 
 **`memberof`** CustomerTenantProfile
+
+#### Defined in
+
+[src/models/CustomerTenantProfile.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/CustomerTenantProfile.ts#L48)

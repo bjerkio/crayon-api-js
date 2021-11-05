@@ -1,60 +1,64 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [SubscriptionLite](subscriptionlite.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / SubscriptionLite
 
 # Interface: SubscriptionLite
 
-**`export`** 
+**`export`**
 
 **`interface`** SubscriptionLite
 
-## Hierarchy
-
-* **SubscriptionLite**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [id](subscriptionlite.md#optional-id)
-* [name](subscriptionlite.md#optional-name)
-* [publisherSubscriptionId](subscriptionlite.md#optional-publishersubscriptionid)
-* [resellerCustomerName](subscriptionlite.md#optional-resellercustomername)
+- [id](SubscriptionLite.md#id)
+- [name](SubscriptionLite.md#name)
+- [publisherSubscriptionId](SubscriptionLite.md#publishersubscriptionid)
+- [resellerCustomerName](SubscriptionLite.md#resellercustomername)
 
 ## Properties
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** SubscriptionLite
+
+#### Defined in
+
+[src/models/SubscriptionLite.ts:27](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionLite.ts#L27)
 
 ___
 
-### `Optional` name
+### name
 
-• **name**? : *string*
-
-**`type`** {string}
+• `Optional` **name**: `string`
 
 **`memberof`** SubscriptionLite
+
+#### Defined in
+
+[src/models/SubscriptionLite.ts:33](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionLite.ts#L33)
 
 ___
 
-### `Optional` publisherSubscriptionId
+### publisherSubscriptionId
 
-• **publisherSubscriptionId**? : *string*
-
-**`type`** {string}
+• `Optional` **publisherSubscriptionId**: `string`
 
 **`memberof`** SubscriptionLite
+
+#### Defined in
+
+[src/models/SubscriptionLite.ts:39](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionLite.ts#L39)
 
 ___
 
-### `Optional` resellerCustomerName
+### resellerCustomerName
 
-• **resellerCustomerName**? : *string*
-
-**`type`** {string}
+• `Optional` **resellerCustomerName**: `string`
 
 **`memberof`** SubscriptionLite
+
+#### Defined in
+
+[src/models/SubscriptionLite.ts:45](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/SubscriptionLite.ts#L45)

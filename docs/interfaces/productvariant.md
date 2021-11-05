@@ -1,317 +1,393 @@
-[@bjerkio/crayon-api - v0.0.0](../README.md) › [ProductVariant](productvariant.md)
+[@bjerkio/crayon-api](../README.md) / [Exports](../modules.md) / ProductVariant
 
 # Interface: ProductVariant
 
-**`export`** 
+**`export`**
 
 **`interface`** ProductVariant
 
-## Hierarchy
-
-* **ProductVariant**
-
-## Index
+## Table of contents
 
 ### Properties
 
-* [addDate](productvariant.md#optional-adddate)
-* [attributes](productvariant.md#optional-attributes)
-* [availableBillingCycleIds](productvariant.md#optional-availablebillingcycleids)
-* [defaultBillingCycleId](productvariant.md#optional-defaultbillingcycleid)
-* [deleteDate](productvariant.md#optional-deletedate)
-* [id](productvariant.md#optional-id)
-* [isTrial](productvariant.md#optional-istrial)
-* [language](productvariant.md#optional-language)
-* [level](productvariant.md#optional-level)
-* [licenseAgreementType](productvariant.md#optional-licenseagreementtype)
-* [licenseType](productvariant.md#optional-licensetype)
-* [minimumCommitment](productvariant.md#optional-minimumcommitment)
-* [offering](productvariant.md#optional-offering)
-* [operatingSystem](productvariant.md#optional-operatingsystem)
-* [partNumber](productvariant.md#optional-partnumber)
-* [pool](productvariant.md#optional-pool)
-* [product](productvariant.md#optional-product)
-* [productCategory](productvariant.md#optional-productcategory)
-* [productFamily](productvariant.md#optional-productfamily)
-* [productName](productvariant.md#optional-productname)
-* [productType](productvariant.md#optional-producttype)
-* [program](productvariant.md#optional-program)
-* [publisher](productvariant.md#optional-publisher)
-* [purchaseUnit](productvariant.md#optional-purchaseunit)
-* [region](productvariant.md#optional-region)
-* [unitCount](productvariant.md#optional-unitcount)
-* [version](productvariant.md#optional-version)
+- [addDate](ProductVariant.md#adddate)
+- [attributes](ProductVariant.md#attributes)
+- [availableBillingCycleIds](ProductVariant.md#availablebillingcycleids)
+- [defaultBillingCycleId](ProductVariant.md#defaultbillingcycleid)
+- [deleteDate](ProductVariant.md#deletedate)
+- [id](ProductVariant.md#id)
+- [isTrial](ProductVariant.md#istrial)
+- [language](ProductVariant.md#language)
+- [level](ProductVariant.md#level)
+- [licenseAgreementType](ProductVariant.md#licenseagreementtype)
+- [licenseType](ProductVariant.md#licensetype)
+- [minimumCommitment](ProductVariant.md#minimumcommitment)
+- [minimumQuantity](ProductVariant.md#minimumquantity)
+- [offering](ProductVariant.md#offering)
+- [operatingSystem](ProductVariant.md#operatingsystem)
+- [partNumber](ProductVariant.md#partnumber)
+- [pool](ProductVariant.md#pool)
+- [product](ProductVariant.md#product)
+- [productCategory](ProductVariant.md#productcategory)
+- [productFamily](ProductVariant.md#productfamily)
+- [productName](ProductVariant.md#productname)
+- [productType](ProductVariant.md#producttype)
+- [program](ProductVariant.md#program)
+- [publisher](ProductVariant.md#publisher)
+- [purchasePeriod](ProductVariant.md#purchaseperiod)
+- [purchaseUnit](ProductVariant.md#purchaseunit)
+- [region](ProductVariant.md#region)
+- [unitCount](ProductVariant.md#unitcount)
+- [version](ProductVariant.md#version)
 
 ## Properties
 
-### `Optional` addDate
+### addDate
 
-• **addDate**? : *Date*
-
-**`type`** {Date}
+• `Optional` **addDate**: `Date`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:162](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L162)
 
 ___
 
-### `Optional` attributes
+### attributes
 
-• **attributes**? : *object*
-
-**`type`** {{ [key: string]: any; }}
+• `Optional` **attributes**: `Object`
 
 **`memberof`** ProductVariant
 
-#### Type declaration:
+#### Index signature
 
-* \[ **key**: *string*\]: any
+▪ [key: `string`]: `object`
+
+#### Defined in
+
+[src/models/ProductVariant.ts:204](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L204)
 
 ___
 
-### `Optional` availableBillingCycleIds
+### availableBillingCycleIds
 
-• **availableBillingCycleIds**? : *Array‹number›*
-
-**`type`** {Array<number>}
+• `Optional` **availableBillingCycleIds**: `number`[]
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:198](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L198)
 
 ___
 
-### `Optional` defaultBillingCycleId
+### defaultBillingCycleId
 
-• **defaultBillingCycleId**? : *number*
-
-**`type`** {number}
+• `Optional` **defaultBillingCycleId**: `number`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:192](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L192)
 
 ___
 
-### `Optional` deleteDate
+### deleteDate
 
-• **deleteDate**? : *Date*
-
-**`type`** {Date}
+• `Optional` **deleteDate**: `Date`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:168](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L168)
 
 ___
 
-### `Optional` id
+### id
 
-• **id**? : *number*
-
-**`type`** {number}
+• `Optional` **id**: `number`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:42](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L42)
 
 ___
 
-### `Optional` isTrial
+### isTrial
 
-• **isTrial**? : *boolean*
-
-**`type`** {boolean}
+• `Optional` **isTrial**: `boolean`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:186](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L186)
 
 ___
 
-### `Optional` language
+### language
 
-• **language**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **language**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:84](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L84)
 
 ___
 
-### `Optional` level
+### level
 
-• **level**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **level**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:90](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L90)
 
 ___
 
-### `Optional` licenseAgreementType
+### licenseAgreementType
 
-• **licenseAgreementType**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **licenseAgreementType**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:114](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L114)
 
 ___
 
-### `Optional` licenseType
+### licenseType
 
-• **licenseType**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **licenseType**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:108](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L108)
 
 ___
 
-### `Optional` minimumCommitment
+### minimumCommitment
 
-• **minimumCommitment**? : *[MinimumCommitmentLight](minimumcommitmentlight.md)*
-
-**`type`** {MinimumCommitmentLight}
+• `Optional` **minimumCommitment**: [`MinimumCommitmentLight`](MinimumCommitmentLight.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:132](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L132)
 
 ___
 
-### `Optional` offering
+### minimumQuantity
 
-• **offering**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **minimumQuantity**: `number`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:210](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L210)
 
 ___
 
-### `Optional` operatingSystem
+### offering
 
-• **operatingSystem**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **offering**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:126](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L126)
 
 ___
 
-### `Optional` partNumber
+### operatingSystem
 
-• **partNumber**? : *string*
-
-**`type`** {string}
+• `Optional` **operatingSystem**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:120](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L120)
 
 ___
 
-### `Optional` pool
+### partNumber
 
-• **pool**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **partNumber**: `string`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:54](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L54)
 
 ___
 
-### `Optional` product
+### pool
 
-• **product**? : *[ProductReference](productreference.md)*
-
-**`type`** {ProductReference}
+• `Optional` **pool**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:102](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L102)
 
 ___
 
-### `Optional` productCategory
+### product
 
-• **productCategory**? : *string*
-
-**`type`** {string}
+• `Optional` **product**: [`ProductReference`](ProductReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:48](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L48)
 
 ___
 
-### `Optional` productFamily
+### productCategory
 
-• **productFamily**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **productCategory**: `string`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:174](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L174)
 
 ___
 
-### `Optional` productName
+### productFamily
 
-• **productName**? : *string*
-
-**`type`** {string}
+• `Optional` **productFamily**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:78](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L78)
 
 ___
 
-### `Optional` productType
+### productName
 
-• **productType**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **productName**: `string`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:60](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L60)
 
 ___
 
-### `Optional` program
+### productType
 
-• **program**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **productType**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:96](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L96)
 
 ___
 
-### `Optional` publisher
+### program
 
-• **publisher**? : *[ObjectReference](objectreference.md)*
-
-**`type`** {ObjectReference}
+• `Optional` **program**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:72](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L72)
 
 ___
 
-### `Optional` purchaseUnit
+### publisher
 
-• **purchaseUnit**? : *string*
-
-**`type`** {string}
+• `Optional` **publisher**: [`ObjectReference`](ObjectReference.md)
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:66](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L66)
 
 ___
 
-### `Optional` region
+### purchasePeriod
 
-• **region**? : *string*
-
-**`type`** {string}
+• `Optional` **purchasePeriod**: `string`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:156](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L156)
 
 ___
 
-### `Optional` unitCount
+### purchaseUnit
 
-• **unitCount**? : *number*
-
-**`type`** {number}
+• `Optional` **purchaseUnit**: `string`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:150](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L150)
 
 ___
 
-### `Optional` version
+### region
 
-• **version**? : *string*
-
-**`type`** {string}
+• `Optional` **region**: `string`
 
 **`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:180](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L180)
+
+___
+
+### unitCount
+
+• `Optional` **unitCount**: `number`
+
+**`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:138](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L138)
+
+___
+
+### version
+
+• `Optional` **version**: `string`
+
+**`memberof`** ProductVariant
+
+#### Defined in
+
+[src/models/ProductVariant.ts:144](https://github.com/bjerkio/crayon-api-js/blob/22cd66d/src/models/ProductVariant.ts#L144)
