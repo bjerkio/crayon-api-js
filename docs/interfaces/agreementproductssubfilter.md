@@ -39,7 +39,7 @@
 
 • **languageNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -49,7 +49,7 @@ ___
 
 • **levelNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -59,7 +59,7 @@ ___
 
 • **licenseAgreementTypeNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -69,7 +69,7 @@ ___
 
 • **licenseTypeNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -79,7 +79,7 @@ ___
 
 • **offeringNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -89,7 +89,7 @@ ___
 
 • **operatingSystemNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -99,7 +99,7 @@ ___
 
 • **partNumbers**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -109,7 +109,7 @@ ___
 
 • **poolNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -119,7 +119,7 @@ ___
 
 • **productCategoryNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -129,7 +129,7 @@ ___
 
 • **productFamilyNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -139,7 +139,7 @@ ___
 
 • **productTypeNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -149,7 +149,7 @@ ___
 
 • **programNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -159,7 +159,7 @@ ___
 
 • **publisherIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -169,7 +169,7 @@ ___
 
 • **publisherNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -179,7 +179,7 @@ ___
 
 • **purchasePeriodNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -189,7 +189,7 @@ ___
 
 • **purchaseUnitNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -199,7 +199,7 @@ ___
 
 • **regionNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter
 
@@ -209,6 +209,6 @@ ___
 
 • **versionNames**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductsSubFilter

@@ -81,7 +81,7 @@ ___
 
 ###  get
 
-▸ **get**(`agreementTypeIds?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: string, `options?`: any): *Promise‹[AgreementProductCollection](../interfaces/agreementproductcollection.md)›*
+▸ **get**(`agreementTypeIds?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: "Ascending" | "Descending", `options?`: any): *Promise‹[AgreementProductCollection](../interfaces/agreementproductcollection.md)›*
 
 **`throws`** {RequiredError}
 
@@ -91,7 +91,7 @@ ___
 
 Name | Type |
 ------ | ------ |
-`agreementTypeIds?` | Array‹string› |
+`agreementTypeIds?` | Array‹"None" &#124; "LicenseAgreement" &#124; "OpenAgreement" &#124; "FrameAgreement" &#124; "SamAgreement" &#124; "ConsultingAgreement" &#124; "CloudSeatAgreement" &#124; "CloudUsageAgreement" &#124; "ReportingAgreement" &#124; "OtherAgreement" &#124; "Reserved1" &#124; "Reserved2" &#124; "Reserved3"› |
 `page?` | number |
 `pageSize?` | number |
 `search?` | string |
@@ -140,7 +140,7 @@ Name | Type |
 `excludeProductCategoryNames?` | Array‹string› |
 `sortKey?` | string |
 `includeProductInformation?` | boolean |
-`sortOrder?` | string |
+`sortOrder?` | "Ascending" &#124; "Descending" |
 `options?` | any |
 
 **Returns:** *Promise‹[AgreementProductCollection](../interfaces/agreementproductcollection.md)›*

@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[User](user.md)›*
 
-**`type`** {Array&lt;User&gt;}
+**`type`** {Array<User>}
 
 **`memberof`** ApiCollectionOfUser
 

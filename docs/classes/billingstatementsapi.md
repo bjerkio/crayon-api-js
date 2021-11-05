@@ -120,7 +120,7 @@ ___
 
 ###  getBillingStatements
 
-▸ **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfBillingStatement](../interfaces/apicollectionofbillingstatement.md)›*
+▸ **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfBillingStatement](../interfaces/apicollectionofbillingstatement.md)›*
 
 **`throws`** {RequiredError}
 
@@ -132,7 +132,7 @@ Name | Type |
 ------ | ------ |
 `invoiceProfileId?` | number |
 `organizationId?` | number |
-`provisionType?` | string |
+`provisionType?` | "None" &#124; "Seat" &#124; "Usage" &#124; "OneTime" &#124; "Crayon" &#124; "AzureMarketplace" |
 `from?` | Date |
 `to?` | Date |
 `page?` | number |
@@ -145,7 +145,7 @@ ___
 
 ###  getGroupedBillingStatements
 
-▸ **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfGroupedBillingStatement](../interfaces/apicollectionofgroupedbillingstatement.md)›*
+▸ **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfGroupedBillingStatement](../interfaces/apicollectionofgroupedbillingstatement.md)›*
 
 **`throws`** {RequiredError}
 
@@ -157,7 +157,7 @@ Name | Type |
 ------ | ------ |
 `invoiceProfileId?` | number |
 `organizationId?` | number |
-`provisionType?` | string |
+`provisionType?` | "None" &#124; "Seat" &#124; "Usage" &#124; "OneTime" &#124; "Crayon" &#124; "AzureMarketplace" |
 `from?` | Date |
 `to?` | Date |
 `page?` | number |

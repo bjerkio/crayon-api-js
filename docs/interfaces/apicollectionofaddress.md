@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Address](../modules/address.md)›*
 
-**`type`** {Array&lt;Address&gt;}
+**`type`** {Array<Address>}
 
 **`memberof`** ApiCollectionOfAddress
 

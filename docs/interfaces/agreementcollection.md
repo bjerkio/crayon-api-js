@@ -34,7 +34,7 @@ ___
 
 • **items**? : *Array‹[Agreement](../modules/agreement.md)›*
 
-**`type`** {Array&lt;Agreement&gt;}
+**`type`** {Array<Agreement>}
 
 **`memberof`** AgreementCollection
 

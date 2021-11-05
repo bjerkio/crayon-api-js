@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Organization](organization.md)›*
 
-**`type`** {Array&lt;Organization&gt;}
+**`type`** {Array<Organization>}
 
 **`memberof`** ApiCollectionOfOrganization
 

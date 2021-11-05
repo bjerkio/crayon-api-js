@@ -83,7 +83,7 @@ ___
 
 ###  deleteByFilterAsync
 
-▸ **deleteByFilterAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *Promise‹Response›*
+▸ **deleteByFilterAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹Response›*
 
 **`throws`** {RequiredError}
 
@@ -93,9 +93,9 @@ ___
 
 Name | Type |
 ------ | ------ |
-`type?` | string |
+`type?` | "License" &#124; "Usage" &#124; "OneTime" |
 `objectId?` | number |
-`objectType?` | string |
+`objectType?` | "Organization" &#124; "CustomerTenant" &#124; "Subscription" &#124; "SubscriptionAddon" |
 `fromDate?` | Date |
 `options?` | any |
 
@@ -105,7 +105,7 @@ ___
 
 ###  getAsync
 
-▸ **getAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)[]›*
+▸ **getAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)[]›*
 
 **`throws`** {RequiredError}
 
@@ -115,9 +115,9 @@ ___
 
 Name | Type |
 ------ | ------ |
-`type?` | string |
+`type?` | "License" &#124; "Usage" &#124; "OneTime" |
 `objectId?` | number |
-`objectType?` | string |
+`objectType?` | "Organization" &#124; "CustomerTenant" &#124; "Subscription" &#124; "SubscriptionAddon" |
 `fromDate?` | Date |
 `options?` | any |
 
@@ -127,7 +127,7 @@ ___
 
 ###  getCurrentAsync
 
-▸ **getCurrentAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
+▸ **getCurrentAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](../modules/resellersalesprice.md)›*
 
 **`throws`** {RequiredError}
 
@@ -137,9 +137,9 @@ ___
 
 Name | Type |
 ------ | ------ |
-`type?` | string |
+`type?` | "License" &#124; "Usage" &#124; "OneTime" |
 `objectId?` | number |
-`objectType?` | string |
+`objectType?` | "Organization" &#124; "CustomerTenant" &#124; "Subscription" &#124; "SubscriptionAddon" |
 `fromDate?` | Date |
 `options?` | any |
 

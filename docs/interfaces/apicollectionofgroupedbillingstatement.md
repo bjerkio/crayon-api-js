@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[GroupedBillingStatement](../modules/groupedbillingstatement.md)›*
 
-**`type`** {Array&lt;GroupedBillingStatement&gt;}
+**`type`** {Array<GroupedBillingStatement>}
 
 **`memberof`** ApiCollectionOfGroupedBillingStatement
 

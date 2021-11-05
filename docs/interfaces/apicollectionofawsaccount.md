@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[AwsAccount](../modules/awsaccount.md)›*
 
-**`type`** {Array&lt;AwsAccount&gt;}
+**`type`** {Array<AwsAccount>}
 
 **`memberof`** ApiCollectionOfAwsAccount
 

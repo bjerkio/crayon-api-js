@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[ManagementLinkGrouped](managementlinkgrouped.md)›*
 
-**`type`** {Array&lt;ManagementLinkGrouped&gt;}
+**`type`** {Array<ManagementLinkGrouped>}
 
 **`memberof`** ApiCollectionOfManagementLinkGrouped
 

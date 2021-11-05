@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Client](../modules/client.md)›*
 
-**`type`** {Array&lt;Client&gt;}
+**`type`** {Array<Client>}
 
 **`memberof`** ApiCollectionOfClient
 

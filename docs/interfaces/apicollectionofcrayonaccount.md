@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[CrayonAccount](../modules/crayonaccount.md)›*
 
-**`type`** {Array&lt;CrayonAccount&gt;}
+**`type`** {Array<CrayonAccount>}
 
 **`memberof`** ApiCollectionOfCrayonAccount
 

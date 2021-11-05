@@ -109,7 +109,7 @@ ___
 
 ###  get
 
-▸ **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: string, `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfSubscription](../interfaces/apicollectionofsubscription.md)›*
+▸ **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: "None" | "Active" | "Suspended" | "Deleted" | "CustomerCancellation" | "Converted" | "Inactive" | "All", `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfSubscription](../interfaces/apicollectionofsubscription.md)›*
 
 **`throws`** {RequiredError}
 
@@ -123,7 +123,7 @@ Name | Type |
 `customerTenantId?` | number |
 `publisherId?` | number |
 `refresh?` | boolean |
-`statuses?` | string |
+`statuses?` | "None" &#124; "Active" &#124; "Suspended" &#124; "Deleted" &#124; "CustomerCancellation" &#124; "Converted" &#124; "Inactive" &#124; "All" |
 `isTrial?` | boolean |
 `page?` | number |
 `pageSize?` | number |

@@ -99,7 +99,7 @@ ___
 
 ###  get
 
-▸ **get**(`customerTenantId`: number, `agreementTypeConsent?`: string, `options?`: any): *Promise‹[ApiCollectionOfServiceAccountAgreement](../interfaces/apicollectionofserviceaccountagreement.md)›*
+▸ **get**(`customerTenantId`: number, `agreementTypeConsent?`: "MicrosoftCloudAgreement" | "MicrosoftCustomerAgreement", `options?`: any): *Promise‹[ApiCollectionOfServiceAccountAgreement](../interfaces/apicollectionofserviceaccountagreement.md)›*
 
 **`throws`** {RequiredError}
 
@@ -110,7 +110,7 @@ ___
 Name | Type |
 ------ | ------ |
 `customerTenantId` | number |
-`agreementTypeConsent?` | string |
+`agreementTypeConsent?` | "MicrosoftCloudAgreement" &#124; "MicrosoftCustomerAgreement" |
 `options?` | any |
 
 **Returns:** *Promise‹[ApiCollectionOfServiceAccountAgreement](../interfaces/apicollectionofserviceaccountagreement.md)›*

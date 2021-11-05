@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹boolean›*
 
-**`type`** {Array&lt;boolean&gt;}
+**`type`** {Array<boolean>}
 
 **`memberof`** ApiCollectionOfBoolean
 

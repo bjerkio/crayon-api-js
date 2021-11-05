@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[InvoiceProfile](invoiceprofile.md)›*
 
-**`type`** {Array&lt;InvoiceProfile&gt;}
+**`type`** {Array<InvoiceProfile>}
 
 **`memberof`** ApiCollectionOfInvoiceProfile
 

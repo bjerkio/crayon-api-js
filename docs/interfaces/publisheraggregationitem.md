@@ -44,6 +44,6 @@ ___
 
 • **programs**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** PublisherAggregationItem

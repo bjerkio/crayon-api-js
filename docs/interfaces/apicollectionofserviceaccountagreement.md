@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[ServiceAccountAgreement](../modules/serviceaccountagreement.md)›*
 
-**`type`** {Array&lt;ServiceAccountAgreement&gt;}
+**`type`** {Array<ServiceAccountAgreement>}
 
 **`memberof`** ApiCollectionOfServiceAccountAgreement
 

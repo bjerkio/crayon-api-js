@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[ManagementLink](managementlink.md)›*
 
-**`type`** {Array&lt;ManagementLink&gt;}
+**`type`** {Array<ManagementLink>}
 
 **`memberof`** ApiCollectionOfManagementLink
 

@@ -123,7 +123,7 @@ ___
 
 • **issues**? : *Array‹[ProductContainerIssue](../interfaces/productcontainerissue.md)›*
 
-**`type`** {Array&lt;ProductContainerIssue&gt;}
+**`type`** {Array<ProductContainerIssue>}
 
 **`memberof`** ProductRow
 

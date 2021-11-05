@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[OrganizationUsageCost](organizationusagecost.md)›*
 
-**`type`** {Array&lt;OrganizationUsageCost&gt;}
+**`type`** {Array<OrganizationUsageCost>}
 
 **`memberof`** ApiCollectionOfOrganizationUsageCost
 

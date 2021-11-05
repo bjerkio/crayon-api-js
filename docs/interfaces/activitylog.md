@@ -34,7 +34,7 @@ ___
 
 • **items**? : *Array‹[ActivityLogItem](../modules/activitylogitem.md)›*
 
-**`type`** {Array&lt;ActivityLogItem&gt;}
+**`type`** {Array<ActivityLogItem>}
 
 **`memberof`** ActivityLog
 

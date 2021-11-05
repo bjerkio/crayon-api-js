@@ -334,7 +334,7 @@ ___
 
 • **subscriptions**? : *Array‹[SubscriptionAddOn](subscriptionaddon.md)›*
 
-**`type`** {Array&lt;SubscriptionAddOn&gt;}
+**`type`** {Array<SubscriptionAddOn>}
 
 **`memberof`** SubscriptionDetailed
 

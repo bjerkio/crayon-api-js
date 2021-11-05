@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[SubcategoryUsageCost](subcategoryusagecost.md)›*
 
-**`type`** {Array&lt;SubcategoryUsageCost&gt;}
+**`type`** {Array<SubcategoryUsageCost>}
 
 **`memberof`** ApiCollectionOfSubcategoryUsageCost
 

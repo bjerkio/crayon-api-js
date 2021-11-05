@@ -48,7 +48,7 @@ ___
 
 • **agreementIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** AgreementProductFilter
 
@@ -58,7 +58,7 @@ ___
 
 • **agreementTypeIds**? : *Array‹[AgreementTypeIdsEnum](../enums/agreementproductfilter.agreementtypeidsenum.md)›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementProductFilter
 

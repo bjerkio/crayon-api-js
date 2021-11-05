@@ -83,7 +83,7 @@ ___
 
 • **comments**? : *Array‹[ProductContainerComment](productcontainercomment.md)›*
 
-**`type`** {Array&lt;ProductContainerComment&gt;}
+**`type`** {Array<ProductContainerComment>}
 
 **`memberof`** ProductContainer
 
@@ -173,7 +173,7 @@ ___
 
 • **issues**? : *Array‹[ProductContainerIssue](../interfaces/productcontainerissue.md)›*
 
-**`type`** {Array&lt;ProductContainerIssue&gt;}
+**`type`** {Array<ProductContainerIssue>}
 
 **`memberof`** ProductContainer
 
@@ -243,7 +243,7 @@ ___
 
 • **productRows**? : *Array‹[ProductRow](productrow.md)›*
 
-**`type`** {Array&lt;ProductRow&gt;}
+**`type`** {Array<ProductRow>}
 
 **`memberof`** ProductContainer
 
@@ -323,7 +323,7 @@ ___
 
 • **totalAlternativeSalesPrice**? : *Array‹[Price](../interfaces/price.md)›*
 
-**`type`** {Array&lt;Price&gt;}
+**`type`** {Array<Price>}
 
 **`memberof`** ProductContainer
 
@@ -333,7 +333,7 @@ ___
 
 • **totalSalesPrice**? : *Array‹[Price](../interfaces/price.md)›*
 
-**`type`** {Array&lt;Price&gt;}
+**`type`** {Array<Price>}
 
 **`memberof`** ProductContainer
 

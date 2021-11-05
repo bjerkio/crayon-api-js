@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Publisher](publisher.md)›*
 
-**`type`** {Array&lt;Publisher&gt;}
+**`type`** {Array<Publisher>}
 
 **`memberof`** ApiCollectionOfPublisher
 

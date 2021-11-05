@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[BlogItem](blogitem.md)›*
 
-**`type`** {Array&lt;BlogItem&gt;}
+**`type`** {Array<BlogItem>}
 
 **`memberof`** ApiCollectionOfBlogItem
 

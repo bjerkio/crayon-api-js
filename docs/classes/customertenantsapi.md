@@ -124,7 +124,7 @@ ___
 
 ###  get
 
-▸ **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: string, `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfCustomerTenant](../interfaces/apicollectionofcustomertenant.md)›*
+▸ **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: "None" | "T1" | "T2", `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfCustomerTenant](../interfaces/apicollectionofcustomertenant.md)›*
 
 **`throws`** {RequiredError}
 
@@ -140,7 +140,7 @@ Name | Type |
 `consumerId?` | number |
 `domain?` | string |
 `domainPrefix?` | string |
-`customerTenantType?` | string |
+`customerTenantType?` | "None" &#124; "T1" &#124; "T2" |
 `invoiceProfileId?` | number |
 `page?` | number |
 `pageSize?` | number |

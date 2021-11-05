@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Asset](../modules/asset.md)›*
 
-**`type`** {Array&lt;Asset&gt;}
+**`type`** {Array<Asset>}
 
 **`memberof`** ApiCollectionOfAsset
 

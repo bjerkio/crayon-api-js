@@ -142,7 +142,7 @@ ___
 
 ###  get
 
-▸ **get**(`search?`: string, `organizationId?`: number, `role?`: string, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfUser](../interfaces/apicollectionofuser.md)›*
+▸ **get**(`search?`: string, `organizationId?`: number, `role?`: "None" | "User" | "TenantAdmin", `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfUser](../interfaces/apicollectionofuser.md)›*
 
 **`throws`** {RequiredError}
 
@@ -154,7 +154,7 @@ Name | Type |
 ------ | ------ |
 `search?` | string |
 `organizationId?` | number |
-`role?` | string |
+`role?` | "None" &#124; "User" &#124; "TenantAdmin" |
 `page?` | number |
 `pageSize?` | number |
 `options?` | any |

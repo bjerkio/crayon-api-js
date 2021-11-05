@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[ProductContainer](../modules/productcontainer.md)›*
 
-**`type`** {Array&lt;ProductContainer&gt;}
+**`type`** {Array<ProductContainer>}
 
 **`memberof`** ApiCollectionOfProductContainer
 

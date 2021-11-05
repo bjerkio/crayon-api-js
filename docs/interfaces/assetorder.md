@@ -36,7 +36,7 @@ ___
 
 • **errors**? : *Array‹[AssetOrderError](assetordererror.md)›*
 
-**`type`** {Array&lt;AssetOrderError&gt;}
+**`type`** {Array<AssetOrderError>}
 
 **`memberof`** AssetOrder
 
@@ -56,7 +56,7 @@ ___
 
 • **orderLines**? : *Array‹[AssetOrderLine](../modules/assetorderline.md)›*
 
-**`type`** {Array&lt;AssetOrderLine&gt;}
+**`type`** {Array<AssetOrderLine>}
 
 **`memberof`** AssetOrder
 

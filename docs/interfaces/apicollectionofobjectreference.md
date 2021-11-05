@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[ObjectReference](objectreference.md)›*
 
-**`type`** {Array&lt;ObjectReference&gt;}
+**`type`** {Array<ObjectReference>}
 
 **`memberof`** ApiCollectionOfObjectReference
 

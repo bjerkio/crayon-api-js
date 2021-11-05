@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Program](program.md)›*
 
-**`type`** {Array&lt;Program&gt;}
+**`type`** {Array<Program>}
 
 **`memberof`** ApiCollectionOfProgram
 

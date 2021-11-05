@@ -79,7 +79,7 @@ ___
 
 ###  get
 
-▸ **get**(`regionList?`: string, `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfRegion](../interfaces/apicollectionofregion.md)›*
+▸ **get**(`regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfRegion](../interfaces/apicollectionofregion.md)›*
 
 **`throws`** {RequiredError}
 
@@ -89,7 +89,7 @@ ___
 
 Name | Type |
 ------ | ------ |
-`regionList?` | string |
+`regionList?` | "None" &#124; "MicrosoftCsp" &#124; "OrganizationSpecific" |
 `organizationId?` | number |
 `page?` | number |
 `pageSize?` | number |
@@ -102,7 +102,7 @@ ___
 
 ###  getByRegionCode
 
-▸ **getByRegionCode**(`regionCode?`: string, `regionList?`: string, `options?`: any): *Promise‹[Region](../interfaces/region.md)›*
+▸ **getByRegionCode**(`regionCode?`: string, `regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `options?`: any): *Promise‹[Region](../interfaces/region.md)›*
 
 **`throws`** {RequiredError}
 
@@ -113,7 +113,7 @@ ___
 Name | Type |
 ------ | ------ |
 `regionCode?` | string |
-`regionList?` | string |
+`regionList?` | "None" &#124; "MicrosoftCsp" &#124; "OrganizationSpecific" |
 `options?` | any |
 
 **Returns:** *Promise‹[Region](../interfaces/region.md)›*

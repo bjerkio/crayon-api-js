@@ -25,7 +25,7 @@
 
 • **claims**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** Me
 

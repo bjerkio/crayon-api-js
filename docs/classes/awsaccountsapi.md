@@ -99,7 +99,7 @@ ___
 
 ###  getAwsAccounts
 
-▸ **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAwsAccount](../interfaces/apicollectionofawsaccount.md)›*
+▸ **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAwsAccount](../interfaces/apicollectionofawsaccount.md)›*
 
 **`throws`** {RequiredError}
 
@@ -112,7 +112,7 @@ Name | Type |
 `organizationId?` | number |
 `publisherId?` | number |
 `consumerId?` | number |
-`customerTenantType?` | string |
+`customerTenantType?` | "None" &#124; "T1" &#124; "T2" |
 `page?` | number |
 `pageSize?` | number |
 `search?` | string |

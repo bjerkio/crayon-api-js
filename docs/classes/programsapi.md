@@ -79,7 +79,7 @@ ___
 
 ###  get
 
-▸ **get**(`publisherId?`: number, `programType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options?`: any): *Promise‹[ApiCollectionOfProgram](../interfaces/apicollectionofprogram.md)›*
+▸ **get**(`publisherId?`: number, `programType?`: "None" | "License" | "Report" | "Cloud", `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options?`: any): *Promise‹[ApiCollectionOfProgram](../interfaces/apicollectionofprogram.md)›*
 
 **`throws`** {RequiredError}
 
@@ -90,7 +90,7 @@ ___
 Name | Type |
 ------ | ------ |
 `publisherId?` | number |
-`programType?` | string |
+`programType?` | "None" &#124; "License" &#124; "Report" &#124; "Cloud" |
 `page?` | number |
 `pageSize?` | number |
 `search?` | string |

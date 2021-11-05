@@ -386,7 +386,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`organizationId`: number, `type?`: string, `options?`: any): *Promise‹[ApiCollectionOfAddress](interfaces/apicollectionofaddress.md)›*
+* **get**(`organizationId`: number, `type?`: "None" | "Invoice" | "Delivery", `options?`: any): *Promise‹[ApiCollectionOfAddress](interfaces/apicollectionofaddress.md)›*
 
 * **getById**(`organizationId`: number, `id`: number, `options?`: any): *Promise‹[Address](modules/address.md)›*
 
@@ -406,7 +406,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`organizationId`: number, `type?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`organizationId`: number, `type?`: "None" | "Invoice" | "Delivery", `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getById**(`organizationId`: number, `id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -426,7 +426,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`organizationId`: number, `type?`: string, `options?`: any): *function*
+* **get**(`organizationId`: number, `type?`: "None" | "Invoice" | "Delivery", `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfAddress](interfaces/apicollectionofaddress.md)›*
 
@@ -452,7 +452,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`agreementTypeIds?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: string, `options?`: any): *Promise‹[AgreementProductCollection](interfaces/agreementproductcollection.md)›*
+* **get**(`agreementTypeIds?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: "Ascending" | "Descending", `options?`: any): *Promise‹[AgreementProductCollection](interfaces/agreementproductcollection.md)›*
 
 * **getAsExcelFile**(`filter?`: [AgreementProductFilter](modules/agreementproductfilter.md), `options?`: any): *Promise‹Response›*
 
@@ -476,7 +476,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`agreementTypeIds?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`agreementTypeIds?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: "Ascending" | "Descending", `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getAsExcelFile**(`filter?`: [AgreementProductFilter](modules/agreementproductfilter.md), `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -500,7 +500,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`agreementTypeIds?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: string, `options?`: any): *function*
+* **get**(`agreementTypeIds?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `page?`: number, `pageSize?`: number, `search?`: string, `priceListId?`: number, `organizationId?`: number, `customerTenantId?`: number, `agreementId?`: number, `isTrial?`: boolean, `agreementIds?`: Array‹number›, `searchDate?`: Date, `includePartNumbers?`: Array‹string›, `includePublisherIds?`: Array‹number›, `includePublisherNames?`: Array‹string›, `includePoolNames?`: Array‹string›, `includeOperatingSystemNames?`: Array‹string›, `includeLevelNames?`: Array‹string›, `includeLanguageNames?`: Array‹string›, `includeLicenseAgreementTypeNames?`: Array‹string›, `includeLicenseTypeNames?`: Array‹string›, `includeProductFamilyNames?`: Array‹string›, `includeProductTypeNames?`: Array‹string›, `includeProgramNames?`: Array‹string›, `includeOfferingNames?`: Array‹string›, `includePurchasePeriodNames?`: Array‹string›, `includePurchaseUnitNames?`: Array‹string›, `includeVersionNames?`: Array‹string›, `includeRegionNames?`: Array‹string›, `includeProductCategoryNames?`: Array‹string›, `excludePartNumbers?`: Array‹string›, `excludePublisherIds?`: Array‹number›, `excludePublisherNames?`: Array‹string›, `excludePoolNames?`: Array‹string›, `excludeOperatingSystemNames?`: Array‹string›, `excludeLevelNames?`: Array‹string›, `excludeLanguageNames?`: Array‹string›, `excludeLicenseAgreementTypeNames?`: Array‹string›, `excludeLicenseTypeNames?`: Array‹string›, `excludeProductFamilyNames?`: Array‹string›, `excludeProductTypeNames?`: Array‹string›, `excludeProgramNames?`: Array‹string›, `excludeOfferingNames?`: Array‹string›, `excludePurchasePeriodNames?`: Array‹string›, `excludePurchaseUnitNames?`: Array‹string›, `excludeVersionNames?`: Array‹string›, `excludeRegionNames?`: Array‹string›, `excludeProductCategoryNames?`: Array‹string›, `sortKey?`: string, `includeProductInformation?`: boolean, `sortOrder?`: "Ascending" | "Descending", `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[AgreementProductCollection](interfaces/agreementproductcollection.md)›*
 
@@ -600,7 +600,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: string, `agreementTypes?`: Array‹string›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[AgreementCollection](interfaces/agreementcollection.md)›*
+* **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: "None" | "Active" | "Inactive" | "ActiveInactive", `agreementTypes?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[AgreementCollection](interfaces/agreementcollection.md)›*
 
 ___
 
@@ -618,7 +618,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: string, `agreementTypes?`: Array‹string›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: "None" | "Active" | "Inactive" | "ActiveInactive", `agreementTypes?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 ___
 
@@ -636,7 +636,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: string, `agreementTypes?`: Array‹string›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
+* **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: "None" | "Active" | "Inactive" | "ActiveInactive", `agreementTypes?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[AgreementCollection](interfaces/agreementcollection.md)›*
 
@@ -660,9 +660,9 @@ Name | Type |
 
 * **checkoutAsync**(`order?`: [AssetOrder](interfaces/assetorder.md), `options?`: any): *Promise‹Response›*
 
-* **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAsset](interfaces/apicollectionofasset.md)›*
+* **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAsset](interfaces/apicollectionofasset.md)›*
 
-* **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAssetOrder](interfaces/apicollectionofassetorder.md)›*
+* **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAssetOrder](interfaces/apicollectionofassetorder.md)›*
 
 * **verifyAsync**(`order?`: [AssetOrder](interfaces/assetorder.md), `options?`: any): *Promise‹[AssetOrder](interfaces/assetorder.md)›*
 
@@ -684,9 +684,9 @@ Name | Type |
 
 * **checkoutAsync**(`order?`: [AssetOrder](interfaces/assetorder.md), `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **verifyAsync**(`order?`: [AssetOrder](interfaces/assetorder.md), `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -710,11 +710,11 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹Response›*
 
-* **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
+* **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfAsset](interfaces/apicollectionofasset.md)›*
 
-* **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
+* **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfAssetOrder](interfaces/apicollectionofassetorder.md)›*
 
@@ -742,7 +742,7 @@ Name | Type |
 
 * **getAwsAccountById**(`id`: number, `options?`: any): *Promise‹[AwsAccount](modules/awsaccount.md)›*
 
-* **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAwsAccount](interfaces/apicollectionofawsaccount.md)›*
+* **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAwsAccount](interfaces/apicollectionofawsaccount.md)›*
 
 * **put**(`id`: number, `awsAccount?`: [AwsAccount](modules/awsaccount.md), `options?`: any): *Promise‹[AwsAccount](modules/awsaccount.md)›*
 
@@ -764,7 +764,7 @@ Name | Type |
 
 * **getAwsAccountById**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **put**(`id`: number, `awsAccount?`: [AwsAccount](modules/awsaccount.md), `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -788,7 +788,7 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[AwsAccount](modules/awsaccount.md)›*
 
-* **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
+* **getAwsAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfAwsAccount](interfaces/apicollectionofawsaccount.md)›*
 
@@ -974,9 +974,9 @@ Name | Type |
 
 * **getBillingStatementFile**(`id`: number, `options?`: any): *Promise‹Response›*
 
-* **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfBillingStatement](interfaces/apicollectionofbillingstatement.md)›*
+* **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfBillingStatement](interfaces/apicollectionofbillingstatement.md)›*
 
-* **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfGroupedBillingStatement](interfaces/apicollectionofgroupedbillingstatement.md)›*
+* **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfGroupedBillingStatement](interfaces/apicollectionofgroupedbillingstatement.md)›*
 
 * **getReconciliationFile**(`id`: number, `options?`: any): *Promise‹Response›*
 
@@ -1000,9 +1000,9 @@ Name | Type |
 
 * **getBillingStatementFile**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getReconciliationFile**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -1030,11 +1030,11 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹Response›*
 
-* **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *function*
+* **getBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfBillingStatement](interfaces/apicollectionofbillingstatement.md)›*
 
-* **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: string, `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *function*
+* **getGroupedBillingStatements**(`invoiceProfileId?`: number, `organizationId?`: number, `provisionType?`: "None" | "Seat" | "Usage" | "OneTime" | "Crayon" | "AzureMarketplace", `from?`: Date, `to?`: Date, `page?`: number, `pageSize?`: number, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfGroupedBillingStatement](interfaces/apicollectionofgroupedbillingstatement.md)›*
 
@@ -1300,7 +1300,7 @@ Name | Type |
 
 * **getCrayonAccountById**(`id`: number, `options?`: any): *Promise‹[CrayonAccount](modules/crayonaccount.md)›*
 
-* **getCrayonAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfCrayonAccount](interfaces/apicollectionofcrayonaccount.md)›*
+* **getCrayonAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfCrayonAccount](interfaces/apicollectionofcrayonaccount.md)›*
 
 * **post**(`crayonAccount?`: [CrayonAccount](modules/crayonaccount.md), `options?`: any): *Promise‹[CrayonAccount](modules/crayonaccount.md)›*
 
@@ -1324,7 +1324,7 @@ Name | Type |
 
 * **getCrayonAccountById**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getCrayonAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getCrayonAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **post**(`crayonAccount?`: [CrayonAccount](modules/crayonaccount.md), `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -1350,7 +1350,7 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[CrayonAccount](modules/crayonaccount.md)›*
 
-* **getCrayonAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
+* **getCrayonAccounts**(`organizationId?`: number, `publisherId?`: number, `consumerId?`: number, `customerTenantType?`: "None" | "T1" | "T2", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfCrayonAccount](interfaces/apicollectionofcrayonaccount.md)›*
 
@@ -1382,7 +1382,7 @@ Name | Type |
 
 * **add**(`customerTenantId`: number, `agreement?`: [ServiceAccountAgreement](modules/serviceaccountagreement.md), `options?`: any): *Promise‹[ServiceAccountAgreement](modules/serviceaccountagreement.md)›*
 
-* **get**(`customerTenantId`: number, `agreementTypeConsent?`: string, `options?`: any): *Promise‹[ApiCollectionOfServiceAccountAgreement](interfaces/apicollectionofserviceaccountagreement.md)›*
+* **get**(`customerTenantId`: number, `agreementTypeConsent?`: "MicrosoftCloudAgreement" | "MicrosoftCustomerAgreement", `options?`: any): *Promise‹[ApiCollectionOfServiceAccountAgreement](interfaces/apicollectionofserviceaccountagreement.md)›*
 
 ___
 
@@ -1402,7 +1402,7 @@ Name | Type |
 
 * **add**(`customerTenantId`: number, `agreement?`: [ServiceAccountAgreement](modules/serviceaccountagreement.md), `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **get**(`customerTenantId`: number, `agreementTypeConsent?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`customerTenantId`: number, `agreementTypeConsent?`: "MicrosoftCloudAgreement" | "MicrosoftCustomerAgreement", `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 ___
 
@@ -1424,7 +1424,7 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ServiceAccountAgreement](modules/serviceaccountagreement.md)›*
 
-* **get**(`customerTenantId`: number, `agreementTypeConsent?`: string, `options?`: any): *function*
+* **get**(`customerTenantId`: number, `agreementTypeConsent?`: "MicrosoftCloudAgreement" | "MicrosoftCustomerAgreement", `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfServiceAccountAgreement](interfaces/apicollectionofserviceaccountagreement.md)›*
 
@@ -1450,7 +1450,7 @@ Name | Type |
 
 * **deleteCustomerById**(`id`: number, `options?`: any): *Promise‹Response›*
 
-* **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: string, `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfCustomerTenant](interfaces/apicollectionofcustomertenant.md)›*
+* **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: "None" | "T1" | "T2", `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfCustomerTenant](interfaces/apicollectionofcustomertenant.md)›*
 
 * **getAzurePlan**(`customerTenantId`: number, `options?`: any): *Promise‹[AzurePlan](modules/azureplan.md)›*
 
@@ -1482,7 +1482,7 @@ Name | Type |
 
 * **deleteCustomerById**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: string, `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: "None" | "T1" | "T2", `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getAzurePlan**(`customerTenantId`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -1518,7 +1518,7 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹Response›*
 
-* **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: string, `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
+* **get**(`organizationId?`: number, `publisherId?`: number, `programId?`: number, `consumerId?`: number, `domain?`: string, `domainPrefix?`: string, `customerTenantType?`: "None" | "T1" | "T2", `invoiceProfileId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfCustomerTenant](interfaces/apicollectionofcustomertenant.md)›*
 
@@ -2256,7 +2256,7 @@ Name | Type |
 
 * **deleteProductContainer**(`id`: number, `options?`: any): *Promise‹boolean›*
 
-* **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: string, `category?`: string, `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfProductContainer](interfaces/apicollectionofproductcontainer.md)›*
+* **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: "None" | "Draft" | "Request" | "Order" | "Quote" | "Template", `category?`: "None" | "Seat" | "Report", `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfProductContainer](interfaces/apicollectionofproductcontainer.md)›*
 
 * **getById**(`id`: number, `options?`: any): *Promise‹[ProductContainer](modules/productcontainer.md)›*
 
@@ -2288,7 +2288,7 @@ Name | Type |
 
 * **deleteProductContainer**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: string, `category?`: string, `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: "None" | "Draft" | "Request" | "Order" | "Quote" | "Template", `category?`: "None" | "Seat" | "Report", `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getById**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -2324,7 +2324,7 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹boolean›*
 
-* **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: string, `category?`: string, `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options?`: any): *function*
+* **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: "None" | "Draft" | "Request" | "Order" | "Quote" | "Template", `category?`: "None" | "Seat" | "Report", `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfProductContainer](interfaces/apicollectionofproductcontainer.md)›*
 
@@ -2366,7 +2366,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`publisherId?`: number, `programType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options?`: any): *Promise‹[ApiCollectionOfProgram](interfaces/apicollectionofprogram.md)›*
+* **get**(`publisherId?`: number, `programType?`: "None" | "License" | "Report" | "Cloud", `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options?`: any): *Promise‹[ApiCollectionOfProgram](interfaces/apicollectionofprogram.md)›*
 
 * **getById**(`id`: number, `options?`: any): *Promise‹[Program](interfaces/program.md)›*
 
@@ -2386,7 +2386,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`publisherId?`: number, `programType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`publisherId?`: number, `programType?`: "None" | "License" | "Report" | "Cloud", `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getById**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -2406,7 +2406,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`publisherId?`: number, `programType?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options?`: any): *function*
+* **get**(`publisherId?`: number, `programType?`: "None" | "License" | "Report" | "Cloud", `page?`: number, `pageSize?`: number, `search?`: string, `organizationId?`: number, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfProgram](interfaces/apicollectionofprogram.md)›*
 
@@ -2432,7 +2432,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: string, `options?`: any): *Promise‹[ApiCollectionOfPublisher](interfaces/apicollectionofpublisher.md)›*
+* **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: "None" | "License" | "Report" | "Cloud", `options?`: any): *Promise‹[ApiCollectionOfPublisher](interfaces/apicollectionofpublisher.md)›*
 
 * **getById**(`id`: number, `options?`: any): *Promise‹[Publisher](interfaces/publisher.md)›*
 
@@ -2452,7 +2452,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: "None" | "License" | "Report" | "Cloud", `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getById**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -2472,7 +2472,7 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: string, `options?`: any): *function*
+* **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: "None" | "License" | "Report" | "Cloud", `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfPublisher](interfaces/apicollectionofpublisher.md)›*
 
@@ -2498,9 +2498,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`regionList?`: string, `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfRegion](interfaces/apicollectionofregion.md)›*
+* **get**(`regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfRegion](interfaces/apicollectionofregion.md)›*
 
-* **getByRegionCode**(`regionCode?`: string, `regionList?`: string, `options?`: any): *Promise‹[Region](interfaces/region.md)›*
+* **getByRegionCode**(`regionCode?`: string, `regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `options?`: any): *Promise‹[Region](interfaces/region.md)›*
 
 ___
 
@@ -2518,9 +2518,9 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`regionList?`: string, `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getByRegionCode**(`regionCode?`: string, `regionList?`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getByRegionCode**(`regionCode?`: string, `regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 ___
 
@@ -2538,11 +2538,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **get**(`regionList?`: string, `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
+* **get**(`regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `organizationId?`: number, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfRegion](interfaces/apicollectionofregion.md)›*
 
-* **getByRegionCode**(`regionCode?`: string, `regionList?`: string, `options?`: any): *function*
+* **getByRegionCode**(`regionCode?`: string, `regionList?`: "None" | "MicrosoftCsp" | "OrganizationSpecific", `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[Region](interfaces/region.md)›*
 
@@ -2564,11 +2564,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **deleteByFilterAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *Promise‹Response›*
+* **deleteByFilterAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹Response›*
 
-* **getAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](modules/resellersalesprice.md)[]›*
+* **getAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](modules/resellersalesprice.md)[]›*
 
-* **getCurrentAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](modules/resellersalesprice.md)›*
+* **getCurrentAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *Promise‹[ResellerSalesPrice](modules/resellersalesprice.md)›*
 
 * **postAsync**(`resellerSalesPrice?`: [ResellerSalesPrice](modules/resellersalesprice.md), `options?`: any): *Promise‹[ResellerSalesPrice](modules/resellersalesprice.md)›*
 
@@ -2592,11 +2592,11 @@ Name | Type |
 
 **Returns:** *object*
 
-* **deleteByFilterAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **deleteByFilterAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **getCurrentAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **getCurrentAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **postAsync**(`resellerSalesPrice?`: [ResellerSalesPrice](modules/resellersalesprice.md), `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -2620,15 +2620,15 @@ Name | Type |
 
 **Returns:** *object*
 
-* **deleteByFilterAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *function*
+* **deleteByFilterAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹Response›*
 
-* **getAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *function*
+* **getAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹Array‹[ResellerSalesPrice](modules/resellersalesprice.md)››*
 
-* **getCurrentAsync**(`type?`: string, `objectId?`: number, `objectType?`: string, `fromDate?`: Date, `options?`: any): *function*
+* **getCurrentAsync**(`type?`: "License" | "Usage" | "OneTime", `objectId?`: number, `objectType?`: "Organization" | "CustomerTenant" | "Subscription" | "SubscriptionAddon", `fromDate?`: Date, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ResellerSalesPrice](modules/resellersalesprice.md)›*
 
@@ -2730,7 +2730,7 @@ Name | Type |
 
 * **deleteSubscriptionTags**(`subscriptionId`: number, `options?`: any): *Promise‹Response›*
 
-* **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: string, `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfSubscription](interfaces/apicollectionofsubscription.md)›*
+* **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: "None" | "Active" | "Suspended" | "Deleted" | "CustomerCancellation" | "Converted" | "Inactive" | "All", `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfSubscription](interfaces/apicollectionofsubscription.md)›*
 
 * **getActivationLinkAsync**(`id`: number, `options?`: any): *Promise‹[ActivationLink](interfaces/activationlink.md)›*
 
@@ -2772,7 +2772,7 @@ Name | Type |
 
 * **deleteSubscriptionTags**(`subscriptionId`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: string, `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: "None" | "Active" | "Suspended" | "Deleted" | "CustomerCancellation" | "Converted" | "Inactive" | "All", `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getActivationLinkAsync**(`id`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -2816,7 +2816,7 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹Response›*
 
-* **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: string, `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options?`: any): *function*
+* **get**(`organizationId?`: number, `customerTenantId?`: number, `publisherId?`: number, `refresh?`: boolean, `statuses?`: "None" | "Active" | "Suspended" | "Deleted" | "CustomerCancellation" | "Converted" | "Inactive" | "All", `isTrial?`: boolean, `page?`: number, `pageSize?`: number, `search?`: string, `registeredForReservedInstance?`: boolean, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfSubscription](interfaces/apicollectionofsubscription.md)›*
 
@@ -3026,7 +3026,7 @@ Name | Type |
 
 * **deleteUser**(`id`: string, `options?`: any): *Promise‹boolean›*
 
-* **get**(`search?`: string, `organizationId?`: number, `role?`: string, `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfUser](interfaces/apicollectionofuser.md)›*
+* **get**(`search?`: string, `organizationId?`: number, `role?`: "None" | "User" | "TenantAdmin", `page?`: number, `pageSize?`: number, `options?`: any): *Promise‹[ApiCollectionOfUser](interfaces/apicollectionofuser.md)›*
 
 * **getUserById**(`id`: string, `options?`: any): *Promise‹[User](interfaces/user.md)›*
 
@@ -3056,7 +3056,7 @@ Name | Type |
 
 * **deleteUser**(`id`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
-* **get**(`search?`: string, `organizationId?`: number, `role?`: string, `page?`: number, `pageSize?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
+* **get**(`search?`: string, `organizationId?`: number, `role?`: "None" | "User" | "TenantAdmin", `page?`: number, `pageSize?`: number, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
 * **getUserById**(`id`: string, `options`: any): *[FetchArgs](interfaces/fetchargs.md)*
 
@@ -3092,7 +3092,7 @@ Name | Type |
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹boolean›*
 
-* **get**(`search?`: string, `organizationId?`: number, `role?`: string, `page?`: number, `pageSize?`: number, `options?`: any): *function*
+* **get**(`search?`: string, `organizationId?`: number, `role?`: "None" | "User" | "TenantAdmin", `page?`: number, `pageSize?`: number, `options?`: any): *function*
 
   * (`fetch?`: [FetchAPI](interfaces/fetchapi.md), `basePath?`: string): *Promise‹[ApiCollectionOfUser](interfaces/apicollectionofuser.md)›*
 

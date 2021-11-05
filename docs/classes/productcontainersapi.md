@@ -127,7 +127,7 @@ ___
 
 ###  get
 
-▸ **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: string, `category?`: string, `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfProductContainer](../interfaces/apicollectionofproductcontainer.md)›*
+▸ **get**(`organizationId?`: number, `search?`: string, `page?`: number, `pageSize?`: number, `activeDraft?`: boolean, `programId?`: number, `year?`: number, `month?`: number, `userId?`: string, `sentByUserId?`: string, `type?`: "None" | "Draft" | "Request" | "Order" | "Quote" | "Template", `category?`: "None" | "Seat" | "Report", `from?`: Date, `to?`: Date, `includeRemoved?`: boolean, `includeSubsidiaries?`: boolean, `options?`: any): *Promise‹[ApiCollectionOfProductContainer](../interfaces/apicollectionofproductcontainer.md)›*
 
 **`throws`** {RequiredError}
 
@@ -147,8 +147,8 @@ Name | Type |
 `month?` | number |
 `userId?` | string |
 `sentByUserId?` | string |
-`type?` | string |
-`category?` | string |
+`type?` | "None" &#124; "Draft" &#124; "Request" &#124; "Order" &#124; "Quote" &#124; "Template" |
+`category?` | "None" &#124; "Seat" &#124; "Report" |
 `from?` | Date |
 `to?` | Date |
 `includeRemoved?` | boolean |

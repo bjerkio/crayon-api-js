@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Region](region.md)›*
 
-**`type`** {Array&lt;Region&gt;}
+**`type`** {Array<Region>}
 
 **`memberof`** ApiCollectionOfRegion
 

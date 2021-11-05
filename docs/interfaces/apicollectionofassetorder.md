@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[AssetOrder](assetorder.md)›*
 
-**`type`** {Array&lt;AssetOrder&gt;}
+**`type`** {Array<AssetOrder>}
 
 **`memberof`** ApiCollectionOfAssetOrder
 

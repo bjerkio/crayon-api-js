@@ -100,7 +100,7 @@ ___
 
 ###  get
 
-▸ **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAsset](../interfaces/apicollectionofasset.md)›*
+▸ **get**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAsset](../interfaces/apicollectionofasset.md)›*
 
 **`throws`** {RequiredError}
 
@@ -115,8 +115,8 @@ Name | Type |
 `externalOrderId?` | string |
 `externalOrderIds?` | Array‹string› |
 `reservationId?` | string |
-`assetType?` | string |
-`status?` | string |
+`assetType?` | "Reservation" &#124; "Software" &#124; "Subscription" |
+`status?` | "None" &#124; "Fulfilling" &#124; "Succeeded" &#124; "Cancelled" &#124; "All" |
 `page?` | number |
 `pageSize?` | number |
 `search?` | string |
@@ -128,7 +128,7 @@ ___
 
 ###  getAssetOrdersAsync
 
-▸ **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: string, `status?`: string, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAssetOrder](../interfaces/apicollectionofassetorder.md)›*
+▸ **getAssetOrdersAsync**(`resellerCustomerId?`: number, `publisherId?`: number, `externalOrderId?`: string, `externalOrderIds?`: Array‹string›, `reservationId?`: string, `assetType?`: "Reservation" | "Software" | "Subscription", `status?`: "None" | "Fulfilling" | "Succeeded" | "Cancelled" | "All", `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[ApiCollectionOfAssetOrder](../interfaces/apicollectionofassetorder.md)›*
 
 **`throws`** {RequiredError}
 
@@ -143,8 +143,8 @@ Name | Type |
 `externalOrderId?` | string |
 `externalOrderIds?` | Array‹string› |
 `reservationId?` | string |
-`assetType?` | string |
-`status?` | string |
+`assetType?` | "Reservation" &#124; "Software" &#124; "Subscription" |
+`status?` | "None" &#124; "Fulfilling" &#124; "Succeeded" &#124; "Cancelled" &#124; "All" |
 `page?` | number |
 `pageSize?` | number |
 `search?` | string |

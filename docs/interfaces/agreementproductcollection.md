@@ -41,7 +41,7 @@
 
 • **agreements**? : *Array‹[ObjectReference](objectreference.md)›*
 
-**`type`** {Array&lt;ObjectReference&gt;}
+**`type`** {Array<ObjectReference>}
 
 **`memberof`** AgreementProductCollection
 
@@ -61,7 +61,7 @@ ___
 
 • **items**? : *Array‹[AgreementProduct](../modules/agreementproduct.md)›*
 
-**`type`** {Array&lt;AgreementProduct&gt;}
+**`type`** {Array<AgreementProduct>}
 
 **`memberof`** AgreementProductCollection
 
@@ -71,7 +71,7 @@ ___
 
 • **languages**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -81,7 +81,7 @@ ___
 
 • **levels**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -91,7 +91,7 @@ ___
 
 • **licenseAgreementTypes**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -101,7 +101,7 @@ ___
 
 • **licenseTypes**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -111,7 +111,7 @@ ___
 
 • **offerings**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -121,7 +121,7 @@ ___
 
 • **operatingSystems**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -131,7 +131,7 @@ ___
 
 • **pools**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -141,7 +141,7 @@ ___
 
 • **productCategories**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -151,7 +151,7 @@ ___
 
 • **productFamilies**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -161,7 +161,7 @@ ___
 
 • **productTypes**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -171,7 +171,7 @@ ___
 
 • **programs**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -181,7 +181,7 @@ ___
 
 • **publishers**? : *Array‹[PublisherAggregationItem](publisheraggregationitem.md)›*
 
-**`type`** {Array&lt;PublisherAggregationItem&gt;}
+**`type`** {Array<PublisherAggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -191,7 +191,7 @@ ___
 
 • **purchasePeriods**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -201,7 +201,7 @@ ___
 
 • **purchaseUnits**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -211,7 +211,7 @@ ___
 
 • **regions**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection
 
@@ -231,6 +231,6 @@ ___
 
 • **versions**? : *Array‹[AggregationItem](aggregationitem.md)›*
 
-**`type`** {Array&lt;AggregationItem&gt;}
+**`type`** {Array<AggregationItem>}
 
 **`memberof`** AgreementProductCollection

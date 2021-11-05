@@ -72,7 +72,7 @@ ___
 
 • **availableBillingCycleIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** ProductVariant
 

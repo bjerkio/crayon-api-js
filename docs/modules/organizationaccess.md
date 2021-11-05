@@ -29,7 +29,7 @@
 
 • **agreements**? : *Array‹[AgreementAccess](../interfaces/agreementaccess.md)›*
 
-**`type`** {Array&lt;AgreementAccess&gt;}
+**`type`** {Array<AgreementAccess>}
 
 **`memberof`** OrganizationAccess
 

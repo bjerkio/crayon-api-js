@@ -70,7 +70,7 @@ ___
 
 • **errors**? : *Array‹[AssetOrderLineError](../interfaces/assetorderlineerror.md)›*
 
-**`type`** {Array&lt;AssetOrderLineError&gt;}
+**`type`** {Array<AssetOrderLineError>}
 
 **`memberof`** AssetOrderLine
 

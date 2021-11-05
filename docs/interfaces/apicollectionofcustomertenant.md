@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[CustomerTenant](../modules/customertenant.md)›*
 
-**`type`** {Array&lt;CustomerTenant&gt;}
+**`type`** {Array<CustomerTenant>}
 
 **`memberof`** ApiCollectionOfCustomerTenant
 

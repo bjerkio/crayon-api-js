@@ -169,7 +169,7 @@ ___
 
 • **lines**? : *Array‹[GoogleOrderLine](googleorderline.md)›*
 
-**`type`** {Array&lt;GoogleOrderLine&gt;}
+**`type`** {Array<GoogleOrderLine>}
 
 **`memberof`** GoogleOrder
 

@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[AgreementReport](../modules/agreementreport.md)›*
 
-**`type`** {Array&lt;AgreementReport&gt;}
+**`type`** {Array<AgreementReport>}
 
 **`memberof`** ApiCollectionOfAgreementReport
 

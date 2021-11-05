@@ -78,7 +78,7 @@ ___
 
 ###  get
 
-▸ **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: string, `agreementTypes?`: Array‹string›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[AgreementCollection](../interfaces/agreementcollection.md)›*
+▸ **get**(`organizationId?`: number, `organizationIds?`: Array‹number›, `pricelistIds?`: Array‹number›, `status?`: "None" | "Active" | "Inactive" | "ActiveInactive", `agreementTypes?`: Array‹"None" | "LicenseAgreement" | "OpenAgreement" | "FrameAgreement" | "SamAgreement" | "ConsultingAgreement" | "CloudSeatAgreement" | "CloudUsageAgreement" | "ReportingAgreement" | "OtherAgreement" | "Reserved1" | "Reserved2" | "Reserved3"›, `publisherIds?`: Array‹number›, `programIds?`: Array‹number›, `searchDate?`: Date, `agreementIds?`: Array‹number›, `salesPriceCurrency?`: string, `termRequired?`: boolean, `publisherId?`: number, `endDateFrom?`: Date, `endDateTo?`: Date, `page?`: number, `pageSize?`: number, `search?`: string, `options?`: any): *Promise‹[AgreementCollection](../interfaces/agreementcollection.md)›*
 
 **`throws`** {RequiredError}
 
@@ -91,8 +91,8 @@ Name | Type |
 `organizationId?` | number |
 `organizationIds?` | Array‹number› |
 `pricelistIds?` | Array‹number› |
-`status?` | string |
-`agreementTypes?` | Array‹string› |
+`status?` | "None" &#124; "Active" &#124; "Inactive" &#124; "ActiveInactive" |
+`agreementTypes?` | Array‹"None" &#124; "LicenseAgreement" &#124; "OpenAgreement" &#124; "FrameAgreement" &#124; "SamAgreement" &#124; "ConsultingAgreement" &#124; "CloudSeatAgreement" &#124; "CloudUsageAgreement" &#124; "ReportingAgreement" &#124; "OtherAgreement" &#124; "Reserved1" &#124; "Reserved2" &#124; "Reserved3"› |
 `publisherIds?` | Array‹number› |
 `programIds?` | Array‹number› |
 `searchDate?` | Date |

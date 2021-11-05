@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Grouping](grouping.md)›*
 
-**`type`** {Array&lt;Grouping&gt;}
+**`type`** {Array<Grouping>}
 
 **`memberof`** ApiCollectionOfGrouping
 

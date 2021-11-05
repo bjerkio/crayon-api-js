@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[ResourceGroupUsageCost](resourcegroupusagecost.md)›*
 
-**`type`** {Array&lt;ResourceGroupUsageCost&gt;}
+**`type`** {Array<ResourceGroupUsageCost>}
 
 **`memberof`** ApiCollectionOfResourceGroupUsageCost
 

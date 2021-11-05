@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[Subscription](../modules/subscription.md)›*
 
-**`type`** {Array&lt;Subscription&gt;}
+**`type`** {Array<Subscription>}
 
 **`memberof`** ApiCollectionOfSubscription
 

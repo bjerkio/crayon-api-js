@@ -101,7 +101,7 @@ ___
 
 • **lines**? : *Array‹[FacebookOrderLine](facebookorderline.md)›*
 
-**`type`** {Array&lt;FacebookOrderLine&gt;}
+**`type`** {Array<FacebookOrderLine>}
 
 **`memberof`** FacebookOrder
 

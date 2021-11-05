@@ -49,7 +49,7 @@ ___
 
 • **clientSecrets**? : *Array‹[Secret](../interfaces/secret.md)›*
 
-**`type`** {Array&lt;Secret&gt;}
+**`type`** {Array<Secret>}
 
 **`memberof`** Client
 
@@ -89,7 +89,7 @@ ___
 
 • **redirectUris**? : *Array‹string›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** Client
 

@@ -79,7 +79,7 @@ ___
 
 ###  get
 
-▸ **get**(`organizationId`: number, `type?`: string, `options?`: any): *Promise‹[ApiCollectionOfAddress](../interfaces/apicollectionofaddress.md)›*
+▸ **get**(`organizationId`: number, `type?`: "None" | "Invoice" | "Delivery", `options?`: any): *Promise‹[ApiCollectionOfAddress](../interfaces/apicollectionofaddress.md)›*
 
 **`throws`** {RequiredError}
 
@@ -90,7 +90,7 @@ ___
 Name | Type |
 ------ | ------ |
 `organizationId` | number |
-`type?` | string |
+`type?` | "None" &#124; "Invoice" &#124; "Delivery" |
 `options?` | any |
 
 **Returns:** *Promise‹[ApiCollectionOfAddress](../interfaces/apicollectionofaddress.md)›*

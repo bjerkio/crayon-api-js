@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[SubscriptionResourceGroupUsageCost](subscriptionresourcegroupusagecost.md)›*
 
-**`type`** {Array&lt;SubscriptionResourceGroupUsageCost&gt;}
+**`type`** {Array<SubscriptionResourceGroupUsageCost>}
 
 **`memberof`** ApiCollectionOfSubscriptionResourceGroupUsageCost
 

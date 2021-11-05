@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[SubscriptionConversion](../modules/subscriptionconversion.md)›*
 
-**`type`** {Array&lt;SubscriptionConversion&gt;}
+**`type`** {Array<SubscriptionConversion>}
 
 **`memberof`** ApiCollectionOfSubscriptionConversion
 

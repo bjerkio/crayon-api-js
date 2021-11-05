@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[BillingCycle](billingcycle.md)›*
 
-**`type`** {Array&lt;BillingCycle&gt;}
+**`type`** {Array<BillingCycle>}
 
 **`memberof`** ApiCollectionOfBillingCycle
 

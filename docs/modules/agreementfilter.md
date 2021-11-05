@@ -39,7 +39,7 @@
 
 • **agreementIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** AgreementFilter
 
@@ -49,7 +49,7 @@ ___
 
 • **agreementTypes**? : *Array‹[AgreementTypesEnum](../enums/agreementfilter.agreementtypesenum.md)›*
 
-**`type`** {Array&lt;string&gt;}
+**`type`** {Array<string>}
 
 **`memberof`** AgreementFilter
 
@@ -89,7 +89,7 @@ ___
 
 • **organizationIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** AgreementFilter
 
@@ -119,7 +119,7 @@ ___
 
 • **pricelistIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** AgreementFilter
 
@@ -129,7 +129,7 @@ ___
 
 • **programIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** AgreementFilter
 
@@ -149,7 +149,7 @@ ___
 
 • **publisherIds**? : *Array‹number›*
 
-**`type`** {Array&lt;number&gt;}
+**`type`** {Array<number>}
 
 **`memberof`** AgreementFilter
 

@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[OrganizationAccess](../modules/organizationaccess.md)›*
 
-**`type`** {Array&lt;OrganizationAccess&gt;}
+**`type`** {Array<OrganizationAccess>}
 
 **`memberof`** ApiCollectionOfOrganizationAccess
 

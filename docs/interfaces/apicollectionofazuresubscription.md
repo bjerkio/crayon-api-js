@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[AzureSubscription](azuresubscription.md)›*
 
-**`type`** {Array&lt;AzureSubscription&gt;}
+**`type`** {Array<AzureSubscription>}
 
 **`memberof`** ApiCollectionOfAzureSubscription
 

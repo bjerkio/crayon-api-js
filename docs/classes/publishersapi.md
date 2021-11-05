@@ -79,7 +79,7 @@ ___
 
 ###  get
 
-▸ **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: string, `options?`: any): *Promise‹[ApiCollectionOfPublisher](../interfaces/apicollectionofpublisher.md)›*
+▸ **get**(`names?`: Array‹string›, `page?`: number, `pageSize?`: number, `search?`: string, `programType?`: "None" | "License" | "Report" | "Cloud", `options?`: any): *Promise‹[ApiCollectionOfPublisher](../interfaces/apicollectionofpublisher.md)›*
 
 **`throws`** {RequiredError}
 
@@ -93,7 +93,7 @@ Name | Type |
 `page?` | number |
 `pageSize?` | number |
 `search?` | string |
-`programType?` | string |
+`programType?` | "None" &#124; "License" &#124; "Report" &#124; "Cloud" |
 `options?` | any |
 
 **Returns:** *Promise‹[ApiCollectionOfPublisher](../interfaces/apicollectionofpublisher.md)›*

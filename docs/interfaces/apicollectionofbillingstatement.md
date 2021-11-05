@@ -23,7 +23,7 @@
 
 • **items**? : *Array‹[BillingStatement](../modules/billingstatement.md)›*
 
-**`type`** {Array&lt;BillingStatement&gt;}
+**`type`** {Array<BillingStatement>}
 
 **`memberof`** ApiCollectionOfBillingStatement
 
