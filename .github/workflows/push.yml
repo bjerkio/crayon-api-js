@@ -1,14 +1,10 @@
 on:
   push:
     branches:
-      - master
-      - next
-    # paths:
-    #   - "swagger.json"
-
+      - main
 jobs:
-  generate_files:
-    name: Generate and Release
+  push:
+    name: Push
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
