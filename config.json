@@ -1,6 +1,6 @@
 {
   "projectName": "crayon-api",
-  "projectVersion": "2.0.0",
+  "projectVersion": "3.0.0",
   "projectDescription": "JavaScript client library for the Crayon API",
   "projectLicenseName": "MIT",
   "moduleName": "crayon",
