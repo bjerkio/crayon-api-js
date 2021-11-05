@@ -1,3 +1,9 @@
+## 3.0.0
+
+Crayon has changed their API in a backwards-incompatible way, and along with a lot more.
+
+We're not able to provide a migration guide for this, unfortunately.
+
 ## [2.0.1](https://github.com/bjerkio/crayon-api-js/compare/v2.0.0...v2.0.1) (2020-03-13)
 
 
