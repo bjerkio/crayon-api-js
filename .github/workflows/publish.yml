@@ -7,15 +7,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - id: get_version
+        uses: battila7/get-version-action@v2
       - uses: actions/setup-node@v2
         with:
           node-version: '16.x'
+          cache: yarn
           registry-url: 'https://registry.npmjs.org'
       - run: yarn install
       - run: yarn build
-      - run:
-          yarn publish --tag ${{ github.event.release.target_commitish }}
-          --no-git-tag-version --no-commit-hooks
+      - name: Set version
+        run: |
+            yarn version --no-commit-hooks --no-git-tag-version \
+            --new-version ${{ steps.get_version.outputs.version-without-v }}
+      - run: yarn publish --ignore-scripts
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: stefanzweifel/git-auto-commit-action@v4
