@@ -1,3 +1,7 @@
+## 3.0.1
+
+* Removed unintended prefix (`ApiV1`) prefix.
+
 ## 3.0.0
 
 Crayon has changed their API in a backwards-incompatible way, and along with a lot more.
