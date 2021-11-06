@@ -29,16 +29,16 @@ import {
     CustomerTenantTypeToJSON,
 } from '../models';
 
-export interface ApiV1CustomerTenantsCustomerTenantIdAzurePlanGetRequest {
+export interface CustomerTenantsCustomerTenantIdAzurePlanGetRequest {
     customerTenantId: number;
 }
 
-export interface ApiV1CustomerTenantsExistingPostRequest {
+export interface CustomerTenantsExistingPostRequest {
     syncFromPublisher?: boolean;
     customerTenantDetailed?: CustomerTenantDetailed;
 }
 
-export interface ApiV1CustomerTenantsGetRequest {
+export interface CustomerTenantsGetRequest {
     organizationId?: number;
     publisherId?: number;
     programId?: number;
@@ -52,24 +52,24 @@ export interface ApiV1CustomerTenantsGetRequest {
     search?: string | null;
 }
 
-export interface ApiV1CustomerTenantsIdDeleteRequest {
+export interface CustomerTenantsIdDeleteRequest {
     id: number;
 }
 
-export interface ApiV1CustomerTenantsIdDetailedGetRequest {
+export interface CustomerTenantsIdDetailedGetRequest {
     id: number;
 }
 
-export interface ApiV1CustomerTenantsIdGetRequest {
+export interface CustomerTenantsIdGetRequest {
     id: number;
 }
 
-export interface ApiV1CustomerTenantsIdPutRequest {
+export interface CustomerTenantsIdPutRequest {
     id: number;
     customerTenantDetailed?: CustomerTenantDetailed;
 }
 
-export interface ApiV1CustomerTenantsPostRequest {
+export interface CustomerTenantsPostRequest {
     customerTenantDetailed?: CustomerTenantDetailed;
 }
 
@@ -80,9 +80,9 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsCustomerTenantIdAzurePlanGetRaw(requestParameters: ApiV1CustomerTenantsCustomerTenantIdAzurePlanGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzurePlan>> {
+    async customerTenantsCustomerTenantIdAzurePlanGetRaw(requestParameters: CustomerTenantsCustomerTenantIdAzurePlanGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzurePlan>> {
         if (requestParameters.customerTenantId === null || requestParameters.customerTenantId === undefined) {
-            throw new runtime.RequiredError('customerTenantId','Required parameter requestParameters.customerTenantId was null or undefined when calling apiV1CustomerTenantsCustomerTenantIdAzurePlanGet.');
+            throw new runtime.RequiredError('customerTenantId','Required parameter requestParameters.customerTenantId was null or undefined when calling customerTenantsCustomerTenantIdAzurePlanGet.');
         }
 
         const queryParameters: any = {};
@@ -94,7 +94,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants/{customerTenantId}/azurePlan`.replace(`{${"customerTenantId"}}`, encodeURIComponent(String(requestParameters.customerTenantId))),
+            path: `/CustomerTenants/{customerTenantId}/azurePlan`.replace(`{${"customerTenantId"}}`, encodeURIComponent(String(requestParameters.customerTenantId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -105,14 +105,14 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsCustomerTenantIdAzurePlanGet(requestParameters: ApiV1CustomerTenantsCustomerTenantIdAzurePlanGetRequest, initOverrides?: RequestInit): Promise<AzurePlan> {
-        const response = await this.apiV1CustomerTenantsCustomerTenantIdAzurePlanGetRaw(requestParameters, initOverrides);
+    async customerTenantsCustomerTenantIdAzurePlanGet(requestParameters: CustomerTenantsCustomerTenantIdAzurePlanGetRequest, initOverrides?: RequestInit): Promise<AzurePlan> {
+        const response = await this.customerTenantsCustomerTenantIdAzurePlanGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CustomerTenantsExistingPostRaw(requestParameters: ApiV1CustomerTenantsExistingPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
+    async customerTenantsExistingPostRaw(requestParameters: CustomerTenantsExistingPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
         const queryParameters: any = {};
 
         if (requestParameters.syncFromPublisher !== undefined) {
@@ -128,7 +128,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants/existing`,
+            path: `/CustomerTenants/existing`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -140,14 +140,14 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsExistingPost(requestParameters: ApiV1CustomerTenantsExistingPostRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.apiV1CustomerTenantsExistingPostRaw(requestParameters, initOverrides);
+    async customerTenantsExistingPost(requestParameters: CustomerTenantsExistingPostRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.customerTenantsExistingPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CustomerTenantsGetRaw(requestParameters: ApiV1CustomerTenantsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CustomerTenant>>> {
+    async customerTenantsGetRaw(requestParameters: CustomerTenantsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CustomerTenant>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -201,7 +201,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants`,
+            path: `/CustomerTenants`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -212,16 +212,16 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsGet(requestParameters: ApiV1CustomerTenantsGetRequest, initOverrides?: RequestInit): Promise<Array<CustomerTenant>> {
-        const response = await this.apiV1CustomerTenantsGetRaw(requestParameters, initOverrides);
+    async customerTenantsGet(requestParameters: CustomerTenantsGetRequest, initOverrides?: RequestInit): Promise<Array<CustomerTenant>> {
+        const response = await this.customerTenantsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CustomerTenantsIdDeleteRaw(requestParameters: ApiV1CustomerTenantsIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async customerTenantsIdDeleteRaw(requestParameters: CustomerTenantsIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1CustomerTenantsIdDelete.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdDelete.');
         }
 
         const queryParameters: any = {};
@@ -233,7 +233,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -244,15 +244,15 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsIdDelete(requestParameters: ApiV1CustomerTenantsIdDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1CustomerTenantsIdDeleteRaw(requestParameters, initOverrides);
+    async customerTenantsIdDelete(requestParameters: CustomerTenantsIdDeleteRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.customerTenantsIdDeleteRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async apiV1CustomerTenantsIdDetailedGetRaw(requestParameters: ApiV1CustomerTenantsIdDetailedGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
+    async customerTenantsIdDetailedGetRaw(requestParameters: CustomerTenantsIdDetailedGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1CustomerTenantsIdDetailedGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdDetailedGet.');
         }
 
         const queryParameters: any = {};
@@ -264,7 +264,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants/{id}/detailed`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/CustomerTenants/{id}/detailed`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -275,16 +275,16 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsIdDetailedGet(requestParameters: ApiV1CustomerTenantsIdDetailedGetRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.apiV1CustomerTenantsIdDetailedGetRaw(requestParameters, initOverrides);
+    async customerTenantsIdDetailedGet(requestParameters: CustomerTenantsIdDetailedGetRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.customerTenantsIdDetailedGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CustomerTenantsIdGetRaw(requestParameters: ApiV1CustomerTenantsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenant>> {
+    async customerTenantsIdGetRaw(requestParameters: CustomerTenantsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenant>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1CustomerTenantsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -296,7 +296,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -307,16 +307,16 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsIdGet(requestParameters: ApiV1CustomerTenantsIdGetRequest, initOverrides?: RequestInit): Promise<CustomerTenant> {
-        const response = await this.apiV1CustomerTenantsIdGetRaw(requestParameters, initOverrides);
+    async customerTenantsIdGet(requestParameters: CustomerTenantsIdGetRequest, initOverrides?: RequestInit): Promise<CustomerTenant> {
+        const response = await this.customerTenantsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CustomerTenantsIdPutRaw(requestParameters: ApiV1CustomerTenantsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
+    async customerTenantsIdPutRaw(requestParameters: CustomerTenantsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1CustomerTenantsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdPut.');
         }
 
         const queryParameters: any = {};
@@ -330,7 +330,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -342,14 +342,14 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsIdPut(requestParameters: ApiV1CustomerTenantsIdPutRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.apiV1CustomerTenantsIdPutRaw(requestParameters, initOverrides);
+    async customerTenantsIdPut(requestParameters: CustomerTenantsIdPutRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.customerTenantsIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CustomerTenantsPostRaw(requestParameters: ApiV1CustomerTenantsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
+    async customerTenantsPostRaw(requestParameters: CustomerTenantsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -361,7 +361,7 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CustomerTenants`,
+            path: `/CustomerTenants`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -373,8 +373,8 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CustomerTenantsPost(requestParameters: ApiV1CustomerTenantsPostRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.apiV1CustomerTenantsPostRaw(requestParameters, initOverrides);
+    async customerTenantsPost(requestParameters: CustomerTenantsPostRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.customerTenantsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

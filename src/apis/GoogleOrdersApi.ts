@@ -20,7 +20,7 @@ import {
     GoogleOrderToJSON,
 } from '../models';
 
-export interface ApiV1GoogleOrdersCheckoutPostRequest {
+export interface GoogleOrdersCheckoutPostRequest {
     googleOrder?: GoogleOrder;
 }
 
@@ -31,7 +31,7 @@ export class GoogleOrdersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GoogleOrdersCheckoutPostRaw(requestParameters: ApiV1GoogleOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async googleOrdersCheckoutPostRaw(requestParameters: GoogleOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -43,7 +43,7 @@ export class GoogleOrdersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/GoogleOrders/checkout`,
+            path: `/GoogleOrders/checkout`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -55,8 +55,8 @@ export class GoogleOrdersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GoogleOrdersCheckoutPost(requestParameters: ApiV1GoogleOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1GoogleOrdersCheckoutPostRaw(requestParameters, initOverrides);
+    async googleOrdersCheckoutPost(requestParameters: GoogleOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.googleOrdersCheckoutPostRaw(requestParameters, initOverrides);
     }
 
 }

@@ -20,27 +20,27 @@ import {
     InvoiceProfileToJSON,
 } from '../models';
 
-export interface ApiV1InvoiceProfilesGetRequest {
+export interface InvoiceProfilesGetRequest {
     organizationId?: number;
     page?: number;
     pageSize?: number;
     search?: string | null;
 }
 
-export interface ApiV1InvoiceProfilesIdDeleteRequest {
+export interface InvoiceProfilesIdDeleteRequest {
     id: number;
 }
 
-export interface ApiV1InvoiceProfilesIdGetRequest {
+export interface InvoiceProfilesIdGetRequest {
     id: number;
 }
 
-export interface ApiV1InvoiceProfilesIdPutRequest {
+export interface InvoiceProfilesIdPutRequest {
     id: number;
     invoiceProfile?: InvoiceProfile;
 }
 
-export interface ApiV1InvoiceProfilesPostRequest {
+export interface InvoiceProfilesPostRequest {
     invoiceProfile?: InvoiceProfile;
 }
 
@@ -51,7 +51,7 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1InvoiceProfilesGetRaw(requestParameters: ApiV1InvoiceProfilesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<InvoiceProfile>>> {
+    async invoiceProfilesGetRaw(requestParameters: InvoiceProfilesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<InvoiceProfile>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -77,7 +77,7 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/InvoiceProfiles`,
+            path: `/InvoiceProfiles`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -88,16 +88,16 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1InvoiceProfilesGet(requestParameters: ApiV1InvoiceProfilesGetRequest, initOverrides?: RequestInit): Promise<Array<InvoiceProfile>> {
-        const response = await this.apiV1InvoiceProfilesGetRaw(requestParameters, initOverrides);
+    async invoiceProfilesGet(requestParameters: InvoiceProfilesGetRequest, initOverrides?: RequestInit): Promise<Array<InvoiceProfile>> {
+        const response = await this.invoiceProfilesGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1InvoiceProfilesIdDeleteRaw(requestParameters: ApiV1InvoiceProfilesIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async invoiceProfilesIdDeleteRaw(requestParameters: InvoiceProfilesIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1InvoiceProfilesIdDelete.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invoiceProfilesIdDelete.');
         }
 
         const queryParameters: any = {};
@@ -109,7 +109,7 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -120,16 +120,16 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1InvoiceProfilesIdDelete(requestParameters: ApiV1InvoiceProfilesIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1InvoiceProfilesIdDeleteRaw(requestParameters, initOverrides);
+    async invoiceProfilesIdDelete(requestParameters: InvoiceProfilesIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.invoiceProfilesIdDeleteRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1InvoiceProfilesIdGetRaw(requestParameters: ApiV1InvoiceProfilesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
+    async invoiceProfilesIdGetRaw(requestParameters: InvoiceProfilesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1InvoiceProfilesIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invoiceProfilesIdGet.');
         }
 
         const queryParameters: any = {};
@@ -141,7 +141,7 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -152,16 +152,16 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1InvoiceProfilesIdGet(requestParameters: ApiV1InvoiceProfilesIdGetRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
-        const response = await this.apiV1InvoiceProfilesIdGetRaw(requestParameters, initOverrides);
+    async invoiceProfilesIdGet(requestParameters: InvoiceProfilesIdGetRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
+        const response = await this.invoiceProfilesIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1InvoiceProfilesIdPutRaw(requestParameters: ApiV1InvoiceProfilesIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
+    async invoiceProfilesIdPutRaw(requestParameters: InvoiceProfilesIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1InvoiceProfilesIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invoiceProfilesIdPut.');
         }
 
         const queryParameters: any = {};
@@ -175,7 +175,7 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -187,14 +187,14 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1InvoiceProfilesIdPut(requestParameters: ApiV1InvoiceProfilesIdPutRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
-        const response = await this.apiV1InvoiceProfilesIdPutRaw(requestParameters, initOverrides);
+    async invoiceProfilesIdPut(requestParameters: InvoiceProfilesIdPutRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
+        const response = await this.invoiceProfilesIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1InvoiceProfilesPostRaw(requestParameters: ApiV1InvoiceProfilesPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
+    async invoiceProfilesPostRaw(requestParameters: InvoiceProfilesPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -206,7 +206,7 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/InvoiceProfiles`,
+            path: `/InvoiceProfiles`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -218,8 +218,8 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1InvoiceProfilesPost(requestParameters: ApiV1InvoiceProfilesPostRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
-        const response = await this.apiV1InvoiceProfilesPostRaw(requestParameters, initOverrides);
+    async invoiceProfilesPost(requestParameters: InvoiceProfilesPostRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
+        const response = await this.invoiceProfilesPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

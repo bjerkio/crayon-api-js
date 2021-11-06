@@ -20,26 +20,26 @@ import {
     ClientToJSON,
 } from '../models';
 
-export interface ApiV1ClientsClientIdDeleteRequest {
+export interface ClientsClientIdDeleteRequest {
     clientId: string | null;
 }
 
-export interface ApiV1ClientsClientIdGetRequest {
+export interface ClientsClientIdGetRequest {
     clientId: string | null;
 }
 
-export interface ApiV1ClientsClientIdPutRequest {
+export interface ClientsClientIdPutRequest {
     clientId: string | null;
     client?: Client;
 }
 
-export interface ApiV1ClientsGetRequest {
+export interface ClientsGetRequest {
     page?: number;
     pageSize?: number;
     search?: string | null;
 }
 
-export interface ApiV1ClientsPostRequest {
+export interface ClientsPostRequest {
     client?: Client;
 }
 
@@ -50,9 +50,9 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ClientsClientIdDeleteRaw(requestParameters: ApiV1ClientsClientIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async clientsClientIdDeleteRaw(requestParameters: ClientsClientIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.clientId === null || requestParameters.clientId === undefined) {
-            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling apiV1ClientsClientIdDelete.');
+            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling clientsClientIdDelete.');
         }
 
         const queryParameters: any = {};
@@ -64,7 +64,7 @@ export class ClientsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
+            path: `/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -75,16 +75,16 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ClientsClientIdDelete(requestParameters: ApiV1ClientsClientIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1ClientsClientIdDeleteRaw(requestParameters, initOverrides);
+    async clientsClientIdDelete(requestParameters: ClientsClientIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.clientsClientIdDeleteRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ClientsClientIdGetRaw(requestParameters: ApiV1ClientsClientIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
+    async clientsClientIdGetRaw(requestParameters: ClientsClientIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
         if (requestParameters.clientId === null || requestParameters.clientId === undefined) {
-            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling apiV1ClientsClientIdGet.');
+            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling clientsClientIdGet.');
         }
 
         const queryParameters: any = {};
@@ -96,7 +96,7 @@ export class ClientsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
+            path: `/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -107,16 +107,16 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ClientsClientIdGet(requestParameters: ApiV1ClientsClientIdGetRequest, initOverrides?: RequestInit): Promise<Client> {
-        const response = await this.apiV1ClientsClientIdGetRaw(requestParameters, initOverrides);
+    async clientsClientIdGet(requestParameters: ClientsClientIdGetRequest, initOverrides?: RequestInit): Promise<Client> {
+        const response = await this.clientsClientIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ClientsClientIdPutRaw(requestParameters: ApiV1ClientsClientIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
+    async clientsClientIdPutRaw(requestParameters: ClientsClientIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
         if (requestParameters.clientId === null || requestParameters.clientId === undefined) {
-            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling apiV1ClientsClientIdPut.');
+            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling clientsClientIdPut.');
         }
 
         const queryParameters: any = {};
@@ -130,7 +130,7 @@ export class ClientsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
+            path: `/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -142,14 +142,14 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ClientsClientIdPut(requestParameters: ApiV1ClientsClientIdPutRequest, initOverrides?: RequestInit): Promise<Client> {
-        const response = await this.apiV1ClientsClientIdPutRaw(requestParameters, initOverrides);
+    async clientsClientIdPut(requestParameters: ClientsClientIdPutRequest, initOverrides?: RequestInit): Promise<Client> {
+        const response = await this.clientsClientIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ClientsGetRaw(requestParameters: ApiV1ClientsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Client>>> {
+    async clientsGetRaw(requestParameters: ClientsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Client>>> {
         const queryParameters: any = {};
 
         if (requestParameters.page !== undefined) {
@@ -171,7 +171,7 @@ export class ClientsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Clients`,
+            path: `/Clients`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -182,14 +182,14 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ClientsGet(requestParameters: ApiV1ClientsGetRequest, initOverrides?: RequestInit): Promise<Array<Client>> {
-        const response = await this.apiV1ClientsGetRaw(requestParameters, initOverrides);
+    async clientsGet(requestParameters: ClientsGetRequest, initOverrides?: RequestInit): Promise<Array<Client>> {
+        const response = await this.clientsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ClientsPostRaw(requestParameters: ApiV1ClientsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
+    async clientsPostRaw(requestParameters: ClientsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -201,7 +201,7 @@ export class ClientsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Clients`,
+            path: `/Clients`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -213,8 +213,8 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ClientsPost(requestParameters: ApiV1ClientsPostRequest, initOverrides?: RequestInit): Promise<Client> {
-        const response = await this.apiV1ClientsPostRaw(requestParameters, initOverrides);
+    async clientsPost(requestParameters: ClientsPostRequest, initOverrides?: RequestInit): Promise<Client> {
+        const response = await this.clientsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

@@ -59,7 +59,7 @@ import {
     SubscriptionTransitionResponseToJSON,
 } from '../models';
 
-export interface ApiV1SubscriptionsGetRequest {
+export interface SubscriptionsGetRequest {
     organizationId?: number;
     customerTenantId?: number;
     publisherId?: number;
@@ -74,69 +74,69 @@ export interface ApiV1SubscriptionsGetRequest {
     sortOrder?: SortOrder;
 }
 
-export interface ApiV1SubscriptionsIdActivationlinkGetRequest {
+export interface SubscriptionsIdActivationlinkGetRequest {
     id: number;
 }
 
-export interface ApiV1SubscriptionsIdGetRequest {
+export interface SubscriptionsIdGetRequest {
     id: number;
 }
 
-export interface ApiV1SubscriptionsIdPutRequest {
+export interface SubscriptionsIdPutRequest {
     id: number;
     subscriptionDetailed?: SubscriptionDetailed;
 }
 
-export interface ApiV1SubscriptionsIdTransitionEligibilitiesGetRequest {
+export interface SubscriptionsIdTransitionEligibilitiesGetRequest {
     id: number;
 }
 
-export interface ApiV1SubscriptionsIdTransitionPostRequest {
+export interface SubscriptionsIdTransitionPostRequest {
     id: number;
     subscriptionTransition?: SubscriptionTransition;
 }
 
-export interface ApiV1SubscriptionsPostRequest {
+export interface SubscriptionsPostRequest {
     subscriptionDetailed?: SubscriptionDetailed;
 }
 
-export interface ApiV1SubscriptionsReservedInstanceSubscriptionIdIdGetRequest {
+export interface SubscriptionsReservedInstanceSubscriptionIdIdGetRequest {
     id: number;
     reservedInstance: boolean;
 }
 
-export interface ApiV1SubscriptionsReservedInstanceSubscriptionIdIdPostRequest {
+export interface SubscriptionsReservedInstanceSubscriptionIdIdPostRequest {
     id: number;
     reservedInstance: boolean;
 }
 
-export interface ApiV1SubscriptionsSubscriptionIdAddonOffersGetRequest {
+export interface SubscriptionsSubscriptionIdAddonOffersGetRequest {
     subscriptionId: number;
 }
 
-export interface ApiV1SubscriptionsSubscriptionIdAddonsPostRequest {
+export interface SubscriptionsSubscriptionIdAddonsPostRequest {
     subscriptionId: number;
     postSubscriptionAddOn?: PostSubscriptionAddOn;
 }
 
-export interface ApiV1SubscriptionsSubscriptionIdConversionsGetRequest {
+export interface SubscriptionsSubscriptionIdConversionsGetRequest {
     subscriptionId: number;
 }
 
-export interface ApiV1SubscriptionsSubscriptionIdConversionsPostRequest {
+export interface SubscriptionsSubscriptionIdConversionsPostRequest {
     subscriptionId: number;
     subscriptionConversion?: SubscriptionConversion;
 }
 
-export interface ApiV1SubscriptionsSubscriptionIdTagsDeleteRequest {
+export interface SubscriptionsSubscriptionIdTagsDeleteRequest {
     subscriptionId: number;
 }
 
-export interface ApiV1SubscriptionsSubscriptionIdTagsGetRequest {
+export interface SubscriptionsSubscriptionIdTagsGetRequest {
     subscriptionId: number;
 }
 
-export interface ApiV1SubscriptionsSubscriptionIdTagsPostRequest {
+export interface SubscriptionsSubscriptionIdTagsPostRequest {
     subscriptionId: string;
     subscriptionTags?: SubscriptionTags;
 }
@@ -148,7 +148,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsGetRaw(requestParameters: ApiV1SubscriptionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Subscription>>> {
+    async subscriptionsGetRaw(requestParameters: SubscriptionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Subscription>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -206,7 +206,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions`,
+            path: `/Subscriptions`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -217,16 +217,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsGet(requestParameters: ApiV1SubscriptionsGetRequest, initOverrides?: RequestInit): Promise<Array<Subscription>> {
-        const response = await this.apiV1SubscriptionsGetRaw(requestParameters, initOverrides);
+    async subscriptionsGet(requestParameters: SubscriptionsGetRequest, initOverrides?: RequestInit): Promise<Array<Subscription>> {
+        const response = await this.subscriptionsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsIdActivationlinkGetRaw(requestParameters: ApiV1SubscriptionsIdActivationlinkGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ActivationLink>> {
+    async subscriptionsIdActivationlinkGetRaw(requestParameters: SubscriptionsIdActivationlinkGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ActivationLink>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1SubscriptionsIdActivationlinkGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdActivationlinkGet.');
         }
 
         const queryParameters: any = {};
@@ -238,7 +238,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{id}/activationlink`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Subscriptions/{id}/activationlink`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -249,16 +249,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsIdActivationlinkGet(requestParameters: ApiV1SubscriptionsIdActivationlinkGetRequest, initOverrides?: RequestInit): Promise<ActivationLink> {
-        const response = await this.apiV1SubscriptionsIdActivationlinkGetRaw(requestParameters, initOverrides);
+    async subscriptionsIdActivationlinkGet(requestParameters: SubscriptionsIdActivationlinkGetRequest, initOverrides?: RequestInit): Promise<ActivationLink> {
+        const response = await this.subscriptionsIdActivationlinkGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsIdGetRaw(requestParameters: ApiV1SubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+    async subscriptionsIdGetRaw(requestParameters: SubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1SubscriptionsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -270,7 +270,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Subscriptions/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -281,16 +281,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsIdGet(requestParameters: ApiV1SubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.apiV1SubscriptionsIdGetRaw(requestParameters, initOverrides);
+    async subscriptionsIdGet(requestParameters: SubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.subscriptionsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsIdPutRaw(requestParameters: ApiV1SubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+    async subscriptionsIdPutRaw(requestParameters: SubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1SubscriptionsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdPut.');
         }
 
         const queryParameters: any = {};
@@ -304,7 +304,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Subscriptions/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -316,16 +316,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsIdPut(requestParameters: ApiV1SubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.apiV1SubscriptionsIdPutRaw(requestParameters, initOverrides);
+    async subscriptionsIdPut(requestParameters: SubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.subscriptionsIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsIdTransitionEligibilitiesGetRaw(requestParameters: ApiV1SubscriptionsIdTransitionEligibilitiesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionTransitionEligibility>>> {
+    async subscriptionsIdTransitionEligibilitiesGetRaw(requestParameters: SubscriptionsIdTransitionEligibilitiesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionTransitionEligibility>>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1SubscriptionsIdTransitionEligibilitiesGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdTransitionEligibilitiesGet.');
         }
 
         const queryParameters: any = {};
@@ -337,7 +337,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{id}/transition-eligibilities`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Subscriptions/{id}/transition-eligibilities`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -348,16 +348,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsIdTransitionEligibilitiesGet(requestParameters: ApiV1SubscriptionsIdTransitionEligibilitiesGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionTransitionEligibility>> {
-        const response = await this.apiV1SubscriptionsIdTransitionEligibilitiesGetRaw(requestParameters, initOverrides);
+    async subscriptionsIdTransitionEligibilitiesGet(requestParameters: SubscriptionsIdTransitionEligibilitiesGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionTransitionEligibility>> {
+        const response = await this.subscriptionsIdTransitionEligibilitiesGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsIdTransitionPostRaw(requestParameters: ApiV1SubscriptionsIdTransitionPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTransitionResponse>> {
+    async subscriptionsIdTransitionPostRaw(requestParameters: SubscriptionsIdTransitionPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTransitionResponse>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1SubscriptionsIdTransitionPost.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdTransitionPost.');
         }
 
         const queryParameters: any = {};
@@ -371,7 +371,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{id}/transition`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Subscriptions/{id}/transition`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -383,14 +383,14 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsIdTransitionPost(requestParameters: ApiV1SubscriptionsIdTransitionPostRequest, initOverrides?: RequestInit): Promise<SubscriptionTransitionResponse> {
-        const response = await this.apiV1SubscriptionsIdTransitionPostRaw(requestParameters, initOverrides);
+    async subscriptionsIdTransitionPost(requestParameters: SubscriptionsIdTransitionPostRequest, initOverrides?: RequestInit): Promise<SubscriptionTransitionResponse> {
+        const response = await this.subscriptionsIdTransitionPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsPostRaw(requestParameters: ApiV1SubscriptionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+    async subscriptionsPostRaw(requestParameters: SubscriptionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -402,7 +402,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions`,
+            path: `/Subscriptions`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -414,20 +414,20 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsPost(requestParameters: ApiV1SubscriptionsPostRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.apiV1SubscriptionsPostRaw(requestParameters, initOverrides);
+    async subscriptionsPost(requestParameters: SubscriptionsPostRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.subscriptionsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsReservedInstanceSubscriptionIdIdGetRaw(requestParameters: ApiV1SubscriptionsReservedInstanceSubscriptionIdIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<boolean>>> {
+    async subscriptionsReservedInstanceSubscriptionIdIdGetRaw(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<boolean>>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1SubscriptionsReservedInstanceSubscriptionIdIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdGet.');
         }
 
         if (requestParameters.reservedInstance === null || requestParameters.reservedInstance === undefined) {
-            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling apiV1SubscriptionsReservedInstanceSubscriptionIdIdGet.');
+            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdGet.');
         }
 
         const queryParameters: any = {};
@@ -439,7 +439,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
+            path: `/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -450,20 +450,20 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsReservedInstanceSubscriptionIdIdGet(requestParameters: ApiV1SubscriptionsReservedInstanceSubscriptionIdIdGetRequest, initOverrides?: RequestInit): Promise<Array<boolean>> {
-        const response = await this.apiV1SubscriptionsReservedInstanceSubscriptionIdIdGetRaw(requestParameters, initOverrides);
+    async subscriptionsReservedInstanceSubscriptionIdIdGet(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdGetRequest, initOverrides?: RequestInit): Promise<Array<boolean>> {
+        const response = await this.subscriptionsReservedInstanceSubscriptionIdIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsReservedInstanceSubscriptionIdIdPostRaw(requestParameters: ApiV1SubscriptionsReservedInstanceSubscriptionIdIdPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async subscriptionsReservedInstanceSubscriptionIdIdPostRaw(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1SubscriptionsReservedInstanceSubscriptionIdIdPost.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdPost.');
         }
 
         if (requestParameters.reservedInstance === null || requestParameters.reservedInstance === undefined) {
-            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling apiV1SubscriptionsReservedInstanceSubscriptionIdIdPost.');
+            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdPost.');
         }
 
         const queryParameters: any = {};
@@ -475,7 +475,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
+            path: `/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -486,16 +486,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsReservedInstanceSubscriptionIdIdPost(requestParameters: ApiV1SubscriptionsReservedInstanceSubscriptionIdIdPostRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1SubscriptionsReservedInstanceSubscriptionIdIdPostRaw(requestParameters, initOverrides);
+    async subscriptionsReservedInstanceSubscriptionIdIdPost(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdPostRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.subscriptionsReservedInstanceSubscriptionIdIdPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdAddonOffersGetRaw(requestParameters: ApiV1SubscriptionsSubscriptionIdAddonOffersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionAddOnOffer>>> {
+    async subscriptionsSubscriptionIdAddonOffersGetRaw(requestParameters: SubscriptionsSubscriptionIdAddonOffersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionAddOnOffer>>> {
         if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling apiV1SubscriptionsSubscriptionIdAddonOffersGet.');
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdAddonOffersGet.');
         }
 
         const queryParameters: any = {};
@@ -507,7 +507,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{subscriptionId}/addon-offers`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            path: `/Subscriptions/{subscriptionId}/addon-offers`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -518,16 +518,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdAddonOffersGet(requestParameters: ApiV1SubscriptionsSubscriptionIdAddonOffersGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionAddOnOffer>> {
-        const response = await this.apiV1SubscriptionsSubscriptionIdAddonOffersGetRaw(requestParameters, initOverrides);
+    async subscriptionsSubscriptionIdAddonOffersGet(requestParameters: SubscriptionsSubscriptionIdAddonOffersGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionAddOnOffer>> {
+        const response = await this.subscriptionsSubscriptionIdAddonOffersGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdAddonsPostRaw(requestParameters: ApiV1SubscriptionsSubscriptionIdAddonsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async subscriptionsSubscriptionIdAddonsPostRaw(requestParameters: SubscriptionsSubscriptionIdAddonsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling apiV1SubscriptionsSubscriptionIdAddonsPost.');
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdAddonsPost.');
         }
 
         const queryParameters: any = {};
@@ -541,7 +541,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{subscriptionId}/addons`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            path: `/Subscriptions/{subscriptionId}/addons`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -553,16 +553,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdAddonsPost(requestParameters: ApiV1SubscriptionsSubscriptionIdAddonsPostRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1SubscriptionsSubscriptionIdAddonsPostRaw(requestParameters, initOverrides);
+    async subscriptionsSubscriptionIdAddonsPost(requestParameters: SubscriptionsSubscriptionIdAddonsPostRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.subscriptionsSubscriptionIdAddonsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdConversionsGetRaw(requestParameters: ApiV1SubscriptionsSubscriptionIdConversionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionConversion>>> {
+    async subscriptionsSubscriptionIdConversionsGetRaw(requestParameters: SubscriptionsSubscriptionIdConversionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionConversion>>> {
         if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling apiV1SubscriptionsSubscriptionIdConversionsGet.');
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdConversionsGet.');
         }
 
         const queryParameters: any = {};
@@ -574,7 +574,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            path: `/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -585,16 +585,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdConversionsGet(requestParameters: ApiV1SubscriptionsSubscriptionIdConversionsGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionConversion>> {
-        const response = await this.apiV1SubscriptionsSubscriptionIdConversionsGetRaw(requestParameters, initOverrides);
+    async subscriptionsSubscriptionIdConversionsGet(requestParameters: SubscriptionsSubscriptionIdConversionsGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionConversion>> {
+        const response = await this.subscriptionsSubscriptionIdConversionsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdConversionsPostRaw(requestParameters: ApiV1SubscriptionsSubscriptionIdConversionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+    async subscriptionsSubscriptionIdConversionsPostRaw(requestParameters: SubscriptionsSubscriptionIdConversionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
         if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling apiV1SubscriptionsSubscriptionIdConversionsPost.');
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdConversionsPost.');
         }
 
         const queryParameters: any = {};
@@ -608,7 +608,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            path: `/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -620,16 +620,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdConversionsPost(requestParameters: ApiV1SubscriptionsSubscriptionIdConversionsPostRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.apiV1SubscriptionsSubscriptionIdConversionsPostRaw(requestParameters, initOverrides);
+    async subscriptionsSubscriptionIdConversionsPost(requestParameters: SubscriptionsSubscriptionIdConversionsPostRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.subscriptionsSubscriptionIdConversionsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdTagsDeleteRaw(requestParameters: ApiV1SubscriptionsSubscriptionIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async subscriptionsSubscriptionIdTagsDeleteRaw(requestParameters: SubscriptionsSubscriptionIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling apiV1SubscriptionsSubscriptionIdTagsDelete.');
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdTagsDelete.');
         }
 
         const queryParameters: any = {};
@@ -641,7 +641,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -652,15 +652,15 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdTagsDelete(requestParameters: ApiV1SubscriptionsSubscriptionIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1SubscriptionsSubscriptionIdTagsDeleteRaw(requestParameters, initOverrides);
+    async subscriptionsSubscriptionIdTagsDelete(requestParameters: SubscriptionsSubscriptionIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.subscriptionsSubscriptionIdTagsDeleteRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdTagsGetRaw(requestParameters: ApiV1SubscriptionsSubscriptionIdTagsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTags>> {
+    async subscriptionsSubscriptionIdTagsGetRaw(requestParameters: SubscriptionsSubscriptionIdTagsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTags>> {
         if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling apiV1SubscriptionsSubscriptionIdTagsGet.');
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdTagsGet.');
         }
 
         const queryParameters: any = {};
@@ -672,7 +672,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -683,16 +683,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdTagsGet(requestParameters: ApiV1SubscriptionsSubscriptionIdTagsGetRequest, initOverrides?: RequestInit): Promise<SubscriptionTags> {
-        const response = await this.apiV1SubscriptionsSubscriptionIdTagsGetRaw(requestParameters, initOverrides);
+    async subscriptionsSubscriptionIdTagsGet(requestParameters: SubscriptionsSubscriptionIdTagsGetRequest, initOverrides?: RequestInit): Promise<SubscriptionTags> {
+        const response = await this.subscriptionsSubscriptionIdTagsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdTagsPostRaw(requestParameters: ApiV1SubscriptionsSubscriptionIdTagsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async subscriptionsSubscriptionIdTagsPostRaw(requestParameters: SubscriptionsSubscriptionIdTagsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling apiV1SubscriptionsSubscriptionIdTagsPost.');
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdTagsPost.');
         }
 
         const queryParameters: any = {};
@@ -706,7 +706,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -718,14 +718,14 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionIdTagsPost(requestParameters: ApiV1SubscriptionsSubscriptionIdTagsPostRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1SubscriptionsSubscriptionIdTagsPostRaw(requestParameters, initOverrides);
+    async subscriptionsSubscriptionIdTagsPost(requestParameters: SubscriptionsSubscriptionIdTagsPostRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.subscriptionsSubscriptionIdTagsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionpricetypesGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ObjectReference>>> {
+    async subscriptionsSubscriptionpricetypesGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ObjectReference>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -735,7 +735,7 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Subscriptions/subscriptionpricetypes`,
+            path: `/Subscriptions/subscriptionpricetypes`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -746,8 +746,8 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SubscriptionsSubscriptionpricetypesGet(initOverrides?: RequestInit): Promise<Array<ObjectReference>> {
-        const response = await this.apiV1SubscriptionsSubscriptionpricetypesGetRaw(initOverrides);
+    async subscriptionsSubscriptionpricetypesGet(initOverrides?: RequestInit): Promise<Array<ObjectReference>> {
+        const response = await this.subscriptionsSubscriptionpricetypesGetRaw(initOverrides);
         return await response.value();
     }
 

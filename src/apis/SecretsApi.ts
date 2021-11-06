@@ -20,12 +20,12 @@ import {
     SecretToJSON,
 } from '../models';
 
-export interface ApiV1SecretsDeleteRequest {
+export interface SecretsDeleteRequest {
     clientId?: string | null;
     secretId?: number;
 }
 
-export interface ApiV1SecretsPostRequest {
+export interface SecretsPostRequest {
     secret?: Secret;
 }
 
@@ -36,7 +36,7 @@ export class SecretsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SecretsDeleteRaw(requestParameters: ApiV1SecretsDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async secretsDeleteRaw(requestParameters: SecretsDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         const queryParameters: any = {};
 
         if (requestParameters.clientId !== undefined) {
@@ -54,7 +54,7 @@ export class SecretsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Secrets`,
+            path: `/Secrets`,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -65,14 +65,14 @@ export class SecretsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SecretsDelete(requestParameters: ApiV1SecretsDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1SecretsDeleteRaw(requestParameters, initOverrides);
+    async secretsDelete(requestParameters: SecretsDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.secretsDeleteRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1SecretsPostRaw(requestParameters: ApiV1SecretsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Secret>> {
+    async secretsPostRaw(requestParameters: SecretsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Secret>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -84,7 +84,7 @@ export class SecretsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Secrets`,
+            path: `/Secrets`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -96,8 +96,8 @@ export class SecretsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1SecretsPost(requestParameters: ApiV1SecretsPostRequest, initOverrides?: RequestInit): Promise<Secret> {
-        const response = await this.apiV1SecretsPostRaw(requestParameters, initOverrides);
+    async secretsPost(requestParameters: SecretsPostRequest, initOverrides?: RequestInit): Promise<Secret> {
+        const response = await this.secretsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

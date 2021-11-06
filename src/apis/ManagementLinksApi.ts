@@ -23,14 +23,14 @@ import {
     ManagementLinkGroupedToJSON,
 } from '../models';
 
-export interface ApiV1ManagementLinksGetRequest {
+export interface ManagementLinksGetRequest {
     subscriptionIds?: Array<number> | null;
     resellerCustomerIds?: Array<number> | null;
     page?: number;
     pageSize?: number;
 }
 
-export interface ApiV1ManagementLinksGroupedGetRequest {
+export interface ManagementLinksGroupedGetRequest {
     subscriptionIds?: Array<number> | null;
     resellerCustomerIds?: Array<number> | null;
     page?: number;
@@ -44,7 +44,7 @@ export class ManagementLinksApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ManagementLinksGetRaw(requestParameters: ApiV1ManagementLinksGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLink>>> {
+    async managementLinksGetRaw(requestParameters: ManagementLinksGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLink>>> {
         const queryParameters: any = {};
 
         if (requestParameters.subscriptionIds) {
@@ -70,7 +70,7 @@ export class ManagementLinksApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ManagementLinks`,
+            path: `/ManagementLinks`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -81,14 +81,14 @@ export class ManagementLinksApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ManagementLinksGet(requestParameters: ApiV1ManagementLinksGetRequest, initOverrides?: RequestInit): Promise<Array<ManagementLink>> {
-        const response = await this.apiV1ManagementLinksGetRaw(requestParameters, initOverrides);
+    async managementLinksGet(requestParameters: ManagementLinksGetRequest, initOverrides?: RequestInit): Promise<Array<ManagementLink>> {
+        const response = await this.managementLinksGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ManagementLinksGroupedGetRaw(requestParameters: ApiV1ManagementLinksGroupedGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLinkGrouped>>> {
+    async managementLinksGroupedGetRaw(requestParameters: ManagementLinksGroupedGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLinkGrouped>>> {
         const queryParameters: any = {};
 
         if (requestParameters.subscriptionIds) {
@@ -114,7 +114,7 @@ export class ManagementLinksApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ManagementLinks/grouped`,
+            path: `/ManagementLinks/grouped`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -125,8 +125,8 @@ export class ManagementLinksApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ManagementLinksGroupedGet(requestParameters: ApiV1ManagementLinksGroupedGetRequest, initOverrides?: RequestInit): Promise<Array<ManagementLinkGrouped>> {
-        const response = await this.apiV1ManagementLinksGroupedGetRaw(requestParameters, initOverrides);
+    async managementLinksGroupedGet(requestParameters: ManagementLinksGroupedGetRequest, initOverrides?: RequestInit): Promise<Array<ManagementLinkGrouped>> {
+        const response = await this.managementLinksGroupedGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

@@ -20,27 +20,27 @@ import {
     ConsumerToJSON,
 } from '../models';
 
-export interface ApiV1ConsumersGetRequest {
+export interface ConsumersGetRequest {
     organizationId?: number;
     search?: string | null;
     page?: number;
     pageSize?: number;
 }
 
-export interface ApiV1ConsumersIdDeleteRequest {
+export interface ConsumersIdDeleteRequest {
     id: number;
 }
 
-export interface ApiV1ConsumersIdGetRequest {
+export interface ConsumersIdGetRequest {
     id: number;
 }
 
-export interface ApiV1ConsumersIdPutRequest {
+export interface ConsumersIdPutRequest {
     id: number;
     consumer?: Consumer;
 }
 
-export interface ApiV1ConsumersPostRequest {
+export interface ConsumersPostRequest {
     consumer?: Consumer;
 }
 
@@ -51,7 +51,7 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ConsumersGetRaw(requestParameters: ApiV1ConsumersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Consumer>>> {
+    async consumersGetRaw(requestParameters: ConsumersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Consumer>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -77,7 +77,7 @@ export class ConsumersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Consumers`,
+            path: `/Consumers`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -88,16 +88,16 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ConsumersGet(requestParameters: ApiV1ConsumersGetRequest, initOverrides?: RequestInit): Promise<Array<Consumer>> {
-        const response = await this.apiV1ConsumersGetRaw(requestParameters, initOverrides);
+    async consumersGet(requestParameters: ConsumersGetRequest, initOverrides?: RequestInit): Promise<Array<Consumer>> {
+        const response = await this.consumersGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ConsumersIdDeleteRaw(requestParameters: ApiV1ConsumersIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async consumersIdDeleteRaw(requestParameters: ConsumersIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ConsumersIdDelete.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling consumersIdDelete.');
         }
 
         const queryParameters: any = {};
@@ -109,7 +109,7 @@ export class ConsumersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -120,16 +120,16 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ConsumersIdDelete(requestParameters: ApiV1ConsumersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1ConsumersIdDeleteRaw(requestParameters, initOverrides);
+    async consumersIdDelete(requestParameters: ConsumersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.consumersIdDeleteRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ConsumersIdGetRaw(requestParameters: ApiV1ConsumersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
+    async consumersIdGetRaw(requestParameters: ConsumersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ConsumersIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling consumersIdGet.');
         }
 
         const queryParameters: any = {};
@@ -141,7 +141,7 @@ export class ConsumersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -152,16 +152,16 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ConsumersIdGet(requestParameters: ApiV1ConsumersIdGetRequest, initOverrides?: RequestInit): Promise<Consumer> {
-        const response = await this.apiV1ConsumersIdGetRaw(requestParameters, initOverrides);
+    async consumersIdGet(requestParameters: ConsumersIdGetRequest, initOverrides?: RequestInit): Promise<Consumer> {
+        const response = await this.consumersIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ConsumersIdPutRaw(requestParameters: ApiV1ConsumersIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
+    async consumersIdPutRaw(requestParameters: ConsumersIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ConsumersIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling consumersIdPut.');
         }
 
         const queryParameters: any = {};
@@ -175,7 +175,7 @@ export class ConsumersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -187,14 +187,14 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ConsumersIdPut(requestParameters: ApiV1ConsumersIdPutRequest, initOverrides?: RequestInit): Promise<Consumer> {
-        const response = await this.apiV1ConsumersIdPutRaw(requestParameters, initOverrides);
+    async consumersIdPut(requestParameters: ConsumersIdPutRequest, initOverrides?: RequestInit): Promise<Consumer> {
+        const response = await this.consumersIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ConsumersPostRaw(requestParameters: ApiV1ConsumersPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
+    async consumersPostRaw(requestParameters: ConsumersPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -206,7 +206,7 @@ export class ConsumersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Consumers`,
+            path: `/Consumers`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -218,8 +218,8 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ConsumersPost(requestParameters: ApiV1ConsumersPostRequest, initOverrides?: RequestInit): Promise<Consumer> {
-        const response = await this.apiV1ConsumersPostRaw(requestParameters, initOverrides);
+    async consumersPost(requestParameters: ConsumersPostRequest, initOverrides?: RequestInit): Promise<Consumer> {
+        const response = await this.consumersPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

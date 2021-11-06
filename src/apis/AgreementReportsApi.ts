@@ -20,12 +20,12 @@ import {
     AgreementReportToJSON,
 } from '../models';
 
-export interface ApiV1AgreementReportsAgreementIdPutRequest {
+export interface AgreementReportsAgreementIdPutRequest {
     agreementId: number;
     agreementReport?: AgreementReport;
 }
 
-export interface ApiV1AgreementReportsProductContainerIdGetRequest {
+export interface AgreementReportsProductContainerIdGetRequest {
     productContainerId: number;
 }
 
@@ -36,9 +36,9 @@ export class AgreementReportsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementReportsAgreementIdPutRaw(requestParameters: ApiV1AgreementReportsAgreementIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AgreementReport>> {
+    async agreementReportsAgreementIdPutRaw(requestParameters: AgreementReportsAgreementIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AgreementReport>> {
         if (requestParameters.agreementId === null || requestParameters.agreementId === undefined) {
-            throw new runtime.RequiredError('agreementId','Required parameter requestParameters.agreementId was null or undefined when calling apiV1AgreementReportsAgreementIdPut.');
+            throw new runtime.RequiredError('agreementId','Required parameter requestParameters.agreementId was null or undefined when calling agreementReportsAgreementIdPut.');
         }
 
         const queryParameters: any = {};
@@ -52,7 +52,7 @@ export class AgreementReportsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AgreementReports/{agreementId}`.replace(`{${"agreementId"}}`, encodeURIComponent(String(requestParameters.agreementId))),
+            path: `/AgreementReports/{agreementId}`.replace(`{${"agreementId"}}`, encodeURIComponent(String(requestParameters.agreementId))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -64,16 +64,16 @@ export class AgreementReportsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementReportsAgreementIdPut(requestParameters: ApiV1AgreementReportsAgreementIdPutRequest, initOverrides?: RequestInit): Promise<AgreementReport> {
-        const response = await this.apiV1AgreementReportsAgreementIdPutRaw(requestParameters, initOverrides);
+    async agreementReportsAgreementIdPut(requestParameters: AgreementReportsAgreementIdPutRequest, initOverrides?: RequestInit): Promise<AgreementReport> {
+        const response = await this.agreementReportsAgreementIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AgreementReportsProductContainerIdGetRaw(requestParameters: ApiV1AgreementReportsProductContainerIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementReport>>> {
+    async agreementReportsProductContainerIdGetRaw(requestParameters: AgreementReportsProductContainerIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementReport>>> {
         if (requestParameters.productContainerId === null || requestParameters.productContainerId === undefined) {
-            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling apiV1AgreementReportsProductContainerIdGet.');
+            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling agreementReportsProductContainerIdGet.');
         }
 
         const queryParameters: any = {};
@@ -85,7 +85,7 @@ export class AgreementReportsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AgreementReports/{productContainerId}`.replace(`{${"productContainerId"}}`, encodeURIComponent(String(requestParameters.productContainerId))),
+            path: `/AgreementReports/{productContainerId}`.replace(`{${"productContainerId"}}`, encodeURIComponent(String(requestParameters.productContainerId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -96,8 +96,8 @@ export class AgreementReportsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementReportsProductContainerIdGet(requestParameters: ApiV1AgreementReportsProductContainerIdGetRequest, initOverrides?: RequestInit): Promise<Array<AgreementReport>> {
-        const response = await this.apiV1AgreementReportsProductContainerIdGetRaw(requestParameters, initOverrides);
+    async agreementReportsProductContainerIdGet(requestParameters: AgreementReportsProductContainerIdGetRequest, initOverrides?: RequestInit): Promise<Array<AgreementReport>> {
+        const response = await this.agreementReportsProductContainerIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

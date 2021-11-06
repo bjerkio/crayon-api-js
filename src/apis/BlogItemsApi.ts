@@ -20,7 +20,7 @@ import {
     BlogItemToJSON,
 } from '../models';
 
-export interface ApiV1BlogItemsGetRequest {
+export interface BlogItemsGetRequest {
     count?: number;
     organizationId?: number;
 }
@@ -32,7 +32,7 @@ export class BlogItemsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1BlogItemsGetRaw(requestParameters: ApiV1BlogItemsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BlogItem>>> {
+    async blogItemsGetRaw(requestParameters: BlogItemsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BlogItem>>> {
         const queryParameters: any = {};
 
         if (requestParameters.count !== undefined) {
@@ -50,7 +50,7 @@ export class BlogItemsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/BlogItems`,
+            path: `/BlogItems`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -61,8 +61,8 @@ export class BlogItemsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1BlogItemsGet(requestParameters: ApiV1BlogItemsGetRequest, initOverrides?: RequestInit): Promise<Array<BlogItem>> {
-        const response = await this.apiV1BlogItemsGetRaw(requestParameters, initOverrides);
+    async blogItemsGet(requestParameters: BlogItemsGetRequest, initOverrides?: RequestInit): Promise<Array<BlogItem>> {
+        const response = await this.blogItemsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

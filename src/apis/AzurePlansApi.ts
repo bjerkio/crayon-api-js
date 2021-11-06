@@ -38,52 +38,52 @@ import {
     PutAzureSubscriptionToJSON,
 } from '../models';
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsGetRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsGetRequest {
     azurePlanId: number;
     search?: string | null;
     page?: number;
     pageSize?: number;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRequest {
     azurePlanId: number;
     id: number;
     azureSubscriptionAssignAdmin?: AzureSubscriptionAssignAdmin;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRequest {
     azurePlanId: number;
     id: number;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRequest {
     azurePlanId: number;
     id: number;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGetRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsIdGetRequest {
     azurePlanId: number;
     id: number;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPutRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsIdPutRequest {
     azurePlanId: number;
     id: number;
     putAzureSubscription?: PutAzureSubscription;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRequest {
     azurePlanId: number;
     id: number;
     azureSubscriptionRename?: AzureSubscriptionRename;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdAzureSubscriptionsPostRequest {
+export interface AzurePlansAzurePlanIdAzureSubscriptionsPostRequest {
     azurePlanId: number;
     createAzureSubscriptionRequest?: CreateAzureSubscriptionRequest;
 }
 
-export interface ApiV1AzurePlansAzurePlanIdGetRequest {
+export interface AzurePlansAzurePlanIdGetRequest {
     azurePlanId: number;
 }
 
@@ -94,9 +94,9 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsGetRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AzureSubscription>>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsGetRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AzureSubscription>>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsGet.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsGet.');
         }
 
         const queryParameters: any = {};
@@ -120,7 +120,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -131,20 +131,20 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsGet(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsGetRequest, initOverrides?: RequestInit): Promise<Array<AzureSubscription>> {
-        const response = await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsGetRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsGet(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsGetRequest, initOverrides?: RequestInit): Promise<Array<AzureSubscription>> {
+        const response = await this.azurePlansAzurePlanIdAzureSubscriptionsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPut.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPut.');
         }
 
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPut.');
         }
 
         const queryParameters: any = {};
@@ -158,7 +158,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/assign-unique-admin`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/assign-unique-admin`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -170,20 +170,20 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPut(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPut(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.azurePlansAzurePlanIdAzureSubscriptionsIdAssignUniqueAdminPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscriptionUpdated>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscriptionUpdated>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPost.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdCancelPost.');
         }
 
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPost.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdCancelPost.');
         }
 
         const queryParameters: any = {};
@@ -195,7 +195,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/cancel`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/cancel`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -206,20 +206,20 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPost(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRequest, initOverrides?: RequestInit): Promise<AzureSubscriptionUpdated> {
-        const response = await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsIdCancelPost(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRequest, initOverrides?: RequestInit): Promise<AzureSubscriptionUpdated> {
+        const response = await this.azurePlansAzurePlanIdAzureSubscriptionsIdCancelPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscriptionUpdated>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscriptionUpdated>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePost.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdEnablePost.');
         }
 
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePost.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdEnablePost.');
         }
 
         const queryParameters: any = {};
@@ -231,7 +231,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/enable`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/enable`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -242,20 +242,20 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePost(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRequest, initOverrides?: RequestInit): Promise<AzureSubscriptionUpdated> {
-        const response = await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsIdEnablePost(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRequest, initOverrides?: RequestInit): Promise<AzureSubscriptionUpdated> {
+        const response = await this.azurePlansAzurePlanIdAzureSubscriptionsIdEnablePostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGetRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscription>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsIdGetRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscription>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGet.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdGet.');
         }
 
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -267,7 +267,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions/{id}`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -278,20 +278,20 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGet(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<AzureSubscription> {
-        const response = await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdGetRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsIdGet(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<AzureSubscription> {
+        const response = await this.azurePlansAzurePlanIdAzureSubscriptionsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPutRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscription>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsIdPutRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscription>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPut.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdPut.');
         }
 
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdPut.');
         }
 
         const queryParameters: any = {};
@@ -305,7 +305,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions/{id}`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -317,20 +317,20 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPut(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<AzureSubscription> {
-        const response = await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdPutRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsIdPut(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<AzureSubscription> {
+        const response = await this.azurePlansAzurePlanIdAzureSubscriptionsIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscriptionUpdated>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzureSubscriptionUpdated>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatch.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdRenamePatch.');
         }
 
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatch.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsIdRenamePatch.');
         }
 
         const queryParameters: any = {};
@@ -344,7 +344,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/rename`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/rename`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
@@ -356,16 +356,16 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatch(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRequest, initOverrides?: RequestInit): Promise<AzureSubscriptionUpdated> {
-        const response = await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsIdRenamePatch(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRequest, initOverrides?: RequestInit): Promise<AzureSubscriptionUpdated> {
+        const response = await this.azurePlansAzurePlanIdAzureSubscriptionsIdRenamePatchRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsPostRaw(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async azurePlansAzurePlanIdAzureSubscriptionsPostRaw(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdAzureSubscriptionsPost.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdAzureSubscriptionsPost.');
         }
 
         const queryParameters: any = {};
@@ -379,7 +379,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))),
+            path: `/AzurePlans/{azurePlanId}/azureSubscriptions`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -391,15 +391,15 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdAzureSubscriptionsPost(requestParameters: ApiV1AzurePlansAzurePlanIdAzureSubscriptionsPostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1AzurePlansAzurePlanIdAzureSubscriptionsPostRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdAzureSubscriptionsPost(requestParameters: AzurePlansAzurePlanIdAzureSubscriptionsPostRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.azurePlansAzurePlanIdAzureSubscriptionsPostRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdGetRaw(requestParameters: ApiV1AzurePlansAzurePlanIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzurePlan>> {
+    async azurePlansAzurePlanIdGetRaw(requestParameters: AzurePlansAzurePlanIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzurePlan>> {
         if (requestParameters.azurePlanId === null || requestParameters.azurePlanId === undefined) {
-            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling apiV1AzurePlansAzurePlanIdGet.');
+            throw new runtime.RequiredError('azurePlanId','Required parameter requestParameters.azurePlanId was null or undefined when calling azurePlansAzurePlanIdGet.');
         }
 
         const queryParameters: any = {};
@@ -411,7 +411,7 @@ export class AzurePlansApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AzurePlans/{azurePlanId}`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))),
+            path: `/AzurePlans/{azurePlanId}`.replace(`{${"azurePlanId"}}`, encodeURIComponent(String(requestParameters.azurePlanId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -422,8 +422,8 @@ export class AzurePlansApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AzurePlansAzurePlanIdGet(requestParameters: ApiV1AzurePlansAzurePlanIdGetRequest, initOverrides?: RequestInit): Promise<AzurePlan> {
-        const response = await this.apiV1AzurePlansAzurePlanIdGetRaw(requestParameters, initOverrides);
+    async azurePlansAzurePlanIdGet(requestParameters: AzurePlansAzurePlanIdGetRequest, initOverrides?: RequestInit): Promise<AzurePlan> {
+        const response = await this.azurePlansAzurePlanIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

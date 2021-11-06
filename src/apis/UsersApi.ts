@@ -26,7 +26,7 @@ import {
     UserRoleToJSON,
 } from '../models';
 
-export interface ApiV1UsersGetRequest {
+export interface UsersGetRequest {
     search?: string | null;
     organizationId?: number;
     role?: UserRole;
@@ -34,29 +34,29 @@ export interface ApiV1UsersGetRequest {
     pageSize?: number;
 }
 
-export interface ApiV1UsersIdChangepasswordPutRequest {
+export interface UsersIdChangepasswordPutRequest {
     id: string;
     userChangePassword?: UserChangePassword;
 }
 
-export interface ApiV1UsersIdDeleteRequest {
+export interface UsersIdDeleteRequest {
     id: string | null;
 }
 
-export interface ApiV1UsersIdGetRequest {
+export interface UsersIdGetRequest {
     id: string | null;
 }
 
-export interface ApiV1UsersIdPutRequest {
+export interface UsersIdPutRequest {
     id: string | null;
     user?: User;
 }
 
-export interface ApiV1UsersPostRequest {
+export interface UsersPostRequest {
     user?: User;
 }
 
-export interface ApiV1UsersUserGetRequest {
+export interface UsersUserGetRequest {
     userName?: string | null;
 }
 
@@ -67,7 +67,7 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersGetRaw(requestParameters: ApiV1UsersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<User>>> {
+    async usersGetRaw(requestParameters: UsersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<User>>> {
         const queryParameters: any = {};
 
         if (requestParameters.search !== undefined) {
@@ -97,7 +97,7 @@ export class UsersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Users`,
+            path: `/Users`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -108,16 +108,16 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersGet(requestParameters: ApiV1UsersGetRequest, initOverrides?: RequestInit): Promise<Array<User>> {
-        const response = await this.apiV1UsersGetRaw(requestParameters, initOverrides);
+    async usersGet(requestParameters: UsersGetRequest, initOverrides?: RequestInit): Promise<Array<User>> {
+        const response = await this.usersGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsersIdChangepasswordPutRaw(requestParameters: ApiV1UsersIdChangepasswordPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async usersIdChangepasswordPutRaw(requestParameters: UsersIdChangepasswordPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1UsersIdChangepasswordPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling usersIdChangepasswordPut.');
         }
 
         const queryParameters: any = {};
@@ -131,7 +131,7 @@ export class UsersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Users/{id}/changepassword`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Users/{id}/changepassword`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -143,16 +143,16 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersIdChangepasswordPut(requestParameters: ApiV1UsersIdChangepasswordPutRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1UsersIdChangepasswordPutRaw(requestParameters, initOverrides);
+    async usersIdChangepasswordPut(requestParameters: UsersIdChangepasswordPutRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.usersIdChangepasswordPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsersIdDeleteRaw(requestParameters: ApiV1UsersIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async usersIdDeleteRaw(requestParameters: UsersIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1UsersIdDelete.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling usersIdDelete.');
         }
 
         const queryParameters: any = {};
@@ -164,7 +164,7 @@ export class UsersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Users/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Users/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -175,16 +175,16 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersIdDelete(requestParameters: ApiV1UsersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1UsersIdDeleteRaw(requestParameters, initOverrides);
+    async usersIdDelete(requestParameters: UsersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.usersIdDeleteRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsersIdGetRaw(requestParameters: ApiV1UsersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
+    async usersIdGetRaw(requestParameters: UsersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1UsersIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling usersIdGet.');
         }
 
         const queryParameters: any = {};
@@ -196,7 +196,7 @@ export class UsersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Users/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Users/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -207,16 +207,16 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersIdGet(requestParameters: ApiV1UsersIdGetRequest, initOverrides?: RequestInit): Promise<User> {
-        const response = await this.apiV1UsersIdGetRaw(requestParameters, initOverrides);
+    async usersIdGet(requestParameters: UsersIdGetRequest, initOverrides?: RequestInit): Promise<User> {
+        const response = await this.usersIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsersIdPutRaw(requestParameters: ApiV1UsersIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
+    async usersIdPutRaw(requestParameters: UsersIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1UsersIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling usersIdPut.');
         }
 
         const queryParameters: any = {};
@@ -230,7 +230,7 @@ export class UsersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Users/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Users/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -242,14 +242,14 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersIdPut(requestParameters: ApiV1UsersIdPutRequest, initOverrides?: RequestInit): Promise<User> {
-        const response = await this.apiV1UsersIdPutRaw(requestParameters, initOverrides);
+    async usersIdPut(requestParameters: UsersIdPutRequest, initOverrides?: RequestInit): Promise<User> {
+        const response = await this.usersIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsersPostRaw(requestParameters: ApiV1UsersPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
+    async usersPostRaw(requestParameters: UsersPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -261,7 +261,7 @@ export class UsersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Users`,
+            path: `/Users`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -273,14 +273,14 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersPost(requestParameters: ApiV1UsersPostRequest, initOverrides?: RequestInit): Promise<User> {
-        const response = await this.apiV1UsersPostRaw(requestParameters, initOverrides);
+    async usersPost(requestParameters: UsersPostRequest, initOverrides?: RequestInit): Promise<User> {
+        const response = await this.usersPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsersUserGetRaw(requestParameters: ApiV1UsersUserGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
+    async usersUserGetRaw(requestParameters: UsersUserGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<User>> {
         const queryParameters: any = {};
 
         if (requestParameters.userName !== undefined) {
@@ -294,7 +294,7 @@ export class UsersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Users/user`,
+            path: `/Users/user`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -305,8 +305,8 @@ export class UsersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsersUserGet(requestParameters: ApiV1UsersUserGetRequest, initOverrides?: RequestInit): Promise<User> {
-        const response = await this.apiV1UsersUserGetRaw(requestParameters, initOverrides);
+    async usersUserGet(requestParameters: UsersUserGetRequest, initOverrides?: RequestInit): Promise<User> {
+        const response = await this.usersUserGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

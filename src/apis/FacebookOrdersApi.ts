@@ -20,7 +20,7 @@ import {
     FacebookOrderToJSON,
 } from '../models';
 
-export interface ApiV1FacebookOrdersCheckoutPostRequest {
+export interface FacebookOrdersCheckoutPostRequest {
     facebookOrder?: FacebookOrder;
 }
 
@@ -31,7 +31,7 @@ export class FacebookOrdersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1FacebookOrdersCheckoutPostRaw(requestParameters: ApiV1FacebookOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async facebookOrdersCheckoutPostRaw(requestParameters: FacebookOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -43,7 +43,7 @@ export class FacebookOrdersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/FacebookOrders/checkout`,
+            path: `/FacebookOrders/checkout`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -55,8 +55,8 @@ export class FacebookOrdersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1FacebookOrdersCheckoutPost(requestParameters: ApiV1FacebookOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1FacebookOrdersCheckoutPostRaw(requestParameters, initOverrides);
+    async facebookOrdersCheckoutPost(requestParameters: FacebookOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.facebookOrdersCheckoutPostRaw(requestParameters, initOverrides);
     }
 
 }

@@ -23,7 +23,7 @@ import {
     PublisherToJSON,
 } from '../models';
 
-export interface ApiV1PublishersGetRequest {
+export interface PublishersGetRequest {
     names?: Array<string> | null;
     page?: number;
     pageSize?: number;
@@ -31,7 +31,7 @@ export interface ApiV1PublishersGetRequest {
     programType?: ProgramType;
 }
 
-export interface ApiV1PublishersIdGetRequest {
+export interface PublishersIdGetRequest {
     id: number;
 }
 
@@ -42,7 +42,7 @@ export class PublishersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1PublishersGetRaw(requestParameters: ApiV1PublishersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Publisher>>> {
+    async publishersGetRaw(requestParameters: PublishersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Publisher>>> {
         const queryParameters: any = {};
 
         if (requestParameters.names) {
@@ -72,7 +72,7 @@ export class PublishersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Publishers`,
+            path: `/Publishers`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -83,16 +83,16 @@ export class PublishersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1PublishersGet(requestParameters: ApiV1PublishersGetRequest, initOverrides?: RequestInit): Promise<Array<Publisher>> {
-        const response = await this.apiV1PublishersGetRaw(requestParameters, initOverrides);
+    async publishersGet(requestParameters: PublishersGetRequest, initOverrides?: RequestInit): Promise<Array<Publisher>> {
+        const response = await this.publishersGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1PublishersIdGetRaw(requestParameters: ApiV1PublishersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Publisher>> {
+    async publishersIdGetRaw(requestParameters: PublishersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Publisher>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1PublishersIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling publishersIdGet.');
         }
 
         const queryParameters: any = {};
@@ -104,7 +104,7 @@ export class PublishersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Publishers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Publishers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -115,8 +115,8 @@ export class PublishersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1PublishersIdGet(requestParameters: ApiV1PublishersIdGetRequest, initOverrides?: RequestInit): Promise<Publisher> {
-        const response = await this.apiV1PublishersIdGetRaw(requestParameters, initOverrides);
+    async publishersIdGet(requestParameters: PublishersIdGetRequest, initOverrides?: RequestInit): Promise<Publisher> {
+        const response = await this.publishersIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

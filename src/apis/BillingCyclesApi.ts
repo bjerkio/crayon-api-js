@@ -20,11 +20,11 @@ import {
     BillingCycleToJSON,
 } from '../models';
 
-export interface ApiV1BillingCyclesGetRequest {
+export interface BillingCyclesGetRequest {
     includeUnknown?: boolean;
 }
 
-export interface ApiV1BillingCyclesProductVariantProductVariantIdGetRequest {
+export interface BillingCyclesProductVariantProductVariantIdGetRequest {
     productVariantId: number;
 }
 
@@ -35,7 +35,7 @@ export class BillingCyclesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1BillingCyclesCspNameDictionaryGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<{ [key: string]: string; }>> {
+    async billingCyclesCspNameDictionaryGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<{ [key: string]: string; }>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -45,7 +45,7 @@ export class BillingCyclesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/BillingCycles/cspNameDictionary`,
+            path: `/BillingCycles/cspNameDictionary`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -56,14 +56,14 @@ export class BillingCyclesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1BillingCyclesCspNameDictionaryGet(initOverrides?: RequestInit): Promise<{ [key: string]: string; }> {
-        const response = await this.apiV1BillingCyclesCspNameDictionaryGetRaw(initOverrides);
+    async billingCyclesCspNameDictionaryGet(initOverrides?: RequestInit): Promise<{ [key: string]: string; }> {
+        const response = await this.billingCyclesCspNameDictionaryGetRaw(initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1BillingCyclesGetRaw(requestParameters: ApiV1BillingCyclesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
+    async billingCyclesGetRaw(requestParameters: BillingCyclesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
         const queryParameters: any = {};
 
         if (requestParameters.includeUnknown !== undefined) {
@@ -77,7 +77,7 @@ export class BillingCyclesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/BillingCycles`,
+            path: `/BillingCycles`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -88,16 +88,16 @@ export class BillingCyclesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1BillingCyclesGet(requestParameters: ApiV1BillingCyclesGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
-        const response = await this.apiV1BillingCyclesGetRaw(requestParameters, initOverrides);
+    async billingCyclesGet(requestParameters: BillingCyclesGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
+        const response = await this.billingCyclesGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1BillingCyclesProductVariantProductVariantIdGetRaw(requestParameters: ApiV1BillingCyclesProductVariantProductVariantIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
+    async billingCyclesProductVariantProductVariantIdGetRaw(requestParameters: BillingCyclesProductVariantProductVariantIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
         if (requestParameters.productVariantId === null || requestParameters.productVariantId === undefined) {
-            throw new runtime.RequiredError('productVariantId','Required parameter requestParameters.productVariantId was null or undefined when calling apiV1BillingCyclesProductVariantProductVariantIdGet.');
+            throw new runtime.RequiredError('productVariantId','Required parameter requestParameters.productVariantId was null or undefined when calling billingCyclesProductVariantProductVariantIdGet.');
         }
 
         const queryParameters: any = {};
@@ -109,7 +109,7 @@ export class BillingCyclesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/BillingCycles/productVariant/{productVariantId}`.replace(`{${"productVariantId"}}`, encodeURIComponent(String(requestParameters.productVariantId))),
+            path: `/BillingCycles/productVariant/{productVariantId}`.replace(`{${"productVariantId"}}`, encodeURIComponent(String(requestParameters.productVariantId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -120,8 +120,8 @@ export class BillingCyclesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1BillingCyclesProductVariantProductVariantIdGet(requestParameters: ApiV1BillingCyclesProductVariantProductVariantIdGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
-        const response = await this.apiV1BillingCyclesProductVariantProductVariantIdGetRaw(requestParameters, initOverrides);
+    async billingCyclesProductVariantProductVariantIdGet(requestParameters: BillingCyclesProductVariantProductVariantIdGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
+        const response = await this.billingCyclesProductVariantProductVariantIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

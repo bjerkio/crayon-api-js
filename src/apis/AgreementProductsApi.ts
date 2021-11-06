@@ -32,11 +32,11 @@ import {
     SortOrderToJSON,
 } from '../models';
 
-export interface ApiV1AgreementProductsFileXlsxPostRequest {
+export interface AgreementProductsFileXlsxPostRequest {
     agreementProductFilter?: AgreementProductFilter;
 }
 
-export interface ApiV1AgreementProductsGetRequest {
+export interface AgreementProductsGetRequest {
     agreementTypeIds?: Array<AgreementType> | null;
     page?: number;
     pageSize?: number;
@@ -93,12 +93,12 @@ export interface ApiV1AgreementProductsGetRequest {
     sortOrder?: SortOrder;
 }
 
-export interface ApiV1AgreementProductsPartNumberSupportedbillingcyclesGetRequest {
+export interface AgreementProductsPartNumberSupportedbillingcyclesGetRequest {
     partNumber: string | null;
     resellerCustomerId?: number;
 }
 
-export interface ApiV1AgreementProductsPostRequest {
+export interface AgreementProductsPostRequest {
     agreementProductFilter?: AgreementProductFilter;
 }
 
@@ -109,7 +109,7 @@ export class AgreementProductsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementProductsFileXlsxPostRaw(requestParameters: ApiV1AgreementProductsFileXlsxPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async agreementProductsFileXlsxPostRaw(requestParameters: AgreementProductsFileXlsxPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -121,7 +121,7 @@ export class AgreementProductsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AgreementProducts/file/xlsx`,
+            path: `/AgreementProducts/file/xlsx`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -133,13 +133,13 @@ export class AgreementProductsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementProductsFileXlsxPost(requestParameters: ApiV1AgreementProductsFileXlsxPostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1AgreementProductsFileXlsxPostRaw(requestParameters, initOverrides);
+    async agreementProductsFileXlsxPost(requestParameters: AgreementProductsFileXlsxPostRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.agreementProductsFileXlsxPostRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async apiV1AgreementProductsGetRaw(requestParameters: ApiV1AgreementProductsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementProduct>>> {
+    async agreementProductsGetRaw(requestParameters: AgreementProductsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementProduct>>> {
         const queryParameters: any = {};
 
         if (requestParameters.agreementTypeIds) {
@@ -365,7 +365,7 @@ export class AgreementProductsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AgreementProducts`,
+            path: `/AgreementProducts`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -376,16 +376,16 @@ export class AgreementProductsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementProductsGet(requestParameters: ApiV1AgreementProductsGetRequest, initOverrides?: RequestInit): Promise<Array<AgreementProduct>> {
-        const response = await this.apiV1AgreementProductsGetRaw(requestParameters, initOverrides);
+    async agreementProductsGet(requestParameters: AgreementProductsGetRequest, initOverrides?: RequestInit): Promise<Array<AgreementProduct>> {
+        const response = await this.agreementProductsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AgreementProductsPartNumberSupportedbillingcyclesGetRaw(requestParameters: ApiV1AgreementProductsPartNumberSupportedbillingcyclesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycleEnum>>> {
+    async agreementProductsPartNumberSupportedbillingcyclesGetRaw(requestParameters: AgreementProductsPartNumberSupportedbillingcyclesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycleEnum>>> {
         if (requestParameters.partNumber === null || requestParameters.partNumber === undefined) {
-            throw new runtime.RequiredError('partNumber','Required parameter requestParameters.partNumber was null or undefined when calling apiV1AgreementProductsPartNumberSupportedbillingcyclesGet.');
+            throw new runtime.RequiredError('partNumber','Required parameter requestParameters.partNumber was null or undefined when calling agreementProductsPartNumberSupportedbillingcyclesGet.');
         }
 
         const queryParameters: any = {};
@@ -401,7 +401,7 @@ export class AgreementProductsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AgreementProducts/{partNumber}/supportedbillingcycles`.replace(`{${"partNumber"}}`, encodeURIComponent(String(requestParameters.partNumber))),
+            path: `/AgreementProducts/{partNumber}/supportedbillingcycles`.replace(`{${"partNumber"}}`, encodeURIComponent(String(requestParameters.partNumber))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -412,14 +412,14 @@ export class AgreementProductsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementProductsPartNumberSupportedbillingcyclesGet(requestParameters: ApiV1AgreementProductsPartNumberSupportedbillingcyclesGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycleEnum>> {
-        const response = await this.apiV1AgreementProductsPartNumberSupportedbillingcyclesGetRaw(requestParameters, initOverrides);
+    async agreementProductsPartNumberSupportedbillingcyclesGet(requestParameters: AgreementProductsPartNumberSupportedbillingcyclesGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycleEnum>> {
+        const response = await this.agreementProductsPartNumberSupportedbillingcyclesGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AgreementProductsPostRaw(requestParameters: ApiV1AgreementProductsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementProduct>>> {
+    async agreementProductsPostRaw(requestParameters: AgreementProductsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementProduct>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -431,7 +431,7 @@ export class AgreementProductsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AgreementProducts`,
+            path: `/AgreementProducts`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -443,8 +443,8 @@ export class AgreementProductsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementProductsPost(requestParameters: ApiV1AgreementProductsPostRequest, initOverrides?: RequestInit): Promise<Array<AgreementProduct>> {
-        const response = await this.apiV1AgreementProductsPostRaw(requestParameters, initOverrides);
+    async agreementProductsPost(requestParameters: AgreementProductsPostRequest, initOverrides?: RequestInit): Promise<Array<AgreementProduct>> {
+        const response = await this.agreementProductsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

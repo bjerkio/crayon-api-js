@@ -20,21 +20,21 @@ import {
     OrganizationAccessToJSON,
 } from '../models';
 
-export interface ApiV1OrganizationAccessGetRequest {
+export interface OrganizationAccessGetRequest {
     userId?: string | null;
     organizationId?: number;
     page?: number;
     pageSize?: number;
 }
 
-export interface ApiV1OrganizationAccessGrantGetRequest {
+export interface OrganizationAccessGrantGetRequest {
     userId?: string | null;
     organizationId?: number;
     page?: number;
     pageSize?: number;
 }
 
-export interface ApiV1OrganizationAccessPutRequest {
+export interface OrganizationAccessPutRequest {
     organizationAccess?: Array<OrganizationAccess> | null;
 }
 
@@ -45,7 +45,7 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationAccessGetRaw(requestParameters: ApiV1OrganizationAccessGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
+    async organizationAccessGetRaw(requestParameters: OrganizationAccessGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
         const queryParameters: any = {};
 
         if (requestParameters.userId !== undefined) {
@@ -71,7 +71,7 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/OrganizationAccess`,
+            path: `/OrganizationAccess`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -82,14 +82,14 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationAccessGet(requestParameters: ApiV1OrganizationAccessGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
-        const response = await this.apiV1OrganizationAccessGetRaw(requestParameters, initOverrides);
+    async organizationAccessGet(requestParameters: OrganizationAccessGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
+        const response = await this.organizationAccessGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1OrganizationAccessGrantGetRaw(requestParameters: ApiV1OrganizationAccessGrantGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
+    async organizationAccessGrantGetRaw(requestParameters: OrganizationAccessGrantGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
         const queryParameters: any = {};
 
         if (requestParameters.userId !== undefined) {
@@ -115,7 +115,7 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/OrganizationAccess/grant`,
+            path: `/OrganizationAccess/grant`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -126,14 +126,14 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationAccessGrantGet(requestParameters: ApiV1OrganizationAccessGrantGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
-        const response = await this.apiV1OrganizationAccessGrantGetRaw(requestParameters, initOverrides);
+    async organizationAccessGrantGet(requestParameters: OrganizationAccessGrantGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
+        const response = await this.organizationAccessGrantGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1OrganizationAccessPutRaw(requestParameters: ApiV1OrganizationAccessPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
+    async organizationAccessPutRaw(requestParameters: OrganizationAccessPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -145,7 +145,7 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/OrganizationAccess`,
+            path: `/OrganizationAccess`,
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -157,8 +157,8 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationAccessPut(requestParameters: ApiV1OrganizationAccessPutRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
-        const response = await this.apiV1OrganizationAccessPutRaw(requestParameters, initOverrides);
+    async organizationAccessPut(requestParameters: OrganizationAccessPutRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
+        const response = await this.organizationAccessPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

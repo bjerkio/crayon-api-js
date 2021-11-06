@@ -23,21 +23,21 @@ import {
     OrganizationSalesContactToJSON,
 } from '../models';
 
-export interface ApiV1OrganizationsGetRequest {
+export interface OrganizationsGetRequest {
     page?: number;
     pageSize?: number;
     search?: string | null;
 }
 
-export interface ApiV1OrganizationsHasAccessIdGetRequest {
+export interface OrganizationsHasAccessIdGetRequest {
     id: number;
 }
 
-export interface ApiV1OrganizationsIdGetRequest {
+export interface OrganizationsIdGetRequest {
     id: number;
 }
 
-export interface ApiV1OrganizationsOrganizationIdSalescontactGetRequest {
+export interface OrganizationsOrganizationIdSalescontactGetRequest {
     organizationId: number;
 }
 
@@ -48,7 +48,7 @@ export class OrganizationsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsGetRaw(requestParameters: ApiV1OrganizationsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Organization>>> {
+    async organizationsGetRaw(requestParameters: OrganizationsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Organization>>> {
         const queryParameters: any = {};
 
         if (requestParameters.page !== undefined) {
@@ -70,7 +70,7 @@ export class OrganizationsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Organizations`,
+            path: `/Organizations`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -81,16 +81,16 @@ export class OrganizationsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsGet(requestParameters: ApiV1OrganizationsGetRequest, initOverrides?: RequestInit): Promise<Array<Organization>> {
-        const response = await this.apiV1OrganizationsGetRaw(requestParameters, initOverrides);
+    async organizationsGet(requestParameters: OrganizationsGetRequest, initOverrides?: RequestInit): Promise<Array<Organization>> {
+        const response = await this.organizationsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1OrganizationsHasAccessIdGetRaw(requestParameters: ApiV1OrganizationsHasAccessIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async organizationsHasAccessIdGetRaw(requestParameters: OrganizationsHasAccessIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1OrganizationsHasAccessIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling organizationsHasAccessIdGet.');
         }
 
         const queryParameters: any = {};
@@ -102,7 +102,7 @@ export class OrganizationsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Organizations/HasAccess/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Organizations/HasAccess/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -113,16 +113,16 @@ export class OrganizationsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsHasAccessIdGet(requestParameters: ApiV1OrganizationsHasAccessIdGetRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1OrganizationsHasAccessIdGetRaw(requestParameters, initOverrides);
+    async organizationsHasAccessIdGet(requestParameters: OrganizationsHasAccessIdGetRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.organizationsHasAccessIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1OrganizationsIdGetRaw(requestParameters: ApiV1OrganizationsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Organization>> {
+    async organizationsIdGetRaw(requestParameters: OrganizationsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Organization>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1OrganizationsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling organizationsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -134,7 +134,7 @@ export class OrganizationsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Organizations/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Organizations/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -145,16 +145,16 @@ export class OrganizationsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsIdGet(requestParameters: ApiV1OrganizationsIdGetRequest, initOverrides?: RequestInit): Promise<Organization> {
-        const response = await this.apiV1OrganizationsIdGetRaw(requestParameters, initOverrides);
+    async organizationsIdGet(requestParameters: OrganizationsIdGetRequest, initOverrides?: RequestInit): Promise<Organization> {
+        const response = await this.organizationsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1OrganizationsOrganizationIdSalescontactGetRaw(requestParameters: ApiV1OrganizationsOrganizationIdSalescontactGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<OrganizationSalesContact>> {
+    async organizationsOrganizationIdSalescontactGetRaw(requestParameters: OrganizationsOrganizationIdSalescontactGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<OrganizationSalesContact>> {
         if (requestParameters.organizationId === null || requestParameters.organizationId === undefined) {
-            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling apiV1OrganizationsOrganizationIdSalescontactGet.');
+            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling organizationsOrganizationIdSalescontactGet.');
         }
 
         const queryParameters: any = {};
@@ -166,7 +166,7 @@ export class OrganizationsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Organizations/{organizationId}/salescontact`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))),
+            path: `/Organizations/{organizationId}/salescontact`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -177,8 +177,8 @@ export class OrganizationsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsOrganizationIdSalescontactGet(requestParameters: ApiV1OrganizationsOrganizationIdSalescontactGetRequest, initOverrides?: RequestInit): Promise<OrganizationSalesContact> {
-        const response = await this.apiV1OrganizationsOrganizationIdSalescontactGetRaw(requestParameters, initOverrides);
+    async organizationsOrganizationIdSalescontactGet(requestParameters: OrganizationsOrganizationIdSalescontactGetRequest, initOverrides?: RequestInit): Promise<OrganizationSalesContact> {
+        const response = await this.organizationsOrganizationIdSalescontactGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

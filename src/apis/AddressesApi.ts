@@ -23,12 +23,12 @@ import {
     AddressTypeToJSON,
 } from '../models';
 
-export interface ApiV1OrganizationsOrganizationIdAddressesGetRequest {
+export interface OrganizationsOrganizationIdAddressesGetRequest {
     organizationId: number;
     type?: AddressType;
 }
 
-export interface ApiV1OrganizationsOrganizationIdAddressesIdGetRequest {
+export interface OrganizationsOrganizationIdAddressesIdGetRequest {
     organizationId: number;
     id: number;
 }
@@ -40,9 +40,9 @@ export class AddressesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsOrganizationIdAddressesGetRaw(requestParameters: ApiV1OrganizationsOrganizationIdAddressesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Address>>> {
+    async organizationsOrganizationIdAddressesGetRaw(requestParameters: OrganizationsOrganizationIdAddressesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Address>>> {
         if (requestParameters.organizationId === null || requestParameters.organizationId === undefined) {
-            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling apiV1OrganizationsOrganizationIdAddressesGet.');
+            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling organizationsOrganizationIdAddressesGet.');
         }
 
         const queryParameters: any = {};
@@ -58,7 +58,7 @@ export class AddressesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/organizations/{organizationId}/Addresses`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))),
+            path: `/organizations/{organizationId}/Addresses`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -69,20 +69,20 @@ export class AddressesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsOrganizationIdAddressesGet(requestParameters: ApiV1OrganizationsOrganizationIdAddressesGetRequest, initOverrides?: RequestInit): Promise<Array<Address>> {
-        const response = await this.apiV1OrganizationsOrganizationIdAddressesGetRaw(requestParameters, initOverrides);
+    async organizationsOrganizationIdAddressesGet(requestParameters: OrganizationsOrganizationIdAddressesGetRequest, initOverrides?: RequestInit): Promise<Array<Address>> {
+        const response = await this.organizationsOrganizationIdAddressesGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1OrganizationsOrganizationIdAddressesIdGetRaw(requestParameters: ApiV1OrganizationsOrganizationIdAddressesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Address>> {
+    async organizationsOrganizationIdAddressesIdGetRaw(requestParameters: OrganizationsOrganizationIdAddressesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Address>> {
         if (requestParameters.organizationId === null || requestParameters.organizationId === undefined) {
-            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling apiV1OrganizationsOrganizationIdAddressesIdGet.');
+            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling organizationsOrganizationIdAddressesIdGet.');
         }
 
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1OrganizationsOrganizationIdAddressesIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling organizationsOrganizationIdAddressesIdGet.');
         }
 
         const queryParameters: any = {};
@@ -94,7 +94,7 @@ export class AddressesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/organizations/{organizationId}/Addresses/{id}`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/organizations/{organizationId}/Addresses/{id}`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -105,8 +105,8 @@ export class AddressesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1OrganizationsOrganizationIdAddressesIdGet(requestParameters: ApiV1OrganizationsOrganizationIdAddressesIdGetRequest, initOverrides?: RequestInit): Promise<Address> {
-        const response = await this.apiV1OrganizationsOrganizationIdAddressesIdGetRaw(requestParameters, initOverrides);
+    async organizationsOrganizationIdAddressesIdGet(requestParameters: OrganizationsOrganizationIdAddressesIdGetRequest, initOverrides?: RequestInit): Promise<Address> {
+        const response = await this.organizationsOrganizationIdAddressesIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

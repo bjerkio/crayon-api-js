@@ -4,9 +4,9 @@
     "title": "Crayon Group Customer API",
     "version": "v1"
   },
-  "servers": [{ "url": "api.crayon.com" }],
+  "servers": [{ "url": "https://api.crayon.com/api/v1" }],
   "paths": {
-    "/api/v1/ActivityLogs": {
+    "/ActivityLogs": {
       "get": {
         "tags": ["ActivityLogs"],
         "parameters": [
@@ -115,7 +115,7 @@
         }
       }
     },
-    "/api/v1/organizations/{organizationId}/Addresses": {
+    "/organizations/{organizationId}/Addresses": {
       "get": {
         "tags": ["Addresses"],
         "parameters": [
@@ -169,7 +169,7 @@
         }
       }
     },
-    "/api/v1/organizations/{organizationId}/Addresses/{id}": {
+    "/organizations/{organizationId}/Addresses/{id}": {
       "get": {
         "tags": ["Addresses"],
         "parameters": [
@@ -216,7 +216,7 @@
         }
       }
     },
-    "/api/v1/AgreementProducts": {
+    "/AgreementProducts": {
       "get": {
         "tags": ["AgreementProducts"],
         "parameters": [
@@ -872,7 +872,7 @@
         }
       }
     },
-    "/api/v1/AgreementProducts/file/xlsx": {
+    "/AgreementProducts/file/xlsx": {
       "post": {
         "tags": ["AgreementProducts"],
         "requestBody": {
@@ -906,7 +906,7 @@
         }
       }
     },
-    "/api/v1/AgreementProducts/{partNumber}/supportedbillingcycles": {
+    "/AgreementProducts/{partNumber}/supportedbillingcycles": {
       "get": {
         "tags": ["AgreementProducts"],
         "parameters": [
@@ -961,7 +961,7 @@
         }
       }
     },
-    "/api/v1/AgreementReports/{productContainerId}": {
+    "/AgreementReports/{productContainerId}": {
       "get": {
         "tags": ["AgreementReports"],
         "parameters": [
@@ -1008,7 +1008,7 @@
         }
       }
     },
-    "/api/v1/AgreementReports/{agreementId}": {
+    "/AgreementReports/{agreementId}": {
       "put": {
         "tags": ["AgreementReports"],
         "parameters": [
@@ -1070,7 +1070,7 @@
         }
       }
     },
-    "/api/v1/Agreements": {
+    "/Agreements": {
       "get": {
         "tags": ["Agreements"],
         "parameters": [
@@ -1268,7 +1268,7 @@
         }
       }
     },
-    "/api/v1/Assets": {
+    "/Assets": {
       "get": {
         "tags": ["Assets"],
         "parameters": [
@@ -1401,7 +1401,7 @@
         }
       }
     },
-    "/api/v1/Assets/{id}": {
+    "/Assets/{id}": {
       "get": {
         "tags": ["Assets"],
         "parameters": [
@@ -1439,7 +1439,7 @@
         }
       }
     },
-    "/api/v1/Assets/orders": {
+    "/Assets/orders": {
       "get": {
         "tags": ["Assets"],
         "parameters": [
@@ -1572,7 +1572,7 @@
         }
       }
     },
-    "/api/v1/Assets/verify": {
+    "/Assets/verify": {
       "post": {
         "tags": ["Assets"],
         "requestBody": {
@@ -1623,7 +1623,7 @@
         }
       }
     },
-    "/api/v1/Assets/checkout": {
+    "/Assets/checkout": {
       "post": {
         "tags": ["Assets"],
         "requestBody": {
@@ -1657,7 +1657,7 @@
         }
       }
     },
-    "/api/v1/Assets/{assetId}": {
+    "/Assets/{assetId}": {
       "put": {
         "tags": ["Assets"],
         "parameters": [
@@ -1702,7 +1702,7 @@
         }
       }
     },
-    "/api/v1/Assets/{assetId}/tags": {
+    "/Assets/{assetId}/tags": {
       "post": {
         "tags": ["Assets"],
         "parameters": [
@@ -1809,7 +1809,7 @@
         }
       }
     },
-    "/api/v1/AwsAccounts": {
+    "/AwsAccounts": {
       "get": {
         "tags": ["AwsAccounts"],
         "parameters": [
@@ -1902,7 +1902,7 @@
         }
       }
     },
-    "/api/v1/AwsAccounts/{id}": {
+    "/AwsAccounts/{id}": {
       "get": {
         "tags": ["AwsAccounts"],
         "parameters": [
@@ -2000,7 +2000,7 @@
         }
       }
     },
-    "/api/v1/AzurePlans/{azurePlanId}": {
+    "/AzurePlans/{azurePlanId}": {
       "get": {
         "tags": ["AzurePlans"],
         "parameters": [
@@ -2038,7 +2038,7 @@
         }
       }
     },
-    "/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions": {
+    "/AzurePlans/{azurePlanId}/azureSubscriptions": {
       "get": {
         "tags": ["AzurePlans"],
         "parameters": [
@@ -2152,7 +2152,7 @@
         }
       }
     },
-    "/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}": {
+    "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}": {
       "get": {
         "tags": ["AzurePlans"],
         "parameters": [
@@ -2268,7 +2268,7 @@
         }
       }
     },
-    "/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/assign-unique-admin": {
+    "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/assign-unique-admin": {
       "put": {
         "tags": ["AzurePlans"],
         "parameters": [
@@ -2339,7 +2339,7 @@
         }
       }
     },
-    "/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/cancel": {
+    "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/cancel": {
       "post": {
         "tags": ["AzurePlans"],
         "parameters": [
@@ -2386,7 +2386,7 @@
         }
       }
     },
-    "/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/enable": {
+    "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/enable": {
       "post": {
         "tags": ["AzurePlans"],
         "parameters": [
@@ -2433,7 +2433,7 @@
         }
       }
     },
-    "/api/v1/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/rename": {
+    "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/rename": {
       "patch": {
         "tags": ["AzurePlans"],
         "parameters": [
@@ -2504,7 +2504,7 @@
         }
       }
     },
-    "/api/v1/BillingCycles": {
+    "/BillingCycles": {
       "get": {
         "tags": ["BillingCycles"],
         "parameters": [
@@ -2550,7 +2550,7 @@
         }
       }
     },
-    "/api/v1/BillingCycles/productVariant/{productVariantId}": {
+    "/BillingCycles/productVariant/{productVariantId}": {
       "get": {
         "tags": ["BillingCycles"],
         "parameters": [
@@ -2597,7 +2597,7 @@
         }
       }
     },
-    "/api/v1/BillingCycles/cspNameDictionary": {
+    "/BillingCycles/cspNameDictionary": {
       "get": {
         "tags": ["BillingCycles"],
         "responses": {
@@ -2633,7 +2633,7 @@
         }
       }
     },
-    "/api/v1/BillingStatements": {
+    "/BillingStatements": {
       "get": {
         "tags": ["BillingStatements"],
         "parameters": [
@@ -2728,7 +2728,7 @@
         }
       }
     },
-    "/api/v1/BillingStatements/grouped": {
+    "/BillingStatements/grouped": {
       "get": {
         "tags": ["BillingStatements"],
         "parameters": [
@@ -2823,7 +2823,7 @@
         }
       }
     },
-    "/api/v1/BillingStatements/file/{id}": {
+    "/BillingStatements/file/{id}": {
       "get": {
         "tags": ["BillingStatements"],
         "parameters": [
@@ -2844,7 +2844,7 @@
         }
       }
     },
-    "/api/v1/BillingStatements/{id}/reconciliationfile": {
+    "/BillingStatements/{id}/reconciliationfile": {
       "get": {
         "tags": ["BillingStatements"],
         "parameters": [
@@ -2865,7 +2865,7 @@
         }
       }
     },
-    "/api/v1/BillingStatements/{id}/billingrecordsfile": {
+    "/BillingStatements/{id}/billingrecordsfile": {
       "get": {
         "tags": ["BillingStatements"],
         "parameters": [
@@ -2886,7 +2886,7 @@
         }
       }
     },
-    "/api/v1/BlogItems": {
+    "/BlogItems": {
       "get": {
         "tags": ["BlogItems"],
         "parameters": [
@@ -2942,7 +2942,7 @@
         }
       }
     },
-    "/api/v1/Clients": {
+    "/Clients": {
       "get": {
         "tags": ["Clients"],
         "parameters": [
@@ -3053,7 +3053,7 @@
         }
       }
     },
-    "/api/v1/Clients/{clientId}": {
+    "/Clients/{clientId}": {
       "get": {
         "tags": ["Clients"],
         "parameters": [
@@ -3187,7 +3187,7 @@
         }
       }
     },
-    "/api/v1/Consumers": {
+    "/Consumers": {
       "get": {
         "tags": ["Consumers"],
         "parameters": [
@@ -3306,7 +3306,7 @@
         }
       }
     },
-    "/api/v1/Consumers/{id}": {
+    "/Consumers/{id}": {
       "get": {
         "tags": ["Consumers"],
         "parameters": [
@@ -3440,7 +3440,7 @@
         }
       }
     },
-    "/api/v1/CrayonAccounts": {
+    "/CrayonAccounts": {
       "get": {
         "tags": ["CrayonAccounts"],
         "parameters": [
@@ -3582,7 +3582,7 @@
         }
       }
     },
-    "/api/v1/CrayonAccounts/{id}": {
+    "/CrayonAccounts/{id}": {
       "get": {
         "tags": ["CrayonAccounts"],
         "parameters": [
@@ -3680,7 +3680,7 @@
         }
       }
     },
-    "/api/v1/customertenants/{customerTenantId}/agreements": {
+    "/customertenants/{customerTenantId}/agreements": {
       "get": {
         "tags": ["CustomerTenantAgreements"],
         "parameters": [
@@ -3794,7 +3794,7 @@
         }
       }
     },
-    "/api/v1/CustomerTenants": {
+    "/CustomerTenants": {
       "get": {
         "tags": ["CustomerTenants"],
         "parameters": [
@@ -3968,7 +3968,7 @@
         }
       }
     },
-    "/api/v1/CustomerTenants/{id}": {
+    "/CustomerTenants/{id}": {
       "get": {
         "tags": ["CustomerTenants"],
         "parameters": [
@@ -4085,7 +4085,7 @@
         }
       }
     },
-    "/api/v1/CustomerTenants/{id}/detailed": {
+    "/CustomerTenants/{id}/detailed": {
       "get": {
         "tags": ["CustomerTenants"],
         "parameters": [
@@ -4123,7 +4123,7 @@
         }
       }
     },
-    "/api/v1/CustomerTenants/existing": {
+    "/CustomerTenants/existing": {
       "post": {
         "tags": ["CustomerTenants"],
         "parameters": [
@@ -4184,7 +4184,7 @@
         }
       }
     },
-    "/api/v1/CustomerTenants/{customerTenantId}/azurePlan": {
+    "/CustomerTenants/{customerTenantId}/azurePlan": {
       "get": {
         "tags": ["CustomerTenants"],
         "parameters": [
@@ -4222,7 +4222,7 @@
         }
       }
     },
-    "/api/v1/connect/token": {
+    "/connect/token": {
       "post": {
         "tags": ["CustomerToken"],
         "responses": {
@@ -4249,7 +4249,7 @@
         }
       }
     },
-    "/api/v1/FacebookOrders/checkout": {
+    "/FacebookOrders/checkout": {
       "post": {
         "tags": ["FacebookOrders"],
         "requestBody": {
@@ -4283,7 +4283,7 @@
         }
       }
     },
-    "/api/v1/GoogleOrders/checkout": {
+    "/GoogleOrders/checkout": {
       "post": {
         "tags": ["GoogleOrders"],
         "requestBody": {
@@ -4317,7 +4317,7 @@
         }
       }
     },
-    "/api/v1/Groupings": {
+    "/Groupings": {
       "get": {
         "tags": ["Groupings"],
         "parameters": [
@@ -4443,7 +4443,7 @@
         }
       }
     },
-    "/api/v1/Groupings/{id}": {
+    "/Groupings/{id}": {
       "get": {
         "tags": ["Groupings"],
         "parameters": [
@@ -4560,7 +4560,7 @@
         }
       }
     },
-    "/api/v1/InvoiceProfiles": {
+    "/InvoiceProfiles": {
       "get": {
         "tags": ["InvoiceProfiles"],
         "parameters": [
@@ -4679,7 +4679,7 @@
         }
       }
     },
-    "/api/v1/InvoiceProfiles/{id}": {
+    "/InvoiceProfiles/{id}": {
       "get": {
         "tags": ["InvoiceProfiles"],
         "parameters": [
@@ -4813,7 +4813,7 @@
         }
       }
     },
-    "/api/v1/ManagementLinks": {
+    "/ManagementLinks": {
       "get": {
         "tags": ["ManagementLinks"],
         "parameters": [
@@ -4891,7 +4891,7 @@
         }
       }
     },
-    "/api/v1/ManagementLinks/grouped": {
+    "/ManagementLinks/grouped": {
       "get": {
         "tags": ["ManagementLinks"],
         "parameters": [
@@ -4969,7 +4969,7 @@
         }
       }
     },
-    "/api/v1/Me": {
+    "/Me": {
       "get": {
         "tags": ["Me"],
         "responses": {
@@ -4996,7 +4996,7 @@
         }
       }
     },
-    "/api/v1/OrganizationAccess/grant": {
+    "/OrganizationAccess/grant": {
       "get": {
         "tags": ["OrganizationAccess"],
         "parameters": [
@@ -5069,7 +5069,7 @@
         }
       }
     },
-    "/api/v1/OrganizationAccess": {
+    "/OrganizationAccess": {
       "get": {
         "tags": ["OrganizationAccess"],
         "parameters": [
@@ -5216,7 +5216,7 @@
         }
       }
     },
-    "/api/v1/Organizations": {
+    "/Organizations": {
       "get": {
         "tags": ["Organizations"],
         "parameters": [
@@ -5278,7 +5278,7 @@
         }
       }
     },
-    "/api/v1/Organizations/{id}": {
+    "/Organizations/{id}": {
       "get": {
         "tags": ["Organizations"],
         "parameters": [
@@ -5316,7 +5316,7 @@
         }
       }
     },
-    "/api/v1/Organizations/{organizationId}/salescontact": {
+    "/Organizations/{organizationId}/salescontact": {
       "get": {
         "tags": ["Organizations"],
         "parameters": [
@@ -5354,7 +5354,7 @@
         }
       }
     },
-    "/api/v1/Organizations/HasAccess/{id}": {
+    "/Organizations/HasAccess/{id}": {
       "get": {
         "tags": ["Organizations"],
         "parameters": [
@@ -5392,7 +5392,7 @@
         }
       }
     },
-    "/api/v1/Ping": {
+    "/Ping": {
       "get": {
         "tags": ["Ping"],
         "responses": {
@@ -5402,7 +5402,7 @@
         }
       }
     },
-    "/api/v1/ProductContainers": {
+    "/ProductContainers": {
       "get": {
         "tags": ["ProductContainers"],
         "parameters": [
@@ -5565,7 +5565,7 @@
         }
       }
     },
-    "/api/v1/ProductContainers/{id}": {
+    "/ProductContainers/{id}": {
       "get": {
         "tags": ["ProductContainers"],
         "parameters": [
@@ -5708,7 +5708,7 @@
         }
       }
     },
-    "/api/v1/ProductContainers/rowissues/{id}": {
+    "/ProductContainers/rowissues/{id}": {
       "get": {
         "tags": ["ProductContainers"],
         "parameters": [
@@ -5746,7 +5746,7 @@
         }
       }
     },
-    "/api/v1/ProductContainers/{productContainerId}/row/{productRowId}": {
+    "/ProductContainers/{productContainerId}/row/{productRowId}": {
       "patch": {
         "tags": ["ProductContainers"],
         "parameters": [
@@ -5817,7 +5817,7 @@
         }
       }
     },
-    "/api/v1/ProductContainers/reportbymonth": {
+    "/ProductContainers/reportbymonth": {
       "post": {
         "tags": ["ProductContainers"],
         "parameters": [
@@ -5885,7 +5885,7 @@
         }
       }
     },
-    "/api/v1/ProductContainers/getorcreateshoppingcart": {
+    "/ProductContainers/getorcreateshoppingcart": {
       "get": {
         "tags": ["ProductContainers"],
         "parameters": [
@@ -5922,7 +5922,7 @@
         }
       }
     },
-    "/api/v1/Programs": {
+    "/Programs": {
       "get": {
         "tags": ["Programs"],
         "parameters": [
@@ -6007,7 +6007,7 @@
         }
       }
     },
-    "/api/v1/Programs/{id}": {
+    "/Programs/{id}": {
       "get": {
         "tags": ["Programs"],
         "parameters": [
@@ -6045,7 +6045,7 @@
         }
       }
     },
-    "/api/v1/Publishers": {
+    "/Publishers": {
       "get": {
         "tags": ["Publishers"],
         "parameters": [
@@ -6125,7 +6125,7 @@
         }
       }
     },
-    "/api/v1/Publishers/{id}": {
+    "/Publishers/{id}": {
       "get": {
         "tags": ["Publishers"],
         "parameters": [
@@ -6163,7 +6163,7 @@
         }
       }
     },
-    "/api/v1/Regions": {
+    "/Regions": {
       "get": {
         "tags": ["Regions"],
         "parameters": [
@@ -6240,7 +6240,7 @@
         }
       }
     },
-    "/api/v1/Regions/bycode": {
+    "/Regions/bycode": {
       "get": {
         "tags": ["Regions"],
         "parameters": [
@@ -6284,7 +6284,7 @@
         }
       }
     },
-    "/api/v1/ResellerSalesPrices": {
+    "/ResellerSalesPrices": {
       "get": {
         "tags": ["ResellerSalesPrices"],
         "parameters": [
@@ -6443,7 +6443,7 @@
         }
       }
     },
-    "/api/v1/ResellerSalesPrices/current": {
+    "/ResellerSalesPrices/current": {
       "get": {
         "tags": ["ResellerSalesPrices"],
         "parameters": [
@@ -6503,7 +6503,7 @@
         }
       }
     },
-    "/api/v1/ResellerSalesPrices/{oldFromDate}": {
+    "/ResellerSalesPrices/{oldFromDate}": {
       "put": {
         "tags": ["ResellerSalesPrices"],
         "parameters": [
@@ -6565,7 +6565,7 @@
         }
       }
     },
-    "/api/v1/ResellerSalesPrices/toggle": {
+    "/ResellerSalesPrices/toggle": {
       "post": {
         "tags": ["ResellerSalesPrices"],
         "requestBody": {
@@ -6599,7 +6599,7 @@
         }
       }
     },
-    "/api/v1/Secrets": {
+    "/Secrets": {
       "post": {
         "tags": ["Secrets"],
         "requestBody": {
@@ -6693,7 +6693,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions": {
+    "/Subscriptions": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -6873,7 +6873,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{id}": {
+    "/Subscriptions/{id}": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -6971,7 +6971,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{subscriptionId}/conversions": {
+    "/Subscriptions/{subscriptionId}/conversions": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7078,7 +7078,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{id}/activationlink": {
+    "/Subscriptions/{id}/activationlink": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7116,7 +7116,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{reservedInstance}/subscriptionId/{id}": {
+    "/Subscriptions/{reservedInstance}/subscriptionId/{id}": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7215,7 +7215,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{id}/transition-eligibilities": {
+    "/Subscriptions/{id}/transition-eligibilities": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7262,7 +7262,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{id}/transition": {
+    "/Subscriptions/{id}/transition": {
       "post": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7324,7 +7324,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/subscriptionpricetypes": {
+    "/Subscriptions/subscriptionpricetypes": {
       "get": {
         "tags": ["Subscriptions"],
         "responses": {
@@ -7360,7 +7360,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{subscriptionId}/tags": {
+    "/Subscriptions/{subscriptionId}/tags": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7476,7 +7476,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{subscriptionId}/addon-offers": {
+    "/Subscriptions/{subscriptionId}/addon-offers": {
       "get": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7523,7 +7523,7 @@
         }
       }
     },
-    "/api/v1/Subscriptions/{subscriptionId}/addons": {
+    "/Subscriptions/{subscriptionId}/addons": {
       "post": {
         "tags": ["Subscriptions"],
         "parameters": [
@@ -7585,7 +7585,7 @@
         }
       }
     },
-    "/api/v1/UsageCost/organization/{organizationId}": {
+    "/UsageCost/organization/{organizationId}": {
       "get": {
         "tags": ["UsageCost"],
         "parameters": [
@@ -7648,7 +7648,7 @@
         }
       }
     },
-    "/api/v1/UsageCost/getForSubscription": {
+    "/UsageCost/getForSubscription": {
       "post": {
         "tags": ["UsageCost"],
         "requestBody": {
@@ -7708,7 +7708,7 @@
         }
       }
     },
-    "/api/v1/UsageCost/getForCategory": {
+    "/UsageCost/getForCategory": {
       "post": {
         "tags": ["UsageCost"],
         "requestBody": {
@@ -7768,7 +7768,7 @@
         }
       }
     },
-    "/api/v1/UsageCost/getForSubcategory": {
+    "/UsageCost/getForSubcategory": {
       "post": {
         "tags": ["UsageCost"],
         "requestBody": {
@@ -7828,7 +7828,7 @@
         }
       }
     },
-    "/api/v1/UsageCost/getForSubscription/resourceGroups": {
+    "/UsageCost/getForSubscription/resourceGroups": {
       "post": {
         "tags": ["UsageCost"],
         "requestBody": {
@@ -7888,7 +7888,7 @@
         }
       }
     },
-    "/api/v1/UsageCost/getForResourceGroup": {
+    "/UsageCost/getForResourceGroup": {
       "post": {
         "tags": ["UsageCost"],
         "requestBody": {
@@ -7948,7 +7948,7 @@
         }
       }
     },
-    "/api/v1/Users": {
+    "/Users": {
       "get": {
         "tags": ["Users"],
         "parameters": [
@@ -8074,7 +8074,7 @@
         }
       }
     },
-    "/api/v1/Users/{id}": {
+    "/Users/{id}": {
       "get": {
         "tags": ["Users"],
         "parameters": [
@@ -8208,7 +8208,7 @@
         }
       }
     },
-    "/api/v1/Users/user": {
+    "/Users/user": {
       "get": {
         "tags": ["Users"],
         "parameters": [
@@ -8245,7 +8245,7 @@
         }
       }
     },
-    "/api/v1/Users/{id}/changepassword": {
+    "/Users/{id}/changepassword": {
       "put": {
         "tags": ["Users"],
         "parameters": [

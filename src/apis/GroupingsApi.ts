@@ -20,7 +20,7 @@ import {
     GroupingToJSON,
 } from '../models';
 
-export interface ApiV1GroupingsGetRequest {
+export interface GroupingsGetRequest {
     organizationId?: number;
     includeRemoved?: boolean;
     search?: string | null;
@@ -28,20 +28,20 @@ export interface ApiV1GroupingsGetRequest {
     pageSize?: number;
 }
 
-export interface ApiV1GroupingsIdDeleteRequest {
+export interface GroupingsIdDeleteRequest {
     id: number;
 }
 
-export interface ApiV1GroupingsIdGetRequest {
+export interface GroupingsIdGetRequest {
     id: number;
 }
 
-export interface ApiV1GroupingsIdPutRequest {
+export interface GroupingsIdPutRequest {
     id: number;
     grouping?: Grouping;
 }
 
-export interface ApiV1GroupingsPostRequest {
+export interface GroupingsPostRequest {
     grouping?: Grouping;
 }
 
@@ -52,7 +52,7 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GroupingsGetRaw(requestParameters: ApiV1GroupingsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Grouping>>> {
+    async groupingsGetRaw(requestParameters: GroupingsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Grouping>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -82,7 +82,7 @@ export class GroupingsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Groupings`,
+            path: `/Groupings`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -93,16 +93,16 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GroupingsGet(requestParameters: ApiV1GroupingsGetRequest, initOverrides?: RequestInit): Promise<Array<Grouping>> {
-        const response = await this.apiV1GroupingsGetRaw(requestParameters, initOverrides);
+    async groupingsGet(requestParameters: GroupingsGetRequest, initOverrides?: RequestInit): Promise<Array<Grouping>> {
+        const response = await this.groupingsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1GroupingsIdDeleteRaw(requestParameters: ApiV1GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async groupingsIdDeleteRaw(requestParameters: GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1GroupingsIdDelete.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdDelete.');
         }
 
         const queryParameters: any = {};
@@ -114,7 +114,7 @@ export class GroupingsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -125,15 +125,15 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GroupingsIdDelete(requestParameters: ApiV1GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1GroupingsIdDeleteRaw(requestParameters, initOverrides);
+    async groupingsIdDelete(requestParameters: GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.groupingsIdDeleteRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async apiV1GroupingsIdGetRaw(requestParameters: ApiV1GroupingsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
+    async groupingsIdGetRaw(requestParameters: GroupingsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1GroupingsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -145,7 +145,7 @@ export class GroupingsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -156,16 +156,16 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GroupingsIdGet(requestParameters: ApiV1GroupingsIdGetRequest, initOverrides?: RequestInit): Promise<Grouping> {
-        const response = await this.apiV1GroupingsIdGetRaw(requestParameters, initOverrides);
+    async groupingsIdGet(requestParameters: GroupingsIdGetRequest, initOverrides?: RequestInit): Promise<Grouping> {
+        const response = await this.groupingsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1GroupingsIdPutRaw(requestParameters: ApiV1GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
+    async groupingsIdPutRaw(requestParameters: GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1GroupingsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdPut.');
         }
 
         const queryParameters: any = {};
@@ -179,7 +179,7 @@ export class GroupingsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -191,14 +191,14 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GroupingsIdPut(requestParameters: ApiV1GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<Grouping> {
-        const response = await this.apiV1GroupingsIdPutRaw(requestParameters, initOverrides);
+    async groupingsIdPut(requestParameters: GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<Grouping> {
+        const response = await this.groupingsIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1GroupingsPostRaw(requestParameters: ApiV1GroupingsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
+    async groupingsPostRaw(requestParameters: GroupingsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -210,7 +210,7 @@ export class GroupingsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Groupings`,
+            path: `/Groupings`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -222,8 +222,8 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1GroupingsPost(requestParameters: ApiV1GroupingsPostRequest, initOverrides?: RequestInit): Promise<Grouping> {
-        const response = await this.apiV1GroupingsPostRaw(requestParameters, initOverrides);
+    async groupingsPost(requestParameters: GroupingsPostRequest, initOverrides?: RequestInit): Promise<Grouping> {
+        const response = await this.groupingsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

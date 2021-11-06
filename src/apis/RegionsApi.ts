@@ -23,12 +23,12 @@ import {
     RegionListToJSON,
 } from '../models';
 
-export interface ApiV1RegionsBycodeGetRequest {
+export interface RegionsBycodeGetRequest {
     regionCode?: string | null;
     regionList?: RegionList;
 }
 
-export interface ApiV1RegionsGetRequest {
+export interface RegionsGetRequest {
     regionList?: RegionList;
     organizationId?: number;
     page?: number;
@@ -43,7 +43,7 @@ export class RegionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1RegionsBycodeGetRaw(requestParameters: ApiV1RegionsBycodeGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Region>> {
+    async regionsBycodeGetRaw(requestParameters: RegionsBycodeGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Region>> {
         const queryParameters: any = {};
 
         if (requestParameters.regionCode !== undefined) {
@@ -61,7 +61,7 @@ export class RegionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Regions/bycode`,
+            path: `/Regions/bycode`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -72,14 +72,14 @@ export class RegionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1RegionsBycodeGet(requestParameters: ApiV1RegionsBycodeGetRequest, initOverrides?: RequestInit): Promise<Region> {
-        const response = await this.apiV1RegionsBycodeGetRaw(requestParameters, initOverrides);
+    async regionsBycodeGet(requestParameters: RegionsBycodeGetRequest, initOverrides?: RequestInit): Promise<Region> {
+        const response = await this.regionsBycodeGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1RegionsGetRaw(requestParameters: ApiV1RegionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Region>>> {
+    async regionsGetRaw(requestParameters: RegionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Region>>> {
         const queryParameters: any = {};
 
         if (requestParameters.regionList !== undefined) {
@@ -109,7 +109,7 @@ export class RegionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Regions`,
+            path: `/Regions`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -120,8 +120,8 @@ export class RegionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1RegionsGet(requestParameters: ApiV1RegionsGetRequest, initOverrides?: RequestInit): Promise<Array<Region>> {
-        const response = await this.apiV1RegionsGetRaw(requestParameters, initOverrides);
+    async regionsGet(requestParameters: RegionsGetRequest, initOverrides?: RequestInit): Promise<Array<Region>> {
+        const response = await this.regionsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

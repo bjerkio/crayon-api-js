@@ -20,7 +20,7 @@ import {
     ActivityLogItemToJSON,
 } from '../models';
 
-export interface ApiV1ActivityLogsGetRequest {
+export interface ActivityLogsGetRequest {
     entity?: string | null;
     id?: number;
     ids?: Array<number> | null;
@@ -38,7 +38,7 @@ export class ActivityLogsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ActivityLogsGetRaw(requestParameters: ApiV1ActivityLogsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ActivityLogItem>>> {
+    async activityLogsGetRaw(requestParameters: ActivityLogsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ActivityLogItem>>> {
         const queryParameters: any = {};
 
         if (requestParameters.entity !== undefined) {
@@ -80,7 +80,7 @@ export class ActivityLogsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ActivityLogs`,
+            path: `/ActivityLogs`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -91,8 +91,8 @@ export class ActivityLogsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ActivityLogsGet(requestParameters: ApiV1ActivityLogsGetRequest, initOverrides?: RequestInit): Promise<Array<ActivityLogItem>> {
-        const response = await this.apiV1ActivityLogsGetRaw(requestParameters, initOverrides);
+    async activityLogsGet(requestParameters: ActivityLogsGetRequest, initOverrides?: RequestInit): Promise<Array<ActivityLogItem>> {
+        const response = await this.activityLogsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

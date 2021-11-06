@@ -29,7 +29,7 @@ import {
     ProductRowPatchToJSON,
 } from '../models';
 
-export interface ApiV1ProductContainersGetRequest {
+export interface ProductContainersGetRequest {
     organizationId?: number;
     search?: string | null;
     page?: number;
@@ -48,31 +48,31 @@ export interface ApiV1ProductContainersGetRequest {
     includeSubsidiaries?: boolean;
 }
 
-export interface ApiV1ProductContainersGetorcreateshoppingcartGetRequest {
+export interface ProductContainersGetorcreateshoppingcartGetRequest {
     organizationId?: number;
 }
 
-export interface ApiV1ProductContainersIdDeleteRequest {
+export interface ProductContainersIdDeleteRequest {
     id: number;
 }
 
-export interface ApiV1ProductContainersIdGetRequest {
+export interface ProductContainersIdGetRequest {
     id: number;
 }
 
-export interface ApiV1ProductContainersIdPutRequest {
+export interface ProductContainersIdPutRequest {
     id: number;
     requireEulaAnalysis?: boolean | null;
     productContainer?: ProductContainer;
 }
 
-export interface ApiV1ProductContainersProductContainerIdRowProductRowIdPatchRequest {
+export interface ProductContainersProductContainerIdRowProductRowIdPatchRequest {
     productContainerId: number;
     productRowId: number;
     productRowPatch?: ProductRowPatch;
 }
 
-export interface ApiV1ProductContainersReportbymonthPostRequest {
+export interface ProductContainersReportbymonthPostRequest {
     year?: number;
     month?: number;
     programId?: number;
@@ -80,7 +80,7 @@ export interface ApiV1ProductContainersReportbymonthPostRequest {
     copyLast?: boolean;
 }
 
-export interface ApiV1ProductContainersRowissuesIdGetRequest {
+export interface ProductContainersRowissuesIdGetRequest {
     id: number;
 }
 
@@ -91,7 +91,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersGetRaw(requestParameters: ApiV1ProductContainersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ProductContainer>>> {
+    async productContainersGetRaw(requestParameters: ProductContainersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ProductContainer>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -165,7 +165,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers`,
+            path: `/ProductContainers`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -176,14 +176,14 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersGet(requestParameters: ApiV1ProductContainersGetRequest, initOverrides?: RequestInit): Promise<Array<ProductContainer>> {
-        const response = await this.apiV1ProductContainersGetRaw(requestParameters, initOverrides);
+    async productContainersGet(requestParameters: ProductContainersGetRequest, initOverrides?: RequestInit): Promise<Array<ProductContainer>> {
+        const response = await this.productContainersGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProductContainersGetorcreateshoppingcartGetRaw(requestParameters: ApiV1ProductContainersGetorcreateshoppingcartGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+    async productContainersGetorcreateshoppingcartGetRaw(requestParameters: ProductContainersGetorcreateshoppingcartGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -197,7 +197,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers/getorcreateshoppingcart`,
+            path: `/ProductContainers/getorcreateshoppingcart`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -208,16 +208,16 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersGetorcreateshoppingcartGet(requestParameters: ApiV1ProductContainersGetorcreateshoppingcartGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.apiV1ProductContainersGetorcreateshoppingcartGetRaw(requestParameters, initOverrides);
+    async productContainersGetorcreateshoppingcartGet(requestParameters: ProductContainersGetorcreateshoppingcartGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.productContainersGetorcreateshoppingcartGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProductContainersIdDeleteRaw(requestParameters: ApiV1ProductContainersIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async productContainersIdDeleteRaw(requestParameters: ProductContainersIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ProductContainersIdDelete.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling productContainersIdDelete.');
         }
 
         const queryParameters: any = {};
@@ -229,7 +229,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -240,16 +240,16 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersIdDelete(requestParameters: ApiV1ProductContainersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.apiV1ProductContainersIdDeleteRaw(requestParameters, initOverrides);
+    async productContainersIdDelete(requestParameters: ProductContainersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.productContainersIdDeleteRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProductContainersIdGetRaw(requestParameters: ApiV1ProductContainersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+    async productContainersIdGetRaw(requestParameters: ProductContainersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ProductContainersIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling productContainersIdGet.');
         }
 
         const queryParameters: any = {};
@@ -261,7 +261,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -272,16 +272,16 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersIdGet(requestParameters: ApiV1ProductContainersIdGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.apiV1ProductContainersIdGetRaw(requestParameters, initOverrides);
+    async productContainersIdGet(requestParameters: ProductContainersIdGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.productContainersIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProductContainersIdPutRaw(requestParameters: ApiV1ProductContainersIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+    async productContainersIdPutRaw(requestParameters: ProductContainersIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ProductContainersIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling productContainersIdPut.');
         }
 
         const queryParameters: any = {};
@@ -299,7 +299,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -311,20 +311,20 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersIdPut(requestParameters: ApiV1ProductContainersIdPutRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.apiV1ProductContainersIdPutRaw(requestParameters, initOverrides);
+    async productContainersIdPut(requestParameters: ProductContainersIdPutRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.productContainersIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProductContainersProductContainerIdRowProductRowIdPatchRaw(requestParameters: ApiV1ProductContainersProductContainerIdRowProductRowIdPatchRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+    async productContainersProductContainerIdRowProductRowIdPatchRaw(requestParameters: ProductContainersProductContainerIdRowProductRowIdPatchRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
         if (requestParameters.productContainerId === null || requestParameters.productContainerId === undefined) {
-            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling apiV1ProductContainersProductContainerIdRowProductRowIdPatch.');
+            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling productContainersProductContainerIdRowProductRowIdPatch.');
         }
 
         if (requestParameters.productRowId === null || requestParameters.productRowId === undefined) {
-            throw new runtime.RequiredError('productRowId','Required parameter requestParameters.productRowId was null or undefined when calling apiV1ProductContainersProductContainerIdRowProductRowIdPatch.');
+            throw new runtime.RequiredError('productRowId','Required parameter requestParameters.productRowId was null or undefined when calling productContainersProductContainerIdRowProductRowIdPatch.');
         }
 
         const queryParameters: any = {};
@@ -338,7 +338,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers/{productContainerId}/row/{productRowId}`.replace(`{${"productContainerId"}}`, encodeURIComponent(String(requestParameters.productContainerId))).replace(`{${"productRowId"}}`, encodeURIComponent(String(requestParameters.productRowId))),
+            path: `/ProductContainers/{productContainerId}/row/{productRowId}`.replace(`{${"productContainerId"}}`, encodeURIComponent(String(requestParameters.productContainerId))).replace(`{${"productRowId"}}`, encodeURIComponent(String(requestParameters.productRowId))),
             method: 'PATCH',
             headers: headerParameters,
             query: queryParameters,
@@ -350,14 +350,14 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersProductContainerIdRowProductRowIdPatch(requestParameters: ApiV1ProductContainersProductContainerIdRowProductRowIdPatchRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.apiV1ProductContainersProductContainerIdRowProductRowIdPatchRaw(requestParameters, initOverrides);
+    async productContainersProductContainerIdRowProductRowIdPatch(requestParameters: ProductContainersProductContainerIdRowProductRowIdPatchRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.productContainersProductContainerIdRowProductRowIdPatchRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProductContainersReportbymonthPostRaw(requestParameters: ApiV1ProductContainersReportbymonthPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+    async productContainersReportbymonthPostRaw(requestParameters: ProductContainersReportbymonthPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
         const queryParameters: any = {};
 
         if (requestParameters.year !== undefined) {
@@ -387,7 +387,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers/reportbymonth`,
+            path: `/ProductContainers/reportbymonth`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -398,16 +398,16 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersReportbymonthPost(requestParameters: ApiV1ProductContainersReportbymonthPostRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.apiV1ProductContainersReportbymonthPostRaw(requestParameters, initOverrides);
+    async productContainersReportbymonthPost(requestParameters: ProductContainersReportbymonthPostRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.productContainersReportbymonthPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProductContainersRowissuesIdGetRaw(requestParameters: ApiV1ProductContainersRowissuesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+    async productContainersRowissuesIdGetRaw(requestParameters: ProductContainersRowissuesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ProductContainersRowissuesIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling productContainersRowissuesIdGet.');
         }
 
         const queryParameters: any = {};
@@ -419,7 +419,7 @@ export class ProductContainersApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ProductContainers/rowissues/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/ProductContainers/rowissues/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -430,8 +430,8 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProductContainersRowissuesIdGet(requestParameters: ApiV1ProductContainersRowissuesIdGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.apiV1ProductContainersRowissuesIdGetRaw(requestParameters, initOverrides);
+    async productContainersRowissuesIdGet(requestParameters: ProductContainersRowissuesIdGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.productContainersRowissuesIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

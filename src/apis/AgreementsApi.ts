@@ -26,7 +26,7 @@ import {
     AgreementTypeToJSON,
 } from '../models';
 
-export interface ApiV1AgreementsGetRequest {
+export interface AgreementsGetRequest {
     organizationId?: number;
     organizationIds?: Array<number> | null;
     pricelistIds?: Array<number> | null;
@@ -53,7 +53,7 @@ export class AgreementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementsGetRaw(requestParameters: ApiV1AgreementsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Agreement>>> {
+    async agreementsGetRaw(requestParameters: AgreementsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Agreement>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -131,7 +131,7 @@ export class AgreementsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Agreements`,
+            path: `/Agreements`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -142,8 +142,8 @@ export class AgreementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AgreementsGet(requestParameters: ApiV1AgreementsGetRequest, initOverrides?: RequestInit): Promise<Array<Agreement>> {
-        const response = await this.apiV1AgreementsGetRaw(requestParameters, initOverrides);
+    async agreementsGet(requestParameters: AgreementsGetRequest, initOverrides?: RequestInit): Promise<Array<Agreement>> {
+        const response = await this.agreementsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

@@ -22,7 +22,7 @@ export class PingApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1PingGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async pingGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -32,7 +32,7 @@ export class PingApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Ping`,
+            path: `/Ping`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -43,8 +43,8 @@ export class PingApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1PingGet(initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1PingGetRaw(initOverrides);
+    async pingGet(initOverrides?: RequestInit): Promise<void> {
+        await this.pingGetRaw(initOverrides);
     }
 
 }

@@ -23,7 +23,7 @@ import {
     CustomerTenantTypeToJSON,
 } from '../models';
 
-export interface ApiV1AwsAccountsGetRequest {
+export interface AwsAccountsGetRequest {
     organizationId?: number;
     publisherId?: number;
     consumerId?: number;
@@ -33,11 +33,11 @@ export interface ApiV1AwsAccountsGetRequest {
     search?: string | null;
 }
 
-export interface ApiV1AwsAccountsIdGetRequest {
+export interface AwsAccountsIdGetRequest {
     id: number;
 }
 
-export interface ApiV1AwsAccountsIdPutRequest {
+export interface AwsAccountsIdPutRequest {
     id: number;
     awsAccount?: AwsAccount;
 }
@@ -49,7 +49,7 @@ export class AwsAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AwsAccountsGetRaw(requestParameters: ApiV1AwsAccountsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AwsAccount>>> {
+    async awsAccountsGetRaw(requestParameters: AwsAccountsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AwsAccount>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -87,7 +87,7 @@ export class AwsAccountsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AwsAccounts`,
+            path: `/AwsAccounts`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -98,16 +98,16 @@ export class AwsAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AwsAccountsGet(requestParameters: ApiV1AwsAccountsGetRequest, initOverrides?: RequestInit): Promise<Array<AwsAccount>> {
-        const response = await this.apiV1AwsAccountsGetRaw(requestParameters, initOverrides);
+    async awsAccountsGet(requestParameters: AwsAccountsGetRequest, initOverrides?: RequestInit): Promise<Array<AwsAccount>> {
+        const response = await this.awsAccountsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AwsAccountsIdGetRaw(requestParameters: ApiV1AwsAccountsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
+    async awsAccountsIdGetRaw(requestParameters: AwsAccountsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AwsAccountsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling awsAccountsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -119,7 +119,7 @@ export class AwsAccountsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AwsAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AwsAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -130,16 +130,16 @@ export class AwsAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AwsAccountsIdGet(requestParameters: ApiV1AwsAccountsIdGetRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
-        const response = await this.apiV1AwsAccountsIdGetRaw(requestParameters, initOverrides);
+    async awsAccountsIdGet(requestParameters: AwsAccountsIdGetRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
+        const response = await this.awsAccountsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1AwsAccountsIdPutRaw(requestParameters: ApiV1AwsAccountsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
+    async awsAccountsIdPutRaw(requestParameters: AwsAccountsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1AwsAccountsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling awsAccountsIdPut.');
         }
 
         const queryParameters: any = {};
@@ -153,7 +153,7 @@ export class AwsAccountsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/AwsAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/AwsAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -165,8 +165,8 @@ export class AwsAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1AwsAccountsIdPut(requestParameters: ApiV1AwsAccountsIdPutRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
-        const response = await this.apiV1AwsAccountsIdPutRaw(requestParameters, initOverrides);
+    async awsAccountsIdPut(requestParameters: AwsAccountsIdPutRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
+        const response = await this.awsAccountsIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

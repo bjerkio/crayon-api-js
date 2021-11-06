@@ -23,7 +23,7 @@ import {
     CustomerTenantTypeToJSON,
 } from '../models';
 
-export interface ApiV1CrayonAccountsGetRequest {
+export interface CrayonAccountsGetRequest {
     organizationId?: number;
     publisherId?: number;
     consumerId?: number;
@@ -33,16 +33,16 @@ export interface ApiV1CrayonAccountsGetRequest {
     search?: string | null;
 }
 
-export interface ApiV1CrayonAccountsIdGetRequest {
+export interface CrayonAccountsIdGetRequest {
     id: number;
 }
 
-export interface ApiV1CrayonAccountsIdPutRequest {
+export interface CrayonAccountsIdPutRequest {
     id: number;
     crayonAccount?: CrayonAccount;
 }
 
-export interface ApiV1CrayonAccountsPostRequest {
+export interface CrayonAccountsPostRequest {
     crayonAccount?: CrayonAccount;
 }
 
@@ -53,7 +53,7 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CrayonAccountsGetRaw(requestParameters: ApiV1CrayonAccountsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CrayonAccount>>> {
+    async crayonAccountsGetRaw(requestParameters: CrayonAccountsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CrayonAccount>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -91,7 +91,7 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CrayonAccounts`,
+            path: `/CrayonAccounts`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -102,16 +102,16 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CrayonAccountsGet(requestParameters: ApiV1CrayonAccountsGetRequest, initOverrides?: RequestInit): Promise<Array<CrayonAccount>> {
-        const response = await this.apiV1CrayonAccountsGetRaw(requestParameters, initOverrides);
+    async crayonAccountsGet(requestParameters: CrayonAccountsGetRequest, initOverrides?: RequestInit): Promise<Array<CrayonAccount>> {
+        const response = await this.crayonAccountsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CrayonAccountsIdGetRaw(requestParameters: ApiV1CrayonAccountsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
+    async crayonAccountsIdGetRaw(requestParameters: CrayonAccountsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1CrayonAccountsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling crayonAccountsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -123,7 +123,7 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CrayonAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/CrayonAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -134,16 +134,16 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CrayonAccountsIdGet(requestParameters: ApiV1CrayonAccountsIdGetRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
-        const response = await this.apiV1CrayonAccountsIdGetRaw(requestParameters, initOverrides);
+    async crayonAccountsIdGet(requestParameters: CrayonAccountsIdGetRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
+        const response = await this.crayonAccountsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CrayonAccountsIdPutRaw(requestParameters: ApiV1CrayonAccountsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
+    async crayonAccountsIdPutRaw(requestParameters: CrayonAccountsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1CrayonAccountsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling crayonAccountsIdPut.');
         }
 
         const queryParameters: any = {};
@@ -157,7 +157,7 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CrayonAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/CrayonAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -169,14 +169,14 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CrayonAccountsIdPut(requestParameters: ApiV1CrayonAccountsIdPutRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
-        const response = await this.apiV1CrayonAccountsIdPutRaw(requestParameters, initOverrides);
+    async crayonAccountsIdPut(requestParameters: CrayonAccountsIdPutRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
+        const response = await this.crayonAccountsIdPutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1CrayonAccountsPostRaw(requestParameters: ApiV1CrayonAccountsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
+    async crayonAccountsPostRaw(requestParameters: CrayonAccountsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -188,7 +188,7 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/CrayonAccounts`,
+            path: `/CrayonAccounts`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -200,8 +200,8 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1CrayonAccountsPost(requestParameters: ApiV1CrayonAccountsPostRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
-        const response = await this.apiV1CrayonAccountsPostRaw(requestParameters, initOverrides);
+    async crayonAccountsPost(requestParameters: CrayonAccountsPostRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
+        const response = await this.crayonAccountsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

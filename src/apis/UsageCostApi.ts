@@ -47,27 +47,27 @@ import {
     SubscriptionUsageCostRequestToJSON,
 } from '../models';
 
-export interface ApiV1UsageCostGetForCategoryPostRequest {
+export interface UsageCostGetForCategoryPostRequest {
     categoryUsageCostRequest?: CategoryUsageCostRequest;
 }
 
-export interface ApiV1UsageCostGetForResourceGroupPostRequest {
+export interface UsageCostGetForResourceGroupPostRequest {
     resourceGroupUsageCostRequest?: ResourceGroupUsageCostRequest;
 }
 
-export interface ApiV1UsageCostGetForSubcategoryPostRequest {
+export interface UsageCostGetForSubcategoryPostRequest {
     subcategoryUsageCostRequest?: SubcategoryUsageCostRequest;
 }
 
-export interface ApiV1UsageCostGetForSubscriptionPostRequest {
+export interface UsageCostGetForSubscriptionPostRequest {
     subscriptionUsageCostRequest?: SubscriptionUsageCostRequest;
 }
 
-export interface ApiV1UsageCostGetForSubscriptionResourceGroupsPostRequest {
+export interface UsageCostGetForSubscriptionResourceGroupsPostRequest {
     subscriptionUsageCostRequest?: SubscriptionUsageCostRequest;
 }
 
-export interface ApiV1UsageCostOrganizationOrganizationIdGetRequest {
+export interface UsageCostOrganizationOrganizationIdGetRequest {
     organizationId: number;
     from?: Date;
     to?: Date;
@@ -80,7 +80,7 @@ export class UsageCostApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsageCostGetForCategoryPostRaw(requestParameters: ApiV1UsageCostGetForCategoryPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CategoryUsageCost>>> {
+    async usageCostGetForCategoryPostRaw(requestParameters: UsageCostGetForCategoryPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CategoryUsageCost>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -92,7 +92,7 @@ export class UsageCostApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/UsageCost/getForCategory`,
+            path: `/UsageCost/getForCategory`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -104,14 +104,14 @@ export class UsageCostApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsageCostGetForCategoryPost(requestParameters: ApiV1UsageCostGetForCategoryPostRequest, initOverrides?: RequestInit): Promise<Array<CategoryUsageCost>> {
-        const response = await this.apiV1UsageCostGetForCategoryPostRaw(requestParameters, initOverrides);
+    async usageCostGetForCategoryPost(requestParameters: UsageCostGetForCategoryPostRequest, initOverrides?: RequestInit): Promise<Array<CategoryUsageCost>> {
+        const response = await this.usageCostGetForCategoryPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsageCostGetForResourceGroupPostRaw(requestParameters: ApiV1UsageCostGetForResourceGroupPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ResourceGroupUsageCost>>> {
+    async usageCostGetForResourceGroupPostRaw(requestParameters: UsageCostGetForResourceGroupPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ResourceGroupUsageCost>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -123,7 +123,7 @@ export class UsageCostApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/UsageCost/getForResourceGroup`,
+            path: `/UsageCost/getForResourceGroup`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -135,14 +135,14 @@ export class UsageCostApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsageCostGetForResourceGroupPost(requestParameters: ApiV1UsageCostGetForResourceGroupPostRequest, initOverrides?: RequestInit): Promise<Array<ResourceGroupUsageCost>> {
-        const response = await this.apiV1UsageCostGetForResourceGroupPostRaw(requestParameters, initOverrides);
+    async usageCostGetForResourceGroupPost(requestParameters: UsageCostGetForResourceGroupPostRequest, initOverrides?: RequestInit): Promise<Array<ResourceGroupUsageCost>> {
+        const response = await this.usageCostGetForResourceGroupPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsageCostGetForSubcategoryPostRaw(requestParameters: ApiV1UsageCostGetForSubcategoryPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubcategoryUsageCost>>> {
+    async usageCostGetForSubcategoryPostRaw(requestParameters: UsageCostGetForSubcategoryPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubcategoryUsageCost>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -154,7 +154,7 @@ export class UsageCostApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/UsageCost/getForSubcategory`,
+            path: `/UsageCost/getForSubcategory`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -166,14 +166,14 @@ export class UsageCostApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsageCostGetForSubcategoryPost(requestParameters: ApiV1UsageCostGetForSubcategoryPostRequest, initOverrides?: RequestInit): Promise<Array<SubcategoryUsageCost>> {
-        const response = await this.apiV1UsageCostGetForSubcategoryPostRaw(requestParameters, initOverrides);
+    async usageCostGetForSubcategoryPost(requestParameters: UsageCostGetForSubcategoryPostRequest, initOverrides?: RequestInit): Promise<Array<SubcategoryUsageCost>> {
+        const response = await this.usageCostGetForSubcategoryPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsageCostGetForSubscriptionPostRaw(requestParameters: ApiV1UsageCostGetForSubscriptionPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionUsageCost>>> {
+    async usageCostGetForSubscriptionPostRaw(requestParameters: UsageCostGetForSubscriptionPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionUsageCost>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -185,7 +185,7 @@ export class UsageCostApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/UsageCost/getForSubscription`,
+            path: `/UsageCost/getForSubscription`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -197,14 +197,14 @@ export class UsageCostApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsageCostGetForSubscriptionPost(requestParameters: ApiV1UsageCostGetForSubscriptionPostRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionUsageCost>> {
-        const response = await this.apiV1UsageCostGetForSubscriptionPostRaw(requestParameters, initOverrides);
+    async usageCostGetForSubscriptionPost(requestParameters: UsageCostGetForSubscriptionPostRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionUsageCost>> {
+        const response = await this.usageCostGetForSubscriptionPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsageCostGetForSubscriptionResourceGroupsPostRaw(requestParameters: ApiV1UsageCostGetForSubscriptionResourceGroupsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionResourceGroupUsageCost>>> {
+    async usageCostGetForSubscriptionResourceGroupsPostRaw(requestParameters: UsageCostGetForSubscriptionResourceGroupsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionResourceGroupUsageCost>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -216,7 +216,7 @@ export class UsageCostApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/UsageCost/getForSubscription/resourceGroups`,
+            path: `/UsageCost/getForSubscription/resourceGroups`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -228,16 +228,16 @@ export class UsageCostApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsageCostGetForSubscriptionResourceGroupsPost(requestParameters: ApiV1UsageCostGetForSubscriptionResourceGroupsPostRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionResourceGroupUsageCost>> {
-        const response = await this.apiV1UsageCostGetForSubscriptionResourceGroupsPostRaw(requestParameters, initOverrides);
+    async usageCostGetForSubscriptionResourceGroupsPost(requestParameters: UsageCostGetForSubscriptionResourceGroupsPostRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionResourceGroupUsageCost>> {
+        const response = await this.usageCostGetForSubscriptionResourceGroupsPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1UsageCostOrganizationOrganizationIdGetRaw(requestParameters: ApiV1UsageCostOrganizationOrganizationIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationUsageCost>>> {
+    async usageCostOrganizationOrganizationIdGetRaw(requestParameters: UsageCostOrganizationOrganizationIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationUsageCost>>> {
         if (requestParameters.organizationId === null || requestParameters.organizationId === undefined) {
-            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling apiV1UsageCostOrganizationOrganizationIdGet.');
+            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling usageCostOrganizationOrganizationIdGet.');
         }
 
         const queryParameters: any = {};
@@ -257,7 +257,7 @@ export class UsageCostApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/UsageCost/organization/{organizationId}`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))),
+            path: `/UsageCost/organization/{organizationId}`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -268,8 +268,8 @@ export class UsageCostApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1UsageCostOrganizationOrganizationIdGet(requestParameters: ApiV1UsageCostOrganizationOrganizationIdGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationUsageCost>> {
-        const response = await this.apiV1UsageCostOrganizationOrganizationIdGetRaw(requestParameters, initOverrides);
+    async usageCostOrganizationOrganizationIdGet(requestParameters: UsageCostOrganizationOrganizationIdGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationUsageCost>> {
+        const response = await this.usageCostOrganizationOrganizationIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

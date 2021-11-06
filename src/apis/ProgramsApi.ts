@@ -23,7 +23,7 @@ import {
     ProgramTypeToJSON,
 } from '../models';
 
-export interface ApiV1ProgramsGetRequest {
+export interface ProgramsGetRequest {
     publisherId?: number;
     programType?: ProgramType;
     page?: number;
@@ -32,7 +32,7 @@ export interface ApiV1ProgramsGetRequest {
     organizationId?: number;
 }
 
-export interface ApiV1ProgramsIdGetRequest {
+export interface ProgramsIdGetRequest {
     id: number;
 }
 
@@ -43,7 +43,7 @@ export class ProgramsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProgramsGetRaw(requestParameters: ApiV1ProgramsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Program>>> {
+    async programsGetRaw(requestParameters: ProgramsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Program>>> {
         const queryParameters: any = {};
 
         if (requestParameters.publisherId !== undefined) {
@@ -77,7 +77,7 @@ export class ProgramsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Programs`,
+            path: `/Programs`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -88,16 +88,16 @@ export class ProgramsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProgramsGet(requestParameters: ApiV1ProgramsGetRequest, initOverrides?: RequestInit): Promise<Array<Program>> {
-        const response = await this.apiV1ProgramsGetRaw(requestParameters, initOverrides);
+    async programsGet(requestParameters: ProgramsGetRequest, initOverrides?: RequestInit): Promise<Array<Program>> {
+        const response = await this.programsGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ProgramsIdGetRaw(requestParameters: ApiV1ProgramsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Program>> {
+    async programsIdGetRaw(requestParameters: ProgramsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Program>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling apiV1ProgramsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling programsIdGet.');
         }
 
         const queryParameters: any = {};
@@ -109,7 +109,7 @@ export class ProgramsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/Programs/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Programs/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -120,8 +120,8 @@ export class ProgramsApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ProgramsIdGet(requestParameters: ApiV1ProgramsIdGetRequest, initOverrides?: RequestInit): Promise<Program> {
-        const response = await this.apiV1ProgramsIdGetRaw(requestParameters, initOverrides);
+    async programsIdGet(requestParameters: ProgramsIdGetRequest, initOverrides?: RequestInit): Promise<Program> {
+        const response = await this.programsIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

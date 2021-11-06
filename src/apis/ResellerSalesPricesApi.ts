@@ -29,37 +29,37 @@ import {
     ResellerSalesPriceTypeToJSON,
 } from '../models';
 
-export interface ApiV1ResellerSalesPricesCurrentGetRequest {
+export interface ResellerSalesPricesCurrentGetRequest {
     type?: ResellerSalesPriceType;
     objectId?: number;
     objectType?: ResellerSalesPriceObjectType;
     fromDate?: Date | null;
 }
 
-export interface ApiV1ResellerSalesPricesDeleteRequest {
+export interface ResellerSalesPricesDeleteRequest {
     type?: ResellerSalesPriceType;
     objectId?: number;
     objectType?: ResellerSalesPriceObjectType;
     fromDate?: Date | null;
 }
 
-export interface ApiV1ResellerSalesPricesGetRequest {
+export interface ResellerSalesPricesGetRequest {
     type?: ResellerSalesPriceType;
     objectId?: number;
     objectType?: ResellerSalesPriceObjectType;
     fromDate?: Date | null;
 }
 
-export interface ApiV1ResellerSalesPricesOldFromDatePutRequest {
+export interface ResellerSalesPricesOldFromDatePutRequest {
     oldFromDate: Date;
     resellerSalesPrice?: ResellerSalesPrice;
 }
 
-export interface ApiV1ResellerSalesPricesPostRequest {
+export interface ResellerSalesPricesPostRequest {
     resellerSalesPrice?: ResellerSalesPrice;
 }
 
-export interface ApiV1ResellerSalesPricesTogglePostRequest {
+export interface ResellerSalesPricesTogglePostRequest {
     resellerSalesPriceToggle?: ResellerSalesPriceToggle;
 }
 
@@ -70,7 +70,7 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ResellerSalesPricesCurrentGetRaw(requestParameters: ApiV1ResellerSalesPricesCurrentGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ResellerSalesPrice>> {
+    async resellerSalesPricesCurrentGetRaw(requestParameters: ResellerSalesPricesCurrentGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ResellerSalesPrice>> {
         const queryParameters: any = {};
 
         if (requestParameters.type !== undefined) {
@@ -96,7 +96,7 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ResellerSalesPrices/current`,
+            path: `/ResellerSalesPrices/current`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -107,14 +107,14 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ResellerSalesPricesCurrentGet(requestParameters: ApiV1ResellerSalesPricesCurrentGetRequest, initOverrides?: RequestInit): Promise<ResellerSalesPrice> {
-        const response = await this.apiV1ResellerSalesPricesCurrentGetRaw(requestParameters, initOverrides);
+    async resellerSalesPricesCurrentGet(requestParameters: ResellerSalesPricesCurrentGetRequest, initOverrides?: RequestInit): Promise<ResellerSalesPrice> {
+        const response = await this.resellerSalesPricesCurrentGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ResellerSalesPricesDeleteRaw(requestParameters: ApiV1ResellerSalesPricesDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async resellerSalesPricesDeleteRaw(requestParameters: ResellerSalesPricesDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         if (requestParameters.type !== undefined) {
@@ -140,7 +140,7 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ResellerSalesPrices`,
+            path: `/ResellerSalesPrices`,
             method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
@@ -151,13 +151,13 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ResellerSalesPricesDelete(requestParameters: ApiV1ResellerSalesPricesDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1ResellerSalesPricesDeleteRaw(requestParameters, initOverrides);
+    async resellerSalesPricesDelete(requestParameters: ResellerSalesPricesDeleteRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.resellerSalesPricesDeleteRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async apiV1ResellerSalesPricesGetRaw(requestParameters: ApiV1ResellerSalesPricesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ResellerSalesPrice>>> {
+    async resellerSalesPricesGetRaw(requestParameters: ResellerSalesPricesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ResellerSalesPrice>>> {
         const queryParameters: any = {};
 
         if (requestParameters.type !== undefined) {
@@ -183,7 +183,7 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ResellerSalesPrices`,
+            path: `/ResellerSalesPrices`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
@@ -194,16 +194,16 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ResellerSalesPricesGet(requestParameters: ApiV1ResellerSalesPricesGetRequest, initOverrides?: RequestInit): Promise<Array<ResellerSalesPrice>> {
-        const response = await this.apiV1ResellerSalesPricesGetRaw(requestParameters, initOverrides);
+    async resellerSalesPricesGet(requestParameters: ResellerSalesPricesGetRequest, initOverrides?: RequestInit): Promise<Array<ResellerSalesPrice>> {
+        const response = await this.resellerSalesPricesGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ResellerSalesPricesOldFromDatePutRaw(requestParameters: ApiV1ResellerSalesPricesOldFromDatePutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ResellerSalesPrice>> {
+    async resellerSalesPricesOldFromDatePutRaw(requestParameters: ResellerSalesPricesOldFromDatePutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ResellerSalesPrice>> {
         if (requestParameters.oldFromDate === null || requestParameters.oldFromDate === undefined) {
-            throw new runtime.RequiredError('oldFromDate','Required parameter requestParameters.oldFromDate was null or undefined when calling apiV1ResellerSalesPricesOldFromDatePut.');
+            throw new runtime.RequiredError('oldFromDate','Required parameter requestParameters.oldFromDate was null or undefined when calling resellerSalesPricesOldFromDatePut.');
         }
 
         const queryParameters: any = {};
@@ -217,7 +217,7 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ResellerSalesPrices/{oldFromDate}`.replace(`{${"oldFromDate"}}`, encodeURIComponent(String(requestParameters.oldFromDate))),
+            path: `/ResellerSalesPrices/{oldFromDate}`.replace(`{${"oldFromDate"}}`, encodeURIComponent(String(requestParameters.oldFromDate))),
             method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
@@ -229,14 +229,14 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ResellerSalesPricesOldFromDatePut(requestParameters: ApiV1ResellerSalesPricesOldFromDatePutRequest, initOverrides?: RequestInit): Promise<ResellerSalesPrice> {
-        const response = await this.apiV1ResellerSalesPricesOldFromDatePutRaw(requestParameters, initOverrides);
+    async resellerSalesPricesOldFromDatePut(requestParameters: ResellerSalesPricesOldFromDatePutRequest, initOverrides?: RequestInit): Promise<ResellerSalesPrice> {
+        const response = await this.resellerSalesPricesOldFromDatePutRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ResellerSalesPricesPostRaw(requestParameters: ApiV1ResellerSalesPricesPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ResellerSalesPrice>> {
+    async resellerSalesPricesPostRaw(requestParameters: ResellerSalesPricesPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ResellerSalesPrice>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -248,7 +248,7 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ResellerSalesPrices`,
+            path: `/ResellerSalesPrices`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -260,14 +260,14 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ResellerSalesPricesPost(requestParameters: ApiV1ResellerSalesPricesPostRequest, initOverrides?: RequestInit): Promise<ResellerSalesPrice> {
-        const response = await this.apiV1ResellerSalesPricesPostRaw(requestParameters, initOverrides);
+    async resellerSalesPricesPost(requestParameters: ResellerSalesPricesPostRequest, initOverrides?: RequestInit): Promise<ResellerSalesPrice> {
+        const response = await this.resellerSalesPricesPostRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async apiV1ResellerSalesPricesTogglePostRaw(requestParameters: ApiV1ResellerSalesPricesTogglePostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async resellerSalesPricesTogglePostRaw(requestParameters: ResellerSalesPricesTogglePostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -279,7 +279,7 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/api/v1/ResellerSalesPrices/toggle`,
+            path: `/ResellerSalesPrices/toggle`,
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
@@ -291,8 +291,8 @@ export class ResellerSalesPricesApi extends runtime.BaseAPI {
 
     /**
      */
-    async apiV1ResellerSalesPricesTogglePost(requestParameters: ApiV1ResellerSalesPricesTogglePostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.apiV1ResellerSalesPricesTogglePostRaw(requestParameters, initOverrides);
+    async resellerSalesPricesTogglePost(requestParameters: ResellerSalesPricesTogglePostRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.resellerSalesPricesTogglePostRaw(requestParameters, initOverrides);
     }
 
 }
