@@ -75,6 +75,7 @@ src/models/AzureSubscriptionUpdated.ts
 src/models/BillingCycle.ts
 src/models/BillingCycleEnum.ts
 src/models/BillingCycleType.ts
+src/models/BillingFile.ts
 src/models/BillingStatement.ts
 src/models/BlogItem.ts
 src/models/CategoryUsageCost.ts

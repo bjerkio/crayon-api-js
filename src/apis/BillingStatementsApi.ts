@@ -15,6 +15,9 @@
 
 import * as runtime from '../runtime';
 import {
+    BillingFile,
+    BillingFileFromJSON,
+    BillingFileToJSON,
     BillingStatement,
     BillingStatementFromJSON,
     BillingStatementToJSON,
@@ -65,7 +68,7 @@ export class BillingStatementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async getBillingStatementFileRaw(requestParameters: GetBillingStatementFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async getBillingStatementFileRaw(requestParameters: GetBillingStatementFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<BillingFile>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
             throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getBillingStatementFile.');
         }
@@ -85,18 +88,19 @@ export class BillingStatementsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.VoidApiResponse(response);
+        return new runtime.JSONApiResponse(response, (jsonValue) => BillingFileFromJSON(jsonValue));
     }
 
     /**
      */
-    async getBillingStatementFile(requestParameters: GetBillingStatementFileRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.getBillingStatementFileRaw(requestParameters, initOverrides);
+    async getBillingStatementFile(requestParameters: GetBillingStatementFileRequest, initOverrides?: RequestInit): Promise<BillingFile> {
+        const response = await this.getBillingStatementFileRaw(requestParameters, initOverrides);
+        return await response.value();
     }
 
     /**
      */
-    async getBillingStatementReconciliationFileRaw(requestParameters: GetBillingStatementReconciliationFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async getBillingStatementReconciliationFileRaw(requestParameters: GetBillingStatementReconciliationFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<BillingFile>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
             throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getBillingStatementReconciliationFile.');
         }
@@ -116,18 +120,19 @@ export class BillingStatementsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.VoidApiResponse(response);
+        return new runtime.JSONApiResponse(response, (jsonValue) => BillingFileFromJSON(jsonValue));
     }
 
     /**
      */
-    async getBillingStatementReconciliationFile(requestParameters: GetBillingStatementReconciliationFileRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.getBillingStatementReconciliationFileRaw(requestParameters, initOverrides);
+    async getBillingStatementReconciliationFile(requestParameters: GetBillingStatementReconciliationFileRequest, initOverrides?: RequestInit): Promise<BillingFile> {
+        const response = await this.getBillingStatementReconciliationFileRaw(requestParameters, initOverrides);
+        return await response.value();
     }
 
     /**
      */
-    async getBillingStatementRecordsFileRaw(requestParameters: GetBillingStatementRecordsFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async getBillingStatementRecordsFileRaw(requestParameters: GetBillingStatementRecordsFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<BillingFile>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
             throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getBillingStatementRecordsFile.');
         }
@@ -147,13 +152,14 @@ export class BillingStatementsApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.VoidApiResponse(response);
+        return new runtime.JSONApiResponse(response, (jsonValue) => BillingFileFromJSON(jsonValue));
     }
 
     /**
      */
-    async getBillingStatementRecordsFile(requestParameters: GetBillingStatementRecordsFileRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.getBillingStatementRecordsFileRaw(requestParameters, initOverrides);
+    async getBillingStatementRecordsFile(requestParameters: GetBillingStatementRecordsFileRequest, initOverrides?: RequestInit): Promise<BillingFile> {
+        const response = await this.getBillingStatementRecordsFileRaw(requestParameters, initOverrides);
+        return await response.value();
     }
 
     /**

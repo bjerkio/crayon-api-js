@@ -2876,7 +2876,14 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BillingFile"
+                }
+              }
+            }
           }
         }
       }
@@ -2898,7 +2905,14 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BillingFile"
+                }
+              }
+            }
           }
         }
       }
@@ -2920,7 +2934,14 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BillingFile"
+                }
+              }
+            }
           }
         }
       }
@@ -12266,6 +12287,20 @@
           "newPassword": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BillingFile": {
+        "type": "object",
+        "properties": {
+          "fileName": {
+            "type": "string",
+            "nullable": false
+          },
+          "data": {
+            "type": "string",
+            "nullable": false
           }
         },
         "additionalProperties": false

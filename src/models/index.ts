@@ -38,6 +38,7 @@ export * from './AzureSubscriptionUpdated';
 export * from './BillingCycle';
 export * from './BillingCycleEnum';
 export * from './BillingCycleType';
+export * from './BillingFile';
 export * from './BillingStatement';
 export * from './BlogItem';
 export * from './CategoryUsageCost';
