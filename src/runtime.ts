@@ -9,7 +9,7 @@
  */
 import 'portable-fetch';
 
-export const BASE_PATH = 'http://api.crayon.com'.replace(/\/+$/, '');
+export const BASE_PATH = 'https://api.crayon.com/api/v1'.replace(/\/+$/, '');
 
 const isBlob = (value: any) =>
   typeof Blob !== 'undefined' && value instanceof Blob;
