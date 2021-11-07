@@ -23,14 +23,14 @@ import {
     AddressTypeToJSON,
 } from '../models';
 
-export interface OrganizationsOrganizationIdAddressesGetRequest {
-    organizationId: number;
-    type?: AddressType;
-}
-
-export interface OrganizationsOrganizationIdAddressesIdGetRequest {
+export interface GetAddressRequest {
     organizationId: number;
     id: number;
+}
+
+export interface ListAddressesRequest {
+    organizationId: number;
+    type?: AddressType;
 }
 
 /**
@@ -40,9 +40,45 @@ export class AddressesApi extends runtime.BaseAPI {
 
     /**
      */
-    async organizationsOrganizationIdAddressesGetRaw(requestParameters: OrganizationsOrganizationIdAddressesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Address>>> {
+    async getAddressRaw(requestParameters: GetAddressRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Address>> {
         if (requestParameters.organizationId === null || requestParameters.organizationId === undefined) {
-            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling organizationsOrganizationIdAddressesGet.');
+            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling getAddress.');
+        }
+
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getAddress.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/organizations/{organizationId}/Addresses/{id}`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AddressFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getAddress(requestParameters: GetAddressRequest, initOverrides?: RequestInit): Promise<Address> {
+        const response = await this.getAddressRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listAddressesRaw(requestParameters: ListAddressesRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Address>>> {
+        if (requestParameters.organizationId === null || requestParameters.organizationId === undefined) {
+            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling listAddresses.');
         }
 
         const queryParameters: any = {};
@@ -69,44 +105,8 @@ export class AddressesApi extends runtime.BaseAPI {
 
     /**
      */
-    async organizationsOrganizationIdAddressesGet(requestParameters: OrganizationsOrganizationIdAddressesGetRequest, initOverrides?: RequestInit): Promise<Array<Address>> {
-        const response = await this.organizationsOrganizationIdAddressesGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async organizationsOrganizationIdAddressesIdGetRaw(requestParameters: OrganizationsOrganizationIdAddressesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Address>> {
-        if (requestParameters.organizationId === null || requestParameters.organizationId === undefined) {
-            throw new runtime.RequiredError('organizationId','Required parameter requestParameters.organizationId was null or undefined when calling organizationsOrganizationIdAddressesIdGet.');
-        }
-
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling organizationsOrganizationIdAddressesIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/organizations/{organizationId}/Addresses/{id}`.replace(`{${"organizationId"}}`, encodeURIComponent(String(requestParameters.organizationId))).replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => AddressFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async organizationsOrganizationIdAddressesIdGet(requestParameters: OrganizationsOrganizationIdAddressesIdGetRequest, initOverrides?: RequestInit): Promise<Address> {
-        const response = await this.organizationsOrganizationIdAddressesIdGetRaw(requestParameters, initOverrides);
+    async listAddresses(requestParameters: ListAddressesRequest, initOverrides?: RequestInit): Promise<Array<Address>> {
+        const response = await this.listAddressesRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

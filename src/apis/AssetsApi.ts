@@ -38,65 +38,65 @@ import {
     SortOrderToJSON,
 } from '../models';
 
-export interface AssetsAssetIdPutRequest {
+export interface CreateAssetCheckoutOrderRequest {
+    assetOrder?: AssetOrder;
+}
+
+export interface CreateAssetVerifyOrderRequest {
+    assetOrder?: AssetOrder;
+}
+
+export interface DeleteAssetTagsRequest {
+    assetId: number;
+}
+
+export interface GetAssetRequest {
+    id: number;
+}
+
+export interface ListAssetOrdersRequest {
+    resellerCustomerId?: number;
+    publisherId?: number;
+    externalOrderId?: string | null;
+    externalOrderIds?: Array<string> | null;
+    reservationId?: string | null;
+    assetType?: AssetType;
+    status?: AssetStatus;
+    page?: number;
+    pageSize?: number;
+    search?: string | null;
+    sortBy?: AssetSortBy;
+    sortOrder?: SortOrder;
+}
+
+export interface ListAssetTagsRequest {
+    assetId: number;
+    assetTags?: AssetTags;
+}
+
+export interface ListAssetsRequest {
+    resellerCustomerId?: number;
+    publisherId?: number;
+    externalOrderId?: string | null;
+    externalOrderIds?: Array<string> | null;
+    reservationId?: string | null;
+    assetType?: AssetType;
+    status?: AssetStatus;
+    page?: number;
+    pageSize?: number;
+    search?: string | null;
+    sortBy?: AssetSortBy;
+    sortOrder?: SortOrder;
+}
+
+export interface UpdateAssetRequest {
     assetId: number;
     asset?: Asset;
 }
 
-export interface AssetsAssetIdTagsDeleteRequest {
-    assetId: number;
-}
-
-export interface AssetsAssetIdTagsPostRequest {
+export interface UpdateAssetTagsRequest {
     assetId: number;
     assetTags?: AssetTags;
-}
-
-export interface AssetsAssetIdTagsPutRequest {
-    assetId: number;
-    assetTags?: AssetTags;
-}
-
-export interface AssetsCheckoutPostRequest {
-    assetOrder?: AssetOrder;
-}
-
-export interface AssetsGetRequest {
-    resellerCustomerId?: number;
-    publisherId?: number;
-    externalOrderId?: string | null;
-    externalOrderIds?: Array<string> | null;
-    reservationId?: string | null;
-    assetType?: AssetType;
-    status?: AssetStatus;
-    page?: number;
-    pageSize?: number;
-    search?: string | null;
-    sortBy?: AssetSortBy;
-    sortOrder?: SortOrder;
-}
-
-export interface AssetsIdGetRequest {
-    id: number;
-}
-
-export interface AssetsOrdersGetRequest {
-    resellerCustomerId?: number;
-    publisherId?: number;
-    externalOrderId?: string | null;
-    externalOrderIds?: Array<string> | null;
-    reservationId?: string | null;
-    assetType?: AssetType;
-    status?: AssetStatus;
-    page?: number;
-    pageSize?: number;
-    search?: string | null;
-    sortBy?: AssetSortBy;
-    sortOrder?: SortOrder;
-}
-
-export interface AssetsVerifyPostRequest {
-    assetOrder?: AssetOrder;
 }
 
 /**
@@ -106,140 +106,7 @@ export class AssetsApi extends runtime.BaseAPI {
 
     /**
      */
-    async assetsAssetIdPutRaw(requestParameters: AssetsAssetIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
-            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling assetsAssetIdPut.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Assets/{assetId}`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
-            method: 'PUT',
-            headers: headerParameters,
-            query: queryParameters,
-            body: AssetToJSON(requestParameters.asset),
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async assetsAssetIdPut(requestParameters: AssetsAssetIdPutRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.assetsAssetIdPutRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async assetsAssetIdTagsDeleteRaw(requestParameters: AssetsAssetIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
-            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling assetsAssetIdTagsDelete.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Assets/{assetId}/tags`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
-            method: 'DELETE',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async assetsAssetIdTagsDelete(requestParameters: AssetsAssetIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.assetsAssetIdTagsDeleteRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async assetsAssetIdTagsPostRaw(requestParameters: AssetsAssetIdTagsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
-            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling assetsAssetIdTagsPost.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Assets/{assetId}/tags`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: AssetTagsToJSON(requestParameters.assetTags),
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async assetsAssetIdTagsPost(requestParameters: AssetsAssetIdTagsPostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.assetsAssetIdTagsPostRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async assetsAssetIdTagsPutRaw(requestParameters: AssetsAssetIdTagsPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
-            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling assetsAssetIdTagsPut.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Assets/{assetId}/tags`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
-            method: 'PUT',
-            headers: headerParameters,
-            query: queryParameters,
-            body: AssetTagsToJSON(requestParameters.assetTags),
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async assetsAssetIdTagsPut(requestParameters: AssetsAssetIdTagsPutRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.assetsAssetIdTagsPutRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async assetsCheckoutPostRaw(requestParameters: AssetsCheckoutPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async createAssetCheckoutOrderRaw(requestParameters: CreateAssetCheckoutOrderRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -263,62 +130,49 @@ export class AssetsApi extends runtime.BaseAPI {
 
     /**
      */
-    async assetsCheckoutPost(requestParameters: AssetsCheckoutPostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.assetsCheckoutPostRaw(requestParameters, initOverrides);
+    async createAssetCheckoutOrder(requestParameters: CreateAssetCheckoutOrderRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.createAssetCheckoutOrderRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async assetsGetRaw(requestParameters: AssetsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Asset>>> {
+    async createAssetVerifyOrderRaw(requestParameters: CreateAssetVerifyOrderRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AssetOrder>> {
         const queryParameters: any = {};
 
-        if (requestParameters.resellerCustomerId !== undefined) {
-            queryParameters['ResellerCustomerId'] = requestParameters.resellerCustomerId;
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
         }
 
-        if (requestParameters.publisherId !== undefined) {
-            queryParameters['PublisherId'] = requestParameters.publisherId;
+        const response = await this.request({
+            path: `/Assets/verify`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AssetOrderToJSON(requestParameters.assetOrder),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AssetOrderFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createAssetVerifyOrder(requestParameters: CreateAssetVerifyOrderRequest, initOverrides?: RequestInit): Promise<AssetOrder> {
+        const response = await this.createAssetVerifyOrderRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async deleteAssetTagsRaw(requestParameters: DeleteAssetTagsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
+            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling deleteAssetTags.');
         }
 
-        if (requestParameters.externalOrderId !== undefined) {
-            queryParameters['ExternalOrderId'] = requestParameters.externalOrderId;
-        }
-
-        if (requestParameters.externalOrderIds) {
-            queryParameters['ExternalOrderIds'] = requestParameters.externalOrderIds;
-        }
-
-        if (requestParameters.reservationId !== undefined) {
-            queryParameters['ReservationId'] = requestParameters.reservationId;
-        }
-
-        if (requestParameters.assetType !== undefined) {
-            queryParameters['AssetType'] = requestParameters.assetType;
-        }
-
-        if (requestParameters.status !== undefined) {
-            queryParameters['Status'] = requestParameters.status;
-        }
-
-        if (requestParameters.page !== undefined) {
-            queryParameters['Page'] = requestParameters.page;
-        }
-
-        if (requestParameters.pageSize !== undefined) {
-            queryParameters['PageSize'] = requestParameters.pageSize;
-        }
-
-        if (requestParameters.search !== undefined) {
-            queryParameters['Search'] = requestParameters.search;
-        }
-
-        if (requestParameters.sortBy !== undefined) {
-            queryParameters['SortBy'] = requestParameters.sortBy;
-        }
-
-        if (requestParameters.sortOrder !== undefined) {
-            queryParameters['SortOrder'] = requestParameters.sortOrder;
-        }
+        const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
 
@@ -327,27 +181,26 @@ export class AssetsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/Assets`,
-            method: 'GET',
+            path: `/Assets/{assetId}/tags`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
+            method: 'DELETE',
             headers: headerParameters,
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(AssetFromJSON));
+        return new runtime.VoidApiResponse(response);
     }
 
     /**
      */
-    async assetsGet(requestParameters: AssetsGetRequest, initOverrides?: RequestInit): Promise<Array<Asset>> {
-        const response = await this.assetsGetRaw(requestParameters, initOverrides);
-        return await response.value();
+    async deleteAssetTags(requestParameters: DeleteAssetTagsRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.deleteAssetTagsRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async assetsIdGetRaw(requestParameters: AssetsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Asset>> {
+    async getAssetRaw(requestParameters: GetAssetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Asset>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling assetsIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getAsset.');
         }
 
         const queryParameters: any = {};
@@ -370,14 +223,14 @@ export class AssetsApi extends runtime.BaseAPI {
 
     /**
      */
-    async assetsIdGet(requestParameters: AssetsIdGetRequest, initOverrides?: RequestInit): Promise<Asset> {
-        const response = await this.assetsIdGetRaw(requestParameters, initOverrides);
+    async getAsset(requestParameters: GetAssetRequest, initOverrides?: RequestInit): Promise<Asset> {
+        const response = await this.getAssetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async assetsOrdersGetRaw(requestParameters: AssetsOrdersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AssetOrder>>> {
+    async listAssetOrdersRaw(requestParameters: ListAssetOrdersRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AssetOrder>>> {
         const queryParameters: any = {};
 
         if (requestParameters.resellerCustomerId !== undefined) {
@@ -446,14 +299,18 @@ export class AssetsApi extends runtime.BaseAPI {
 
     /**
      */
-    async assetsOrdersGet(requestParameters: AssetsOrdersGetRequest, initOverrides?: RequestInit): Promise<Array<AssetOrder>> {
-        const response = await this.assetsOrdersGetRaw(requestParameters, initOverrides);
+    async listAssetOrders(requestParameters: ListAssetOrdersRequest, initOverrides?: RequestInit): Promise<Array<AssetOrder>> {
+        const response = await this.listAssetOrdersRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async assetsVerifyPostRaw(requestParameters: AssetsVerifyPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AssetOrder>> {
+    async listAssetTagsRaw(requestParameters: ListAssetTagsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
+            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling listAssetTags.');
+        }
+
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -465,21 +322,164 @@ export class AssetsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/Assets/verify`,
+            path: `/Assets/{assetId}/tags`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
             method: 'POST',
             headers: headerParameters,
             query: queryParameters,
-            body: AssetOrderToJSON(requestParameters.assetOrder),
+            body: AssetTagsToJSON(requestParameters.assetTags),
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => AssetOrderFromJSON(jsonValue));
+        return new runtime.VoidApiResponse(response);
     }
 
     /**
      */
-    async assetsVerifyPost(requestParameters: AssetsVerifyPostRequest, initOverrides?: RequestInit): Promise<AssetOrder> {
-        const response = await this.assetsVerifyPostRaw(requestParameters, initOverrides);
+    async listAssetTags(requestParameters: ListAssetTagsRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.listAssetTagsRaw(requestParameters, initOverrides);
+    }
+
+    /**
+     */
+    async listAssetsRaw(requestParameters: ListAssetsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Asset>>> {
+        const queryParameters: any = {};
+
+        if (requestParameters.resellerCustomerId !== undefined) {
+            queryParameters['ResellerCustomerId'] = requestParameters.resellerCustomerId;
+        }
+
+        if (requestParameters.publisherId !== undefined) {
+            queryParameters['PublisherId'] = requestParameters.publisherId;
+        }
+
+        if (requestParameters.externalOrderId !== undefined) {
+            queryParameters['ExternalOrderId'] = requestParameters.externalOrderId;
+        }
+
+        if (requestParameters.externalOrderIds) {
+            queryParameters['ExternalOrderIds'] = requestParameters.externalOrderIds;
+        }
+
+        if (requestParameters.reservationId !== undefined) {
+            queryParameters['ReservationId'] = requestParameters.reservationId;
+        }
+
+        if (requestParameters.assetType !== undefined) {
+            queryParameters['AssetType'] = requestParameters.assetType;
+        }
+
+        if (requestParameters.status !== undefined) {
+            queryParameters['Status'] = requestParameters.status;
+        }
+
+        if (requestParameters.page !== undefined) {
+            queryParameters['Page'] = requestParameters.page;
+        }
+
+        if (requestParameters.pageSize !== undefined) {
+            queryParameters['PageSize'] = requestParameters.pageSize;
+        }
+
+        if (requestParameters.search !== undefined) {
+            queryParameters['Search'] = requestParameters.search;
+        }
+
+        if (requestParameters.sortBy !== undefined) {
+            queryParameters['SortBy'] = requestParameters.sortBy;
+        }
+
+        if (requestParameters.sortOrder !== undefined) {
+            queryParameters['SortOrder'] = requestParameters.sortOrder;
+        }
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Assets`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(AssetFromJSON));
+    }
+
+    /**
+     */
+    async listAssets(requestParameters: ListAssetsRequest, initOverrides?: RequestInit): Promise<Array<Asset>> {
+        const response = await this.listAssetsRaw(requestParameters, initOverrides);
         return await response.value();
+    }
+
+    /**
+     */
+    async updateAssetRaw(requestParameters: UpdateAssetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
+            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling updateAsset.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Assets/{assetId}`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
+            method: 'PUT',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AssetToJSON(requestParameters.asset),
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async updateAsset(requestParameters: UpdateAssetRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.updateAssetRaw(requestParameters, initOverrides);
+    }
+
+    /**
+     */
+    async updateAssetTagsRaw(requestParameters: UpdateAssetTagsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.assetId === null || requestParameters.assetId === undefined) {
+            throw new runtime.RequiredError('assetId','Required parameter requestParameters.assetId was null or undefined when calling updateAssetTags.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Assets/{assetId}/tags`.replace(`{${"assetId"}}`, encodeURIComponent(String(requestParameters.assetId))),
+            method: 'PUT',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AssetTagsToJSON(requestParameters.assetTags),
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async updateAssetTags(requestParameters: UpdateAssetTagsRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.updateAssetTagsRaw(requestParameters, initOverrides);
     }
 
 }

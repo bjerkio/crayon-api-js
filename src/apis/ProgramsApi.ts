@@ -23,17 +23,17 @@ import {
     ProgramTypeToJSON,
 } from '../models';
 
-export interface ProgramsGetRequest {
+export interface GetProgramRequest {
+    id: number;
+}
+
+export interface ListProgramsRequest {
     publisherId?: number;
     programType?: ProgramType;
     page?: number;
     pageSize?: number;
     search?: string | null;
     organizationId?: number;
-}
-
-export interface ProgramsIdGetRequest {
-    id: number;
 }
 
 /**
@@ -43,7 +43,39 @@ export class ProgramsApi extends runtime.BaseAPI {
 
     /**
      */
-    async programsGetRaw(requestParameters: ProgramsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Program>>> {
+    async getProgramRaw(requestParameters: GetProgramRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Program>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getProgram.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Programs/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ProgramFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getProgram(requestParameters: GetProgramRequest, initOverrides?: RequestInit): Promise<Program> {
+        const response = await this.getProgramRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listProgramsRaw(requestParameters: ListProgramsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Program>>> {
         const queryParameters: any = {};
 
         if (requestParameters.publisherId !== undefined) {
@@ -88,40 +120,8 @@ export class ProgramsApi extends runtime.BaseAPI {
 
     /**
      */
-    async programsGet(requestParameters: ProgramsGetRequest, initOverrides?: RequestInit): Promise<Array<Program>> {
-        const response = await this.programsGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async programsIdGetRaw(requestParameters: ProgramsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Program>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling programsIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Programs/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ProgramFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async programsIdGet(requestParameters: ProgramsIdGetRequest, initOverrides?: RequestInit): Promise<Program> {
-        const response = await this.programsIdGetRaw(requestParameters, initOverrides);
+    async listPrograms(requestParameters: ListProgramsRequest, initOverrides?: RequestInit): Promise<Array<Program>> {
+        const response = await this.listProgramsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

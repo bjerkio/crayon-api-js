@@ -26,7 +26,7 @@ import {
     AgreementTypeToJSON,
 } from '../models';
 
-export interface AgreementsGetRequest {
+export interface ListAgreementsRequest {
     organizationId?: number;
     organizationIds?: Array<number> | null;
     pricelistIds?: Array<number> | null;
@@ -53,7 +53,7 @@ export class AgreementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async agreementsGetRaw(requestParameters: AgreementsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Agreement>>> {
+    async listAgreementsRaw(requestParameters: ListAgreementsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Agreement>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -142,8 +142,8 @@ export class AgreementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async agreementsGet(requestParameters: AgreementsGetRequest, initOverrides?: RequestInit): Promise<Array<Agreement>> {
-        const response = await this.agreementsGetRaw(requestParameters, initOverrides);
+    async listAgreements(requestParameters: ListAgreementsRequest, initOverrides?: RequestInit): Promise<Array<Agreement>> {
+        const response = await this.listAgreementsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

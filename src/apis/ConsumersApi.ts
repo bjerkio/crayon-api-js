@@ -20,18 +20,7 @@ import {
     ConsumerToJSON,
 } from '../models';
 
-export interface ConsumersGetRequest {
-    organizationId?: number;
-    search?: string | null;
-    page?: number;
-    pageSize?: number;
-}
-
 export interface ConsumersIdDeleteRequest {
-    id: number;
-}
-
-export interface ConsumersIdGetRequest {
     id: number;
 }
 
@@ -40,58 +29,25 @@ export interface ConsumersIdPutRequest {
     consumer?: Consumer;
 }
 
-export interface ConsumersPostRequest {
+export interface CreateConsumerRequest {
     consumer?: Consumer;
+}
+
+export interface GetConsumerRequest {
+    id: number;
+}
+
+export interface ListConsumersRequest {
+    organizationId?: number;
+    search?: string | null;
+    page?: number;
+    pageSize?: number;
 }
 
 /**
  * 
  */
 export class ConsumersApi extends runtime.BaseAPI {
-
-    /**
-     */
-    async consumersGetRaw(requestParameters: ConsumersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Consumer>>> {
-        const queryParameters: any = {};
-
-        if (requestParameters.organizationId !== undefined) {
-            queryParameters['OrganizationId'] = requestParameters.organizationId;
-        }
-
-        if (requestParameters.search !== undefined) {
-            queryParameters['Search'] = requestParameters.search;
-        }
-
-        if (requestParameters.page !== undefined) {
-            queryParameters['Page'] = requestParameters.page;
-        }
-
-        if (requestParameters.pageSize !== undefined) {
-            queryParameters['PageSize'] = requestParameters.pageSize;
-        }
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Consumers`,
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(ConsumerFromJSON));
-    }
-
-    /**
-     */
-    async consumersGet(requestParameters: ConsumersGetRequest, initOverrides?: RequestInit): Promise<Array<Consumer>> {
-        const response = await this.consumersGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
 
     /**
      */
@@ -122,38 +78,6 @@ export class ConsumersApi extends runtime.BaseAPI {
      */
     async consumersIdDelete(requestParameters: ConsumersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
         const response = await this.consumersIdDeleteRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async consumersIdGetRaw(requestParameters: ConsumersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling consumersIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ConsumerFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async consumersIdGet(requestParameters: ConsumersIdGetRequest, initOverrides?: RequestInit): Promise<Consumer> {
-        const response = await this.consumersIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -194,7 +118,7 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async consumersPostRaw(requestParameters: ConsumersPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
+    async createConsumerRaw(requestParameters: CreateConsumerRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -218,8 +142,84 @@ export class ConsumersApi extends runtime.BaseAPI {
 
     /**
      */
-    async consumersPost(requestParameters: ConsumersPostRequest, initOverrides?: RequestInit): Promise<Consumer> {
-        const response = await this.consumersPostRaw(requestParameters, initOverrides);
+    async createConsumer(requestParameters: CreateConsumerRequest, initOverrides?: RequestInit): Promise<Consumer> {
+        const response = await this.createConsumerRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getConsumerRaw(requestParameters: GetConsumerRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Consumer>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getConsumer.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Consumers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ConsumerFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getConsumer(requestParameters: GetConsumerRequest, initOverrides?: RequestInit): Promise<Consumer> {
+        const response = await this.getConsumerRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listConsumersRaw(requestParameters: ListConsumersRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Consumer>>> {
+        const queryParameters: any = {};
+
+        if (requestParameters.organizationId !== undefined) {
+            queryParameters['OrganizationId'] = requestParameters.organizationId;
+        }
+
+        if (requestParameters.search !== undefined) {
+            queryParameters['Search'] = requestParameters.search;
+        }
+
+        if (requestParameters.page !== undefined) {
+            queryParameters['Page'] = requestParameters.page;
+        }
+
+        if (requestParameters.pageSize !== undefined) {
+            queryParameters['PageSize'] = requestParameters.pageSize;
+        }
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Consumers`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(ConsumerFromJSON));
+    }
+
+    /**
+     */
+    async listConsumers(requestParameters: ListConsumersRequest, initOverrides?: RequestInit): Promise<Array<Consumer>> {
+        const response = await this.listConsumersRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

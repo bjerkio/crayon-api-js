@@ -20,7 +20,7 @@ import {
     ActivityLogItemToJSON,
 } from '../models';
 
-export interface ActivityLogsGetRequest {
+export interface ListActivityLogsRequest {
     entity?: string | null;
     id?: number;
     ids?: Array<number> | null;
@@ -38,7 +38,7 @@ export class ActivityLogsApi extends runtime.BaseAPI {
 
     /**
      */
-    async activityLogsGetRaw(requestParameters: ActivityLogsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ActivityLogItem>>> {
+    async listActivityLogsRaw(requestParameters: ListActivityLogsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ActivityLogItem>>> {
         const queryParameters: any = {};
 
         if (requestParameters.entity !== undefined) {
@@ -91,8 +91,8 @@ export class ActivityLogsApi extends runtime.BaseAPI {
 
     /**
      */
-    async activityLogsGet(requestParameters: ActivityLogsGetRequest, initOverrides?: RequestInit): Promise<Array<ActivityLogItem>> {
-        const response = await this.activityLogsGetRaw(requestParameters, initOverrides);
+    async listActivityLogs(requestParameters: ListActivityLogsRequest, initOverrides?: RequestInit): Promise<Array<ActivityLogItem>> {
+        const response = await this.listActivityLogsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

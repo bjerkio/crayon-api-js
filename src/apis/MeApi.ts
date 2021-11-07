@@ -27,7 +27,7 @@ export class MeApi extends runtime.BaseAPI {
 
     /**
      */
-    async meGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Me>> {
+    async getMeRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Me>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -48,8 +48,8 @@ export class MeApi extends runtime.BaseAPI {
 
     /**
      */
-    async meGet(initOverrides?: RequestInit): Promise<Me> {
-        const response = await this.meGetRaw(initOverrides);
+    async getMe(initOverrides?: RequestInit): Promise<Me> {
+        const response = await this.getMeRaw(initOverrides);
         return await response.value();
     }
 

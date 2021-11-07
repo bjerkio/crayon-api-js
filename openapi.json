@@ -8,6 +8,7 @@
   "paths": {
     "/ActivityLogs": {
       "get": {
+        "operationId": "ListActivityLogs",
         "tags": ["ActivityLogs"],
         "parameters": [
           {
@@ -118,6 +119,7 @@
     "/organizations/{organizationId}/Addresses": {
       "get": {
         "tags": ["Addresses"],
+        "operationId": "ListAddresses",
         "parameters": [
           {
             "name": "organizationId",
@@ -172,6 +174,7 @@
     "/organizations/{organizationId}/Addresses/{id}": {
       "get": {
         "tags": ["Addresses"],
+        "operationId": "GetAddress",
         "parameters": [
           {
             "name": "organizationId",
@@ -218,6 +221,7 @@
     },
     "/AgreementProducts": {
       "get": {
+        "operationId": "ListAgreementProducts",
         "tags": ["AgreementProducts"],
         "parameters": [
           {
@@ -815,6 +819,7 @@
       },
       "post": {
         "tags": ["AgreementProducts"],
+        "operationId": "CreateAgreementProduct",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -875,6 +880,7 @@
     "/AgreementProducts/file/xlsx": {
       "post": {
         "tags": ["AgreementProducts"],
+        "operationId": "UploadAgreementProductsFileInXLSX",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -909,6 +915,7 @@
     "/AgreementProducts/{partNumber}/supportedbillingcycles": {
       "get": {
         "tags": ["AgreementProducts"],
+        "operationId": "ListSupportedBillingCycles",
         "parameters": [
           {
             "name": "resellerCustomerId",
@@ -964,6 +971,7 @@
     "/AgreementReports/{productContainerId}": {
       "get": {
         "tags": ["AgreementReports"],
+        "operationId": "ListAgreementReports",
         "parameters": [
           {
             "name": "productContainerId",
@@ -1011,6 +1019,7 @@
     "/AgreementReports/{agreementId}": {
       "put": {
         "tags": ["AgreementReports"],
+        "operationId": "UpdateAgreementReport",
         "parameters": [
           {
             "name": "agreementId",
@@ -1073,6 +1082,7 @@
     "/Agreements": {
       "get": {
         "tags": ["Agreements"],
+        "operationId": "ListAgreements",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -1271,6 +1281,7 @@
     "/Assets": {
       "get": {
         "tags": ["Assets"],
+        "operationId": "ListAssets",
         "parameters": [
           {
             "name": "ResellerCustomerId",
@@ -1404,6 +1415,7 @@
     "/Assets/{id}": {
       "get": {
         "tags": ["Assets"],
+        "operationId": "GetAsset",
         "parameters": [
           {
             "name": "id",
@@ -1442,6 +1454,7 @@
     "/Assets/orders": {
       "get": {
         "tags": ["Assets"],
+        "operationId": "ListAssetOrders",
         "parameters": [
           {
             "name": "ResellerCustomerId",
@@ -1575,6 +1588,7 @@
     "/Assets/verify": {
       "post": {
         "tags": ["Assets"],
+        "operationId": "CreateAssetVerifyOrder",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -1626,6 +1640,7 @@
     "/Assets/checkout": {
       "post": {
         "tags": ["Assets"],
+        "operationId": "CreateAssetCheckoutOrder",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -1660,6 +1675,7 @@
     "/Assets/{assetId}": {
       "put": {
         "tags": ["Assets"],
+        "operationId": "UpdateAsset",
         "parameters": [
           {
             "name": "assetId",
@@ -1705,6 +1721,7 @@
     "/Assets/{assetId}/tags": {
       "post": {
         "tags": ["Assets"],
+        "operationId": "ListAssetTags",
         "parameters": [
           {
             "name": "assetId",
@@ -1748,6 +1765,7 @@
       },
       "put": {
         "tags": ["Assets"],
+        "operationId": "UpdateAssetTags",
         "parameters": [
           {
             "name": "assetId",
@@ -1791,6 +1809,7 @@
       },
       "delete": {
         "tags": ["Assets"],
+        "operationId": "DeleteAssetTags",
         "parameters": [
           {
             "name": "assetId",
@@ -1812,6 +1831,7 @@
     "/AwsAccounts": {
       "get": {
         "tags": ["AwsAccounts"],
+        "operationId": "ListAwsAccounts",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -1905,6 +1925,7 @@
     "/AwsAccounts/{id}": {
       "get": {
         "tags": ["AwsAccounts"],
+        "operationId": "GetAwsAccount",
         "parameters": [
           {
             "name": "id",
@@ -1941,6 +1962,7 @@
       },
       "put": {
         "tags": ["AwsAccounts"],
+        "operationId": "UpdateAwsAccount",
         "parameters": [
           {
             "name": "id",
@@ -2003,6 +2025,7 @@
     "/AzurePlans/{azurePlanId}": {
       "get": {
         "tags": ["AzurePlans"],
+        "operationId": "GetAzurePlan",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2041,6 +2064,7 @@
     "/AzurePlans/{azurePlanId}/azureSubscriptions": {
       "get": {
         "tags": ["AzurePlans"],
+        "operationId": "GetAzurePlanSubscriptions",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2110,6 +2134,7 @@
       },
       "post": {
         "tags": ["AzurePlans"],
+        "operationId": "CreateAzurePlanSubscription",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2155,6 +2180,7 @@
     "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}": {
       "get": {
         "tags": ["AzurePlans"],
+        "operationId": "GetAzurePlanSubscriptioById",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2200,6 +2226,7 @@
       },
       "put": {
         "tags": ["AzurePlans"],
+        "operationId": "UpdateAzureSubscription",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2271,6 +2298,7 @@
     "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/assign-unique-admin": {
       "put": {
         "tags": ["AzurePlans"],
+        "operationId": "AssignUniqueAdminAzureSubscription",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2342,6 +2370,7 @@
     "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/cancel": {
       "post": {
         "tags": ["AzurePlans"],
+        "operationId": "CancelAzureSubscription",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2389,6 +2418,7 @@
     "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/enable": {
       "post": {
         "tags": ["AzurePlans"],
+        "operationId": "enableAzureSubscription",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2436,6 +2466,7 @@
     "/AzurePlans/{azurePlanId}/azureSubscriptions/{id}/rename": {
       "patch": {
         "tags": ["AzurePlans"],
+        "operationId": "RenameAzureSubscription",
         "parameters": [
           {
             "name": "azurePlanId",
@@ -2507,6 +2538,7 @@
     "/BillingCycles": {
       "get": {
         "tags": ["BillingCycles"],
+        "operationId": "ListBillingCycles",
         "parameters": [
           {
             "name": "includeUnknown",
@@ -2553,6 +2585,7 @@
     "/BillingCycles/productVariant/{productVariantId}": {
       "get": {
         "tags": ["BillingCycles"],
+        "operationId": "GetBillingCycleProductVariant",
         "parameters": [
           {
             "name": "productVariantId",
@@ -2600,6 +2633,7 @@
     "/BillingCycles/cspNameDictionary": {
       "get": {
         "tags": ["BillingCycles"],
+        "operationId": "ListBillingCyclesCSPNameDictionary",
         "responses": {
           "200": {
             "description": "Success",
@@ -2636,6 +2670,7 @@
     "/BillingStatements": {
       "get": {
         "tags": ["BillingStatements"],
+        "operationId": "ListBillingStatements",
         "parameters": [
           {
             "name": "InvoiceProfileId",
@@ -2731,6 +2766,7 @@
     "/BillingStatements/grouped": {
       "get": {
         "tags": ["BillingStatements"],
+        "operationId": "ListGroupedBillingStatements",
         "parameters": [
           {
             "name": "InvoiceProfileId",
@@ -2826,6 +2862,7 @@
     "/BillingStatements/file/{id}": {
       "get": {
         "tags": ["BillingStatements"],
+        "operationId": "GetBillingStatementFile",
         "parameters": [
           {
             "name": "id",
@@ -2847,6 +2884,7 @@
     "/BillingStatements/{id}/reconciliationfile": {
       "get": {
         "tags": ["BillingStatements"],
+        "operationId": "GetBillingStatementReconciliationFile",
         "parameters": [
           {
             "name": "id",
@@ -2868,6 +2906,7 @@
     "/BillingStatements/{id}/billingrecordsfile": {
       "get": {
         "tags": ["BillingStatements"],
+        "operationId": "GetBillingStatementRecordsFile",
         "parameters": [
           {
             "name": "id",
@@ -2889,6 +2928,7 @@
     "/BlogItems": {
       "get": {
         "tags": ["BlogItems"],
+        "operationId": "ListBlogItems",
         "parameters": [
           {
             "name": "count",
@@ -2945,6 +2985,7 @@
     "/Clients": {
       "get": {
         "tags": ["Clients"],
+        "operationId": "ListClients",
         "parameters": [
           {
             "name": "Page",
@@ -3005,6 +3046,7 @@
       },
       "post": {
         "tags": ["Clients"],
+        "operationId": "CreateClient",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -3056,6 +3098,7 @@
     "/Clients/{clientId}": {
       "get": {
         "tags": ["Clients"],
+        "operationId": "GetClient",
         "parameters": [
           {
             "name": "clientId",
@@ -3190,6 +3233,7 @@
     "/Consumers": {
       "get": {
         "tags": ["Consumers"],
+        "operationId": "ListConsumers",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -3258,6 +3302,7 @@
       },
       "post": {
         "tags": ["Consumers"],
+        "operationId": "CreateConsumer",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -3309,6 +3354,7 @@
     "/Consumers/{id}": {
       "get": {
         "tags": ["Consumers"],
+        "operationId": "GetConsumer",
         "parameters": [
           {
             "name": "id",
@@ -3443,6 +3489,7 @@
     "/CrayonAccounts": {
       "get": {
         "tags": ["CrayonAccounts"],
+        "operationId": "ListCrayonAccounts",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -3534,6 +3581,7 @@
       },
       "post": {
         "tags": ["CrayonAccounts"],
+        "operationId": "CreateCrayonAccount",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -3585,6 +3633,7 @@
     "/CrayonAccounts/{id}": {
       "get": {
         "tags": ["CrayonAccounts"],
+        "operationId": "GetCrayonAccount",
         "parameters": [
           {
             "name": "id",
@@ -3621,6 +3670,7 @@
       },
       "put": {
         "tags": ["CrayonAccounts"],
+        "operationId": "UpdateCrayonAccount",
         "parameters": [
           {
             "name": "id",
@@ -3683,6 +3733,7 @@
     "/customertenants/{customerTenantId}/agreements": {
       "get": {
         "tags": ["CustomerTenantAgreements"],
+        "operationId": "ListCustomerTenantAgreements",
         "parameters": [
           {
             "name": "customerTenantId",
@@ -3735,6 +3786,7 @@
       },
       "post": {
         "tags": ["CustomerTenantAgreements"],
+        "operationId": "CreateCustomerTenantAgreements",
         "parameters": [
           {
             "name": "customerTenantId",
@@ -3797,6 +3849,7 @@
     "/CustomerTenants": {
       "get": {
         "tags": ["CustomerTenants"],
+        "operationId": "ListCustomerTenants",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -3920,6 +3973,7 @@
       },
       "post": {
         "tags": ["CustomerTenants"],
+        "operationId": "CreateCustomerTenant",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -3971,6 +4025,7 @@
     "/CustomerTenants/{id}": {
       "get": {
         "tags": ["CustomerTenants"],
+        "operationId": "GetCustomerTenant",
         "parameters": [
           {
             "name": "id",
@@ -4007,6 +4062,7 @@
       },
       "put": {
         "tags": ["CustomerTenants"],
+        "operationId": "UpdateCustomerTenant",
         "parameters": [
           {
             "name": "id",
@@ -4067,6 +4123,7 @@
       },
       "delete": {
         "tags": ["CustomerTenants"],
+        "operationId": "DeleteCustomerTenant",
         "parameters": [
           {
             "name": "id",
@@ -4088,6 +4145,7 @@
     "/CustomerTenants/{id}/detailed": {
       "get": {
         "tags": ["CustomerTenants"],
+        "operationId": "GetCustomerTenantDetails",
         "parameters": [
           {
             "name": "id",
@@ -4126,6 +4184,7 @@
     "/CustomerTenants/existing": {
       "post": {
         "tags": ["CustomerTenants"],
+        "operationId": "CreateCustomerTenantFromExisting",
         "parameters": [
           {
             "name": "syncFromPublisher",
@@ -4187,6 +4246,7 @@
     "/CustomerTenants/{customerTenantId}/azurePlan": {
       "get": {
         "tags": ["CustomerTenants"],
+        "operationId": "ListCustomerTenantAzurePlan",
         "parameters": [
           {
             "name": "customerTenantId",
@@ -4225,6 +4285,7 @@
     "/connect/token": {
       "post": {
         "tags": ["CustomerToken"],
+        "operationId": "GetCustomerToken",
         "responses": {
           "200": {
             "description": "Success",
@@ -4252,6 +4313,7 @@
     "/FacebookOrders/checkout": {
       "post": {
         "tags": ["FacebookOrders"],
+        "operationId": "CheckoutFacebookOrder",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -4286,6 +4348,7 @@
     "/GoogleOrders/checkout": {
       "post": {
         "tags": ["GoogleOrders"],
+        "operationId": "CheckoutGoogleOrder",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -4320,6 +4383,7 @@
     "/Groupings": {
       "get": {
         "tags": ["Groupings"],
+        "operationId": "ListGroupings",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -4395,6 +4459,7 @@
       },
       "post": {
         "tags": ["Groupings"],
+        "operationId": "CreateGrouping",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -4446,6 +4511,7 @@
     "/Groupings/{id}": {
       "get": {
         "tags": ["Groupings"],
+        "operationId": "GetGrouping",
         "parameters": [
           {
             "name": "id",
@@ -4563,6 +4629,7 @@
     "/InvoiceProfiles": {
       "get": {
         "tags": ["InvoiceProfiles"],
+        "operationId": "ListInvoiceProfiles",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -4631,6 +4698,7 @@
       },
       "post": {
         "tags": ["InvoiceProfiles"],
+        "operationId": "CreateInvoiceProfile",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -4682,6 +4750,7 @@
     "/InvoiceProfiles/{id}": {
       "get": {
         "tags": ["InvoiceProfiles"],
+        "operationId": "GetInvoiceProfile",
         "parameters": [
           {
             "name": "id",
@@ -4718,6 +4787,7 @@
       },
       "put": {
         "tags": ["InvoiceProfiles"],
+        "operationId": "UpdateInvoiceProfile",
         "parameters": [
           {
             "name": "id",
@@ -4778,6 +4848,7 @@
       },
       "delete": {
         "tags": ["InvoiceProfiles"],
+        "operationId": "DeleteInvoiceProfile",
         "parameters": [
           {
             "name": "id",
@@ -4816,6 +4887,7 @@
     "/ManagementLinks": {
       "get": {
         "tags": ["ManagementLinks"],
+        "operationId": "ListManagementLinks",
         "parameters": [
           {
             "name": "SubscriptionIds",
@@ -4894,6 +4966,7 @@
     "/ManagementLinks/grouped": {
       "get": {
         "tags": ["ManagementLinks"],
+        "operationId": "ListGroupedManagementLinks",
         "parameters": [
           {
             "name": "SubscriptionIds",
@@ -4972,6 +5045,7 @@
     "/Me": {
       "get": {
         "tags": ["Me"],
+        "operationId": "GetMe",
         "responses": {
           "200": {
             "description": "Success",
@@ -4999,6 +5073,7 @@
     "/OrganizationAccess/grant": {
       "get": {
         "tags": ["OrganizationAccess"],
+        "operationId": "GrantOrganizationAccess",
         "parameters": [
           {
             "name": "userId",
@@ -5072,6 +5147,7 @@
     "/OrganizationAccess": {
       "get": {
         "tags": ["OrganizationAccess"],
+        "operationId": "ListOrganizationAccess",
         "parameters": [
           {
             "name": "userId",
@@ -5143,6 +5219,7 @@
       },
       "put": {
         "tags": ["OrganizationAccess"],
+        "operationId": "UpdateOrganizationAccess",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -5219,6 +5296,7 @@
     "/Organizations": {
       "get": {
         "tags": ["Organizations"],
+        "operationId": "ListOrganizations",
         "parameters": [
           {
             "name": "Page",
@@ -5281,6 +5359,7 @@
     "/Organizations/{id}": {
       "get": {
         "tags": ["Organizations"],
+        "operationId": "GetOrganization",
         "parameters": [
           {
             "name": "id",
@@ -5319,6 +5398,7 @@
     "/Organizations/{organizationId}/salescontact": {
       "get": {
         "tags": ["Organizations"],
+        "operationId": "ListSalesContacts",
         "parameters": [
           {
             "name": "organizationId",
@@ -5357,6 +5437,7 @@
     "/Organizations/HasAccess/{id}": {
       "get": {
         "tags": ["Organizations"],
+        "operationId": "GetOrganizationHazAccess",
         "parameters": [
           {
             "name": "id",
@@ -5395,6 +5476,7 @@
     "/Ping": {
       "get": {
         "tags": ["Ping"],
+        "operationId": "Ping",
         "responses": {
           "200": {
             "description": "Success"
@@ -5405,6 +5487,7 @@
     "/ProductContainers": {
       "get": {
         "tags": ["ProductContainers"],
+        "operationId": "ListProductContainers",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -5568,6 +5651,7 @@
     "/ProductContainers/{id}": {
       "get": {
         "tags": ["ProductContainers"],
+        "operationId": "GetProductContainer",
         "parameters": [
           {
             "name": "id",
@@ -5711,6 +5795,7 @@
     "/ProductContainers/rowissues/{id}": {
       "get": {
         "tags": ["ProductContainers"],
+        "operationId": "GetProductContainerRowIssue",
         "parameters": [
           {
             "name": "id",
@@ -5749,6 +5834,7 @@
     "/ProductContainers/{productContainerId}/row/{productRowId}": {
       "patch": {
         "tags": ["ProductContainers"],
+        "operationId": "UpdateProductRow",
         "parameters": [
           {
             "name": "productContainerId",
@@ -5820,6 +5906,7 @@
     "/ProductContainers/reportbymonth": {
       "post": {
         "tags": ["ProductContainers"],
+        "operationId": "GetProductContainersReportByMonth",
         "parameters": [
           {
             "name": "year",
@@ -5888,6 +5975,7 @@
     "/ProductContainers/getorcreateshoppingcart": {
       "get": {
         "tags": ["ProductContainers"],
+        "operationId": "GetOrCreateProductContainerShoppingCart",
         "parameters": [
           {
             "name": "organizationId",
@@ -5925,6 +6013,7 @@
     "/Programs": {
       "get": {
         "tags": ["Programs"],
+        "operationId": "ListPrograms",
         "parameters": [
           {
             "name": "PublisherId",
@@ -6010,6 +6099,7 @@
     "/Programs/{id}": {
       "get": {
         "tags": ["Programs"],
+        "operationId": "GetProgram",
         "parameters": [
           {
             "name": "id",
@@ -6048,6 +6138,7 @@
     "/Publishers": {
       "get": {
         "tags": ["Publishers"],
+        "operationId": "ListPublishers",
         "parameters": [
           {
             "name": "Names",
@@ -6128,6 +6219,7 @@
     "/Publishers/{id}": {
       "get": {
         "tags": ["Publishers"],
+        "operationId": "GetPublisher",
         "parameters": [
           {
             "name": "id",
@@ -6166,6 +6258,7 @@
     "/Regions": {
       "get": {
         "tags": ["Regions"],
+        "operationId": "ListRegions",
         "parameters": [
           {
             "name": "RegionList",
@@ -6243,6 +6336,7 @@
     "/Regions/bycode": {
       "get": {
         "tags": ["Regions"],
+        "operationId": "GetRegionByCode",
         "parameters": [
           {
             "name": "regionCode",
@@ -6287,6 +6381,7 @@
     "/ResellerSalesPrices": {
       "get": {
         "tags": ["ResellerSalesPrices"],
+        "operationId": "GetResellerSalesPrices",
         "parameters": [
           {
             "name": "Type",
@@ -6354,6 +6449,7 @@
       },
       "post": {
         "tags": ["ResellerSalesPrices"],
+        "operationId": "CreateResellerSalesPrices",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -6403,6 +6499,7 @@
       },
       "delete": {
         "tags": ["ResellerSalesPrices"],
+        "operationId": "DeleteResellerSalesPrices",
         "parameters": [
           {
             "name": "Type",
@@ -6446,6 +6543,7 @@
     "/ResellerSalesPrices/current": {
       "get": {
         "tags": ["ResellerSalesPrices"],
+        "operationId": "GetCurrentResellerSalesPrices",
         "parameters": [
           {
             "name": "Type",
@@ -6506,6 +6604,7 @@
     "/ResellerSalesPrices/{oldFromDate}": {
       "put": {
         "tags": ["ResellerSalesPrices"],
+        "operationId": "GetResellerSalesPricesByDate",
         "parameters": [
           {
             "name": "oldFromDate",
@@ -6568,6 +6667,7 @@
     "/ResellerSalesPrices/toggle": {
       "post": {
         "tags": ["ResellerSalesPrices"],
+        "operationId": "ToggleResellerSalesPrices",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -6602,6 +6702,7 @@
     "/Secrets": {
       "post": {
         "tags": ["Secrets"],
+        "operationId": "ListSecrets",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -6651,6 +6752,7 @@
       },
       "delete": {
         "tags": ["Secrets"],
+        "operationId": "DeleteSecret",
         "parameters": [
           {
             "name": "clientId",
@@ -6696,6 +6798,7 @@
     "/Subscriptions": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "ListSubscriptions",
         "parameters": [
           {
             "name": "OrganizationId",
@@ -6825,6 +6928,7 @@
       },
       "post": {
         "tags": ["Subscriptions"],
+        "operationId": "CreateSubscription",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -6876,6 +6980,7 @@
     "/Subscriptions/{id}": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "GetSubscription",
         "parameters": [
           {
             "name": "id",
@@ -6912,6 +7017,7 @@
       },
       "put": {
         "tags": ["Subscriptions"],
+        "operationId": "UpdateSubscription",
         "parameters": [
           {
             "name": "id",
@@ -6974,6 +7080,7 @@
     "/Subscriptions/{subscriptionId}/conversions": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "GetSubscriptionConversions",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -7019,6 +7126,7 @@
       },
       "post": {
         "tags": ["Subscriptions"],
+        "operationId": "CreateSubscriptionConversions",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -7081,6 +7189,7 @@
     "/Subscriptions/{id}/activationlink": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "GetSubscriptionActivationLink",
         "parameters": [
           {
             "name": "id",
@@ -7119,6 +7228,7 @@
     "/Subscriptions/{reservedInstance}/subscriptionId/{id}": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "GetSubscriptionReservedInstanceById",
         "parameters": [
           {
             "name": "id",
@@ -7172,6 +7282,7 @@
       },
       "post": {
         "tags": ["Subscriptions"],
+        "operationId": "CreateReservedInstanceSubscription",
         "parameters": [
           {
             "name": "id",
@@ -7218,6 +7329,7 @@
     "/Subscriptions/{id}/transition-eligibilities": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "ListSubscriptionsTransitionEligibilities",
         "parameters": [
           {
             "name": "id",
@@ -7265,6 +7377,7 @@
     "/Subscriptions/{id}/transition": {
       "post": {
         "tags": ["Subscriptions"],
+        "operationId": "CreateSubscriptionTransition",
         "parameters": [
           {
             "name": "id",
@@ -7327,6 +7440,7 @@
     "/Subscriptions/subscriptionpricetypes": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "ListSubscriptionPriceTypes",
         "responses": {
           "200": {
             "description": "Success",
@@ -7363,6 +7477,7 @@
     "/Subscriptions/{subscriptionId}/tags": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "ListSubscriptionTags",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -7399,6 +7514,7 @@
       },
       "post": {
         "tags": ["Subscriptions"],
+        "operationId": "CreateSubscriptionTags",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -7458,6 +7574,7 @@
       },
       "delete": {
         "tags": ["Subscriptions"],
+        "operationId": "DeleteSubscriptionTags",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -7479,6 +7596,7 @@
     "/Subscriptions/{subscriptionId}/addon-offers": {
       "get": {
         "tags": ["Subscriptions"],
+        "operationId": "ListSubscriptionAddonOffers",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -7526,6 +7644,7 @@
     "/Subscriptions/{subscriptionId}/addons": {
       "post": {
         "tags": ["Subscriptions"],
+        "operationId": "CreateSubscriptionAddon",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -7588,6 +7707,7 @@
     "/UsageCost/organization/{organizationId}": {
       "get": {
         "tags": ["UsageCost"],
+        "operationId": "GetUsageCostByOrganizationId",
         "parameters": [
           {
             "name": "organizationId",
@@ -7651,6 +7771,7 @@
     "/UsageCost/getForSubscription": {
       "post": {
         "tags": ["UsageCost"],
+        "operationId": "CreateUsageCostForSubscription",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -7711,6 +7832,7 @@
     "/UsageCost/getForCategory": {
       "post": {
         "tags": ["UsageCost"],
+        "operationId": "CreateUsageCostForCategory",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -7771,6 +7893,7 @@
     "/UsageCost/getForSubcategory": {
       "post": {
         "tags": ["UsageCost"],
+        "operationId": "CreateUsageCostForSubcategory",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -7831,6 +7954,7 @@
     "/UsageCost/getForSubscription/resourceGroups": {
       "post": {
         "tags": ["UsageCost"],
+        "operationId": "CreateUsageCostForSubscriptionResourceGroups",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -7891,6 +8015,7 @@
     "/UsageCost/getForResourceGroup": {
       "post": {
         "tags": ["UsageCost"],
+        "operationId": "CreateUsageCostForResourceGroup",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -7951,6 +8076,7 @@
     "/Users": {
       "get": {
         "tags": ["Users"],
+        "operationId": "ListUsers",
         "parameters": [
           {
             "name": "Search",
@@ -8026,6 +8152,7 @@
       },
       "post": {
         "tags": ["Users"],
+        "operationId": "CreateUser",
         "requestBody": {
           "content": {
             "application/json-patch+json": {
@@ -8077,6 +8204,7 @@
     "/Users/{id}": {
       "get": {
         "tags": ["Users"],
+        "operationId": "GetUser",
         "parameters": [
           {
             "name": "id",
@@ -8113,6 +8241,7 @@
       },
       "put": {
         "tags": ["Users"],
+        "operationId": "UpdateUser",
         "parameters": [
           {
             "name": "id",
@@ -8173,6 +8302,7 @@
       },
       "delete": {
         "tags": ["Users"],
+        "operationId": "DeleteUser",
         "parameters": [
           {
             "name": "id",
@@ -8211,6 +8341,7 @@
     "/Users/user": {
       "get": {
         "tags": ["Users"],
+        "operationId": "ListUsersUser",
         "parameters": [
           {
             "name": "userName",
@@ -8248,6 +8379,7 @@
     "/Users/{id}/changepassword": {
       "put": {
         "tags": ["Users"],
+        "operationId": "UpdateUserPassword",
         "parameters": [
           {
             "name": "id",

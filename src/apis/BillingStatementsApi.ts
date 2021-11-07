@@ -26,11 +26,19 @@ import {
     ProvisionTypeToJSON,
 } from '../models';
 
-export interface BillingStatementsFileIdGetRequest {
+export interface GetBillingStatementFileRequest {
     id: number;
 }
 
-export interface BillingStatementsGetRequest {
+export interface GetBillingStatementReconciliationFileRequest {
+    id: number;
+}
+
+export interface GetBillingStatementRecordsFileRequest {
+    id: number;
+}
+
+export interface ListBillingStatementsRequest {
     invoiceProfileId?: number;
     organizationId?: number;
     provisionType?: ProvisionType;
@@ -40,7 +48,7 @@ export interface BillingStatementsGetRequest {
     pageSize?: number;
 }
 
-export interface BillingStatementsGroupedGetRequest {
+export interface ListGroupedBillingStatementsRequest {
     invoiceProfileId?: number;
     organizationId?: number;
     provisionType?: ProvisionType;
@@ -48,14 +56,6 @@ export interface BillingStatementsGroupedGetRequest {
     to?: Date | null;
     page?: number;
     pageSize?: number;
-}
-
-export interface BillingStatementsIdBillingrecordsfileGetRequest {
-    id: number;
-}
-
-export interface BillingStatementsIdReconciliationfileGetRequest {
-    id: number;
 }
 
 /**
@@ -65,9 +65,9 @@ export class BillingStatementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async billingStatementsFileIdGetRaw(requestParameters: BillingStatementsFileIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async getBillingStatementFileRaw(requestParameters: GetBillingStatementFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling billingStatementsFileIdGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getBillingStatementFile.');
         }
 
         const queryParameters: any = {};
@@ -90,13 +90,75 @@ export class BillingStatementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async billingStatementsFileIdGet(requestParameters: BillingStatementsFileIdGetRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.billingStatementsFileIdGetRaw(requestParameters, initOverrides);
+    async getBillingStatementFile(requestParameters: GetBillingStatementFileRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.getBillingStatementFileRaw(requestParameters, initOverrides);
     }
 
     /**
      */
-    async billingStatementsGetRaw(requestParameters: BillingStatementsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingStatement>>> {
+    async getBillingStatementReconciliationFileRaw(requestParameters: GetBillingStatementReconciliationFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getBillingStatementReconciliationFile.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/BillingStatements/{id}/reconciliationfile`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async getBillingStatementReconciliationFile(requestParameters: GetBillingStatementReconciliationFileRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.getBillingStatementReconciliationFileRaw(requestParameters, initOverrides);
+    }
+
+    /**
+     */
+    async getBillingStatementRecordsFileRaw(requestParameters: GetBillingStatementRecordsFileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getBillingStatementRecordsFile.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/BillingStatements/{id}/billingrecordsfile`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async getBillingStatementRecordsFile(requestParameters: GetBillingStatementRecordsFileRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.getBillingStatementRecordsFileRaw(requestParameters, initOverrides);
+    }
+
+    /**
+     */
+    async listBillingStatementsRaw(requestParameters: ListBillingStatementsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingStatement>>> {
         const queryParameters: any = {};
 
         if (requestParameters.invoiceProfileId !== undefined) {
@@ -145,14 +207,14 @@ export class BillingStatementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async billingStatementsGet(requestParameters: BillingStatementsGetRequest, initOverrides?: RequestInit): Promise<Array<BillingStatement>> {
-        const response = await this.billingStatementsGetRaw(requestParameters, initOverrides);
+    async listBillingStatements(requestParameters: ListBillingStatementsRequest, initOverrides?: RequestInit): Promise<Array<BillingStatement>> {
+        const response = await this.listBillingStatementsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async billingStatementsGroupedGetRaw(requestParameters: BillingStatementsGroupedGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<GroupedBillingStatement>>> {
+    async listGroupedBillingStatementsRaw(requestParameters: ListGroupedBillingStatementsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<GroupedBillingStatement>>> {
         const queryParameters: any = {};
 
         if (requestParameters.invoiceProfileId !== undefined) {
@@ -201,71 +263,9 @@ export class BillingStatementsApi extends runtime.BaseAPI {
 
     /**
      */
-    async billingStatementsGroupedGet(requestParameters: BillingStatementsGroupedGetRequest, initOverrides?: RequestInit): Promise<Array<GroupedBillingStatement>> {
-        const response = await this.billingStatementsGroupedGetRaw(requestParameters, initOverrides);
+    async listGroupedBillingStatements(requestParameters: ListGroupedBillingStatementsRequest, initOverrides?: RequestInit): Promise<Array<GroupedBillingStatement>> {
+        const response = await this.listGroupedBillingStatementsRaw(requestParameters, initOverrides);
         return await response.value();
-    }
-
-    /**
-     */
-    async billingStatementsIdBillingrecordsfileGetRaw(requestParameters: BillingStatementsIdBillingrecordsfileGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling billingStatementsIdBillingrecordsfileGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/BillingStatements/{id}/billingrecordsfile`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async billingStatementsIdBillingrecordsfileGet(requestParameters: BillingStatementsIdBillingrecordsfileGetRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.billingStatementsIdBillingrecordsfileGetRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async billingStatementsIdReconciliationfileGetRaw(requestParameters: BillingStatementsIdReconciliationfileGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling billingStatementsIdReconciliationfileGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/BillingStatements/{id}/reconciliationfile`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async billingStatementsIdReconciliationfileGet(requestParameters: BillingStatementsIdReconciliationfileGetRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.billingStatementsIdReconciliationfileGetRaw(requestParameters, initOverrides);
     }
 
 }

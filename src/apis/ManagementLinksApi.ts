@@ -23,14 +23,14 @@ import {
     ManagementLinkGroupedToJSON,
 } from '../models';
 
-export interface ManagementLinksGetRequest {
+export interface ListGroupedManagementLinksRequest {
     subscriptionIds?: Array<number> | null;
     resellerCustomerIds?: Array<number> | null;
     page?: number;
     pageSize?: number;
 }
 
-export interface ManagementLinksGroupedGetRequest {
+export interface ListManagementLinksRequest {
     subscriptionIds?: Array<number> | null;
     resellerCustomerIds?: Array<number> | null;
     page?: number;
@@ -44,51 +44,7 @@ export class ManagementLinksApi extends runtime.BaseAPI {
 
     /**
      */
-    async managementLinksGetRaw(requestParameters: ManagementLinksGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLink>>> {
-        const queryParameters: any = {};
-
-        if (requestParameters.subscriptionIds) {
-            queryParameters['SubscriptionIds'] = requestParameters.subscriptionIds;
-        }
-
-        if (requestParameters.resellerCustomerIds) {
-            queryParameters['ResellerCustomerIds'] = requestParameters.resellerCustomerIds;
-        }
-
-        if (requestParameters.page !== undefined) {
-            queryParameters['Page'] = requestParameters.page;
-        }
-
-        if (requestParameters.pageSize !== undefined) {
-            queryParameters['PageSize'] = requestParameters.pageSize;
-        }
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/ManagementLinks`,
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(ManagementLinkFromJSON));
-    }
-
-    /**
-     */
-    async managementLinksGet(requestParameters: ManagementLinksGetRequest, initOverrides?: RequestInit): Promise<Array<ManagementLink>> {
-        const response = await this.managementLinksGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async managementLinksGroupedGetRaw(requestParameters: ManagementLinksGroupedGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLinkGrouped>>> {
+    async listGroupedManagementLinksRaw(requestParameters: ListGroupedManagementLinksRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLinkGrouped>>> {
         const queryParameters: any = {};
 
         if (requestParameters.subscriptionIds) {
@@ -125,8 +81,52 @@ export class ManagementLinksApi extends runtime.BaseAPI {
 
     /**
      */
-    async managementLinksGroupedGet(requestParameters: ManagementLinksGroupedGetRequest, initOverrides?: RequestInit): Promise<Array<ManagementLinkGrouped>> {
-        const response = await this.managementLinksGroupedGetRaw(requestParameters, initOverrides);
+    async listGroupedManagementLinks(requestParameters: ListGroupedManagementLinksRequest, initOverrides?: RequestInit): Promise<Array<ManagementLinkGrouped>> {
+        const response = await this.listGroupedManagementLinksRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listManagementLinksRaw(requestParameters: ListManagementLinksRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ManagementLink>>> {
+        const queryParameters: any = {};
+
+        if (requestParameters.subscriptionIds) {
+            queryParameters['SubscriptionIds'] = requestParameters.subscriptionIds;
+        }
+
+        if (requestParameters.resellerCustomerIds) {
+            queryParameters['ResellerCustomerIds'] = requestParameters.resellerCustomerIds;
+        }
+
+        if (requestParameters.page !== undefined) {
+            queryParameters['Page'] = requestParameters.page;
+        }
+
+        if (requestParameters.pageSize !== undefined) {
+            queryParameters['PageSize'] = requestParameters.pageSize;
+        }
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/ManagementLinks`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(ManagementLinkFromJSON));
+    }
+
+    /**
+     */
+    async listManagementLinks(requestParameters: ListManagementLinksRequest, initOverrides?: RequestInit): Promise<Array<ManagementLink>> {
+        const response = await this.listManagementLinksRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

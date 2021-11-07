@@ -20,7 +20,7 @@ import {
     BlogItemToJSON,
 } from '../models';
 
-export interface BlogItemsGetRequest {
+export interface ListBlogItemsRequest {
     count?: number;
     organizationId?: number;
 }
@@ -32,7 +32,7 @@ export class BlogItemsApi extends runtime.BaseAPI {
 
     /**
      */
-    async blogItemsGetRaw(requestParameters: BlogItemsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BlogItem>>> {
+    async listBlogItemsRaw(requestParameters: ListBlogItemsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BlogItem>>> {
         const queryParameters: any = {};
 
         if (requestParameters.count !== undefined) {
@@ -61,8 +61,8 @@ export class BlogItemsApi extends runtime.BaseAPI {
 
     /**
      */
-    async blogItemsGet(requestParameters: BlogItemsGetRequest, initOverrides?: RequestInit): Promise<Array<BlogItem>> {
-        const response = await this.blogItemsGetRaw(requestParameters, initOverrides);
+    async listBlogItems(requestParameters: ListBlogItemsRequest, initOverrides?: RequestInit): Promise<Array<BlogItem>> {
+        const response = await this.listBlogItemsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

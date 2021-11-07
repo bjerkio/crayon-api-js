@@ -20,21 +20,21 @@ import {
     OrganizationAccessToJSON,
 } from '../models';
 
-export interface OrganizationAccessGetRequest {
+export interface GrantOrganizationAccessRequest {
     userId?: string | null;
     organizationId?: number;
     page?: number;
     pageSize?: number;
 }
 
-export interface OrganizationAccessGrantGetRequest {
+export interface ListOrganizationAccessRequest {
     userId?: string | null;
     organizationId?: number;
     page?: number;
     pageSize?: number;
 }
 
-export interface OrganizationAccessPutRequest {
+export interface UpdateOrganizationAccessRequest {
     organizationAccess?: Array<OrganizationAccess> | null;
 }
 
@@ -45,51 +45,7 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
 
     /**
      */
-    async organizationAccessGetRaw(requestParameters: OrganizationAccessGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
-        const queryParameters: any = {};
-
-        if (requestParameters.userId !== undefined) {
-            queryParameters['userId'] = requestParameters.userId;
-        }
-
-        if (requestParameters.organizationId !== undefined) {
-            queryParameters['organizationId'] = requestParameters.organizationId;
-        }
-
-        if (requestParameters.page !== undefined) {
-            queryParameters['page'] = requestParameters.page;
-        }
-
-        if (requestParameters.pageSize !== undefined) {
-            queryParameters['pageSize'] = requestParameters.pageSize;
-        }
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/OrganizationAccess`,
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(OrganizationAccessFromJSON));
-    }
-
-    /**
-     */
-    async organizationAccessGet(requestParameters: OrganizationAccessGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
-        const response = await this.organizationAccessGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async organizationAccessGrantGetRaw(requestParameters: OrganizationAccessGrantGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
+    async grantOrganizationAccessRaw(requestParameters: GrantOrganizationAccessRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
         const queryParameters: any = {};
 
         if (requestParameters.userId !== undefined) {
@@ -126,14 +82,58 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
 
     /**
      */
-    async organizationAccessGrantGet(requestParameters: OrganizationAccessGrantGetRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
-        const response = await this.organizationAccessGrantGetRaw(requestParameters, initOverrides);
+    async grantOrganizationAccess(requestParameters: GrantOrganizationAccessRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
+        const response = await this.grantOrganizationAccessRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async organizationAccessPutRaw(requestParameters: OrganizationAccessPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
+    async listOrganizationAccessRaw(requestParameters: ListOrganizationAccessRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
+        const queryParameters: any = {};
+
+        if (requestParameters.userId !== undefined) {
+            queryParameters['userId'] = requestParameters.userId;
+        }
+
+        if (requestParameters.organizationId !== undefined) {
+            queryParameters['organizationId'] = requestParameters.organizationId;
+        }
+
+        if (requestParameters.page !== undefined) {
+            queryParameters['page'] = requestParameters.page;
+        }
+
+        if (requestParameters.pageSize !== undefined) {
+            queryParameters['pageSize'] = requestParameters.pageSize;
+        }
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/OrganizationAccess`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(OrganizationAccessFromJSON));
+    }
+
+    /**
+     */
+    async listOrganizationAccess(requestParameters: ListOrganizationAccessRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
+        const response = await this.listOrganizationAccessRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async updateOrganizationAccessRaw(requestParameters: UpdateOrganizationAccessRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<OrganizationAccess>>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -157,8 +157,8 @@ export class OrganizationAccessApi extends runtime.BaseAPI {
 
     /**
      */
-    async organizationAccessPut(requestParameters: OrganizationAccessPutRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
-        const response = await this.organizationAccessPutRaw(requestParameters, initOverrides);
+    async updateOrganizationAccess(requestParameters: UpdateOrganizationAccessRequest, initOverrides?: RequestInit): Promise<Array<OrganizationAccess>> {
+        const response = await this.updateOrganizationAccessRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

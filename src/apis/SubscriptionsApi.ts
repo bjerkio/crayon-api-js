@@ -59,7 +59,65 @@ import {
     SubscriptionTransitionResponseToJSON,
 } from '../models';
 
-export interface SubscriptionsGetRequest {
+export interface CreateReservedInstanceSubscriptionRequest {
+    id: number;
+    reservedInstance: boolean;
+}
+
+export interface CreateSubscriptionRequest {
+    subscriptionDetailed?: SubscriptionDetailed;
+}
+
+export interface CreateSubscriptionAddonRequest {
+    subscriptionId: number;
+    postSubscriptionAddOn?: PostSubscriptionAddOn;
+}
+
+export interface CreateSubscriptionConversionsRequest {
+    subscriptionId: number;
+    subscriptionConversion?: SubscriptionConversion;
+}
+
+export interface CreateSubscriptionTagsRequest {
+    subscriptionId: string;
+    subscriptionTags?: SubscriptionTags;
+}
+
+export interface CreateSubscriptionTransitionRequest {
+    id: number;
+    subscriptionTransition?: SubscriptionTransition;
+}
+
+export interface DeleteSubscriptionTagsRequest {
+    subscriptionId: number;
+}
+
+export interface GetSubscriptionRequest {
+    id: number;
+}
+
+export interface GetSubscriptionActivationLinkRequest {
+    id: number;
+}
+
+export interface GetSubscriptionConversionsRequest {
+    subscriptionId: number;
+}
+
+export interface GetSubscriptionReservedInstanceByIdRequest {
+    id: number;
+    reservedInstance: boolean;
+}
+
+export interface ListSubscriptionAddonOffersRequest {
+    subscriptionId: number;
+}
+
+export interface ListSubscriptionTagsRequest {
+    subscriptionId: number;
+}
+
+export interface ListSubscriptionsRequest {
     organizationId?: number;
     customerTenantId?: number;
     publisherId?: number;
@@ -74,71 +132,13 @@ export interface SubscriptionsGetRequest {
     sortOrder?: SortOrder;
 }
 
-export interface SubscriptionsIdActivationlinkGetRequest {
+export interface ListSubscriptionsTransitionEligibilitiesRequest {
     id: number;
 }
 
-export interface SubscriptionsIdGetRequest {
-    id: number;
-}
-
-export interface SubscriptionsIdPutRequest {
+export interface UpdateSubscriptionRequest {
     id: number;
     subscriptionDetailed?: SubscriptionDetailed;
-}
-
-export interface SubscriptionsIdTransitionEligibilitiesGetRequest {
-    id: number;
-}
-
-export interface SubscriptionsIdTransitionPostRequest {
-    id: number;
-    subscriptionTransition?: SubscriptionTransition;
-}
-
-export interface SubscriptionsPostRequest {
-    subscriptionDetailed?: SubscriptionDetailed;
-}
-
-export interface SubscriptionsReservedInstanceSubscriptionIdIdGetRequest {
-    id: number;
-    reservedInstance: boolean;
-}
-
-export interface SubscriptionsReservedInstanceSubscriptionIdIdPostRequest {
-    id: number;
-    reservedInstance: boolean;
-}
-
-export interface SubscriptionsSubscriptionIdAddonOffersGetRequest {
-    subscriptionId: number;
-}
-
-export interface SubscriptionsSubscriptionIdAddonsPostRequest {
-    subscriptionId: number;
-    postSubscriptionAddOn?: PostSubscriptionAddOn;
-}
-
-export interface SubscriptionsSubscriptionIdConversionsGetRequest {
-    subscriptionId: number;
-}
-
-export interface SubscriptionsSubscriptionIdConversionsPostRequest {
-    subscriptionId: number;
-    subscriptionConversion?: SubscriptionConversion;
-}
-
-export interface SubscriptionsSubscriptionIdTagsDeleteRequest {
-    subscriptionId: number;
-}
-
-export interface SubscriptionsSubscriptionIdTagsGetRequest {
-    subscriptionId: number;
-}
-
-export interface SubscriptionsSubscriptionIdTagsPostRequest {
-    subscriptionId: string;
-    subscriptionTags?: SubscriptionTags;
 }
 
 /**
@@ -148,7 +148,469 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async subscriptionsGetRaw(requestParameters: SubscriptionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Subscription>>> {
+    async createReservedInstanceSubscriptionRaw(requestParameters: CreateReservedInstanceSubscriptionRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling createReservedInstanceSubscription.');
+        }
+
+        if (requestParameters.reservedInstance === null || requestParameters.reservedInstance === undefined) {
+            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling createReservedInstanceSubscription.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.TextApiResponse(response) as any;
+    }
+
+    /**
+     */
+    async createReservedInstanceSubscription(requestParameters: CreateReservedInstanceSubscriptionRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.createReservedInstanceSubscriptionRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async createSubscriptionRaw(requestParameters: CreateSubscriptionRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: SubscriptionDetailedToJSON(requestParameters.subscriptionDetailed),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionDetailedFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createSubscription(requestParameters: CreateSubscriptionRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.createSubscriptionRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async createSubscriptionAddonRaw(requestParameters: CreateSubscriptionAddonRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling createSubscriptionAddon.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{subscriptionId}/addons`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: PostSubscriptionAddOnToJSON(requestParameters.postSubscriptionAddOn),
+        }, initOverrides);
+
+        return new runtime.TextApiResponse(response) as any;
+    }
+
+    /**
+     */
+    async createSubscriptionAddon(requestParameters: CreateSubscriptionAddonRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.createSubscriptionAddonRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async createSubscriptionConversionsRaw(requestParameters: CreateSubscriptionConversionsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling createSubscriptionConversions.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: SubscriptionConversionToJSON(requestParameters.subscriptionConversion),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionDetailedFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createSubscriptionConversions(requestParameters: CreateSubscriptionConversionsRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.createSubscriptionConversionsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async createSubscriptionTagsRaw(requestParameters: CreateSubscriptionTagsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling createSubscriptionTags.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: SubscriptionTagsToJSON(requestParameters.subscriptionTags),
+        }, initOverrides);
+
+        return new runtime.TextApiResponse(response) as any;
+    }
+
+    /**
+     */
+    async createSubscriptionTags(requestParameters: CreateSubscriptionTagsRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.createSubscriptionTagsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async createSubscriptionTransitionRaw(requestParameters: CreateSubscriptionTransitionRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTransitionResponse>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling createSubscriptionTransition.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{id}/transition`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: SubscriptionTransitionToJSON(requestParameters.subscriptionTransition),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionTransitionResponseFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createSubscriptionTransition(requestParameters: CreateSubscriptionTransitionRequest, initOverrides?: RequestInit): Promise<SubscriptionTransitionResponse> {
+        const response = await this.createSubscriptionTransitionRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async deleteSubscriptionTagsRaw(requestParameters: DeleteSubscriptionTagsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling deleteSubscriptionTags.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            method: 'DELETE',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async deleteSubscriptionTags(requestParameters: DeleteSubscriptionTagsRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.deleteSubscriptionTagsRaw(requestParameters, initOverrides);
+    }
+
+    /**
+     */
+    async getSubscriptionRaw(requestParameters: GetSubscriptionRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getSubscription.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionDetailedFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getSubscription(requestParameters: GetSubscriptionRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.getSubscriptionRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getSubscriptionActivationLinkRaw(requestParameters: GetSubscriptionActivationLinkRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ActivationLink>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getSubscriptionActivationLink.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{id}/activationlink`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ActivationLinkFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getSubscriptionActivationLink(requestParameters: GetSubscriptionActivationLinkRequest, initOverrides?: RequestInit): Promise<ActivationLink> {
+        const response = await this.getSubscriptionActivationLinkRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getSubscriptionConversionsRaw(requestParameters: GetSubscriptionConversionsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionConversion>>> {
+        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling getSubscriptionConversions.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(SubscriptionConversionFromJSON));
+    }
+
+    /**
+     */
+    async getSubscriptionConversions(requestParameters: GetSubscriptionConversionsRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionConversion>> {
+        const response = await this.getSubscriptionConversionsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getSubscriptionReservedInstanceByIdRaw(requestParameters: GetSubscriptionReservedInstanceByIdRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<boolean>>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getSubscriptionReservedInstanceById.');
+        }
+
+        if (requestParameters.reservedInstance === null || requestParameters.reservedInstance === undefined) {
+            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling getSubscriptionReservedInstanceById.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse<any>(response);
+    }
+
+    /**
+     */
+    async getSubscriptionReservedInstanceById(requestParameters: GetSubscriptionReservedInstanceByIdRequest, initOverrides?: RequestInit): Promise<Array<boolean>> {
+        const response = await this.getSubscriptionReservedInstanceByIdRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listSubscriptionAddonOffersRaw(requestParameters: ListSubscriptionAddonOffersRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionAddOnOffer>>> {
+        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling listSubscriptionAddonOffers.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{subscriptionId}/addon-offers`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(SubscriptionAddOnOfferFromJSON));
+    }
+
+    /**
+     */
+    async listSubscriptionAddonOffers(requestParameters: ListSubscriptionAddonOffersRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionAddOnOffer>> {
+        const response = await this.listSubscriptionAddonOffersRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listSubscriptionPriceTypesRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ObjectReference>>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/subscriptionpricetypes`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(ObjectReferenceFromJSON));
+    }
+
+    /**
+     */
+    async listSubscriptionPriceTypes(initOverrides?: RequestInit): Promise<Array<ObjectReference>> {
+        const response = await this.listSubscriptionPriceTypesRaw(initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listSubscriptionTagsRaw(requestParameters: ListSubscriptionTagsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTags>> {
+        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
+            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling listSubscriptionTags.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionTagsFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async listSubscriptionTags(requestParameters: ListSubscriptionTagsRequest, initOverrides?: RequestInit): Promise<SubscriptionTags> {
+        const response = await this.listSubscriptionTagsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listSubscriptionsRaw(requestParameters: ListSubscriptionsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Subscription>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -217,16 +679,16 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async subscriptionsGet(requestParameters: SubscriptionsGetRequest, initOverrides?: RequestInit): Promise<Array<Subscription>> {
-        const response = await this.subscriptionsGetRaw(requestParameters, initOverrides);
+    async listSubscriptions(requestParameters: ListSubscriptionsRequest, initOverrides?: RequestInit): Promise<Array<Subscription>> {
+        const response = await this.listSubscriptionsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async subscriptionsIdActivationlinkGetRaw(requestParameters: SubscriptionsIdActivationlinkGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ActivationLink>> {
+    async listSubscriptionsTransitionEligibilitiesRaw(requestParameters: ListSubscriptionsTransitionEligibilitiesRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionTransitionEligibility>>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdActivationlinkGet.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling listSubscriptionsTransitionEligibilities.');
         }
 
         const queryParameters: any = {};
@@ -238,59 +700,27 @@ export class SubscriptionsApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/Subscriptions/{id}/activationlink`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            path: `/Subscriptions/{id}/transition-eligibilities`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ActivationLinkFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(SubscriptionTransitionEligibilityFromJSON));
     }
 
     /**
      */
-    async subscriptionsIdActivationlinkGet(requestParameters: SubscriptionsIdActivationlinkGetRequest, initOverrides?: RequestInit): Promise<ActivationLink> {
-        const response = await this.subscriptionsIdActivationlinkGetRaw(requestParameters, initOverrides);
+    async listSubscriptionsTransitionEligibilities(requestParameters: ListSubscriptionsTransitionEligibilitiesRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionTransitionEligibility>> {
+        const response = await this.listSubscriptionsTransitionEligibilitiesRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async subscriptionsIdGetRaw(requestParameters: SubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
+    async updateSubscriptionRaw(requestParameters: UpdateSubscriptionRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionDetailedFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async subscriptionsIdGet(requestParameters: SubscriptionsIdGetRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.subscriptionsIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsIdPutRaw(requestParameters: SubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling updateSubscription.');
         }
 
         const queryParameters: any = {};
@@ -316,438 +746,8 @@ export class SubscriptionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async subscriptionsIdPut(requestParameters: SubscriptionsIdPutRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.subscriptionsIdPutRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsIdTransitionEligibilitiesGetRaw(requestParameters: SubscriptionsIdTransitionEligibilitiesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionTransitionEligibility>>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdTransitionEligibilitiesGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{id}/transition-eligibilities`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(SubscriptionTransitionEligibilityFromJSON));
-    }
-
-    /**
-     */
-    async subscriptionsIdTransitionEligibilitiesGet(requestParameters: SubscriptionsIdTransitionEligibilitiesGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionTransitionEligibility>> {
-        const response = await this.subscriptionsIdTransitionEligibilitiesGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsIdTransitionPostRaw(requestParameters: SubscriptionsIdTransitionPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTransitionResponse>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsIdTransitionPost.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{id}/transition`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: SubscriptionTransitionToJSON(requestParameters.subscriptionTransition),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionTransitionResponseFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async subscriptionsIdTransitionPost(requestParameters: SubscriptionsIdTransitionPostRequest, initOverrides?: RequestInit): Promise<SubscriptionTransitionResponse> {
-        const response = await this.subscriptionsIdTransitionPostRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsPostRaw(requestParameters: SubscriptionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: SubscriptionDetailedToJSON(requestParameters.subscriptionDetailed),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionDetailedFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async subscriptionsPost(requestParameters: SubscriptionsPostRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.subscriptionsPostRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsReservedInstanceSubscriptionIdIdGetRaw(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<boolean>>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdGet.');
-        }
-
-        if (requestParameters.reservedInstance === null || requestParameters.reservedInstance === undefined) {
-            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse<any>(response);
-    }
-
-    /**
-     */
-    async subscriptionsReservedInstanceSubscriptionIdIdGet(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdGetRequest, initOverrides?: RequestInit): Promise<Array<boolean>> {
-        const response = await this.subscriptionsReservedInstanceSubscriptionIdIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsReservedInstanceSubscriptionIdIdPostRaw(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdPost.');
-        }
-
-        if (requestParameters.reservedInstance === null || requestParameters.reservedInstance === undefined) {
-            throw new runtime.RequiredError('reservedInstance','Required parameter requestParameters.reservedInstance was null or undefined when calling subscriptionsReservedInstanceSubscriptionIdIdPost.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{reservedInstance}/subscriptionId/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))).replace(`{${"reservedInstance"}}`, encodeURIComponent(String(requestParameters.reservedInstance))),
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.TextApiResponse(response) as any;
-    }
-
-    /**
-     */
-    async subscriptionsReservedInstanceSubscriptionIdIdPost(requestParameters: SubscriptionsReservedInstanceSubscriptionIdIdPostRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.subscriptionsReservedInstanceSubscriptionIdIdPostRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdAddonOffersGetRaw(requestParameters: SubscriptionsSubscriptionIdAddonOffersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionAddOnOffer>>> {
-        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdAddonOffersGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{subscriptionId}/addon-offers`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(SubscriptionAddOnOfferFromJSON));
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdAddonOffersGet(requestParameters: SubscriptionsSubscriptionIdAddonOffersGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionAddOnOffer>> {
-        const response = await this.subscriptionsSubscriptionIdAddonOffersGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdAddonsPostRaw(requestParameters: SubscriptionsSubscriptionIdAddonsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
-        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdAddonsPost.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{subscriptionId}/addons`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: PostSubscriptionAddOnToJSON(requestParameters.postSubscriptionAddOn),
-        }, initOverrides);
-
-        return new runtime.TextApiResponse(response) as any;
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdAddonsPost(requestParameters: SubscriptionsSubscriptionIdAddonsPostRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.subscriptionsSubscriptionIdAddonsPostRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdConversionsGetRaw(requestParameters: SubscriptionsSubscriptionIdConversionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<SubscriptionConversion>>> {
-        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdConversionsGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(SubscriptionConversionFromJSON));
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdConversionsGet(requestParameters: SubscriptionsSubscriptionIdConversionsGetRequest, initOverrides?: RequestInit): Promise<Array<SubscriptionConversion>> {
-        const response = await this.subscriptionsSubscriptionIdConversionsGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdConversionsPostRaw(requestParameters: SubscriptionsSubscriptionIdConversionsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionDetailed>> {
-        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdConversionsPost.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{subscriptionId}/conversions`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: SubscriptionConversionToJSON(requestParameters.subscriptionConversion),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionDetailedFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdConversionsPost(requestParameters: SubscriptionsSubscriptionIdConversionsPostRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
-        const response = await this.subscriptionsSubscriptionIdConversionsPostRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdTagsDeleteRaw(requestParameters: SubscriptionsSubscriptionIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdTagsDelete.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
-            method: 'DELETE',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdTagsDelete(requestParameters: SubscriptionsSubscriptionIdTagsDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.subscriptionsSubscriptionIdTagsDeleteRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdTagsGetRaw(requestParameters: SubscriptionsSubscriptionIdTagsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<SubscriptionTags>> {
-        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdTagsGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => SubscriptionTagsFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdTagsGet(requestParameters: SubscriptionsSubscriptionIdTagsGetRequest, initOverrides?: RequestInit): Promise<SubscriptionTags> {
-        const response = await this.subscriptionsSubscriptionIdTagsGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdTagsPostRaw(requestParameters: SubscriptionsSubscriptionIdTagsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
-        if (requestParameters.subscriptionId === null || requestParameters.subscriptionId === undefined) {
-            throw new runtime.RequiredError('subscriptionId','Required parameter requestParameters.subscriptionId was null or undefined when calling subscriptionsSubscriptionIdTagsPost.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/{subscriptionId}/tags`.replace(`{${"subscriptionId"}}`, encodeURIComponent(String(requestParameters.subscriptionId))),
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: SubscriptionTagsToJSON(requestParameters.subscriptionTags),
-        }, initOverrides);
-
-        return new runtime.TextApiResponse(response) as any;
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionIdTagsPost(requestParameters: SubscriptionsSubscriptionIdTagsPostRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.subscriptionsSubscriptionIdTagsPostRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionpricetypesGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ObjectReference>>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Subscriptions/subscriptionpricetypes`,
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(ObjectReferenceFromJSON));
-    }
-
-    /**
-     */
-    async subscriptionsSubscriptionpricetypesGet(initOverrides?: RequestInit): Promise<Array<ObjectReference>> {
-        const response = await this.subscriptionsSubscriptionpricetypesGetRaw(initOverrides);
+    async updateSubscription(requestParameters: UpdateSubscriptionRequest, initOverrides?: RequestInit): Promise<SubscriptionDetailed> {
+        const response = await this.updateSubscriptionRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

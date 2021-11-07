@@ -20,19 +20,15 @@ import {
     GroupingToJSON,
 } from '../models';
 
-export interface GroupingsGetRequest {
-    organizationId?: number;
-    includeRemoved?: boolean;
-    search?: string | null;
-    page?: number;
-    pageSize?: number;
+export interface CreateGroupingRequest {
+    grouping?: Grouping;
 }
 
-export interface GroupingsIdDeleteRequest {
+export interface GetGroupingRequest {
     id: number;
 }
 
-export interface GroupingsIdGetRequest {
+export interface GroupingsIdDeleteRequest {
     id: number;
 }
 
@@ -41,8 +37,12 @@ export interface GroupingsIdPutRequest {
     grouping?: Grouping;
 }
 
-export interface GroupingsPostRequest {
-    grouping?: Grouping;
+export interface ListGroupingsRequest {
+    organizationId?: number;
+    includeRemoved?: boolean;
+    search?: string | null;
+    page?: number;
+    pageSize?: number;
 }
 
 /**
@@ -52,7 +52,136 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async groupingsGetRaw(requestParameters: GroupingsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Grouping>>> {
+    async createGroupingRaw(requestParameters: CreateGroupingRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Groupings`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: GroupingToJSON(requestParameters.grouping),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => GroupingFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createGrouping(requestParameters: CreateGroupingRequest, initOverrides?: RequestInit): Promise<Grouping> {
+        const response = await this.createGroupingRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getGroupingRaw(requestParameters: GetGroupingRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getGrouping.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => GroupingFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getGrouping(requestParameters: GetGroupingRequest, initOverrides?: RequestInit): Promise<Grouping> {
+        const response = await this.getGroupingRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async groupingsIdDeleteRaw(requestParameters: GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdDelete.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'DELETE',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async groupingsIdDelete(requestParameters: GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.groupingsIdDeleteRaw(requestParameters, initOverrides);
+    }
+
+    /**
+     */
+    async groupingsIdPutRaw(requestParameters: GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdPut.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'PUT',
+            headers: headerParameters,
+            query: queryParameters,
+            body: GroupingToJSON(requestParameters.grouping),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => GroupingFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async groupingsIdPut(requestParameters: GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<Grouping> {
+        const response = await this.groupingsIdPutRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listGroupingsRaw(requestParameters: ListGroupingsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Grouping>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -93,137 +222,8 @@ export class GroupingsApi extends runtime.BaseAPI {
 
     /**
      */
-    async groupingsGet(requestParameters: GroupingsGetRequest, initOverrides?: RequestInit): Promise<Array<Grouping>> {
-        const response = await this.groupingsGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async groupingsIdDeleteRaw(requestParameters: GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdDelete.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'DELETE',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async groupingsIdDelete(requestParameters: GroupingsIdDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.groupingsIdDeleteRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async groupingsIdGetRaw(requestParameters: GroupingsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => GroupingFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async groupingsIdGet(requestParameters: GroupingsIdGetRequest, initOverrides?: RequestInit): Promise<Grouping> {
-        const response = await this.groupingsIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async groupingsIdPutRaw(requestParameters: GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling groupingsIdPut.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Groupings/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'PUT',
-            headers: headerParameters,
-            query: queryParameters,
-            body: GroupingToJSON(requestParameters.grouping),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => GroupingFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async groupingsIdPut(requestParameters: GroupingsIdPutRequest, initOverrides?: RequestInit): Promise<Grouping> {
-        const response = await this.groupingsIdPutRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async groupingsPostRaw(requestParameters: GroupingsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Grouping>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Groupings`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: GroupingToJSON(requestParameters.grouping),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => GroupingFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async groupingsPost(requestParameters: GroupingsPostRequest, initOverrides?: RequestInit): Promise<Grouping> {
-        const response = await this.groupingsPostRaw(requestParameters, initOverrides);
+    async listGroupings(requestParameters: ListGroupingsRequest, initOverrides?: RequestInit): Promise<Array<Grouping>> {
+        const response = await this.listGroupingsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

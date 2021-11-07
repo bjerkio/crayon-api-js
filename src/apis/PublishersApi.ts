@@ -23,16 +23,16 @@ import {
     PublisherToJSON,
 } from '../models';
 
-export interface PublishersGetRequest {
+export interface GetPublisherRequest {
+    id: number;
+}
+
+export interface ListPublishersRequest {
     names?: Array<string> | null;
     page?: number;
     pageSize?: number;
     search?: string | null;
     programType?: ProgramType;
-}
-
-export interface PublishersIdGetRequest {
-    id: number;
 }
 
 /**
@@ -42,7 +42,39 @@ export class PublishersApi extends runtime.BaseAPI {
 
     /**
      */
-    async publishersGetRaw(requestParameters: PublishersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Publisher>>> {
+    async getPublisherRaw(requestParameters: GetPublisherRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Publisher>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getPublisher.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Publishers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => PublisherFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getPublisher(requestParameters: GetPublisherRequest, initOverrides?: RequestInit): Promise<Publisher> {
+        const response = await this.getPublisherRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listPublishersRaw(requestParameters: ListPublishersRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Publisher>>> {
         const queryParameters: any = {};
 
         if (requestParameters.names) {
@@ -83,40 +115,8 @@ export class PublishersApi extends runtime.BaseAPI {
 
     /**
      */
-    async publishersGet(requestParameters: PublishersGetRequest, initOverrides?: RequestInit): Promise<Array<Publisher>> {
-        const response = await this.publishersGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async publishersIdGetRaw(requestParameters: PublishersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Publisher>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling publishersIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Publishers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => PublisherFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async publishersIdGet(requestParameters: PublishersIdGetRequest, initOverrides?: RequestInit): Promise<Publisher> {
-        const response = await this.publishersIdGetRaw(requestParameters, initOverrides);
+    async listPublishers(requestParameters: ListPublishersRequest, initOverrides?: RequestInit): Promise<Array<Publisher>> {
+        const response = await this.listPublishersRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

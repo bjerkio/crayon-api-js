@@ -29,16 +29,32 @@ import {
     CustomerTenantTypeToJSON,
 } from '../models';
 
-export interface CustomerTenantsCustomerTenantIdAzurePlanGetRequest {
-    customerTenantId: number;
+export interface CreateCustomerTenantRequest {
+    customerTenantDetailed?: CustomerTenantDetailed;
 }
 
-export interface CustomerTenantsExistingPostRequest {
+export interface CreateCustomerTenantFromExistingRequest {
     syncFromPublisher?: boolean;
     customerTenantDetailed?: CustomerTenantDetailed;
 }
 
-export interface CustomerTenantsGetRequest {
+export interface DeleteCustomerTenantRequest {
+    id: number;
+}
+
+export interface GetCustomerTenantRequest {
+    id: number;
+}
+
+export interface GetCustomerTenantDetailsRequest {
+    id: number;
+}
+
+export interface ListCustomerTenantAzurePlanRequest {
+    customerTenantId: number;
+}
+
+export interface ListCustomerTenantsRequest {
     organizationId?: number;
     publisherId?: number;
     programId?: number;
@@ -52,24 +68,8 @@ export interface CustomerTenantsGetRequest {
     search?: string | null;
 }
 
-export interface CustomerTenantsIdDeleteRequest {
+export interface UpdateCustomerTenantRequest {
     id: number;
-}
-
-export interface CustomerTenantsIdDetailedGetRequest {
-    id: number;
-}
-
-export interface CustomerTenantsIdGetRequest {
-    id: number;
-}
-
-export interface CustomerTenantsIdPutRequest {
-    id: number;
-    customerTenantDetailed?: CustomerTenantDetailed;
-}
-
-export interface CustomerTenantsPostRequest {
     customerTenantDetailed?: CustomerTenantDetailed;
 }
 
@@ -80,39 +80,38 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async customerTenantsCustomerTenantIdAzurePlanGetRaw(requestParameters: CustomerTenantsCustomerTenantIdAzurePlanGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzurePlan>> {
-        if (requestParameters.customerTenantId === null || requestParameters.customerTenantId === undefined) {
-            throw new runtime.RequiredError('customerTenantId','Required parameter requestParameters.customerTenantId was null or undefined when calling customerTenantsCustomerTenantIdAzurePlanGet.');
-        }
-
+    async createCustomerTenantRaw(requestParameters: CreateCustomerTenantRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
 
         if (this.configuration && this.configuration.apiKey) {
             headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
         }
 
         const response = await this.request({
-            path: `/CustomerTenants/{customerTenantId}/azurePlan`.replace(`{${"customerTenantId"}}`, encodeURIComponent(String(requestParameters.customerTenantId))),
-            method: 'GET',
+            path: `/CustomerTenants`,
+            method: 'POST',
             headers: headerParameters,
             query: queryParameters,
+            body: CustomerTenantDetailedToJSON(requestParameters.customerTenantDetailed),
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => AzurePlanFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => CustomerTenantDetailedFromJSON(jsonValue));
     }
 
     /**
      */
-    async customerTenantsCustomerTenantIdAzurePlanGet(requestParameters: CustomerTenantsCustomerTenantIdAzurePlanGetRequest, initOverrides?: RequestInit): Promise<AzurePlan> {
-        const response = await this.customerTenantsCustomerTenantIdAzurePlanGetRaw(requestParameters, initOverrides);
+    async createCustomerTenant(requestParameters: CreateCustomerTenantRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.createCustomerTenantRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async customerTenantsExistingPostRaw(requestParameters: CustomerTenantsExistingPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
+    async createCustomerTenantFromExistingRaw(requestParameters: CreateCustomerTenantFromExistingRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
         const queryParameters: any = {};
 
         if (requestParameters.syncFromPublisher !== undefined) {
@@ -140,14 +139,141 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async customerTenantsExistingPost(requestParameters: CustomerTenantsExistingPostRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.customerTenantsExistingPostRaw(requestParameters, initOverrides);
+    async createCustomerTenantFromExisting(requestParameters: CreateCustomerTenantFromExistingRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.createCustomerTenantFromExistingRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async customerTenantsGetRaw(requestParameters: CustomerTenantsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CustomerTenant>>> {
+    async deleteCustomerTenantRaw(requestParameters: DeleteCustomerTenantRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling deleteCustomerTenant.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'DELETE',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.VoidApiResponse(response);
+    }
+
+    /**
+     */
+    async deleteCustomerTenant(requestParameters: DeleteCustomerTenantRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.deleteCustomerTenantRaw(requestParameters, initOverrides);
+    }
+
+    /**
+     */
+    async getCustomerTenantRaw(requestParameters: GetCustomerTenantRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenant>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getCustomerTenant.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => CustomerTenantFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getCustomerTenant(requestParameters: GetCustomerTenantRequest, initOverrides?: RequestInit): Promise<CustomerTenant> {
+        const response = await this.getCustomerTenantRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getCustomerTenantDetailsRaw(requestParameters: GetCustomerTenantDetailsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getCustomerTenantDetails.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/CustomerTenants/{id}/detailed`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => CustomerTenantDetailedFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getCustomerTenantDetails(requestParameters: GetCustomerTenantDetailsRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.getCustomerTenantDetailsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listCustomerTenantAzurePlanRaw(requestParameters: ListCustomerTenantAzurePlanRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AzurePlan>> {
+        if (requestParameters.customerTenantId === null || requestParameters.customerTenantId === undefined) {
+            throw new runtime.RequiredError('customerTenantId','Required parameter requestParameters.customerTenantId was null or undefined when calling listCustomerTenantAzurePlan.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/CustomerTenants/{customerTenantId}/azurePlan`.replace(`{${"customerTenantId"}}`, encodeURIComponent(String(requestParameters.customerTenantId))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AzurePlanFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async listCustomerTenantAzurePlan(requestParameters: ListCustomerTenantAzurePlanRequest, initOverrides?: RequestInit): Promise<AzurePlan> {
+        const response = await this.listCustomerTenantAzurePlanRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listCustomerTenantsRaw(requestParameters: ListCustomerTenantsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CustomerTenant>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -212,111 +338,16 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async customerTenantsGet(requestParameters: CustomerTenantsGetRequest, initOverrides?: RequestInit): Promise<Array<CustomerTenant>> {
-        const response = await this.customerTenantsGetRaw(requestParameters, initOverrides);
+    async listCustomerTenants(requestParameters: ListCustomerTenantsRequest, initOverrides?: RequestInit): Promise<Array<CustomerTenant>> {
+        const response = await this.listCustomerTenantsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async customerTenantsIdDeleteRaw(requestParameters: CustomerTenantsIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async updateCustomerTenantRaw(requestParameters: UpdateCustomerTenantRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdDelete.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'DELETE',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.VoidApiResponse(response);
-    }
-
-    /**
-     */
-    async customerTenantsIdDelete(requestParameters: CustomerTenantsIdDeleteRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.customerTenantsIdDeleteRaw(requestParameters, initOverrides);
-    }
-
-    /**
-     */
-    async customerTenantsIdDetailedGetRaw(requestParameters: CustomerTenantsIdDetailedGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdDetailedGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/CustomerTenants/{id}/detailed`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => CustomerTenantDetailedFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async customerTenantsIdDetailedGet(requestParameters: CustomerTenantsIdDetailedGetRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.customerTenantsIdDetailedGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async customerTenantsIdGetRaw(requestParameters: CustomerTenantsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenant>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/CustomerTenants/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => CustomerTenantFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async customerTenantsIdGet(requestParameters: CustomerTenantsIdGetRequest, initOverrides?: RequestInit): Promise<CustomerTenant> {
-        const response = await this.customerTenantsIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async customerTenantsIdPutRaw(requestParameters: CustomerTenantsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling customerTenantsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling updateCustomerTenant.');
         }
 
         const queryParameters: any = {};
@@ -342,39 +373,8 @@ export class CustomerTenantsApi extends runtime.BaseAPI {
 
     /**
      */
-    async customerTenantsIdPut(requestParameters: CustomerTenantsIdPutRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.customerTenantsIdPutRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async customerTenantsPostRaw(requestParameters: CustomerTenantsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CustomerTenantDetailed>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/CustomerTenants`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: CustomerTenantDetailedToJSON(requestParameters.customerTenantDetailed),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => CustomerTenantDetailedFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async customerTenantsPost(requestParameters: CustomerTenantsPostRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
-        const response = await this.customerTenantsPostRaw(requestParameters, initOverrides);
+    async updateCustomerTenant(requestParameters: UpdateCustomerTenantRequest, initOverrides?: RequestInit): Promise<CustomerTenantDetailed> {
+        const response = await this.updateCustomerTenantRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

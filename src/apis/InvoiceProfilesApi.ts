@@ -20,27 +20,27 @@ import {
     InvoiceProfileToJSON,
 } from '../models';
 
-export interface InvoiceProfilesGetRequest {
+export interface CreateInvoiceProfileRequest {
+    invoiceProfile?: InvoiceProfile;
+}
+
+export interface DeleteInvoiceProfileRequest {
+    id: number;
+}
+
+export interface GetInvoiceProfileRequest {
+    id: number;
+}
+
+export interface ListInvoiceProfilesRequest {
     organizationId?: number;
     page?: number;
     pageSize?: number;
     search?: string | null;
 }
 
-export interface InvoiceProfilesIdDeleteRequest {
+export interface UpdateInvoiceProfileRequest {
     id: number;
-}
-
-export interface InvoiceProfilesIdGetRequest {
-    id: number;
-}
-
-export interface InvoiceProfilesIdPutRequest {
-    id: number;
-    invoiceProfile?: InvoiceProfile;
-}
-
-export interface InvoiceProfilesPostRequest {
     invoiceProfile?: InvoiceProfile;
 }
 
@@ -51,7 +51,102 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async invoiceProfilesGetRaw(requestParameters: InvoiceProfilesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<InvoiceProfile>>> {
+    async createInvoiceProfileRaw(requestParameters: CreateInvoiceProfileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/InvoiceProfiles`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: InvoiceProfileToJSON(requestParameters.invoiceProfile),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => InvoiceProfileFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createInvoiceProfile(requestParameters: CreateInvoiceProfileRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
+        const response = await this.createInvoiceProfileRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async deleteInvoiceProfileRaw(requestParameters: DeleteInvoiceProfileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling deleteInvoiceProfile.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'DELETE',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.TextApiResponse(response) as any;
+    }
+
+    /**
+     */
+    async deleteInvoiceProfile(requestParameters: DeleteInvoiceProfileRequest, initOverrides?: RequestInit): Promise<boolean> {
+        const response = await this.deleteInvoiceProfileRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getInvoiceProfileRaw(requestParameters: GetInvoiceProfileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getInvoiceProfile.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => InvoiceProfileFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getInvoiceProfile(requestParameters: GetInvoiceProfileRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
+        const response = await this.getInvoiceProfileRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listInvoiceProfilesRaw(requestParameters: ListInvoiceProfilesRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<InvoiceProfile>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -88,80 +183,16 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async invoiceProfilesGet(requestParameters: InvoiceProfilesGetRequest, initOverrides?: RequestInit): Promise<Array<InvoiceProfile>> {
-        const response = await this.invoiceProfilesGetRaw(requestParameters, initOverrides);
+    async listInvoiceProfiles(requestParameters: ListInvoiceProfilesRequest, initOverrides?: RequestInit): Promise<Array<InvoiceProfile>> {
+        const response = await this.listInvoiceProfilesRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async invoiceProfilesIdDeleteRaw(requestParameters: InvoiceProfilesIdDeleteRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<boolean>> {
+    async updateInvoiceProfileRaw(requestParameters: UpdateInvoiceProfileRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invoiceProfilesIdDelete.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'DELETE',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.TextApiResponse(response) as any;
-    }
-
-    /**
-     */
-    async invoiceProfilesIdDelete(requestParameters: InvoiceProfilesIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
-        const response = await this.invoiceProfilesIdDeleteRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async invoiceProfilesIdGetRaw(requestParameters: InvoiceProfilesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invoiceProfilesIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/InvoiceProfiles/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => InvoiceProfileFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async invoiceProfilesIdGet(requestParameters: InvoiceProfilesIdGetRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
-        const response = await this.invoiceProfilesIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async invoiceProfilesIdPutRaw(requestParameters: InvoiceProfilesIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invoiceProfilesIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling updateInvoiceProfile.');
         }
 
         const queryParameters: any = {};
@@ -187,39 +218,8 @@ export class InvoiceProfilesApi extends runtime.BaseAPI {
 
     /**
      */
-    async invoiceProfilesIdPut(requestParameters: InvoiceProfilesIdPutRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
-        const response = await this.invoiceProfilesIdPutRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async invoiceProfilesPostRaw(requestParameters: InvoiceProfilesPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<InvoiceProfile>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/InvoiceProfiles`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: InvoiceProfileToJSON(requestParameters.invoiceProfile),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => InvoiceProfileFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async invoiceProfilesPost(requestParameters: InvoiceProfilesPostRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
-        const response = await this.invoiceProfilesPostRaw(requestParameters, initOverrides);
+    async updateInvoiceProfile(requestParameters: UpdateInvoiceProfileRequest, initOverrides?: RequestInit): Promise<InvoiceProfile> {
+        const response = await this.updateInvoiceProfileRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

@@ -24,23 +24,23 @@ export interface ClientsClientIdDeleteRequest {
     clientId: string | null;
 }
 
-export interface ClientsClientIdGetRequest {
-    clientId: string | null;
-}
-
 export interface ClientsClientIdPutRequest {
     clientId: string | null;
     client?: Client;
 }
 
-export interface ClientsGetRequest {
+export interface CreateClientRequest {
+    client?: Client;
+}
+
+export interface GetClientRequest {
+    clientId: string | null;
+}
+
+export interface ListClientsRequest {
     page?: number;
     pageSize?: number;
     search?: string | null;
-}
-
-export interface ClientsPostRequest {
-    client?: Client;
 }
 
 /**
@@ -82,38 +82,6 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async clientsClientIdGetRaw(requestParameters: ClientsClientIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
-        if (requestParameters.clientId === null || requestParameters.clientId === undefined) {
-            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling clientsClientIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ClientFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async clientsClientIdGet(requestParameters: ClientsClientIdGetRequest, initOverrides?: RequestInit): Promise<Client> {
-        const response = await this.clientsClientIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
     async clientsClientIdPutRaw(requestParameters: ClientsClientIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
         if (requestParameters.clientId === null || requestParameters.clientId === undefined) {
             throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling clientsClientIdPut.');
@@ -149,7 +117,70 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async clientsGetRaw(requestParameters: ClientsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Client>>> {
+    async createClientRaw(requestParameters: CreateClientRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Clients`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: ClientToJSON(requestParameters.client),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ClientFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createClient(requestParameters: CreateClientRequest, initOverrides?: RequestInit): Promise<Client> {
+        const response = await this.createClientRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getClientRaw(requestParameters: GetClientRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
+        if (requestParameters.clientId === null || requestParameters.clientId === undefined) {
+            throw new runtime.RequiredError('clientId','Required parameter requestParameters.clientId was null or undefined when calling getClient.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/Clients/{clientId}`.replace(`{${"clientId"}}`, encodeURIComponent(String(requestParameters.clientId))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ClientFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getClient(requestParameters: GetClientRequest, initOverrides?: RequestInit): Promise<Client> {
+        const response = await this.getClientRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listClientsRaw(requestParameters: ListClientsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Client>>> {
         const queryParameters: any = {};
 
         if (requestParameters.page !== undefined) {
@@ -182,39 +213,8 @@ export class ClientsApi extends runtime.BaseAPI {
 
     /**
      */
-    async clientsGet(requestParameters: ClientsGetRequest, initOverrides?: RequestInit): Promise<Array<Client>> {
-        const response = await this.clientsGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async clientsPostRaw(requestParameters: ClientsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Client>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/Clients`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: ClientToJSON(requestParameters.client),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ClientFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async clientsPost(requestParameters: ClientsPostRequest, initOverrides?: RequestInit): Promise<Client> {
-        const response = await this.clientsPostRaw(requestParameters, initOverrides);
+    async listClients(requestParameters: ListClientsRequest, initOverrides?: RequestInit): Promise<Array<Client>> {
+        const response = await this.listClientsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

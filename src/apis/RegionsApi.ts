@@ -23,12 +23,12 @@ import {
     RegionListToJSON,
 } from '../models';
 
-export interface RegionsBycodeGetRequest {
+export interface GetRegionByCodeRequest {
     regionCode?: string | null;
     regionList?: RegionList;
 }
 
-export interface RegionsGetRequest {
+export interface ListRegionsRequest {
     regionList?: RegionList;
     organizationId?: number;
     page?: number;
@@ -43,7 +43,7 @@ export class RegionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async regionsBycodeGetRaw(requestParameters: RegionsBycodeGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Region>> {
+    async getRegionByCodeRaw(requestParameters: GetRegionByCodeRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Region>> {
         const queryParameters: any = {};
 
         if (requestParameters.regionCode !== undefined) {
@@ -72,14 +72,14 @@ export class RegionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async regionsBycodeGet(requestParameters: RegionsBycodeGetRequest, initOverrides?: RequestInit): Promise<Region> {
-        const response = await this.regionsBycodeGetRaw(requestParameters, initOverrides);
+    async getRegionByCode(requestParameters: GetRegionByCodeRequest, initOverrides?: RequestInit): Promise<Region> {
+        const response = await this.getRegionByCodeRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async regionsGetRaw(requestParameters: RegionsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Region>>> {
+    async listRegionsRaw(requestParameters: ListRegionsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<Region>>> {
         const queryParameters: any = {};
 
         if (requestParameters.regionList !== undefined) {
@@ -120,8 +120,8 @@ export class RegionsApi extends runtime.BaseAPI {
 
     /**
      */
-    async regionsGet(requestParameters: RegionsGetRequest, initOverrides?: RequestInit): Promise<Array<Region>> {
-        const response = await this.regionsGetRaw(requestParameters, initOverrides);
+    async listRegions(requestParameters: ListRegionsRequest, initOverrides?: RequestInit): Promise<Array<Region>> {
+        const response = await this.listRegionsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

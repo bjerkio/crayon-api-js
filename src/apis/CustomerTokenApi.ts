@@ -27,7 +27,7 @@ export class CustomerTokenApi extends runtime.BaseAPI {
 
     /**
      */
-    async connectTokenPostRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Token>> {
+    async getCustomerTokenRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<Token>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -48,8 +48,8 @@ export class CustomerTokenApi extends runtime.BaseAPI {
 
     /**
      */
-    async connectTokenPost(initOverrides?: RequestInit): Promise<Token> {
-        const response = await this.connectTokenPostRaw(initOverrides);
+    async getCustomerToken(initOverrides?: RequestInit): Promise<Token> {
+        const response = await this.getCustomerTokenRaw(initOverrides);
         return await response.value();
     }
 

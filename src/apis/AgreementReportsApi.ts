@@ -20,13 +20,13 @@ import {
     AgreementReportToJSON,
 } from '../models';
 
-export interface AgreementReportsAgreementIdPutRequest {
-    agreementId: number;
-    agreementReport?: AgreementReport;
+export interface ListAgreementReportsRequest {
+    productContainerId: number;
 }
 
-export interface AgreementReportsProductContainerIdGetRequest {
-    productContainerId: number;
+export interface UpdateAgreementReportRequest {
+    agreementId: number;
+    agreementReport?: AgreementReport;
 }
 
 /**
@@ -36,9 +36,41 @@ export class AgreementReportsApi extends runtime.BaseAPI {
 
     /**
      */
-    async agreementReportsAgreementIdPutRaw(requestParameters: AgreementReportsAgreementIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AgreementReport>> {
+    async listAgreementReportsRaw(requestParameters: ListAgreementReportsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementReport>>> {
+        if (requestParameters.productContainerId === null || requestParameters.productContainerId === undefined) {
+            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling listAgreementReports.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/AgreementReports/{productContainerId}`.replace(`{${"productContainerId"}}`, encodeURIComponent(String(requestParameters.productContainerId))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(AgreementReportFromJSON));
+    }
+
+    /**
+     */
+    async listAgreementReports(requestParameters: ListAgreementReportsRequest, initOverrides?: RequestInit): Promise<Array<AgreementReport>> {
+        const response = await this.listAgreementReportsRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async updateAgreementReportRaw(requestParameters: UpdateAgreementReportRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AgreementReport>> {
         if (requestParameters.agreementId === null || requestParameters.agreementId === undefined) {
-            throw new runtime.RequiredError('agreementId','Required parameter requestParameters.agreementId was null or undefined when calling agreementReportsAgreementIdPut.');
+            throw new runtime.RequiredError('agreementId','Required parameter requestParameters.agreementId was null or undefined when calling updateAgreementReport.');
         }
 
         const queryParameters: any = {};
@@ -64,40 +96,8 @@ export class AgreementReportsApi extends runtime.BaseAPI {
 
     /**
      */
-    async agreementReportsAgreementIdPut(requestParameters: AgreementReportsAgreementIdPutRequest, initOverrides?: RequestInit): Promise<AgreementReport> {
-        const response = await this.agreementReportsAgreementIdPutRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async agreementReportsProductContainerIdGetRaw(requestParameters: AgreementReportsProductContainerIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AgreementReport>>> {
-        if (requestParameters.productContainerId === null || requestParameters.productContainerId === undefined) {
-            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling agreementReportsProductContainerIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/AgreementReports/{productContainerId}`.replace(`{${"productContainerId"}}`, encodeURIComponent(String(requestParameters.productContainerId))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(AgreementReportFromJSON));
-    }
-
-    /**
-     */
-    async agreementReportsProductContainerIdGet(requestParameters: AgreementReportsProductContainerIdGetRequest, initOverrides?: RequestInit): Promise<Array<AgreementReport>> {
-        const response = await this.agreementReportsProductContainerIdGetRaw(requestParameters, initOverrides);
+    async updateAgreementReport(requestParameters: UpdateAgreementReportRequest, initOverrides?: RequestInit): Promise<AgreementReport> {
+        const response = await this.updateAgreementReportRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

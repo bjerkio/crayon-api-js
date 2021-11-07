@@ -23,7 +23,11 @@ import {
     CustomerTenantTypeToJSON,
 } from '../models';
 
-export interface AwsAccountsGetRequest {
+export interface GetAwsAccountRequest {
+    id: number;
+}
+
+export interface ListAwsAccountsRequest {
     organizationId?: number;
     publisherId?: number;
     consumerId?: number;
@@ -33,11 +37,7 @@ export interface AwsAccountsGetRequest {
     search?: string | null;
 }
 
-export interface AwsAccountsIdGetRequest {
-    id: number;
-}
-
-export interface AwsAccountsIdPutRequest {
+export interface UpdateAwsAccountRequest {
     id: number;
     awsAccount?: AwsAccount;
 }
@@ -49,7 +49,39 @@ export class AwsAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async awsAccountsGetRaw(requestParameters: AwsAccountsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AwsAccount>>> {
+    async getAwsAccountRaw(requestParameters: GetAwsAccountRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getAwsAccount.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/AwsAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AwsAccountFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getAwsAccount(requestParameters: GetAwsAccountRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
+        const response = await this.getAwsAccountRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listAwsAccountsRaw(requestParameters: ListAwsAccountsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<AwsAccount>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -98,48 +130,16 @@ export class AwsAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async awsAccountsGet(requestParameters: AwsAccountsGetRequest, initOverrides?: RequestInit): Promise<Array<AwsAccount>> {
-        const response = await this.awsAccountsGetRaw(requestParameters, initOverrides);
+    async listAwsAccounts(requestParameters: ListAwsAccountsRequest, initOverrides?: RequestInit): Promise<Array<AwsAccount>> {
+        const response = await this.listAwsAccountsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async awsAccountsIdGetRaw(requestParameters: AwsAccountsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
+    async updateAwsAccountRaw(requestParameters: UpdateAwsAccountRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling awsAccountsIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/AwsAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => AwsAccountFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async awsAccountsIdGet(requestParameters: AwsAccountsIdGetRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
-        const response = await this.awsAccountsIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async awsAccountsIdPutRaw(requestParameters: AwsAccountsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<AwsAccount>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling awsAccountsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling updateAwsAccount.');
         }
 
         const queryParameters: any = {};
@@ -165,8 +165,8 @@ export class AwsAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async awsAccountsIdPut(requestParameters: AwsAccountsIdPutRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
-        const response = await this.awsAccountsIdPutRaw(requestParameters, initOverrides);
+    async updateAwsAccount(requestParameters: UpdateAwsAccountRequest, initOverrides?: RequestInit): Promise<AwsAccount> {
+        const response = await this.updateAwsAccountRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

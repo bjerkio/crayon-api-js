@@ -23,7 +23,15 @@ import {
     CustomerTenantTypeToJSON,
 } from '../models';
 
-export interface CrayonAccountsGetRequest {
+export interface CreateCrayonAccountRequest {
+    crayonAccount?: CrayonAccount;
+}
+
+export interface GetCrayonAccountRequest {
+    id: number;
+}
+
+export interface ListCrayonAccountsRequest {
     organizationId?: number;
     publisherId?: number;
     consumerId?: number;
@@ -33,16 +41,8 @@ export interface CrayonAccountsGetRequest {
     search?: string | null;
 }
 
-export interface CrayonAccountsIdGetRequest {
+export interface UpdateCrayonAccountRequest {
     id: number;
-}
-
-export interface CrayonAccountsIdPutRequest {
-    id: number;
-    crayonAccount?: CrayonAccount;
-}
-
-export interface CrayonAccountsPostRequest {
     crayonAccount?: CrayonAccount;
 }
 
@@ -53,7 +53,70 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async crayonAccountsGetRaw(requestParameters: CrayonAccountsGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CrayonAccount>>> {
+    async createCrayonAccountRaw(requestParameters: CreateCrayonAccountRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json-patch+json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/CrayonAccounts`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: CrayonAccountToJSON(requestParameters.crayonAccount),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => CrayonAccountFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async createCrayonAccount(requestParameters: CreateCrayonAccountRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
+        const response = await this.createCrayonAccountRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getCrayonAccountRaw(requestParameters: GetCrayonAccountRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getCrayonAccount.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/CrayonAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => CrayonAccountFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getCrayonAccount(requestParameters: GetCrayonAccountRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
+        const response = await this.getCrayonAccountRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listCrayonAccountsRaw(requestParameters: ListCrayonAccountsRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<CrayonAccount>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -102,48 +165,16 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async crayonAccountsGet(requestParameters: CrayonAccountsGetRequest, initOverrides?: RequestInit): Promise<Array<CrayonAccount>> {
-        const response = await this.crayonAccountsGetRaw(requestParameters, initOverrides);
+    async listCrayonAccounts(requestParameters: ListCrayonAccountsRequest, initOverrides?: RequestInit): Promise<Array<CrayonAccount>> {
+        const response = await this.listCrayonAccountsRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async crayonAccountsIdGetRaw(requestParameters: CrayonAccountsIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
+    async updateCrayonAccountRaw(requestParameters: UpdateCrayonAccountRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling crayonAccountsIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/CrayonAccounts/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => CrayonAccountFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async crayonAccountsIdGet(requestParameters: CrayonAccountsIdGetRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
-        const response = await this.crayonAccountsIdGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async crayonAccountsIdPutRaw(requestParameters: CrayonAccountsIdPutRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling crayonAccountsIdPut.');
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling updateCrayonAccount.');
         }
 
         const queryParameters: any = {};
@@ -169,39 +200,8 @@ export class CrayonAccountsApi extends runtime.BaseAPI {
 
     /**
      */
-    async crayonAccountsIdPut(requestParameters: CrayonAccountsIdPutRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
-        const response = await this.crayonAccountsIdPutRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async crayonAccountsPostRaw(requestParameters: CrayonAccountsPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<CrayonAccount>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json-patch+json';
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/CrayonAccounts`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: CrayonAccountToJSON(requestParameters.crayonAccount),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => CrayonAccountFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async crayonAccountsPost(requestParameters: CrayonAccountsPostRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
-        const response = await this.crayonAccountsPostRaw(requestParameters, initOverrides);
+    async updateCrayonAccount(requestParameters: UpdateCrayonAccountRequest, initOverrides?: RequestInit): Promise<CrayonAccount> {
+        const response = await this.updateCrayonAccountRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

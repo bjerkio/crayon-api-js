@@ -20,7 +20,7 @@ import {
     GoogleOrderToJSON,
 } from '../models';
 
-export interface GoogleOrdersCheckoutPostRequest {
+export interface CheckoutGoogleOrderRequest {
     googleOrder?: GoogleOrder;
 }
 
@@ -31,7 +31,7 @@ export class GoogleOrdersApi extends runtime.BaseAPI {
 
     /**
      */
-    async googleOrdersCheckoutPostRaw(requestParameters: GoogleOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
+    async checkoutGoogleOrderRaw(requestParameters: CheckoutGoogleOrderRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<void>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -55,8 +55,8 @@ export class GoogleOrdersApi extends runtime.BaseAPI {
 
     /**
      */
-    async googleOrdersCheckoutPost(requestParameters: GoogleOrdersCheckoutPostRequest, initOverrides?: RequestInit): Promise<void> {
-        await this.googleOrdersCheckoutPostRaw(requestParameters, initOverrides);
+    async checkoutGoogleOrder(requestParameters: CheckoutGoogleOrderRequest, initOverrides?: RequestInit): Promise<void> {
+        await this.checkoutGoogleOrderRaw(requestParameters, initOverrides);
     }
 
 }

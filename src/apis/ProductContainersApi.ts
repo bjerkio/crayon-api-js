@@ -29,7 +29,27 @@ import {
     ProductRowPatchToJSON,
 } from '../models';
 
-export interface ProductContainersGetRequest {
+export interface GetOrCreateProductContainerShoppingCartRequest {
+    organizationId?: number;
+}
+
+export interface GetProductContainerRequest {
+    id: number;
+}
+
+export interface GetProductContainerRowIssueRequest {
+    id: number;
+}
+
+export interface GetProductContainersReportByMonthRequest {
+    year?: number;
+    month?: number;
+    programId?: number;
+    organizationId?: number;
+    copyLast?: boolean;
+}
+
+export interface ListProductContainersRequest {
     organizationId?: number;
     search?: string | null;
     page?: number;
@@ -48,15 +68,7 @@ export interface ProductContainersGetRequest {
     includeSubsidiaries?: boolean;
 }
 
-export interface ProductContainersGetorcreateshoppingcartGetRequest {
-    organizationId?: number;
-}
-
 export interface ProductContainersIdDeleteRequest {
-    id: number;
-}
-
-export interface ProductContainersIdGetRequest {
     id: number;
 }
 
@@ -66,22 +78,10 @@ export interface ProductContainersIdPutRequest {
     productContainer?: ProductContainer;
 }
 
-export interface ProductContainersProductContainerIdRowProductRowIdPatchRequest {
+export interface UpdateProductRowRequest {
     productContainerId: number;
     productRowId: number;
     productRowPatch?: ProductRowPatch;
-}
-
-export interface ProductContainersReportbymonthPostRequest {
-    year?: number;
-    month?: number;
-    programId?: number;
-    organizationId?: number;
-    copyLast?: boolean;
-}
-
-export interface ProductContainersRowissuesIdGetRequest {
-    id: number;
 }
 
 /**
@@ -91,7 +91,151 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async productContainersGetRaw(requestParameters: ProductContainersGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ProductContainer>>> {
+    async getOrCreateProductContainerShoppingCartRaw(requestParameters: GetOrCreateProductContainerShoppingCartRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+        const queryParameters: any = {};
+
+        if (requestParameters.organizationId !== undefined) {
+            queryParameters['organizationId'] = requestParameters.organizationId;
+        }
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/ProductContainers/getorcreateshoppingcart`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getOrCreateProductContainerShoppingCart(requestParameters: GetOrCreateProductContainerShoppingCartRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.getOrCreateProductContainerShoppingCartRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getProductContainerRaw(requestParameters: GetProductContainerRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getProductContainer.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getProductContainer(requestParameters: GetProductContainerRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.getProductContainerRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getProductContainerRowIssueRaw(requestParameters: GetProductContainerRowIssueRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+        if (requestParameters.id === null || requestParameters.id === undefined) {
+            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling getProductContainerRowIssue.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/ProductContainers/rowissues/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getProductContainerRowIssue(requestParameters: GetProductContainerRowIssueRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.getProductContainerRowIssueRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async getProductContainersReportByMonthRaw(requestParameters: GetProductContainersReportByMonthRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+        const queryParameters: any = {};
+
+        if (requestParameters.year !== undefined) {
+            queryParameters['year'] = requestParameters.year;
+        }
+
+        if (requestParameters.month !== undefined) {
+            queryParameters['month'] = requestParameters.month;
+        }
+
+        if (requestParameters.programId !== undefined) {
+            queryParameters['programId'] = requestParameters.programId;
+        }
+
+        if (requestParameters.organizationId !== undefined) {
+            queryParameters['organizationId'] = requestParameters.organizationId;
+        }
+
+        if (requestParameters.copyLast !== undefined) {
+            queryParameters['copyLast'] = requestParameters.copyLast;
+        }
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
+        }
+
+        const response = await this.request({
+            path: `/ProductContainers/reportbymonth`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async getProductContainersReportByMonth(requestParameters: GetProductContainersReportByMonthRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.getProductContainersReportByMonthRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async listProductContainersRaw(requestParameters: ListProductContainersRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<ProductContainer>>> {
         const queryParameters: any = {};
 
         if (requestParameters.organizationId !== undefined) {
@@ -176,40 +320,8 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async productContainersGet(requestParameters: ProductContainersGetRequest, initOverrides?: RequestInit): Promise<Array<ProductContainer>> {
-        const response = await this.productContainersGetRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async productContainersGetorcreateshoppingcartGetRaw(requestParameters: ProductContainersGetorcreateshoppingcartGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
-        const queryParameters: any = {};
-
-        if (requestParameters.organizationId !== undefined) {
-            queryParameters['organizationId'] = requestParameters.organizationId;
-        }
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/ProductContainers/getorcreateshoppingcart`,
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async productContainersGetorcreateshoppingcartGet(requestParameters: ProductContainersGetorcreateshoppingcartGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.productContainersGetorcreateshoppingcartGetRaw(requestParameters, initOverrides);
+    async listProductContainers(requestParameters: ListProductContainersRequest, initOverrides?: RequestInit): Promise<Array<ProductContainer>> {
+        const response = await this.listProductContainersRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -242,38 +354,6 @@ export class ProductContainersApi extends runtime.BaseAPI {
      */
     async productContainersIdDelete(requestParameters: ProductContainersIdDeleteRequest, initOverrides?: RequestInit): Promise<boolean> {
         const response = await this.productContainersIdDeleteRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async productContainersIdGetRaw(requestParameters: ProductContainersIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling productContainersIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/ProductContainers/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async productContainersIdGet(requestParameters: ProductContainersIdGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.productContainersIdGetRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
@@ -318,13 +398,13 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async productContainersProductContainerIdRowProductRowIdPatchRaw(requestParameters: ProductContainersProductContainerIdRowProductRowIdPatchRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
+    async updateProductRowRaw(requestParameters: UpdateProductRowRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
         if (requestParameters.productContainerId === null || requestParameters.productContainerId === undefined) {
-            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling productContainersProductContainerIdRowProductRowIdPatch.');
+            throw new runtime.RequiredError('productContainerId','Required parameter requestParameters.productContainerId was null or undefined when calling updateProductRow.');
         }
 
         if (requestParameters.productRowId === null || requestParameters.productRowId === undefined) {
-            throw new runtime.RequiredError('productRowId','Required parameter requestParameters.productRowId was null or undefined when calling productContainersProductContainerIdRowProductRowIdPatch.');
+            throw new runtime.RequiredError('productRowId','Required parameter requestParameters.productRowId was null or undefined when calling updateProductRow.');
         }
 
         const queryParameters: any = {};
@@ -350,88 +430,8 @@ export class ProductContainersApi extends runtime.BaseAPI {
 
     /**
      */
-    async productContainersProductContainerIdRowProductRowIdPatch(requestParameters: ProductContainersProductContainerIdRowProductRowIdPatchRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.productContainersProductContainerIdRowProductRowIdPatchRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async productContainersReportbymonthPostRaw(requestParameters: ProductContainersReportbymonthPostRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
-        const queryParameters: any = {};
-
-        if (requestParameters.year !== undefined) {
-            queryParameters['year'] = requestParameters.year;
-        }
-
-        if (requestParameters.month !== undefined) {
-            queryParameters['month'] = requestParameters.month;
-        }
-
-        if (requestParameters.programId !== undefined) {
-            queryParameters['programId'] = requestParameters.programId;
-        }
-
-        if (requestParameters.organizationId !== undefined) {
-            queryParameters['organizationId'] = requestParameters.organizationId;
-        }
-
-        if (requestParameters.copyLast !== undefined) {
-            queryParameters['copyLast'] = requestParameters.copyLast;
-        }
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/ProductContainers/reportbymonth`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async productContainersReportbymonthPost(requestParameters: ProductContainersReportbymonthPostRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.productContainersReportbymonthPostRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async productContainersRowissuesIdGetRaw(requestParameters: ProductContainersRowissuesIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<ProductContainer>> {
-        if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling productContainersRowissuesIdGet.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Bearer authentication
-        }
-
-        const response = await this.request({
-            path: `/ProductContainers/rowissues/{id}`.replace(`{${"id"}}`, encodeURIComponent(String(requestParameters.id))),
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => ProductContainerFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async productContainersRowissuesIdGet(requestParameters: ProductContainersRowissuesIdGetRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
-        const response = await this.productContainersRowissuesIdGetRaw(requestParameters, initOverrides);
+    async updateProductRow(requestParameters: UpdateProductRowRequest, initOverrides?: RequestInit): Promise<ProductContainer> {
+        const response = await this.updateProductRowRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

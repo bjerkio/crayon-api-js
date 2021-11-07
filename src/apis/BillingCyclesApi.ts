@@ -20,12 +20,12 @@ import {
     BillingCycleToJSON,
 } from '../models';
 
-export interface BillingCyclesGetRequest {
-    includeUnknown?: boolean;
+export interface GetBillingCycleProductVariantRequest {
+    productVariantId: number;
 }
 
-export interface BillingCyclesProductVariantProductVariantIdGetRequest {
-    productVariantId: number;
+export interface ListBillingCyclesRequest {
+    includeUnknown?: boolean;
 }
 
 /**
@@ -35,7 +35,11 @@ export class BillingCyclesApi extends runtime.BaseAPI {
 
     /**
      */
-    async billingCyclesCspNameDictionaryGetRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<{ [key: string]: string; }>> {
+    async getBillingCycleProductVariantRaw(requestParameters: GetBillingCycleProductVariantRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
+        if (requestParameters.productVariantId === null || requestParameters.productVariantId === undefined) {
+            throw new runtime.RequiredError('productVariantId','Required parameter requestParameters.productVariantId was null or undefined when calling getBillingCycleProductVariant.');
+        }
+
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -45,25 +49,25 @@ export class BillingCyclesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/BillingCycles/cspNameDictionary`,
+            path: `/BillingCycles/productVariant/{productVariantId}`.replace(`{${"productVariantId"}}`, encodeURIComponent(String(requestParameters.productVariantId))),
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse<any>(response);
+        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(BillingCycleFromJSON));
     }
 
     /**
      */
-    async billingCyclesCspNameDictionaryGet(initOverrides?: RequestInit): Promise<{ [key: string]: string; }> {
-        const response = await this.billingCyclesCspNameDictionaryGetRaw(initOverrides);
+    async getBillingCycleProductVariant(requestParameters: GetBillingCycleProductVariantRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
+        const response = await this.getBillingCycleProductVariantRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async billingCyclesGetRaw(requestParameters: BillingCyclesGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
+    async listBillingCyclesRaw(requestParameters: ListBillingCyclesRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
         const queryParameters: any = {};
 
         if (requestParameters.includeUnknown !== undefined) {
@@ -88,18 +92,14 @@ export class BillingCyclesApi extends runtime.BaseAPI {
 
     /**
      */
-    async billingCyclesGet(requestParameters: BillingCyclesGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
-        const response = await this.billingCyclesGetRaw(requestParameters, initOverrides);
+    async listBillingCycles(requestParameters: ListBillingCyclesRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
+        const response = await this.listBillingCyclesRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
     /**
      */
-    async billingCyclesProductVariantProductVariantIdGetRaw(requestParameters: BillingCyclesProductVariantProductVariantIdGetRequest, initOverrides?: RequestInit): Promise<runtime.ApiResponse<Array<BillingCycle>>> {
-        if (requestParameters.productVariantId === null || requestParameters.productVariantId === undefined) {
-            throw new runtime.RequiredError('productVariantId','Required parameter requestParameters.productVariantId was null or undefined when calling billingCyclesProductVariantProductVariantIdGet.');
-        }
-
+    async listBillingCyclesCSPNameDictionaryRaw(initOverrides?: RequestInit): Promise<runtime.ApiResponse<{ [key: string]: string; }>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -109,19 +109,19 @@ export class BillingCyclesApi extends runtime.BaseAPI {
         }
 
         const response = await this.request({
-            path: `/BillingCycles/productVariant/{productVariantId}`.replace(`{${"productVariantId"}}`, encodeURIComponent(String(requestParameters.productVariantId))),
+            path: `/BillingCycles/cspNameDictionary`,
             method: 'GET',
             headers: headerParameters,
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => jsonValue.map(BillingCycleFromJSON));
+        return new runtime.JSONApiResponse<any>(response);
     }
 
     /**
      */
-    async billingCyclesProductVariantProductVariantIdGet(requestParameters: BillingCyclesProductVariantProductVariantIdGetRequest, initOverrides?: RequestInit): Promise<Array<BillingCycle>> {
-        const response = await this.billingCyclesProductVariantProductVariantIdGetRaw(requestParameters, initOverrides);
+    async listBillingCyclesCSPNameDictionary(initOverrides?: RequestInit): Promise<{ [key: string]: string; }> {
+        const response = await this.listBillingCyclesCSPNameDictionaryRaw(initOverrides);
         return await response.value();
     }
 
