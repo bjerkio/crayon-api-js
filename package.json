@@ -1,6 +1,6 @@
 {
   "name": "@bjerkio/crayon-api",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "private": false,
   "description": "Typescript / Javascript class for Crayon API",
   "keywords": [
