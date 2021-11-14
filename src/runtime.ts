@@ -76,14 +76,14 @@ export class BaseAPI {
         ? context.body
         : JSON.stringify(context.body);
 
-    const headers = Object.assign(
-      {},
-      this.configuration.headers,
-      context.headers,
-    );
     const init = {
       method: context.method,
-      headers: headers,
+      headers: {
+        ...this.configuration.headers,
+        ...context.headers,
+        'user-agent':
+          'crayon-api-js/3.0 (+https://github.com/bjerkio/crayon-api-js)',
+      },
       body,
       credentials: this.configuration.credentials,
       ...initOverrides,
