@@ -4307,6 +4307,7 @@
       "post": {
         "tags": ["CustomerToken"],
         "operationId": "GetCustomerToken",
+        "security": [{ "BasicAuth": [] }],
         "responses": {
           "200": {
             "description": "Success",
@@ -12307,17 +12308,20 @@
       }
     },
     "securitySchemes": {
-      "Bearer": {
-        "type": "apiKey",
+      "BearerAuth": {
+        "type": "http",
         "description": "Please insert \"Bearer {access token}\" below.",
-        "name": "Authorization",
-        "in": "header"
+        "scheme": "bearer"
+      },
+      "BasicAuth": {
+        "type": "http",
+        "scheme": "basic"
       }
     }
   },
   "security": [
     {
-      "Bearer": []
+      "BearerAuth": []
     }
   ]
 }

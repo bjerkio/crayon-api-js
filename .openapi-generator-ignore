@@ -2,3 +2,4 @@ git_push.sh
 package.json
 README.md
 src/runtime.ts
+src/apis/CustomerTokenApi.ts
