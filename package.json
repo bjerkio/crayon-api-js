@@ -22,6 +22,7 @@
     "generate-docs": "typedoc --out docs src/index.ts"
   },
   "dependencies": {
+    "deepmerge": "^4.2.2",
     "portable-fetch": "^3.0.0"
   },
   "devDependencies": {

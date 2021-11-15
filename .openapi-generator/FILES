@@ -16,7 +16,6 @@ src/apis/ConsumersApi.ts
 src/apis/CrayonAccountsApi.ts
 src/apis/CustomerTenantAgreementsApi.ts
 src/apis/CustomerTenantsApi.ts
-src/apis/CustomerTokenApi.ts
 src/apis/FacebookOrdersApi.ts
 src/apis/GoogleOrdersApi.ts
 src/apis/GroupingsApi.ts

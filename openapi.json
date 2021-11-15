@@ -10464,27 +10464,27 @@
       "Token": {
         "type": "object",
         "properties": {
-          "accessToken": {
+          "AccessToken": {
             "type": "string",
             "nullable": true
           },
-          "identityToken": {
+          "IdentityToken": {
             "type": "string",
             "nullable": true
           },
-          "error": {
+          "Error": {
             "type": "string",
             "nullable": true
           },
-          "expiresIn": {
+          "ExpiresIn": {
             "type": "integer",
             "format": "int64"
           },
-          "tokenType": {
+          "TokenType": {
             "type": "string",
             "nullable": true
           },
-          "refreshToken": {
+          "RefreshToken": {
             "type": "string",
             "nullable": true
           }

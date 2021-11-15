@@ -8,6 +8,7 @@
  *
  */
 import 'portable-fetch';
+import * as deepmerge from 'deepmerge';
 
 export const BASE_PATH = 'https://api.crayon.com/api/v1'.replace(/\/+$/, '');
 
@@ -76,18 +77,20 @@ export class BaseAPI {
         ? context.body
         : JSON.stringify(context.body);
 
-    const init = {
-      method: context.method,
-      headers: {
-        ...this.configuration.headers,
-        ...context.headers,
-        'user-agent':
-          'crayon-api-js/3.0 (+https://github.com/bjerkio/crayon-api-js)',
+    const init = deepmerge(
+      {
+        method: context.method,
+        headers: {
+          ...this.configuration.headers,
+          ...context.headers,
+          'user-agent':
+            'crayon-api-js/3.0 (+https://github.com/bjerkio/crayon-api-js)',
+        },
+        body,
+        credentials: this.configuration.credentials,
       },
-      body,
-      credentials: this.configuration.credentials,
-      ...initOverrides,
-    };
+      initOverrides ?? {},
+    );
     return { url, init };
   }
 
@@ -347,7 +350,15 @@ export class JSONApiResponse<T> {
   ) {}
 
   async value(): Promise<T> {
-    return this.transformer(await this.raw.json());
+    const value = await this.raw.json();
+    if (!value) {
+      return undefined;
+    }
+    if (value.Items) {
+      console.log({ items: value.Items });
+      return this.transformer(value.Items);
+    }
+    return this.transformer(value);
   }
 }
 

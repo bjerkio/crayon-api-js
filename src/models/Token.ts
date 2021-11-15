@@ -69,16 +69,16 @@ export function TokenFromJSONTyped(
     return json;
   }
   return {
-    accessToken: !exists(json, 'accessToken') ? undefined : json['accessToken'],
-    identityToken: !exists(json, 'identityToken')
+    accessToken: !exists(json, 'AccessToken') ? undefined : json['AccessToken'],
+    identityToken: !exists(json, 'IdentityToken')
       ? undefined
-      : json['identityToken'],
-    error: !exists(json, 'error') ? undefined : json['error'],
-    expiresIn: !exists(json, 'expiresIn') ? undefined : json['expiresIn'],
-    tokenType: !exists(json, 'tokenType') ? undefined : json['tokenType'],
-    refreshToken: !exists(json, 'refreshToken')
+      : json['IdentityToken'],
+    error: !exists(json, 'Error') ? undefined : json['Error'],
+    expiresIn: !exists(json, 'ExpiresIn') ? undefined : json['ExpiresIn'],
+    tokenType: !exists(json, 'TokenType') ? undefined : json['TokenType'],
+    refreshToken: !exists(json, 'RefreshToken')
       ? undefined
-      : json['refreshToken'],
+      : json['RefreshToken'],
   };
 }
 
@@ -90,11 +90,11 @@ export function TokenToJSON(value?: Token | null): any {
     return null;
   }
   return {
-    accessToken: value.accessToken,
-    identityToken: value.identityToken,
-    error: value.error,
-    expiresIn: value.expiresIn,
-    tokenType: value.tokenType,
-    refreshToken: value.refreshToken,
+    AccessToken: value.accessToken,
+    IdentityToken: value.identityToken,
+    Error: value.error,
+    ExpiresIn: value.expiresIn,
+    TokenType: value.tokenType,
+    RefreshToken: value.refreshToken,
   };
 }
