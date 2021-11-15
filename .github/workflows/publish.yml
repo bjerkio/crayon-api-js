@@ -48,5 +48,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: ${{ steps.metadata.outputs.branch }}
+          file_pattern: package.json
           commit_message:
             'chore: release ${{ github.event.release.target_commitish }}'
