@@ -41,12 +41,12 @@ jobs:
 
       - run: |
           yarn publish --ignore-scripts \
-          --tag ${{ steps.yarn-tag.outputs.results }}
+          --tag ${{ steps.metadata.outputs.tag }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          branch: ${{ steps.branch.outputs.results }}
+          branch: ${{ steps.metadata.outputs.branch }}
           commit_message:
             'chore: release ${{ github.event.release.target_commitish }}'
