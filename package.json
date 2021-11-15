@@ -1,6 +1,6 @@
 {
   "name": "@bjerkio/crayon-api",
-  "version": "2.1.4",
+  "version": "2.1.7",
   "description": "swagger client for @bjerkio/crayon-api",
   "author": "Swagger Codegen Contributors",
   "keywords": [
@@ -12,7 +12,7 @@
   "license": "Unlicense",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "scripts" : {
+  "scripts": {
     "build": "tsc --outDir dist/",
     "prepublishOnly": "npm run build"
   },
