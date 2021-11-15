@@ -21,7 +21,7 @@ jobs:
         run: |
             yarn version --no-commit-hooks --no-git-tag-version \
             --new-version ${{ steps.get_version.outputs.version-without-v }}
-      - run: yarn publish --ignore-scripts
+      - run: yarn publish --ignore-scripts --tag beta
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: stefanzweifel/git-auto-commit-action@v4
