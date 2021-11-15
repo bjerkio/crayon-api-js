@@ -8,39 +8,45 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - id: get_version
         uses: battila7/get-version-action@v2
-      - uses: cobraz/setup-variables@v1
-        id: yarn-tag
+
+      - uses: cobraz/setup-variables@main
+        id: metadata
         with:
           key: ${{ steps.get_version.outputs.major }}
           map: |
-            2: latest
-            3: next
-      - uses: cobraz/setup-variables@v1
-        id: branch
-        with:
-          key: ${{ steps.get_version.outputs.major }}
-          map: |
-            2: v2
-            3: main
+            2:
+              tag: latest
+              branch: v2
+            3:
+              tag: next
+              branch: main
+
       - uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: '16.x'
           cache: yarn
-          registry-url: "https://registry.npmjs.org"
+          registry-url: 'https://registry.npmjs.org'
+
       - run: yarn install
+
       - run: yarn build
+
       - name: Set version
         run: |
           yarn version --no-commit-hooks --no-git-tag-version \
           --new-version ${{ steps.get_version.outputs.version-without-v }}
 
-      - run: yarn publish --ignore-scripts --tag ${{ steps.yarn-tag.outputs.results }}
+      - run: |
+          yarn publish --ignore-scripts \
+          --tag ${{ steps.yarn-tag.outputs.results }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: ${{ steps.branch.outputs.results }}
-          commit_message: "chore: release ${{ github.event.release.target_commitish }}"
+          commit_message:
+            'chore: release ${{ github.event.release.target_commitish }}'
