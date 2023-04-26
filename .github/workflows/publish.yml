@@ -24,7 +24,7 @@ jobs:
               tag: next
               branch: main
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           cache: yarn
