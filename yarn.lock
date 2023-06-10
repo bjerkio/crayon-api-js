@@ -23,12 +23,11 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@simenandre/prettier@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@simenandre/prettier/-/prettier-3.0.2.tgz#c2af74cfc67453a268092b8b79dc08d971e53c56"
-  integrity sha512-r8uJuUBm+sjn2/wACtHcbPsXSaewN2e10bKHDBWi7p8t+J+vedjuqTTWZDf0LLGM97WgrGk10DN4wPCdMf1Ypw==
+"@simenandre/prettier@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@simenandre/prettier/-/prettier-4.0.1.tgz#0ec2bc0a81d81e4ae0dd5bc6efa7e9408aace2ce"
+  integrity sha512-7ys2sGGqVQ1rTtjOgbgOwLDSUNRw/PiaCAWv97dE1d2VZDFxGNvn1BIQqhJrYL3jZBKAKSLH7evkzL8G6QB3ew==
   dependencies:
-    prettier-plugin-organize-imports "^3.2.2"
     prettier-plugin-package-perfection "^1.1.0"
 
 "@types/isomorphic-fetch@0.0.35":
@@ -151,7 +150,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
-glob@^7.1.6:
+glob@^7.1.6, glob@^7.2.0:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.3.tgz#b8df0fb802bbfa8e89bd1d938b4e16578ed44f2b"
   integrity sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==
@@ -160,18 +159,6 @@ glob@^7.1.6:
     inflight "^1.0.4"
     inherits "2"
     minimatch "^3.1.1"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
-glob@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
-  integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
@@ -281,14 +268,7 @@ marked@^3.0.8:
   resolved "https://registry.yarnpkg.com/marked/-/marked-3.0.8.tgz#2785f0dc79cbdc6034be4bb4f0f0a396bd3f8aeb"
   integrity sha512-0gVrAjo5m0VZSJb4rpL59K1unJAMb/hm8HRXqasD8VeC8m91ytDPMritgFSlKonfdt+rRYYpP/JfLxgIX8yoSw==
 
-minimatch@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
-  integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
-  dependencies:
-    brace-expansion "^1.1.7"
-
-minimatch@^3.1.1:
+minimatch@^3.0.4, minimatch@^3.1.1:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
@@ -383,11 +363,6 @@ prettier-package-json@2.6.0:
     sort-object-keys "^1.1.3"
     sort-order "^1.0.1"
 
-prettier-plugin-organize-imports@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-organize-imports/-/prettier-plugin-organize-imports-3.2.2.tgz#91993365e017daa5d0d28d8183179834224d8dd1"
-  integrity sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==
-
 prettier-plugin-package-perfection@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/prettier-plugin-package-perfection/-/prettier-plugin-package-perfection-1.1.0.tgz#2060ca2fa6edc2892c1900a8444fc9e9d1333ff6"
@@ -397,12 +372,7 @@ prettier-plugin-package-perfection@^1.1.0:
     prettier-package-json "2.6.0"
     tslib latest
 
-prettier@^2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
-  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
-
-prettier@^2.7.1:
+prettier@^2.4.1, prettier@^2.7.1:
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
