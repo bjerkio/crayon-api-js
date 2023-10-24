@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@types/isomorphic-fetch": "0.0.35",
-    "@types/node": "^16",
+    "@types/node": "^20.0.0",
     "prettier": "^2.4.1",
     "typedoc": "^0.22.7",
     "typedoc-plugin-markdown": "^3.11.3",
